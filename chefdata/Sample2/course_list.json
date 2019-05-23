@@ -1,0 +1,26 @@
+{
+  "title": "HP LIFE Sample Courses",
+  "kind": "HP LIFE couses listing",
+  "courses": [
+    {
+      "name": "Success Mindset (English)",
+      "path": "Success_Mindset_English",
+      "lang": "en"
+    },
+    {
+      "name": "3D Printing (हिन्दी)",
+      "path": "3D_printing_Hindi",
+      "lang": "hi"
+    },
+    {
+      "name": "Cash flow (中文)",
+      "path": "Cash_flow_Chinese",
+      "lang": "zh"
+    },
+    {
+      "name": "3D Printing (العربية)",
+      "path": "Design_thinking_Arabic",
+      "lang": "ar"
+    }
+  ]
+}
