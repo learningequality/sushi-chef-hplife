@@ -1,9 +1,34 @@
 import json
 import os
+import copy
+
+import urllib.parse
 
 from bs4 import BeautifulSoup
 from bs4.element import NavigableString
 
+
+# HIGH LEVEL API
+################################################################################
+
+def extract_course_tree(coursedir):
+    """
+    Extract a json tree from a edX course 
+    """
+    recusivedata = parse_xml_file_refusive(coursedir, 'course', 'course')
+    # update root element data course/course.xml with data in basedir course.xml
+    flatdata = parse_xml_file_refusive(coursedir, None, 'course')
+    del flatdata['children']
+    recusivedata.update(flatdata)
+    return recusivedata
+
+
+
+
+
+# LOW LEVEL API
+################################################################################
+# Note: This code has some HP-LIFE specific functions, not general purpose edX
 
 def parse_xml_file(coursedir, kind, name, ext='xml'):
     """
@@ -69,10 +94,14 @@ def parse_xml_file_refusive(coursedir, kind, name, ext='xml'):
     new_children = []
     for child in root['children']:
         child_kind = child['kind']
-        if child_kind in ['wiki', 'html']:
+        if child_kind == 'wiki':
             new_children.append(child)
-        elif child_kind in ['problem']:
-            new_children.append(child)
+        elif child_kind == 'html':
+            htmldata = parse_html_file(coursedir, child['kind'], child['url_name'], ext='html')
+            new_children.append(htmldata)
+        elif child_kind == 'problem':
+            problemdata = parse_problem_file(coursedir, child['kind'], child['url_name'], ext='xml')
+            new_children.append(problemdata)
         else:
             child_name = child['url_name']
             resolved_child = parse_xml_file_refusive(coursedir, child_kind, child_name, ext='xml')
@@ -83,23 +112,147 @@ def parse_xml_file_refusive(coursedir, kind, name, ext='xml'):
 
 
 
+def parse_html_file(coursedir, kind, name, ext='html'):
+    """
+    Parse the HTML file at {coursedir}/{kind}/{name}.{ext}
+    and return the json tree representation.
+    """
+    # Build path to XML file
+    path = coursedir
+    if kind:
+        path = os.path.join(path, kind)
+    path = os.path.join(path, name + '.' + ext)
+    if not os.path.exists(path):
+        raise ValueError('HTML file not found: ' + path)
+    
+    # Load XML
+    html = open(path, 'r').read()
+    
+    # JSON data object
+    data = {
+        'kind': kind,
+        'url_name': name,
+        'content': html,                 # [0:30] + '...',  # used for debugging
+        'children': [],
+    }
+
+    # Hanlde special case of HTML file with downloadable resources
+
+    is_resources_folder_candidate = False       # True if we find links to s3.amazonaws.com
+    seen_tuple = None                           # save (bucket_url, bucket_path, activity_ref) links seen
+    is_resources_folder = False                 # True if all links are to the same seen_tuple
+
+    doc = BeautifulSoup(html, "html5lib")
+    links = doc.find_all('a')
+    for link in links:
+        if 'href' in link.attrs and 's3.amazonaws.com' in link['href']:
+            is_resources_folder_candidate = True
+            # print('Found resources_folder_candidate')
+        else:
+            # print('No href in ', link)
+            pass
+
+        if is_resources_folder_candidate:
+            if 'href' in link.attrs and 's3.amazonaws.com' in link['href']:
+                url_parts = link['href'].split('/')
+                bucket_url = '/'.join(url_parts[0:4])
+                bucket_path = '/'.join(url_parts[4:-2])
+                activity_ref = url_parts[-2]
+                this_tuple = (bucket_url, bucket_path, activity_ref)
+                if seen_tuple is None:
+                    seen_tuple = this_tuple
+                else:
+                    if seen_tuple == this_tuple:
+                        is_resources_folder = True
+                    else:
+                        is_resources_folder = False
+            else:
+                # print('another link found', link)
+                pass
+
+    if is_resources_folder:
+        data['activity_ref'] = dict(
+            kind = 'resources_folder',
+            bucket_url = seen_tuple[0],
+            bucket_path = seen_tuple[1],
+            activity_ref = seen_tuple[2],
+            entrypoint = None
+        )
+        print('Found resources_folder', data['activity_ref'])
+    return data
+
+
+def parse_problem_file(coursedir, kind, name, ext='xml'):
+    """
+    Parse the XML for an Articulate Storyline file at {coursedir}/{kind}/{name}.{ext}
+    and return the json tree representation.
+    """
+    # Build path to XML file
+    path = coursedir
+    if kind:
+        path = os.path.join(path, kind)
+    path = os.path.join(path, name + '.' + ext)
+    if not os.path.exists(path):
+        raise ValueError('HTML file not found: ' + path)
+    
+    # Load XML
+    xml = open(path, 'r').read()
+    doc = BeautifulSoup(xml, "xml")
+
+    # JSON data object
+    data = {
+        'kind': kind,
+        'children': [],
+    }
+
+    choiceresponse = doc.find('choiceresponse')
+    jsinput = doc.find('jsinput')
+
+    # CASE A: non-articulare choiceresponse activity
+    if choiceresponse and jsinput is None:
+        data['content'] = xml
+
+    # CASE B: articulare storyline activity
+    elif jsinput and choiceresponse is None:
+        url = jsinput['html_file']
+        url_parts = url.split('/')
+        data['activity_ref'] = dict(
+            kind = 'articulate_storyline',
+            bucket_url = '/'.join(url_parts[0:4]),
+            bucket_path = '/'.join(url_parts[4:-2]),
+            activity_ref = url_parts[-2],
+            entrypoint = url_parts[-1],
+        )
+    else:
+        print('Found unexpected problem type at', path)
+    return data
+
+
+
+
 def print_course(course):
     """
-    Display course hierarchy
+    Display course tree hierarchy for debugging purposes.
     """
     def print_subtree(subtree, indent=0):
+        title = subtree['display_name'] if 'display_name' in subtree else ''
+        
         extra = ''
         if 'url_name' in subtree:
             extra += ' url_name=' + subtree['url_name']
         if 'slug' in subtree:
             extra += ' slug=' + subtree['slug']
-        if 'display_name' in subtree:
-            title = subtree['display_name']
-        else:
-            title = ''
+        if subtree['kind'] == 'course':
+            subtreecopy = copy.deepcopy(subtree)
+            del subtreecopy['children']
+            extra += ' attrs='+str(subtreecopy)
+        if 'activity_ref' in subtree:
+            extra += 'activity_ref=' + str(subtree['activity_ref'])
+        
         print('   '*indent, '-', title,  'kind='+subtree['kind'], '\t', extra)
         if 'children' in subtree:
             for child in subtree['children']:
                 print_subtree(child, indent=indent+1)
     print_subtree(course)
+    print('\n')
 
