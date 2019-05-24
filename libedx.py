@@ -1,12 +1,9 @@
-import json
-import os
-import copy
-
-import urllib.parse
-
 from bs4 import BeautifulSoup
 from bs4.element import NavigableString
-
+import copy
+import json
+import os
+from urllib.parse import unquote_plus
 
 # HIGH LEVEL API
 ################################################################################
@@ -157,7 +154,7 @@ def parse_html_file(coursedir, kind, name, ext='html'):
                 url_parts = link['href'].split('/')
                 bucket_url = '/'.join(url_parts[0:4])
                 bucket_path = '/'.join(url_parts[4:-2])
-                activity_ref = url_parts[-2]
+                activity_ref = unquote_plus(url_parts[-2])
                 this_tuple = (bucket_url, bucket_path, activity_ref)
                 if seen_tuple is None:
                     seen_tuple = this_tuple
@@ -171,14 +168,14 @@ def parse_html_file(coursedir, kind, name, ext='html'):
                 pass
 
     if is_resources_folder:
-        data['activity_ref'] = dict(
+        data['activity'] = dict(
             kind = 'resources_folder',
             bucket_url = seen_tuple[0],
             bucket_path = seen_tuple[1],
             activity_ref = seen_tuple[2],
             entrypoint = None
         )
-        print('Found resources_folder', data['activity_ref'])
+        print('Found resources_folder', data['activity'])
     return data
 
 
@@ -216,11 +213,11 @@ def parse_problem_file(coursedir, kind, name, ext='xml'):
     elif jsinput and choiceresponse is None:
         url = jsinput['html_file']
         url_parts = url.split('/')
-        data['activity_ref'] = dict(
+        data['activity'] = dict(
             kind = 'articulate_storyline',
             bucket_url = '/'.join(url_parts[0:4]),
             bucket_path = '/'.join(url_parts[4:-2]),
-            activity_ref = url_parts[-2],
+            activity_ref = unquote_plus(url_parts[-2]),
             entrypoint = url_parts[-1],
         )
     else:
@@ -246,8 +243,8 @@ def print_course(course):
             subtreecopy = copy.deepcopy(subtree)
             del subtreecopy['children']
             extra += ' attrs='+str(subtreecopy)
-        if 'activity_ref' in subtree:
-            extra += 'activity_ref=' + str(subtree['activity_ref'])
+        if 'activity' in subtree:
+            extra += 'activity=' + str(subtree['activity'])
         
         print('   '*indent, '-', title,  'kind='+subtree['kind'], '\t', extra)
         if 'children' in subtree:

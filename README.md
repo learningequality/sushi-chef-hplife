@@ -87,14 +87,24 @@ Steps:
     - edcast.js
     - zepto.min.js
   - Rewrite links
-  - Created a file `{activity_ref}_webroot.zip` from the activity folder
-  - Save necessary metadata as `{activity_ref}_metadata.json`
+  - Created a zip file from the activity folder
+  - Return the necessary info as a dict
+  
+        {'title_en': '<title>',
+         'thumbnail': '<path to thumbnail img>',
+         'zippath': '/var/folders/wc/2r44j8gs4gn56t1xtw5f6wlm0000gn/T/tmpk1e0mxhf.zip'}
+
 
 #### B2. Resources Folder
 In: folder containing file resources of kind=`resources_folder` (files in a static webserver)
 Out: HTML5Zip file + activity_metadata
-- Created a file `{activity_ref}_webroot.zip` from the folder
-- Save necessary metadata as `{activity_ref}_metadata.json`
+  - Created a zip file from the resources folder
+  - Return the necessary info as a dict
+
+        {'title_en': '<title>',
+         'thumbnail': '<path to thumbnail img>',
+         'zippath': '/var/folders/wc/2r44j8gs4gn56t1xtw5f6wlm0000gn/T/tmpk1e0mxhf.zip'}
+
 
 
 
