@@ -62,6 +62,7 @@ In: edX `course/` directory that contains XML metadata files (and some HTML)
 Out: `edX_course_tree.json` with `activity` content pointers  of the form:  
 
     activity_ref = {
+        kind = 'articulate_storyline',
         bucket_url = 'https://s3.amazonaws.com/hp-life-content',
         bucket_path = 'Antonio+TechClass+Academy/Cash+Flow/Chinese',
         activity_ref = 'CF_BC_CH1',
@@ -73,7 +74,9 @@ that course.
 
 
 ### B. Prepare content folders
-In: folder containing the activity content (HTML+assets)  
+
+#### B1. Articulate Storyline
+In: folder containing activity content of kind=`articulate_storyline` (HTML+assets)
 Out: HTML5Zip file + activity_metadata ?  
 Steps:
   - remove .swf / .flv files
@@ -86,6 +89,13 @@ Steps:
   - Rewrite links
   - Created a file `{activity_ref}_webroot.zip` from the activity folder
   - Save necessary metadata as `{activity_ref}_metadata.json`
+
+#### B2. Resources Folder
+In: folder containing file resources of kind=`resources_folder` (files in a static webserver)
+Out: HTML5Zip file + activity_metadata
+- Created a file `{activity_ref}_webroot.zip` from the folder
+- Save necessary metadata as `{activity_ref}_metadata.json`
+
 
 
 ### C. Generate channel json
