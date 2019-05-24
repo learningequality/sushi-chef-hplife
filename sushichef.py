@@ -5,6 +5,7 @@ import json
 import os
 import requests
 import shutil
+import tempfile
 from urllib.parse import unquote_plus
 
 from ricecooker.chefs import SushiChef
@@ -137,6 +138,37 @@ def transform_resource_folder(contentdir, activity_ref, content):
     metadata['zippath'] = zippath
 
     return metadata
+
+
+def transform_html(content):
+    """
+    Transform the HTML markup taken from `content` (str) to file index.html in
+    a standalone zip file. Return the neceesary metadata as a dict.
+    """
+    chef_tmp_dir = 'chefdata/tmp'
+    webroot = tempfile.mkdtemp(dir=chef_tmp_dir)
+
+    metadata = dict(
+        kind = 'html_content',
+        zippath = None,  # to be set below
+    )
+
+    doc = BeautifulSoup(content, 'html5lib')
+    # TODO: add meta encoding utf-8
+    # TODO: add meta language (in case of right-to-left languages)
+
+    # Writeout new index.html
+    indexhtmlpath = os.path.join(webroot, 'index.html')
+    with open(indexhtmlpath, 'w') as indexfilewrite:
+        indexfilewrite.write(str(doc))
+
+    # Zip it
+    zippath = create_predictable_zip(webroot)
+    metadata['zippath'] = zippath
+
+    return metadata
+
+
 
 
 
