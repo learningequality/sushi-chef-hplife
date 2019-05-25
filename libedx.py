@@ -98,7 +98,8 @@ def parse_xml_file_refusive(coursedir, kind, name, ext='xml'):
             new_children.append(htmldata)
         elif child_kind == 'problem':
             problemdata = parse_problem_file(coursedir, child['kind'], child['url_name'], ext='xml')
-            new_children.append(problemdata)
+            if problemdata:
+                new_children.append(problemdata)                
         else:
             child_name = child['url_name']
             resolved_child = parse_xml_file_refusive(coursedir, child_kind, child_name, ext='xml')
@@ -220,9 +221,11 @@ def parse_problem_file(coursedir, kind, name, ext='xml'):
             activity_ref = unquote_plus(url_parts[-2]),
             entrypoint = url_parts[-1],
         )
+        return data
     else:
         print('Found unexpected problem type at', path)
-    return data
+        return None
+    
 
 
 
@@ -244,7 +247,7 @@ def print_course(course):
             del subtreecopy['children']
             extra += ' attrs='+str(subtreecopy)
         if 'activity' in subtree:
-            extra += 'activity=' + str(subtree['activity'])
+            extra += 'activity_ref=' + str(subtree['activity']['activity_ref'])
         
         print('   '*indent, '-', title,  'kind='+subtree['kind'], '\t', extra)
         if 'children' in subtree:

@@ -1,5 +1,5 @@
 #!/usr/bin/env python
-from bs4 import BeautifulSoup
+from bs4 import BeautifulSoup, Tag
 import copy
 import json
 import os
@@ -8,11 +8,20 @@ import shutil
 import tempfile
 from urllib.parse import unquote_plus
 
-from ricecooker.chefs import SushiChef
-from ricecooker.utils.zip import create_predictable_zip
-from ricecooker.classes.nodes import ChannelNode, TopicNode, DocumentNode, HTML5AppNode
-from ricecooker.classes.files import DocumentFile, HTMLZipFile
+
+from le_utils.constants import content_kinds, file_types, licenses
+from ricecooker.chefs import JsonTreeChef
 from ricecooker.classes.licenses import get_license
+from ricecooker.utils.jsontrees import write_tree_to_json_tree
+from ricecooker.utils.zip import create_predictable_zip
+
+from libedx import extract_course_tree
+
+
+
+containerdir = 'chefdata/Sample2'
+
+HPLIFE_LICENSE = get_license(licenses.CC_BY, copyright_holder='HP LIFE').as_dict()
 
 
 
@@ -24,6 +33,10 @@ def transform_articulate_storyline_folder(contentdir, activity_ref):
     """
     sourcedir = os.path.join(contentdir, activity_ref)            # source folder
     webroot = os.path.join(contentdir, activity_ref+'_webroot')   # transformed dir
+
+    if not os.path.exists(sourcedir):
+        print('wrong guess about content type--- this is not an articulate_storyline_... ')
+        return None
     
     if os.path.exists(webroot):
         shutil.rmtree(webroot)
@@ -50,9 +63,11 @@ def transform_articulate_storyline_folder(contentdir, activity_ref):
     metaxml = open(metapath, 'r').read()
     metadoc = BeautifulSoup(metaxml, "html5lib")
     project = metadoc.find('project')
+    # TODO: get author from     project > <author name="Victoria" email="" website="" />
     metadata = dict(
         kind = 'articulate_storyline',
         title_en = project['title'],
+        source_id = activity_ref,
         thumbnail = os.path.join(webroot, project.attrs['thumburl']),
         datepublished = project['datepublished'],
         duration = project['duration'],
@@ -100,6 +115,10 @@ def transform_resource_folder(contentdir, activity_ref, content):
     sourcedir = os.path.join(contentdir, activity_ref)            # source folder
     webroot = os.path.join(contentdir, activity_ref+'_webroot')   # transformed dir
 
+    if not os.path.exists(sourcedir):
+        print('missing sourcedir', sourcedir)
+        return None
+
     if os.path.exists(webroot):
         shutil.rmtree(webroot)
     
@@ -108,6 +127,7 @@ def transform_resource_folder(contentdir, activity_ref, content):
     
     metadata = dict(
         kind = 'resources_folder',
+        source_id = activity_ref,
         zippath = None,  # to be set below
     )
 
@@ -125,7 +145,8 @@ def transform_resource_folder(contentdir, activity_ref, content):
             filename = unquote_plus(url_parts[-1])
             link['href'] = filename
 
-    # TODO: add meta encoding utf-8
+    meta = Tag(name='meta', attrs={'charset':'utf-8'})
+    doc.head.append(meta)
     # TODO: add meta language (in case of right-to-left languages)
 
     # Writeout new index.html
@@ -150,11 +171,13 @@ def transform_html(content):
 
     metadata = dict(
         kind = 'html_content',
+        source_id = content[0:30],
         zippath = None,  # to be set below
     )
 
     doc = BeautifulSoup(content, 'html5lib')
-    # TODO: add meta encoding utf-8
+    meta = Tag(name='meta', attrs={'charset':'utf-8'})
+    doc.head.append(meta)
     # TODO: add meta language (in case of right-to-left languages)
 
     # Writeout new index.html
@@ -173,44 +196,151 @@ def transform_html(content):
 
 
 
-class HPLifeChef(SushiChef):
-    channel_info = {
-        'CHANNEL_TITLE': 'HP LIFE Sample Channel',
-        'CHANNEL_SOURCE_DOMAIN': 'life-global.org',         # where you got the content (change me!!)
-        'CHANNEL_SOURCE_ID': 'hp-life-sample-content',  # channel's unique id (change me!!)
-        'CHANNEL_LANGUAGE': 'en',                        # le_utils language code
-        'CHANNEL_THUMBNAIL': 'https://s10896.pcdn.co/wp-content/uploads/2015/08/HP-Life-Logo.jpg', # (optional)
-        'CHANNEL_DESCRIPTION': 'This channel contains sample content exported from the Articulate Storyline format slideshows packaged as HTML5Zip',      # (optional)
-    }
+def flatten_subtree(chapter):
+    """
+    Returns a flat list of the content nodes
+    """
+    content_items = []
+    for sequential in chapter['children']:
+        for vertical in sequential['children']:
+            for content_item in vertical['children']:
+                content_item['title'] = sequential['display_name']
+                content_items.append(content_item)
+    return content_items
 
-    def construct_channel(self, **kwargs):
-        channel = self.get_channel(**kwargs)
-        topic = TopicNode(title="Ariculate Storyline samples", source_id="sample_as")
-        channel.add_child(topic)
 
-        html_node1 = HTML5AppNode(
-            title='Business Concept',
-            description='The contents of Business Concept/ dir',
-            source_id='business-concept',
-            license=get_license('CC BY', copyright_holder='HP LIFE'),
-            language='en',
-            files=[HTMLZipFile(path='HP LIFE sample/Success Mindset - English/business-concept-webroot.zip',
-                                language='en')],
+
+def build_subtree_from_course(course):
+    print('Building a tree from course', course)
+    course_dict = dict(
+        kind=content_kinds.TOPIC,
+        title=course['name'],
+        language=course['lang'],
+        children = [],
+    )
+    basedir = os.path.join(containerdir, course['path'])
+    contentdir = os.path.join(basedir, 'content')
+    coursedir = os.path.join(basedir, 'course')
+    data = extract_course_tree(coursedir)
+
+    # TODO: title = data['display_name'] + (first_native_name)
+
+    course_dict['source_id'] = data['course']
+
+
+    for i, chapter in enumerate(data['children']):
+
+        if 'display_name' not in chapter:
+            print('skipping title-less wiki')
+            continue
+        if i == 4:
+            print('skipping course feedback', chapter['display_name'])
+            continue
+
+        chapter_dict = dict(
+            kind=content_kinds.TOPIC,
+            title=chapter['display_name'],
+            source_id=chapter['display_name'],
+            children = [],
         )
-        topic.add_child(html_node1)
+        course_dict['children'].append(chapter_dict)
 
-        # html_node2 = HTML5AppNode(
-        #     title='Story',
-        #     description='The contents of Story/ dir',
-        #     source_id='story',
-        #     license=get_license('CC BY', copyright_holder='HP LIFE'),
-        #     language='en',
-        #     files=[HTMLZipFile(path='HP LIFE sample/Success Mindset - English/story-webroot.zip',
-        #                         language='en')],
-        # )
-        # topic.add_child(html_node2)
+        content_items = flatten_subtree(chapter)
+        for j, item in enumerate(content_items):
+            html5_dict = dict(
+                kind=content_kinds.HTML5,
+                title=chapter_dict['title'],
+                source_id=chapter_dict['title'] + '___' + str(j),
+                license=HPLIFE_LICENSE,
+                language=course['lang'],
+                files=[],
+            )
 
-        return channel
+            kind = item['kind']
+
+            # Resouce folder
+            if kind == 'html' and 'activity' in item:
+                activity_ref = item['activity']['activity_ref']
+                zip_info = transform_resource_folder(contentdir, activity_ref, item['content'])
+                if zip_info:
+                    zippath = zip_info['zippath']
+                    html5_dict['source_id'] = zip_info['source_id']
+                    html5_dict['description'] = 'Content taken from ' + zip_info['source_id']
+                else:
+                    continue
+
+            # Generic HTML
+            elif kind == 'html':
+                zip_info = transform_html(item['content'])
+                if zip_info:
+                    zippath = zip_info['zippath']
+                    html5_dict['source_id'] = zip_info['source_id']
+                    html5_dict['description'] = 'Content taken from ' + zip_info['source_id']
+                else:
+                    continue
+
+            # Articulate Storyline
+            elif kind == 'problem' and 'activity' in item:
+                activity_ref = item['activity']['activity_ref']
+                zip_info = transform_articulate_storyline_folder(contentdir, activity_ref)
+                if zip_info:
+                    html5_dict['thumbnail'] = zip_info['thumbnail']
+                    html5_dict['source_id'] = zip_info['source_id']
+                    html5_dict['description'] = 'Content taken from ' + zip_info['source_id']
+                    zippath = zip_info['zippath']
+                else:
+                    print('transform_articulate_storyline_folder returned None')
+                    continue
+            else:
+                print('Unrecognized item', item)
+                continue
+
+            file_dict = dict(
+                file_type=file_types.HTML5,
+                path=zippath,
+                language=course['lang'],
+            )
+            html5_dict['files'].append(file_dict)
+            
+            chapter_dict['children'].append(html5_dict)
+        
+    return course_dict
+
+
+
+
+
+
+
+
+
+class HPLifeChef(JsonTreeChef):
+    """
+    Sushi chef script for uploading HP LIFE courses to the Kolibri platform.
+    """
+
+    RICECOOKER_JSON_TREE = 'hplife_ricecooker_tree.json'
+
+    def pre_run(self, args, options):
+
+        ricecooker_json_tree = dict(
+            title='HP LIFE Channel',
+            source_domain='life-global.org',         # where you got the content (change me!!)
+            source_id='hp-life-sample-content',  # channel's unique id (change me!!)
+            description='This is Sample2 channel with Articulate Storyline and HTML content packaged as HTML5Zip for use on Kolibri',
+            thumbnail='https://pbs.twimg.com/profile_images/458985190191136768/4yaxe2B3.png',
+            language='en',
+            children=[],
+        )
+
+        course_list = json.load(open(os.path.join(containerdir,'course_list.json')))
+        for course in course_list['courses']:
+            course_dict = build_subtree_from_course(course)
+            ricecooker_json_tree['children'].append(course_dict)
+
+        json_tree_path = self.get_json_tree_path()
+        write_tree_to_json_tree(json_tree_path, ricecooker_json_tree)
+
 
 
 if __name__ == '__main__':
