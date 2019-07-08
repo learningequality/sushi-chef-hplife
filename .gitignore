@@ -2,10 +2,14 @@ credentials
 
 
 # Content directories
+chefdata/tmp
 HP\ LIFE\ sample/
 chefdata/Sample1
 chefdata/Sample2
-chefdata/tmp
+chefdata/ExportJun28
+chefdata/Export
+
+
 
 
 
@@ -109,6 +113,7 @@ celerybeat-schedule
 
 # virtualenv
 venv/
+oldvenv/
 ENV/
 
 # Spyder project settings

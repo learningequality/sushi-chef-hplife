@@ -46,10 +46,32 @@ that includes the following steps:
     make sure all the activity refs match what appears in `course/`
   - Manually document paths in the `course_list.json`
 
-### Production (final HP LIFE channels)
-  - download all edX courses via API?
-  - obtain all content directly from s3 buckets
-  - process the above to place them in standard `course/` and `content/` folder format
+## Production (final HP LIFE channels)
+
+### Extract from google drive
+In order to download a local copy of the HP LIFE course data and activity files,
+you'll need to complete a OAuth workflow to grant access to the GDrive Shared Folder.
+
+1. Setup a SSH tunnel to `vader`:
+```
+ssh -L localhost:8080:localhost:8080 chef@eslgenie.com -p 1
+```
+
+2. Run the extract sctipt:
+```
+./extract.py
+```
+
+3. Open `http://localhost:8080` on your computer and complete the authorization
+
+4. The download will start (and takes approximately ... hours)
+
+
+### Transform
+The next step in the ETL pipeline is to process the extracted files and place them
+the in standard `course/` and `content/` folder structure expected by the chef code.
+
+
 
 
 
@@ -117,4 +139,7 @@ Out: `ricecooker_json_tree.json` for the channel
 In: `ricecooker_json_tree.json` + content zips  
 Out: Channel on Studio  
 Run the `linecook.py` chef to upload to Kolibri Studio
+
+
+
 
