@@ -2,7 +2,8 @@ credentials
 
 
 # Content directories
-chefdata/Export
+chefdata/Exported
+chefdata/Renamed
 chefdata/Courses
 
 
