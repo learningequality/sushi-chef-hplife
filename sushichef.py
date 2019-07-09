@@ -23,7 +23,15 @@ containerdir = 'chefdata/Sample2'
 
 HPLIFE_LICENSE = get_license(licenses.CC_BY, copyright_holder='HP LIFE').as_dict()
 
+HPLIFE_LANGS = ['es', 'fr', 'en']
 
+HPLIFE_COURSE_FOLDER_RENAMES = {
+    'Energy efficiency  Do more for less': 'Energy efficiency - Do more for less',
+    'Eficiencia de la energía hacer más con menos': 'Eficiencia de la energía - hacer más con menos',
+    'Eficiencia de la energía  hacer más con menos': 'Eficiencia de la energía - hacer más con menos',
+    'Efficacité énergétique Faire davantage avec moins': 'Efficacité énergétique - Faire davantage avec moins',
+    'Efficacité énergétique : Faire davantage avec moins': 'Efficacité énergétique - Faire davantage avec moins',
+}
 
 def transform_articulate_storyline_folder(contentdir, activity_ref):
     """

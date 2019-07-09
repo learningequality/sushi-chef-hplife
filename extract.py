@@ -1,5 +1,4 @@
 #!/usr/bin/env python
-import csv
 import io
 import json
 import os
@@ -67,7 +66,7 @@ def get_service(service_name=None, service_version=None):
 
 FOLDER_MIMETYPE = 'application/vnd.google-apps.folder'
 DEFAULT_FILE_FIELDS = 'id,kind,name,mimeType,version,webViewLink,createdTime,modifiedTime'
-
+FORBIDDEN_CHARS_IN_FOLDER_NAMES = ['/', ':']  # will be replaced with space ' '
 
 def itercontents(drive, folder_id, order_by='folder,name', file_fields=DEFAULT_FILE_FIELDS):
     """
@@ -103,9 +102,8 @@ def list_folder(folder_id):
 
 def _clean_folder_name(name):
     """Remove forbidden chars from folder name and strip any whitespace."""
-    FORBIDDEN_CHARS_IN_FOLDER_NAMES = ['/']
     for char in FORBIDDEN_CHARS_IN_FOLDER_NAMES:
-        name = name.replace(char, '_')
+        name = name.replace(char, ' ')
     name = name.strip()
     return name
 
@@ -150,7 +148,7 @@ def gdrive_download_file(file_id, destpath, drive=None):
 
     request = drive.files().get_media(fileId=file_id)
     try:
-        print("\tDownloading pdf file - {}".format(destpath))
+        # print("\tDownloading file - {}".format(destpath))
         fh = io.FileIO(destpath, mode='wb')
         downloader = MediaIoBaseDownload(fh, request)
         done = False
@@ -186,18 +184,20 @@ def export_folder(folder_id, parentdir='', drive=None):
             if not os.path.exists(destpath):
                 gdrive_download_file(file_id, destpath, drive=drive)
             else:
-                print('skipping download of', destpath, 'since it already exists.')
+                pass
+                # print('skipping download of', destpath, 'since it already exists.')
 
 
 def export(lang='all'):
-    assert lang in ['spanish', 'french', 'english', 'all']
+    from sushichef import HPLIFE_LANGS
+    assert lang == 'all' or lang in HPLIFE_LANGS, 'unexpected lang'
     if lang == 'all':
-        langs = ['spanish', 'french', 'english']
+        langs = HPLIFE_LANGS
     else:
         langs =[lang]
-    
+
     drive = get_service(service_name='drive', service_version='v3')
-    
+
     exportdir = os.path.join('chefdata', EXPORT_DIRNAME)
     data_sources = json.load(open('chefdata/data_sources.json'))
 
@@ -213,16 +213,28 @@ def export(lang='all'):
         export_folder(courses['folder_id'], parentdir=langdir, drive=drive)
 
         # export course activity files
-        # content = lang_data_sources['content']
-        # export_folder(content['folder_id'], parentdir=langdir, drive=drive)
+        content = lang_data_sources['content']
+        export_folder(content['folder_id'], parentdir=langdir, drive=drive)
+
+
 
 
 # EXTRACT
 ################################################################################
 
 EXTRACT_DIRNAME = 'Courses'
+EXPORT_SUFFIX_TO_STRIP = ' - Storyline output'
+FILES_TO_SKIP = ['.DS_Store', 'Thumbs.db', 'ehthumbs.db', 'ehthumbs_vista.db', '.gitkeep']
+
 
 def extract_courses(lang):
+    """
+    Extract all the `.gz`s from `chedata/Export/{lang}/{Langname}/{course_name}.gz`
+    to `chefdata/Courses/{lang}/{course_name}/course`.
+    Returns course_names = list of course names encountered.
+    """
+    course_names = []
+
     # src
     exportdir = os.path.join('chefdata', EXPORT_DIRNAME, lang)
     data_sources = json.load(open('chefdata/data_sources.json'))
@@ -236,25 +248,76 @@ def extract_courses(lang):
     for filename in os.listdir(srcdir):
         if filename.endswith('.gz') or filename.endswith('.tar.gz'):
             gzpath = os.path.join(srcdir, filename)
-            course_name, ext = os.path.splitext(filename)
-            if course_name.endswith('.tar'):
-                course_name = course_name[-4:]
-            assert ext == '.gz', 'expecting a tar-gzipped file with ext .gz'
+            if filename.endswith('.tar.gz'):
+                course_name = filename.replace('.tar.gz', '')
+            elif filename.endswith('.gz'):
+                course_name = filename.replace('.gz', '')
+            else:
+                print('unexpected filename', filename)
             destdir = os.path.join(extractdir, course_name)
-            print('Untargzipping course', course_name, 'from', gzpath, 'to', destdir)
-            shutil.unpack_archive(gzpath, destdir, 'gztar')
+            if not os.path.exists(os.path.join(destdir, 'course')):
+                print('Untargzipping course', course_name, 'from', gzpath, 'to', destdir)
+                shutil.unpack_archive(gzpath, destdir, 'gztar')
+            course_names.append(course_name)
         else:
             print('skipping non-gz file', filename)
-            
+
+    return course_names
 
 
-def extract_content(lang):
-    pass
+def process_content_for_course(lang, course_name):
+    """
+    Copy over all resource folders `chedata/Export/{lang}/{Langname} - Activity Files/{course_name}/{srcfolder}`
+    to `chefdata/Courses/{lang}/{course_name}/content/{srcfolder.replace(' - Storyline output','')}`
+    Returns `activity_refs` (list) for resource folder names copied over.
+    """
+    activity_refs = []
+
+    # src
+    exportdir = os.path.join('chefdata', EXPORT_DIRNAME, lang)
+    data_sources = json.load(open('chefdata/data_sources.json'))
+    lang_data_sources = data_sources[lang]
+    dirname = lang_data_sources['content']['name']
+    srcdir = os.path.join(exportdir, dirname)
+    coursedir = os.path.join(srcdir, course_name)
+    if not os.path.exists(coursedir):
+        print('Could not find Activity-Files for course_name', course_name)
+        return []
+
+    # dest
+    extractdir = os.path.join('chefdata', EXTRACT_DIRNAME, lang)
+    contentdir = os.path.join(extractdir, course_name, 'content')
+
+
+    for srcfolder in os.listdir(coursedir):
+        # src
+        if srcfolder in FILES_TO_SKIP:
+            continue
+        srcpath = os.path.join(coursedir, srcfolder)
+
+        # dest
+        if srcfolder.endswith(EXPORT_SUFFIX_TO_STRIP):
+            activity_ref = srcfolder.replace(EXPORT_SUFFIX_TO_STRIP, '')
+        else:
+            activity_ref = srcfolder
+        # print('Processing activity_ref', activity_ref)
+        resource_folder = os.path.join(contentdir, activity_ref)
+        if not os.path.exists(resource_folder):
+            shutil.copytree(srcpath, resource_folder)
+        activity_refs.append(activity_ref)
+
+    return activity_refs
 
 
 def extract(lang):
     print('Extracting lang', lang)
-    extract_courses(lang)
+    course_names = extract_courses(lang)
+    print('\textracting course_names', course_names)
+
+    for course_name in course_names:
+        activity_refs = process_content_for_course(lang, course_name)
+        print('\t\tprocessed activity_refs', activity_refs)
+
 
 
 
@@ -262,5 +325,5 @@ def extract(lang):
 ################################################################################
 
 if __name__ == '__main__':
-    export(lang='spanish')
-    extract(lang='spanish')
+    export(lang='es')
+    extract(lang='es')

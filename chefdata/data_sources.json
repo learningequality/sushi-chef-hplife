@@ -1,5 +1,5 @@
 {
-  "spanish": {
+  "es": {
       "courses": {
           "folder_id": "1uABh_sK12n1LJUniEK6d5WB0iyrt2y3u",
           "name": "Spanish"
@@ -9,7 +9,7 @@
           "name": "Spanish - Activity Files"
       }
     },
-    "french": {
+    "fr": {
         "courses": {
             "folder_id": "11tOzql5HG8IGH8K85Ntrs32i5q5CpPg",
             "name": "French"
@@ -19,7 +19,7 @@
             "name": "French - Activity Files"
         }
     },
-    "english": {
+    "en": {
         "courses": {
             "folder_id": "1DCEF7UpObjaTJg3SBv-GnsKCNVd5x7Aa",
             "name": "English"
