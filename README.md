@@ -9,6 +9,22 @@ All HP-LIFE courses have the following structure (3 interactive activities):
   what is learnt in the above activity
 
 
+Install
+-------
+
+1. Install Python requirements in a virtual environment called `venv`:
+```
+git clone git@github.com:learningequality/sushi-chef-hplife.git
+cd sushi-chef-hplife
+    virtualenv -p python3 venv
+    source venv/bin/activate
+    pip install -r requirements.txt
+```
+
+2. Obtain credentials and place them in `credentials/` folder
+
+
+
 
 Source data
 -----------
@@ -59,12 +75,17 @@ ssh -L localhost:8080:localhost:8080 chef@eslgenie.com -p 1
 
 2. Run the extract sctipt:
 ```
+cd /data/sushi-chef-hplife
+source venv/bin/activate
 ./extract.py
 ```
 
-3. Open `http://localhost:8080` on your computer and complete the authorization
+3. Click on the link that gets printed in the terminal and complete the authorization
 
 4. The download will start (and takes approximately ... hours)
+
+
+
 
 
 ### Transform

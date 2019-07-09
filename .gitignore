@@ -2,12 +2,18 @@ credentials
 
 
 # Content directories
+chefdata/Export
+chefdata/Courses
+
+
+# OLD
 chefdata/tmp
 HP\ LIFE\ sample/
 chefdata/Sample1
 chefdata/Sample2
+chefdata/Sample3
 chefdata/ExportJun28
-chefdata/Export
+
 
 
 
