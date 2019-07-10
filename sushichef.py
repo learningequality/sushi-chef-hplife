@@ -373,7 +373,7 @@ class HPLifeChef(JsonTreeChef):
             source_id='hp-life-courses-{}'.format(lang),
             description=CHANNEL_DESCRIPTION_LOOKUP[lang],
             thumbnail='chefdata/channel_thumbnail.png',
-            language='es',
+            language=lang,
             children=[],
         )
         print('in pre_run; channel info = ', ricecooker_json_tree)
