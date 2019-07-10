@@ -312,7 +312,17 @@ def build_subtree_from_course(course):
 
 
 
+CHANNEL_TITLE_LOOKUP = {
+    'en': 'HP LIFE (English)',
+    'es': 'HP LIFE (Español)',
+    'fr': 'HP LIFE (Français)',
+}
 
+CHANNEL_DESCRIPTION_LOOKUP = {
+    'en': 'HP LIFE is a collection of online business and IT training courses. Learn at your own pace in your own time – free of charge. A program of the HP Foundation.',
+    'es': 'HP LIFE Aprende NEGOCIOS EN LÍNEA Y FORMACIÓN DE TI Aprenda a su ritmo, cuando más le convenga y de forma gratuita. Un programa de HP Foundation',
+    'fr': 'HP LIFE Cours de commerce et l\'informatique en ligne. Apprenez à votre rythme, gratuitement. Un programme de HP Foundation',
+}
 
 
 class HPLifeChef(JsonTreeChef):
@@ -323,16 +333,21 @@ class HPLifeChef(JsonTreeChef):
     RICECOOKER_JSON_TREE = 'hplife_ricecooker_tree.json'
 
     def pre_run(self, args, options):
-
+        if 'lang' in options:
+            lang = options['lang']
+            assert lang in HPLIFE_LANGS
+        else:
+            lang = 'es'
         ricecooker_json_tree = dict(
-            title='HP LIFE Channel',
-            source_domain='life-global.org',         # where you got the content (change me!!)
-            source_id='hp-life-sample-content',  # channel's unique id (change me!!)
-            description='This is Sample2 channel with Articulate Storyline and HTML content packaged as HTML5Zip for use on Kolibri',
-            thumbnail='https://pbs.twimg.com/profile_images/458985190191136768/4yaxe2B3.png',
-            language='en',
+            title=CHANNEL_TITLE_LOOKUP[lang],
+            source_domain='life-global.org',
+            source_id='hp-life-courses-{}'.format(lang),
+            description=CHANNEL_DESCRIPTION_LOOKUP[lang],
+            thumbnail='chefdata/channel_thumbnail.png',
+            language='es',
             children=[],
         )
+        print('in pre_run; channel info = ', ricecooker_json_tree)
 
         course_list = json.load(open(os.path.join(containerdir,'course_list.json')))
         for course in course_list['courses']:
