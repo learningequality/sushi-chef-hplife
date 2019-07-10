@@ -1,6 +1,5 @@
 #!/usr/bin/env python
 from bs4 import BeautifulSoup, Tag
-import copy
 import json
 import os
 import requests
@@ -18,8 +17,9 @@ from ricecooker.utils.zip import create_predictable_zip
 from libedx import extract_course_tree
 
 
+DEBUG_MODE = True
 
-containerdir = 'chefdata/Sample2'
+containerdir = 'chefdata/Courses'
 
 HPLIFE_LICENSE = get_license(licenses.CC_BY, copyright_holder='HP LIFE').as_dict()
 
@@ -80,13 +80,15 @@ def transform_articulate_storyline_folder(contentdir, activity_ref):
     indexhtmlpath = os.path.join(webroot,'index.html')
     shutil.move(os.path.join(webroot,'story_html5.html'), indexhtmlpath)
     
-    # Localize js libs
-    scriptsdir = os.path.join(webroot, 'scripts')
-    if not os.path.exists(scriptsdir):
-        os.mkdir(scriptsdir)
+    # load index.html
     with open(indexhtmlpath, 'r') as indexfileread:
         indexhtml = indexfileread.read()
     doc = BeautifulSoup(indexhtml, 'html5lib')
+
+    # A. Localize js libs
+    scriptsdir = os.path.join(webroot, 'scripts')
+    if not os.path.exists(scriptsdir):
+        os.mkdir(scriptsdir)
     scripts = doc.find('head').find_all('script')
     for script in scripts:
         script_url = script['src']
@@ -96,9 +98,23 @@ def transform_articulate_storyline_folder(contentdir, activity_ref):
             scriptfile.write(response.content)
         scriptrelpath = os.path.join('scripts', script_basename)
         script['src'] = scriptrelpath
+
+    # B. Inline css files to avoid CORS issues
+    styles = doc.find('body').find_all('link', rel="stylesheet")
+    for style in styles:
+        style_href = style['href']
+        style_path = os.path.join(webroot, style_href)
+        style_content = '\n' + open(style_path).read()
+        inline_style_tag = doc.new_tag('style')
+        inline_style_tag['data-noprefix'] = ''
+        inline_style_tag['rel'] = 'stylesheet'
+        inline_style_tag.string = style_content
+        style.replace_with(inline_style_tag)
+
+    # Save modified index.html
     with open(indexhtmlpath, 'w') as indexfilewrite:
         indexfilewrite.write(str(doc))
-    
+
     # Zip it
     zippath = create_predictable_zip(webroot)
     metadata['zippath'] = zippath
@@ -224,6 +240,10 @@ def build_subtree_from_course(course):
     coursedir = os.path.join(basedir, 'course')
     data = extract_course_tree(coursedir)
 
+    if DEBUG_MODE:
+        with open('chefdata/trees/course_tree.json', 'w') as json_file:
+            json.dump(data, json_file, indent=4, ensure_ascii=False)
+
     # TODO: title = data['display_name'] + (first_native_name)
 
     course_dict['source_id'] = data['course']
@@ -250,7 +270,7 @@ def build_subtree_from_course(course):
         for j, item in enumerate(content_items):
             html5_dict = dict(
                 kind=content_kinds.HTML5,
-                title=chapter_dict['title'],
+                title=item['title'],
                 source_id=chapter_dict['title'] + '___' + str(j),
                 license=HPLIFE_LICENSE,
                 language=course['lang'],
