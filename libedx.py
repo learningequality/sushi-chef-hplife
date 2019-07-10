@@ -53,6 +53,7 @@ def parse_xml_file(coursedir, kind, name, ext='xml'):
     # JSON data object
     data = {
         'kind': doc_root.name,
+        'id': name,
         'children': [],
     }
     data.update(doc_root.attrs)

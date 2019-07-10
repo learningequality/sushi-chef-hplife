@@ -19,7 +19,7 @@ from libedx import extract_course_tree
 
 DEBUG_MODE = True
 
-containerdir = 'chefdata/Courses'
+COURSES_DIR = 'chefdata/Courses'
 
 HPLIFE_LICENSE = get_license(licenses.CC_BY, copyright_holder='HP LIFE').as_dict()
 
@@ -227,7 +227,7 @@ def flatten_subtree(chapter):
 
 
 
-def build_subtree_from_course(course):
+def build_subtree_from_course(course, containerdir):
     print('Building a tree from course', course)
     course_dict = dict(
         kind=content_kinds.TOPIC,
@@ -241,11 +241,12 @@ def build_subtree_from_course(course):
     data = extract_course_tree(coursedir)
 
     if DEBUG_MODE:
-        with open('chefdata/trees/course_tree.json', 'w') as json_file:
+        with open('chefdata/trees/course_tree-{}.json'.format(data['course']), 'w') as json_file:
             json.dump(data, json_file, indent=4, ensure_ascii=False)
 
     # TODO: title = data['display_name'] + (first_native_name)
 
+    print('setting course_dict source id to', data['course'])
     course_dict['source_id'] = data['course']
 
 
@@ -350,14 +351,22 @@ class HPLifeChef(JsonTreeChef):
     Sushi chef script for uploading HP LIFE courses to the Kolibri platform.
     """
 
-    RICECOOKER_JSON_TREE = 'hplife_ricecooker_tree.json'
+    def get_json_tree_path(self, *args, **kwargs):
+        """
+        Return path to ricecooker json tree file. Override this method to use
+        a custom filename, e.g., for channel with multiple languages.
+        """
+        lang = kwargs['lang']
+        RICECOOKER_JSON_TREE = 'hplife_ricecooker_tree_{}.json'.format(lang)        
+        json_tree_path = os.path.join(self.TREES_DATA_DIR, RICECOOKER_JSON_TREE)
+        return json_tree_path
 
     def pre_run(self, args, options):
-        if 'lang' in options:
-            lang = options['lang']
-            assert lang in HPLIFE_LANGS
-        else:
-            lang = 'es'
+        if 'lang' not in options:
+            raise ValueError('Must specify lang option in ' + str(HPLIFE_LANGS))
+        lang = options['lang']
+        assert lang in HPLIFE_LANGS
+
         ricecooker_json_tree = dict(
             title=CHANNEL_TITLE_LOOKUP[lang],
             source_domain='life-global.org',
@@ -369,12 +378,14 @@ class HPLifeChef(JsonTreeChef):
         )
         print('in pre_run; channel info = ', ricecooker_json_tree)
 
-        course_list = json.load(open(os.path.join(containerdir,'course_list.json')))
+        containerdir = os.path.join(COURSES_DIR, lang)
+        course_list = json.load(open(os.path.join(containerdir, 'course_list.json')))
         for course in course_list['courses']:
-            course_dict = build_subtree_from_course(course)
+            course_dict = build_subtree_from_course(course, containerdir)
             ricecooker_json_tree['children'].append(course_dict)
-
-        json_tree_path = self.get_json_tree_path()
+        
+        print(ricecooker_json_tree)
+        json_tree_path = self.get_json_tree_path(lang=lang)
         write_tree_to_json_tree(json_tree_path, ricecooker_json_tree)
 
 
@@ -386,5 +397,4 @@ if __name__ == '__main__':
     """
     simple_chef = HPLifeChef()
     simple_chef.main()
-
 

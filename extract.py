@@ -305,6 +305,8 @@ def rename_courses(lang):
     # source directory = `chefdata/Export/{lang}/{Language}/`
     srcdir = get_exported_dir(lang, 'courses')
     for filename in os.listdir(srcdir):
+        if filename in FILES_TO_SKIP:
+            continue
         srcpath = os.path.join(srcdir, filename)
         #
         # Case A. Handle special course folder case
@@ -361,7 +363,6 @@ def rename_activity_files(lang):
 ################################################################################
 
 EXTRACT_DIRNAME = 'Courses'
-EXPORT_SUFFIX_TO_STRIP = ' - Storyline output'
 FILES_TO_SKIP = ['.DS_Store', 'Thumbs.db', 'ehthumbs.db', 'ehthumbs_vista.db', '.gitkeep']
 
 
@@ -422,10 +423,7 @@ def process_content_for_course(lang, course_name):
         srcpath = os.path.join(coursedir, srcfolder)
 
         # dest
-        if srcfolder.endswith(EXPORT_SUFFIX_TO_STRIP):
-            activity_ref = srcfolder.replace(EXPORT_SUFFIX_TO_STRIP, '')
-        else:
-            activity_ref = srcfolder
+        activity_ref = srcfolder
         # print('Processing activity_ref', activity_ref)
         resource_folder = os.path.join(contentdir, activity_ref)
         if not os.path.exists(resource_folder):
@@ -439,11 +437,31 @@ def extract(lang):
     print('Extracting lang', lang)
     course_names = extract_courses(lang)
     print('\textracting course_names', course_names)
+    
 
+    course_list = {
+        "title": "HP LIFE ({})".format(lang),
+        "kind": "HP LIFE couses listing",
+        "courses": []
+    }
     for course_name in course_names:
         activity_refs = process_content_for_course(lang, course_name)
-        print('\t\tprocessed activity_refs', activity_refs)
+        if activity_refs:
+            print('\tCourse course_name=', course_name, '  activity refs=', activity_refs)
+            course_info = {
+              "name": course_name,
+              "path": course_name,
+              "lang": lang,
+            }
+            course_list['courses'].append(course_info)
 
+        else:
+            print('\tno activity_refs for course_name', course_name)
+
+    containerdir = os.path.join('chefdata', EXTRACT_DIRNAME, lang)
+    couse_list_path = os.path.join(containerdir, 'course_list.json')
+    with open(couse_list_path, 'w') as couse_list_file:
+        json.dump(course_list, couse_list_file, indent=4, ensure_ascii=False)
 
 
 
@@ -453,7 +471,7 @@ def extract(lang):
 if __name__ == '__main__':
     from sushichef import HPLIFE_LANGS
     for lang in HPLIFE_LANGS:
-        export(lang=lang)
+        # export(lang=lang)
         rename_courses(lang=lang)
         rename_activity_files(lang=lang)
         extract(lang=lang)
