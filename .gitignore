@@ -16,7 +16,13 @@ chefdata/Sample3
 chefdata/ExportJun28
 
 
+# Sample code for edX course parsing
+edxml-tools/
 
+
+
+# WIP notebooks
+*.ipynb
 
 
 
@@ -32,6 +38,7 @@ token.txt
 restore/*
 restore
 *pycache*
+cache.sqlite
 storage
 storage/*
 .ricecookerfilecache/

@@ -262,6 +262,8 @@ def get_renamed_dir(lang, kind):
     lang_data_sources = data_sources[lang]
     dirname = lang_data_sources[kind]['name']
     srcdir = os.path.join(renameddir, dirname)
+    if not os.path.exists(srcdir):
+        os.makedirs(srcdir)
     return srcdir
 
 
@@ -344,10 +346,12 @@ def rename_activity_files(lang):
     destdir = get_renamed_dir(lang, 'activityfiles')
     # rename activity folders
     for filename in os.listdir(srcdir):
+        if filename in FILES_TO_SKIP:
+            continue
         srcpath = os.path.join(srcdir, filename)
         course_name = _normalize_course_name(filename)
         destpath = os.path.join(destdir, course_name)
-        shutil.copy(srcpath, destpath)
+        shutil.copytree(srcpath, destpath)
 
 
 
@@ -355,7 +359,6 @@ def rename_activity_files(lang):
 
 # EXTRACT
 ################################################################################
-
 
 EXTRACT_DIRNAME = 'Courses'
 EXPORT_SUFFIX_TO_STRIP = ' - Storyline output'
