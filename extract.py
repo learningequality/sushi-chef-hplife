@@ -471,7 +471,7 @@ def extract(lang):
 if __name__ == '__main__':
     from sushichef import HPLIFE_LANGS
     for lang in HPLIFE_LANGS:
-        # export(lang=lang)
+        export(lang=lang)
         rename_courses(lang=lang)
         rename_activity_files(lang=lang)
         extract(lang=lang)
