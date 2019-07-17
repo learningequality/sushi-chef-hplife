@@ -15,6 +15,7 @@ from ricecooker.utils.jsontrees import write_tree_to_json_tree
 from ricecooker.utils.zip import create_predictable_zip
 
 from libedx import extract_course_tree
+from libedx import print_course
 
 
 DEBUG_MODE = True
@@ -24,6 +25,36 @@ COURSES_DIR = 'chefdata/Courses'
 HPLIFE_LICENSE = get_license(licenses.CC_BY, copyright_holder='HP LIFE').as_dict()
 
 HPLIFE_LANGS = ['es', 'fr', 'en']
+
+
+HPLIFE_COURSE_STRUCTURE_STRINGS = {
+    'en': {
+        'intro': 'Start Course',
+        'story': 'Story',
+        'businessconcept': 'Business Concept',
+        'technologyskill': 'Technology Skill',
+        'coursefeedback': 'Course Feedback',
+        'nextsteps': 'Next Steps',
+    },
+    'es': {
+        'intro': 'Inicio del curso',
+        'story': 'Narración',
+        'businessconcept': 'Concepto de negocio',
+        'technologyskill': 'Habilidad Tecnología',
+        'coursefeedback': 'Encuesta',
+        'nextsteps': 'Pasos siguientes',
+    },
+    'fr': {
+        'intro': 'Démarrer',
+        'story': 'Histoire',
+        'businessconcept': 'Concept commercial',
+        'technologyskill': 'Compétence technologiqu',
+        'coursefeedback': 'Sondage',
+        'nextsteps': 'Étapes suivantes',
+    }
+}
+
+
 
 
 def transform_articulate_storyline_folder(contentdir, activity_ref):
@@ -36,7 +67,7 @@ def transform_articulate_storyline_folder(contentdir, activity_ref):
     webroot = os.path.join(contentdir, activity_ref+'_webroot')   # transformed dir
 
     if not os.path.exists(sourcedir):
-        print('wrong guess about content type--- this is not an articulate_storyline_... ')
+        print('WWW Could not find local resource folder for activity_ref=', activity_ref)
         return None
     
     if os.path.exists(webroot):
@@ -227,6 +258,36 @@ def flatten_subtree(chapter):
 
 
 
+def parse_course_tree(course_data, coursedir, contentdir):
+    """
+    Parse the edX XML structure and pluck the neessary components form the tree
+    to return a `parsed_tree` that looks like this:
+    parsed_tree = {
+        'intro': {},
+        'story': {},
+        'businessconcept': {},
+        'technologyskill': {},
+        'coursefeedback': {},
+        'nextsteps': {},
+    }
+    """
+    print('in parse_course_tree', course_data['course'], coursedir, contentdir)
+
+def transform_course_tree(parsed_tree, coursedir, contentdir):
+    """
+    Tranform the parsed_tree for a course into channel subfolder for this course.
+    Includes:
+     - extract info from intro
+     - modify next steps
+     - generate _webroot with transformed outputs of resource folders
+     - scrape hpstoryline stories (if applicable)
+     - package resource folders as .zip
+     - create ricecooker_json_tree
+    Returns a ricecooker_json_tree (dict).
+    """
+    print('in transform_course_tree', parsed_tree, coursedir, contentdir)
+
+
 def build_subtree_from_course(course, containerdir):
     print('Building a tree from course', course)
     course_dict = dict(
@@ -241,12 +302,11 @@ def build_subtree_from_course(course, containerdir):
     data = extract_course_tree(coursedir)
 
     if DEBUG_MODE:
+        print_course(data)
         with open('chefdata/trees/course_tree-{}.json'.format(data['course']), 'w') as json_file:
             json.dump(data, json_file, indent=4, ensure_ascii=False)
 
     # TODO: title = data['display_name'] + (first_native_name)
-
-    print('setting course_dict source id to', data['course'])
     course_dict['source_id'] = data['course']
 
 
@@ -280,7 +340,7 @@ def build_subtree_from_course(course, containerdir):
 
             kind = item['kind']
 
-            # Resouce folder
+            # Local resouce folder
             if kind == 'html' and 'activity' in item:
                 activity_ref = item['activity']['activity_ref']
                 zip_info = transform_resource_folder(contentdir, activity_ref, item['content'])
@@ -311,10 +371,10 @@ def build_subtree_from_course(course, containerdir):
                     html5_dict['description'] = 'Content taken from ' + zip_info['source_id']
                     zippath = zip_info['zippath']
                 else:
-                    print('transform_articulate_storyline_folder returned None')
+                    print('EEEE transform_articulate_storyline_folder', item['activity'])
                     continue
             else:
-                print('Unrecognized item', item)
+                print('EEEEE Unrecognized item', item)
                 continue
 
             file_dict = dict(
@@ -357,7 +417,7 @@ class HPLifeChef(JsonTreeChef):
         a custom filename, e.g., for channel with multiple languages.
         """
         lang = kwargs['lang']
-        RICECOOKER_JSON_TREE = 'hplife_ricecooker_tree_{}.json'.format(lang)        
+        RICECOOKER_JSON_TREE = 'hplife_ricecooker_tree_{}.json'.format(lang)
         json_tree_path = os.path.join(self.TREES_DATA_DIR, RICECOOKER_JSON_TREE)
         return json_tree_path
 
@@ -366,6 +426,9 @@ class HPLifeChef(JsonTreeChef):
             raise ValueError('Must specify lang option in ' + str(HPLIFE_LANGS))
         lang = options['lang']
         assert lang in HPLIFE_LANGS
+
+        if not os.path.exists(self.TREES_DATA_DIR):
+            os.makedirs(self.TREES_DATA_DIR)
 
         ricecooker_json_tree = dict(
             title=CHANNEL_TITLE_LOOKUP[lang],
@@ -383,17 +446,21 @@ class HPLifeChef(JsonTreeChef):
         for course in course_list['courses']:
             course_dict = build_subtree_from_course(course, containerdir)
             ricecooker_json_tree['children'].append(course_dict)
-        
-        print(ricecooker_json_tree)
+
         json_tree_path = self.get_json_tree_path(lang=lang)
         write_tree_to_json_tree(json_tree_path, ricecooker_json_tree)
+
+
+    # def run(self, args, options):
+    #     self.pre_run(args, options)
+    #     print('exiting FOR DEBUGGING')  ###################################################################################################################
 
 
 
 if __name__ == '__main__':
     """
     Run this script on the command line using:
-        python simple_chef.py -v --reset --token=YOURTOKENHERE9139139f3a23232
+    ./suschichef.py -v --reset --thumbnails --token=<YOURTOKENHERE>  lang=es
     """
     simple_chef = HPLifeChef()
     simple_chef.main()
