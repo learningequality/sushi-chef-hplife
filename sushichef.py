@@ -17,6 +17,8 @@ from ricecooker.utils.zip import create_predictable_zip
 from libedx import extract_course_tree
 from libedx import print_course
 
+from transform import extract_hpstoryline
+
 
 DEBUG_MODE = True
 
@@ -145,6 +147,39 @@ def transform_articulate_storyline_folder(contentdir, activity_ref):
     # Save modified index.html
     with open(indexhtmlpath, 'w') as indexfilewrite:
         indexfilewrite.write(str(doc))
+
+    # Zip it
+    zippath = create_predictable_zip(webroot)
+    metadata['zippath'] = zippath
+
+    return metadata
+
+
+
+def transform_hpstoryline_folder(contentdir, story_id, node):
+    """
+    Package the contents of the folder of kind `hpstoryline` called `story_id`
+    located in the directory `contentdir` and return the neceesary metadata as a dict.
+    """
+    sourcedir = os.path.join(contentdir, story_id)
+    webroot = os.path.join(contentdir, story_id+'_webroot')   # transformed dir
+
+    if not os.path.exists(sourcedir):
+        print('WWW Could not find local resource folder for story_id=', story_id)
+        return None
+
+    if os.path.exists(webroot):
+        shutil.rmtree(webroot)
+
+    # Copy source dir to webroot dir where we'll do the edits and transformations
+    shutil.copytree(sourcedir, webroot)
+    metadata = dict(
+        kind = 'hpstoryline',
+        title_en = node['title'],
+        source_id = story_id,
+        thumbnail = None, # TODO
+        zippath = None,                     # will be set below
+    )
 
     # Zip it
     zippath = create_predictable_zip(webroot)
@@ -301,13 +336,17 @@ def build_subtree_from_course(course, containerdir):
     coursedir = os.path.join(basedir, 'course')
     data = extract_course_tree(coursedir)
 
+    course_dict['source_id'] = data['course']
+    # Jul 17: handle duplicate course ID `2352hpl-es03` which is used for both
+    # 'Ganancias y pérdidas' and 'Marketing de medios sociales'
+    if data['course'] == '2352hpl-es03' and course['name'] == 'Marketing de medios sociales':
+        course_dict['source_id'] = data['course'] + '-2'
+
     if DEBUG_MODE:
         print_course(data)
-        with open('chefdata/trees/course_tree-{}.json'.format(data['course']), 'w') as json_file:
+        course_tree_path = 'chefdata/trees/course_tree-{}.json'.format(course_dict['source_id'])
+        with open(course_tree_path, 'w') as json_file:
             json.dump(data, json_file, indent=4, ensure_ascii=False)
-
-    # TODO: title = data['display_name'] + (first_native_name)
-    course_dict['source_id'] = data['course']
 
 
     for i, chapter in enumerate(data['children']):
@@ -361,7 +400,21 @@ def build_subtree_from_course(course, containerdir):
                 else:
                     continue
 
-            # Articulate Storyline
+            # Old-style hpstoryline
+            elif kind == 'problem' and 'activity' in item and item['activity']['kind'] == 'hpstoryline':
+                story_id = item['activity']['story_id']
+                extract_hpstoryline(contentdir, story_id)
+                zip_info = transform_hpstoryline_folder(contentdir, story_id, item)
+                if zip_info:
+                    html5_dict['thumbnail'] = zip_info['thumbnail']
+                    html5_dict['source_id'] = zip_info['source_id']
+                    html5_dict['description'] = 'Content taken from ' + zip_info['source_id']
+                    zippath = zip_info['zippath']
+                else:
+                    print('EEEE2 transform_hpstoryline_folder', item['activity'])
+                    continue
+
+            # New-style Articulate Storyline
             elif kind == 'problem' and 'activity' in item:
                 activity_ref = item['activity']['activity_ref']
                 zip_info = transform_articulate_storyline_folder(contentdir, activity_ref)

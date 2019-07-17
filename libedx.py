@@ -175,7 +175,8 @@ def parse_html_file(coursedir, kind, name, ext='html'):
             bucket_url = seen_tuple[0],
             bucket_path = seen_tuple[1],
             activity_ref = seen_tuple[2],
-            entrypoint = None
+            entrypoint = None,
+            url=link['href'],
         )
         print('Found resources_folder', data['activity'])
     return data
@@ -211,17 +212,32 @@ def parse_problem_file(coursedir, kind, name, ext='xml'):
     if choiceresponse and jsinput is None:
         data['content'] = xml
 
-    # CASE B: articulare storyline activity
+    # CASE B: activity files
     elif jsinput and choiceresponse is None:
         url = jsinput['html_file']
-        url_parts = url.split('/')
-        data['activity'] = dict(
-            kind = 'articulate_storyline',
-            bucket_url = '/'.join(url_parts[0:4]),
-            bucket_path = '/'.join(url_parts[4:-2]),
-            activity_ref = unquote_plus(url_parts[-2]),
-            entrypoint = url_parts[-1],
-        )
+
+        # old-style hpstoryline
+        if 'hpstoryline.edcastcloud.com' in url:
+            querystring = url.split('?')[1]
+            story_id = querystring.replace('story=', '')
+            data['activity'] = dict(
+                kind = 'hpstoryline',
+                story_id = story_id,
+                url=url,
+            )
+
+        # new-style articulare storyline
+        else:
+            url_parts = url.split('/')
+            data['activity'] = dict(
+                kind = 'articulate_storyline',
+                bucket_url = '/'.join(url_parts[0:4]),
+                bucket_path = '/'.join(url_parts[4:-2]),
+                activity_ref = unquote_plus(url_parts[-2]),
+                entrypoint = url_parts[-1],
+                url=url,
+            )
+
         return data
     else:
         print('Found unexpected problem type at', path)
@@ -248,8 +264,10 @@ def print_course(course):
             del subtreecopy['children']
             extra += ' attrs='+str(subtreecopy)
         if 'activity' in subtree:
-            extra += 'activity_ref=' + str(subtree['activity']['activity_ref'])
-        
+            if subtree['activity']['kind'] == 'hpstoryline':
+                extra += 'story_id=' + str(subtree['activity']['story_id'])
+            else:
+                extra += 'activity_ref=' + str(subtree['activity']['activity_ref'])
         print('   '*indent, '-', title,  'kind='+subtree['kind'], '\t', extra)
         if 'children' in subtree:
             for child in subtree['children']:

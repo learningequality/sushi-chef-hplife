@@ -24,6 +24,11 @@ cd sushi-chef-hplife
 2. Obtain credentials and place them in `credentials/` folder
 
 
+TODO
+----
+  - check final picture
+
+
 
 
 Source data
