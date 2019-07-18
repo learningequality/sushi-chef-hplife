@@ -227,6 +227,7 @@ def transform_resource_folder(contentdir, activity_ref, content):
             assert parentdir == activity_ref, 'Found link to another resouce folder'
             filename = unquote_plus(url_parts[-1])
             link['href'] = filename
+            link['target'] = '_blank'
 
     meta = Tag(name='meta', attrs={'charset':'utf-8'})
     doc.head.append(meta)
@@ -445,17 +446,17 @@ def build_subtree_from_course(course, containerdir):
 
 
 
-
 CHANNEL_TITLE_LOOKUP = {
-    'en': 'HP LIFE (English)',
-    'es': 'HP LIFE (Español)',
-    'fr': 'HP LIFE (Français)',
+    'en': 'HP LIFE Courses (English)',
+    'es': 'Cursos HP LIFE (Español)',
+    'fr': 'Cours HP LIFE (Français)',
 }
 
+
 CHANNEL_DESCRIPTION_LOOKUP = {
-    'en': 'HP LIFE is a collection of online business and IT training courses. Learn at your own pace in your own time – free of charge. A program of the HP Foundation.',
-    'es': 'HP LIFE Aprende NEGOCIOS EN LÍNEA Y FORMACIÓN DE TI Aprenda a su ritmo, cuando más le convenga y de forma gratuita. Un programa de HP Foundation',
-    'fr': 'HP LIFE Cours de commerce et l\'informatique en ligne. Apprenez à votre rythme, gratuitement. Un programme de HP Foundation',
+    'en': "A program of the HP Foundation, this collection of short introductory courses helps adults learn independently various digital and entrepreneurship skills, including information technology, starting a business, online sales, and marketing. Appropriate for adults who are curious to develop their professional skills or simply learn about new opportunities.",
+    'es': "Una iniciativa de HP Foundation, esta colección de cursos introductorios y breves ayuda a los adultos a adquirir habilidades en tecnología y emprendimiento de forma independiente, incluye tecnologías de la información, empezar  un negocio, venta en línea y marketing. Son apropiados para adultos con curiosidad por desarrollarse profesionalmente o por aprender nuevas oportunidades.",
+    'fr': "Un programme de HP Foundation, les cours HP LIFE sont conçus pour aider les adultes à apprendre de manière autonome diverses compétences numériques, y compris les technologies de l'information, la création d'entreprise, les ventes en ligne et le marketing. Ces cours conviennent aux adultes qui sont curieux de développer leurs compétences professionnelles ou poursuivre de nouvelles opportunités.",
 }
 
 
@@ -515,6 +516,6 @@ if __name__ == '__main__':
     Run this script on the command line using:
     ./suschichef.py -v --reset --thumbnails --token=<YOURTOKENHERE>  lang=es
     """
-    simple_chef = HPLifeChef()
-    simple_chef.main()
+    chef = HPLifeChef()
+    chef.main()
 

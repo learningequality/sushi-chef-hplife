@@ -1,5 +1,5 @@
 
-from bs4 import BeautifulSoup
+from bs4 import BeautifulSoup, Tag
 import os
 import re
 import requests
@@ -149,6 +149,10 @@ def extract_hpstoryline(contentdir, story_id):
                 print('\tSaved overlay_url', overlay_url)
 
     # E. TODO GET assets/favicon-80ee048bf3522feef23938f79caed29b.ico
+
+    # make sure explicit charset utf-8
+    meta = Tag(name='meta', attrs={'charset':'utf-8'})
+    doc.head.append(meta)
 
     indexpath = os.path.join(destdir, 'index.html')
     with open(indexpath,'w') as indexfile:
