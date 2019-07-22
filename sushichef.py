@@ -404,7 +404,9 @@ def build_subtree_from_course(course, containerdir):
             # Old-style hpstoryline
             elif kind == 'problem' and 'activity' in item and item['activity']['kind'] == 'hpstoryline':
                 story_id = item['activity']['story_id']
-                extract_hpstoryline(contentdir, story_id)
+                contentdir_story_id_path = os.path.join(contentdir, story_id)
+                if not os.path.exists(contentdir_story_id_path):
+                    extract_hpstoryline(contentdir, story_id)
                 zip_info = transform_hpstoryline_folder(contentdir, story_id, item)
                 if zip_info:
                     html5_dict['thumbnail'] = zip_info['thumbnail']
