@@ -274,3 +274,74 @@ def extract_and_download_mp3path(jscode_str, destdir, mediadirname=MEDIA_DIR_NAM
         return tree.to_ecma()
     else:
         raise ValueError('Could not extract mp3path')
+
+
+
+
+
+# DOCUMENT CONVERSION HELPER
+################################################################################
+
+def is_downloadable_resource(download_url):
+    if download_url.strip().startswith('https://s3.amazonaws.com/hp-life-content'):
+        return True
+    else:
+        return False
+
+
+def download_resource(basedir, download_url):
+    """
+    Downloads the pdf/docx/pptx resource from download_url and returns localpath.
+    """
+    pass
+
+
+def transform_downloadable_resource(title, download_url, description=''):
+    """
+    
+    """
+    pass
+
+
+
+
+CONVERTIBLE_DOC_FORMATS = ['.doc', '.docx', '.pptx']
+
+def convert_resource(basedir, download_url):
+    """
+    Convert a Kolibri-imcopatible document format like pptx or docx to pdf
+    using the microwave document conversion service.
+    """
+    #
+    downloadsdirname = 'downloads'
+    downloadsdir = os.path.join(basedir, downloadsdirname)
+    if not os.path.exists(downloadsdir):
+        os.makedirs(downloadsdir)
+    #
+    resourcesdirname = 'resources'
+    destdir = os.path.join(basedir, resourcesdirname)
+    if not os.path.exists(destdir):
+        os.makedirs(destdir)
+    #
+    src_filename = os.path.basename(download_url)
+    name, ext = os.path.splitext(src_filename)
+    if ext in CONVERTIBLE_DOC_FORMATS:
+        # destination path for converted file
+        dest_filename = name + '.pdf'
+        destpath = os.path.join(destdir, dest_filename)
+        if not os.path.exists(destpath):
+            print('Downloading convertible resource from', download_url)
+            # go GET a sample.docx
+            response = requests.get(download_url)
+            downloadpath = os.path.join(downloadsdir, src_filename)
+            with open(downloadpath, 'wb') as localfile:
+                localfile.write(response.content)
+            # convert it
+            microwave_url = 'http://35.185.105.222:8989/unoconv/pdf'
+            files = {'file': open(downloadpath, 'rb')}
+            response2 = requests.post(microwave_url, files=files)
+            # save converted output to destination path
+            with open(destpath, 'wb') as localfile:
+                localfile.write(response2.content)
+    else:
+        print('ERROR non-convertible file extension', ext, 'at', download_url)
