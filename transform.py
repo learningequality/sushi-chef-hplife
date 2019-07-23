@@ -3,8 +3,14 @@ from bs4 import BeautifulSoup, Tag
 import os
 import re
 import requests
+import shutil
+import tempfile
+from urllib.parse import unquote_plus
+from urllib.parse import urljoin
 
 from le_utils.constants import content_kinds, file_types, licenses
+from ricecooker.utils.zip import create_predictable_zip
+
 
 import slimit
 from slimit.parser import Parser
@@ -17,7 +23,7 @@ slimit.parser.ply.yacc.PlyLogger = \
   type('_NullLogger', (slimit.lexer.ply.lex.NullLogger,),
        dict(__init__=lambda s, *_, **__: (None, s.super().__init__())[0]))
 
-from urllib.parse import urljoin
+
 
 
 
@@ -30,6 +36,36 @@ from urllib.parse import urljoin
 # TOP-LEVEL FUNCTION
 ################################################################################
 
+def transform_html(content):
+    """
+    Transform the HTML markup taken from `content` (str) to file index.html in
+    a standalone zip file. Return the neceesary metadata as a dict.
+    """
+    chef_tmp_dir = 'chefdata/tmp'
+    webroot = tempfile.mkdtemp(dir=chef_tmp_dir)
+
+    metadata = dict(
+        kind = 'html_content',
+        source_id = content[0:30],
+        zippath = None,  # to be set below
+    )
+
+    doc = BeautifulSoup(content, 'html5lib')
+    meta = Tag(name='meta', attrs={'charset':'utf-8'})
+    doc.head.append(meta)
+    # TODO: add meta language (in case of right-to-left languages)
+
+    # Writeout new index.html
+    indexhtmlpath = os.path.join(webroot, 'index.html')
+    with open(indexhtmlpath, 'w') as indexfilewrite:
+        indexfilewrite.write(str(doc))
+
+    # Zip it
+    zippath = create_predictable_zip(webroot)
+    metadata['zippath'] = zippath
+
+    return metadata
+
 
 # PARSE CONTENT FOLDERS
 ################################################################################
@@ -40,58 +76,194 @@ from urllib.parse import urljoin
 # TRANSFORM CONTENT FOLDERS
 ################################################################################
 
-def get_html5_from_problem(item, contentdir, lang, title, description):
-    html5_dict = dict(
-        kind=content_kinds.HTML5,
-        title=title,
-        description=description,
-        license=HPLIFE_LICENSE,
-        language=lang,
-        files=[],
+
+def transform_articulate_storyline_folder(contentdir, activity_ref):
+    """
+    Transform the contents of the folder of kind `articulate_storyline` called
+    `activity_ref` located in the directory `contentdir` to adapt it to Kolibri
+    plarform, package it as a zip, and return the neceesary metadata as a dict.
+    """
+    sourcedir = os.path.join(contentdir, activity_ref)            # source folder
+    webroot = os.path.join(contentdir, activity_ref+'_webroot')   # transformed dir
+
+    if not os.path.exists(sourcedir):
+        print('WWW Could not find local resource folder for activity_ref=', activity_ref)
+        return None
+    
+    if os.path.exists(webroot):
+        shutil.rmtree(webroot)
+
+    # Copy source dir to webroot dir where we'll do the edits and transformations
+    shutil.copytree(sourcedir, webroot)
+    
+    # Remove unnecessary files
+    html_files_to_remove = ['story.html', 'story.swf', 'story_flash.html']
+    for html_file in html_files_to_remove:
+        filepath = os.path.join(webroot, html_file)
+        if os.path.exists(filepath):
+            os.remove(filepath)
+
+    # Remove all .swf files from webroot/
+    for root, dirs, files in os.walk(webroot):
+        for file in files:
+            filepath = os.path.join(root, file)
+            _, ext = os.path.splitext(filepath)
+            if ext == '.swf':
+                os.remove(filepath)
+
+    metapath = os.path.join(webroot, 'meta.xml')
+    metaxml = open(metapath, 'r').read()
+    metadoc = BeautifulSoup(metaxml, "html5lib")
+    project = metadoc.find('project')
+    # TODO: get author from     project > <author name="Victoria" email="" website="" />
+    metadata = dict(
+        kind = 'articulate_storyline',
+        title_en = project['title'],
+        source_id = activity_ref,
+        thumbnail = os.path.join(webroot, project.attrs['thumburl']),
+        datepublished = project['datepublished'],
+        duration = project['duration'],
+        totalaudio = project['totalaudio'],
+        zippath = None,  # to be set below
     )
-    kind = item['kind']
 
-    # Old-style hpstoryline
-    elif kind == 'problem' and 'activity' in item and item['activity']['kind'] == 'hpstoryline':
-        story_id = item['activity']['story_id']
-        contentdir_story_id_path = os.path.join(contentdir, story_id)
-        if not os.path.exists(contentdir_story_id_path):
-            download_hpstoryline(contentdir, story_id)
-        zip_info = transform_hpstoryline_folder(contentdir, story_id, item)
-        if zip_info:
-            html5_dict['thumbnail'] = zip_info['thumbnail'] # TODO check how to get thumbnail
-            html5_dict['source_id'] = zip_info['source_id']
-            if DEBUG_MODE:
-                html5_dict['description'] += ' Content taken from ' + zip_info['source_id']
-            zippath = zip_info['zippath']
-        else:
-            print('EEEE2 transform_hpstoryline_folder', item['activity'])
-            continue
+    # Setup index.html
+    indexhtmlpath = os.path.join(webroot,'index.html')
+    shutil.move(os.path.join(webroot,'story_html5.html'), indexhtmlpath)
+    
+    # load index.html
+    with open(indexhtmlpath, 'r') as indexfileread:
+        indexhtml = indexfileread.read()
+    doc = BeautifulSoup(indexhtml, 'html5lib')
 
-    # New-style Articulate Storyline
-    elif kind == 'problem' and 'activity' in item:
-        activity_ref = item['activity']['activity_ref']
-        zip_info = transform_articulate_storyline_folder(contentdir, activity_ref)
-        if zip_info:
-            html5_dict['thumbnail'] = zip_info['thumbnail']
-            html5_dict['source_id'] = zip_info['source_id']
-            if DEBUG_MODE:
-                html5_dict['description'] += ' Content taken from ' + zip_info['source_id']
-            zippath = zip_info['zippath']
-        else:
-            print('EEEE transform_articulate_storyline_folder', item['activity'])
-            continue
-    else:
-        print('EEEEE Unrecognized problem item', item)
-        continue
+    # A. Localize js libs
+    scriptsdir = os.path.join(webroot, 'scripts')
+    if not os.path.exists(scriptsdir):
+        os.mkdir(scriptsdir)
+    scripts = doc.find('head').find_all('script')
+    for script in scripts:
+        script_url = script['src']
+        script_basename = os.path.basename(script_url)
+        response = requests.get(script_url)
+        with open(os.path.join(scriptsdir, script_basename), 'wb') as scriptfile:
+            scriptfile.write(response.content)
+        scriptrelpath = os.path.join('scripts', script_basename)
+        script['src'] = scriptrelpath
 
-    file_dict = dict(
-        file_type=file_types.HTML5,
-        path=zippath,
-        language=lang,
+    # B. Inline css files to avoid CORS issues
+    styles = doc.find('body').find_all('link', rel="stylesheet")
+    for style in styles:
+        style_href = style['href']
+        style_path = os.path.join(webroot, style_href)
+        style_content = '\n' + open(style_path).read()
+        inline_style_tag = doc.new_tag('style')
+        inline_style_tag['data-noprefix'] = ''
+        inline_style_tag['rel'] = 'stylesheet'
+        inline_style_tag.string = style_content
+        style.replace_with(inline_style_tag)
+
+    # Save modified index.html
+    with open(indexhtmlpath, 'w') as indexfilewrite:
+        indexfilewrite.write(str(doc))
+
+    # Zip it
+    zippath = create_predictable_zip(webroot)
+    metadata['zippath'] = zippath
+
+    return metadata
+
+
+
+def transform_hpstoryline_folder(contentdir, story_id, node):
+    """
+    Package the contents of the folder of kind `hpstoryline` called `story_id`
+    located in the directory `contentdir` and return the neceesary metadata as a dict.
+    """
+    sourcedir = os.path.join(contentdir, story_id)
+    webroot = os.path.join(contentdir, story_id+'_webroot')   # transformed dir
+
+    if not os.path.exists(sourcedir):
+        print('WWW Could not find local resource folder for story_id=', story_id)
+        return None
+
+    if os.path.exists(webroot):
+        shutil.rmtree(webroot)
+
+    # Copy source dir to webroot dir where we'll do the edits and transformations
+    shutil.copytree(sourcedir, webroot)
+    metadata = dict(
+        kind = 'hpstoryline',
+        title_en = node['title'],
+        source_id = story_id,
+        thumbnail = None, # TODO
+        zippath = None,                     # will be set below
     )
-    html5_dict['files'].append(file_dict)
-    return html5_dict
+
+    # Zip it
+    zippath = create_predictable_zip(webroot)
+    metadata['zippath'] = zippath
+
+    return metadata
+
+
+def transform_resource_folder(contentdir, activity_ref, content):
+    """
+    Transform the contents of the folder of kind `resources_folder` called
+    `activity_ref` located in the directory `contentdir`, turning it into a
+    standalone zip file with an index.html taken from `content` (str).
+    Return the neceesary metadata as a dict.
+    """
+    sourcedir = os.path.join(contentdir, activity_ref)            # source folder
+    webroot = os.path.join(contentdir, activity_ref+'_webroot')   # transformed dir
+
+    if not os.path.exists(sourcedir):
+        print('missing sourcedir', sourcedir)
+        return None
+
+    if os.path.exists(webroot):
+        shutil.rmtree(webroot)
+    
+    # Copy source dir to webroot dir where we'll do the edits and transformations
+    shutil.copytree(sourcedir, webroot)
+    
+    metadata = dict(
+        kind = 'resources_folder',
+        source_id = activity_ref,
+        zippath = None,  # to be set below
+    )
+
+    doc = BeautifulSoup(content, 'html5lib')
+
+    # Rewrite links
+    links = doc.find_all('a')
+    for link in links:
+        if 'href' in link.attrs:
+            url = link['href']
+            print(url)
+            url_parts = url.split('/')
+            parentdir = unquote_plus(url_parts[-2])
+            assert parentdir == activity_ref, 'Found link to another resouce folder'
+            filename = unquote_plus(url_parts[-1])
+            link['href'] = filename
+            link['target'] = '_blank'
+
+    meta = Tag(name='meta', attrs={'charset':'utf-8'})
+    doc.head.append(meta)
+    # TODO: add meta language (in case of right-to-left languages)
+
+    # Writeout new index.html
+    indexhtmlpath = os.path.join(webroot, 'index.html')
+    with open(indexhtmlpath, 'w') as indexfilewrite:
+        indexfilewrite.write(str(doc))
+
+    # Zip it
+    zippath = create_predictable_zip(webroot)
+    metadata['zippath'] = zippath
+
+    return metadata
+
+
+
 
 
 
@@ -412,3 +584,34 @@ def convert_resource(basedir, download_url):
     else:
         print('ERROR non-convertible file extension', ext, 'at', download_url)
 
+
+
+
+
+# DEBUG UTILS
+################################################################################
+
+def print_parsed_course_dict(parsed_course):
+    """
+    Display course tree hierarchy for debugging purposes.
+    """
+    PARSED_KEYS = ['coursestart', 'story', 'businessconcept', 'technologyskill',
+                   'downloadable_resources', 'nextsteps', 'nextsteps_video']
+    TRANSFORMED_EXTRA_KEYS = ['title', 'description', 'resources']
+    
+    for key in PARSED_KEYS:
+        if key in parsed_course and parsed_course[key]:
+            item = parsed_course[key]
+            extra = ''
+            if 'url_name' in item:
+                extra += ' url_name=' + item['url_name']
+            if 'slug' in item:
+                extra += ' slug=' + item['slug']
+            if 'activity' in item:
+                if item['activity']['kind'] == 'hpstoryline':
+                    extra += 'story_id=' + str(item['activity']['story_id'])
+                else:
+                    extra += 'activity_ref=' + str(item['activity']['activity_ref'])
+            # print(item)
+            print('   -', key,  'kind='+item['kind'], ' \t', extra)
+    print('\n')
