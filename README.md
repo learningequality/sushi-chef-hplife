@@ -26,9 +26,13 @@ cd sushi-chef-hplife
 
 TODO
 ----
-  - check final picture
-
-
+  - select first image as thumbnail for hpstoryline
+  - parse downlodable resources HTML
+  - passe local downlodle resources to extract resources
+  - add a DO_NOT_CONVERT_LIST
+  - handle videos
+  - handle final "thank you" picture in ariculatr storyline
+  - choose consistent course thumbnail as per Ina request
 
 
 Source data
