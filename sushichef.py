@@ -17,7 +17,7 @@ from ricecooker.utils.zip import create_predictable_zip
 from libedx import extract_course_tree
 from libedx import print_course
 
-from transform import extract_hpstoryline
+from transform import download_hpstoryline
 
 
 DEBUG_MODE = True
@@ -553,7 +553,7 @@ def build_subtree_from_course(course, containerdir):
                 story_id = item['activity']['story_id']
                 contentdir_story_id_path = os.path.join(contentdir, story_id)
                 if not os.path.exists(contentdir_story_id_path):
-                    extract_hpstoryline(contentdir, story_id)
+                    download_hpstoryline(contentdir, story_id)
                 zip_info = transform_hpstoryline_folder(contentdir, story_id, item)
                 if zip_info:
                     html5_dict['thumbnail'] = zip_info['thumbnail']

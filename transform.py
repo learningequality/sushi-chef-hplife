@@ -4,6 +4,8 @@ import os
 import re
 import requests
 
+from le_utils.constants import content_kinds, file_types, licenses
+
 import slimit
 from slimit.parser import Parser
 from slimit.visitors import nodevisitor
@@ -22,6 +24,81 @@ from urllib.parse import urljoin
 # CONSTANTS
 ################################################################################
 
+
+
+
+# TOP-LEVEL FUNCTION
+################################################################################
+
+
+# PARSE CONTENT FOLDERS
+################################################################################
+
+
+
+
+# TRANSFORM CONTENT FOLDERS
+################################################################################
+
+def get_html5_from_problem(item, contentdir, lang, title, description):
+    html5_dict = dict(
+        kind=content_kinds.HTML5,
+        title=title,
+        description=description,
+        license=HPLIFE_LICENSE,
+        language=lang,
+        files=[],
+    )
+    kind = item['kind']
+
+    # Old-style hpstoryline
+    elif kind == 'problem' and 'activity' in item and item['activity']['kind'] == 'hpstoryline':
+        story_id = item['activity']['story_id']
+        contentdir_story_id_path = os.path.join(contentdir, story_id)
+        if not os.path.exists(contentdir_story_id_path):
+            download_hpstoryline(contentdir, story_id)
+        zip_info = transform_hpstoryline_folder(contentdir, story_id, item)
+        if zip_info:
+            html5_dict['thumbnail'] = zip_info['thumbnail'] # TODO check how to get thumbnail
+            html5_dict['source_id'] = zip_info['source_id']
+            if DEBUG_MODE:
+                html5_dict['description'] += ' Content taken from ' + zip_info['source_id']
+            zippath = zip_info['zippath']
+        else:
+            print('EEEE2 transform_hpstoryline_folder', item['activity'])
+            continue
+
+    # New-style Articulate Storyline
+    elif kind == 'problem' and 'activity' in item:
+        activity_ref = item['activity']['activity_ref']
+        zip_info = transform_articulate_storyline_folder(contentdir, activity_ref)
+        if zip_info:
+            html5_dict['thumbnail'] = zip_info['thumbnail']
+            html5_dict['source_id'] = zip_info['source_id']
+            if DEBUG_MODE:
+                html5_dict['description'] += ' Content taken from ' + zip_info['source_id']
+            zippath = zip_info['zippath']
+        else:
+            print('EEEE transform_articulate_storyline_folder', item['activity'])
+            continue
+    else:
+        print('EEEEE Unrecognized problem item', item)
+        continue
+
+    file_dict = dict(
+        file_type=file_types.HTML5,
+        path=zippath,
+        language=lang,
+    )
+    html5_dict['files'].append(file_dict)
+    return html5_dict
+
+
+
+
+# DOWNLOADER FOR LEGACY hpstoryline STORIES
+################################################################################
+
 HPSTORYLINE_BASE_URL = 'https://hpstoryline.edcastcloud.com/hp_storyline/story?story='
 
 PHOTO_CLASS = 'field-name-field-hplife-fotoscreen-photo'
@@ -32,12 +109,7 @@ ASSETS_DIR_NAME = 'assets'
 MEDIA_DIR_NAME='media'
 SCRIPTS_DIR_NAME = 'scripts'
 
-
-
-# TOP-LEVEL FUNCTION
-################################################################################
-
-def extract_hpstoryline(contentdir, story_id):
+def download_hpstoryline(contentdir, story_id):
     """
     Downloads the HTML and all necessary assets to `{contentdir}/{story_id}/`.
     """
@@ -160,9 +232,7 @@ def extract_hpstoryline(contentdir, story_id):
 
 
 
-
 # IMAGES
-################################################################################
 
 def img_rewriter(div, source_url, mediadir):
     imgs = div.find_all('img')
@@ -186,9 +256,7 @@ def img_rewriter(div, source_url, mediadir):
 
 
 
-
 # CSS rewriter
-################################################################################
 
 CSS_URL_RE = re.compile(r"url\(['\"]?(.*?)['\"]?\)")
 
@@ -231,9 +299,7 @@ def css_rewriter(style_str, source_url, destdir):
 
 
 
-
-# MP$ path form jscode_str
-################################################################################
+# MP3 path form jscode_str
 
 def extract_and_download_mp3path(jscode_str, destdir, mediadirname=MEDIA_DIR_NAME):
     """
@@ -279,6 +345,7 @@ def extract_and_download_mp3path(jscode_str, destdir, mediadirname=MEDIA_DIR_NAM
 
 
 
+
 # DOCUMENT CONVERSION HELPER
 ################################################################################
 
@@ -289,13 +356,6 @@ def is_downloadable_resource(download_url):
         return False
 
 
-def download_resource(basedir, download_url):
-    """
-    Downloads the pdf/docx/pptx resource from download_url and returns localpath.
-    """
-    pass
-
-
 def transform_downloadable_resource(title, download_url, description=''):
     """
     
@@ -303,6 +363,12 @@ def transform_downloadable_resource(title, download_url, description=''):
     pass
 
 
+
+def download_resource(basedir, download_url):
+    """
+    Downloads the pdf/docx/pptx resource from download_url and returns localpath.
+    """
+    pass
 
 
 CONVERTIBLE_DOC_FORMATS = ['.doc', '.docx', '.pptx']
@@ -345,3 +411,4 @@ def convert_resource(basedir, download_url):
                 localfile.write(response2.content)
     else:
         print('ERROR non-convertible file extension', ext, 'at', download_url)
+
