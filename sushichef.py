@@ -29,30 +29,33 @@ HPLIFE_LICENSE = get_license(licenses.CC_BY, copyright_holder='HP LIFE').as_dict
 HPLIFE_LANGS = ['es', 'fr', 'en']
 
 
-HPLIFE_COURSE_STRUCTURE_STRINGS = {
+HPLIFE_COURSE_STRUCTURE_CHECK_STRINGS = {
     'en': {
-        'intro': 'Start Course',
+        'coursestart': 'Start Course',
         'story': 'Story',
         'businessconcept': 'Business Concept',
         'technologyskill': 'Technology Skill',
-        'coursefeedback': 'Course Feedback',
-        'nextsteps': 'Next Steps',
+        'coursefeedback': 'Course',
+        'nextsteps': 'Steps',
+        'downloadable_resources': 'Downloadable Resources',
     },
     'es': {
-        'intro': 'Inicio del curso',
+        'coursestart': 'Inicio',
         'story': 'Narración',
-        'businessconcept': 'Concepto de negocio',
-        'technologyskill': 'Habilidad Tecnología',
+        'businessconcept': 'Concepto',
+        'technologyskill': 'Habilidad',
         'coursefeedback': 'Encuesta',
-        'nextsteps': 'Pasos siguientes',
+        'nextsteps': 'asos', # 'Pasos siguientes'
+        'downloadable_resources': 'Recursos descargable',
     },
     'fr': {
-        'intro': 'Démarrer',
+        'coursestart': 'Démarrer',
         'story': 'Histoire',
         'businessconcept': 'Concept commercial',
         'technologyskill': 'Compétence technologiqu',
         'coursefeedback': 'Sondage',
         'nextsteps': 'Étapes suivantes',
+        'downloadable_resources': 'Ressources',
     }
 }
 
@@ -280,6 +283,181 @@ def transform_html(content):
 
 
 
+# PARSE TREEE
+################################################################################
+
+def flatten_chapter(chapter):
+    """
+    Return a flat list of the content items chapter while checking assumptions.
+    """
+    content_items = []
+    assert len(chapter['children']) <= 2, 'wrong number of sequentials'
+    for sequential in chapter['children']:
+        assert len(sequential['children']) == 1, 'wrong number of verticals'
+        for vertical in sequential['children']:
+            assert len(vertical['children']) <= 2, 'wrong number of items'
+            for content_item in vertical['children']:
+                content_item['sequential_title'] = sequential['display_name']
+                content_items.append(content_item)
+    return content_items
+
+
+def parse_course_tree(course_data, lang):
+    """
+    Parse the edX XML structure and pluck the neessary components form the tree
+    to return a `parsed_tree` that looks like this:
+        parsed_tree = {
+            'coursestart': {},
+            'story': {},
+            'businessconcept': {},
+            'technologyskill': {},          # first node under technologyskill
+            'downloadable_resources': {},   # second node under technologyskill
+            'nextsteps': {},
+            'nextsteps_video': {},
+        }
+    """
+    print('in parse_course_tree', course_data['course'])
+
+    parsed_tree = {
+        'coursestart': {},
+        'story': {},
+        'businessconcept': {},
+        'technologyskill': {},          # first node under technologyskill
+        'downloadable_resources': {},   # second node under technologyskill
+        'nextsteps': {},
+        'nextsteps_video': {},
+    }
+
+    check_strings = HPLIFE_COURSE_STRUCTURE_CHECK_STRINGS[lang]
+
+    # course chapters
+    chapters = course_data['children']
+
+    # course start
+    chapter = chapters[0]
+    chapter_title = chapter['display_name']
+    assert check_strings['coursestart'] in chapter_title, 'bad ch. title ' + chapter_title
+    content_items = flatten_chapter(chapter)
+    assert len(content_items) == 1, 'unexpected # of items in course start'
+    content_item = content_items[0]
+    content_item['title'] = chapter_title
+    assert content_item['kind'] == 'html', 'unexpected item kind in course start'
+    parsed_tree['coursestart'] = content_item
+
+    # story
+    chapter = chapters[1]
+    chapter_title = chapter['display_name']
+    assert check_strings['story'] in chapter_title, 'bad ch. title ' + chapter_title
+    content_items = flatten_chapter(chapter)
+    assert len(content_items) <= 2, 'unexpected # of items in story'
+    content_item = content_items[0]
+    content_item['title'] = chapter_title
+    assert content_item['kind'] == 'problem', 'unexpected item kind in story'
+    parsed_tree['story'] = content_item
+    if len(content_items) == 2:
+        print('skipping content_item', content_items[1])
+
+    # businessconcept
+    chapter = chapters[2]
+    chapter_title = chapter['display_name'].strip()
+    assert check_strings['businessconcept'] in chapter_title, 'bad ch. title ' + chapter_title
+    content_items = flatten_chapter(chapter)
+    assert len(content_items) == 1, 'unexpected # of items in businessconcept'
+    content_item = content_items[0]
+    content_item['title'] = chapter_title
+    assert content_item['kind'] == 'problem', 'unexpected item kind in businessconcept'
+    parsed_tree['businessconcept'] = content_item
+
+    # technologyskill
+    chapter = chapters[3]
+    chapter_title = chapter['display_name']
+    assert check_strings['technologyskill'] in chapter_title, 'bad ch. title ' + chapter_title
+    content_items = flatten_chapter(chapter)
+    assert len(content_items) == 2, 'unexpected # of items in technologyskill'
+    # technologyskill activity
+    content_item = content_items[0]
+    content_item['title'] = chapter_title
+    assert content_item['kind'] == 'problem', 'unexpected item kind in technologyskill'
+    parsed_tree['technologyskill'] = content_item
+    # downloadable_resources
+    second_item = content_items[1]
+    assert second_item['kind'] == 'html', 'unexpected item kind in technologyskill'
+    parsed_tree['downloadable_resources'] = second_item
+
+    # skip course feedback
+    chapter = chapters[4]
+    chapter_title = chapter['display_name']
+    assert check_strings['coursefeedback'] in chapter_title, 'bad ch. title ' + chapter_title
+
+    # next steps
+    chapter = chapters[5]
+    chapter_title = chapter['display_name']
+    assert check_strings['nextsteps'] in chapter_title, 'bad ch. title ' + chapter_title
+    content_items = flatten_chapter(chapter)
+    assert len(content_items) <= 2, 'unexpected # of items in nextsteps'
+    content_item = content_items[0]
+    content_item['title'] = chapter_title
+    assert content_item['kind'] == 'html', 'unexpected item kind in nextsteps'
+    parsed_tree['nextsteps'] = content_item
+    if len(content_items) == 2:
+        second_item = content_items[1]
+        assert second_item['kind'] == 'video', 'unexpected item kind in nextsteps'
+        parsed_tree['nextsteps_video'] = second_item
+
+    # skip wiki
+    chapter = chapters[6]
+    assert 'display_name' not in chapter, 'unexpected wiki has title'
+
+    return parsed_tree
+
+
+
+
+
+
+def transform_course_tree(parsed_tree, coursedir, contentdir):
+    """
+    Tranform the parsed_tree for a course into channel subfolder for this course.
+    Includes:
+     - extract info from coursestart
+     - modify next steps
+     - generate _webroot with transformed outputs of resource folders
+     - scrape hpstoryline stories (if applicable)
+     - package resource folders as .zip
+     - create ricecooker_json_tree
+    Returns a trasformed tree:
+    trasformed_tree = {
+        'title': "",
+        'description': "",
+        'story': {},
+        'businessconcept': {},
+        'technologyskill': {},
+        'nextsteps': {},
+        'nextsteps_video': {},
+        'resources': {
+            '<download_url>': {
+                'download_url': "",
+                'path': "",
+                'md5hash': "",
+                'ext': "",
+                'title': "",
+                'description': "",
+            }
+        }
+    }
+    Returns a ricecooker_json_tree (dict).
+    
+    """
+    print('in transform_course_tree', parsed_tree, coursedir, contentdir)
+
+
+
+
+
+
+# OLD TREE BUILDER
+################################################################################
+
 def flatten_subtree(chapter):
     """
     Returns a flat list of the content nodes
@@ -291,37 +469,6 @@ def flatten_subtree(chapter):
                 content_item['title'] = sequential['display_name']
                 content_items.append(content_item)
     return content_items
-
-
-
-def parse_course_tree(course_data, coursedir, contentdir):
-    """
-    Parse the edX XML structure and pluck the neessary components form the tree
-    to return a `parsed_tree` that looks like this:
-    parsed_tree = {
-        'intro': {},
-        'story': {},
-        'businessconcept': {},
-        'technologyskill': {},
-        'coursefeedback': {},
-        'nextsteps': {},
-    }
-    """
-    print('in parse_course_tree', course_data['course'], coursedir, contentdir)
-
-def transform_course_tree(parsed_tree, coursedir, contentdir):
-    """
-    Tranform the parsed_tree for a course into channel subfolder for this course.
-    Includes:
-     - extract info from intro
-     - modify next steps
-     - generate _webroot with transformed outputs of resource folders
-     - scrape hpstoryline stories (if applicable)
-     - package resource folders as .zip
-     - create ricecooker_json_tree
-    Returns a ricecooker_json_tree (dict).
-    """
-    print('in transform_course_tree', parsed_tree, coursedir, contentdir)
 
 
 def build_subtree_from_course(course, containerdir):
@@ -520,4 +667,32 @@ if __name__ == '__main__':
     """
     chef = HPLifeChef()
     chef.main()
+
+
+
+
+def print_parsed_course_dict(parsed_course):
+    """
+    Display course tree hierarchy for debugging purposes.
+    """
+    PARSED_KEYS = ['coursestart', 'story', 'businessconcept', 'technologyskill',
+                   'downloadable_resources', 'nextsteps', 'nextsteps_video']
+    TRANSFORMED_EXTRA_KEYS = ['title', 'description', 'resources']
+    
+    for key in PARSED_KEYS:
+        if key in parsed_course and parsed_course[key]:
+            item = parsed_course[key]
+            extra = ''
+            if 'url_name' in item:
+                extra += ' url_name=' + item['url_name']
+            if 'slug' in item:
+                extra += ' slug=' + item['slug']
+            if 'activity' in item:
+                if item['activity']['kind'] == 'hpstoryline':
+                    extra += 'story_id=' + str(item['activity']['story_id'])
+                else:
+                    extra += 'activity_ref=' + str(item['activity']['activity_ref'])
+            # print(item)
+            print('   -', key,  'kind='+item['kind'], ' \t', extra)
+    print('\n')
 
