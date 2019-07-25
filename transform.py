@@ -8,6 +8,7 @@ import shutil
 import tempfile
 from urllib.parse import unquote_plus
 from urllib.parse import urljoin
+from html2text import html2text
 
 from le_utils.constants import content_kinds, file_types, licenses
 from ricecooker.utils.zip import create_predictable_zip
@@ -70,6 +71,98 @@ def transform_html(content):
 
 # PARSE CONTENT FOLDERS
 ################################################################################
+
+
+COURSE_START_STRINGS = {
+    'es': {
+        'start_removables': ['Inicio:', 'INICIO:'],
+        'cutpoint_start': ['¿Por qué empezar hoy?'],
+        'cutpoint': ['Pasos en el curso'],
+    },
+    'fr': {
+        'start_removables': ['Démarrer:', 'Démarrer :', 'DEMARRER :', 'DEMARRER:'],
+        'cutpoint_start': ['Pourquoi commencer aujourd\'hui ?', 'Pourquoi commencer aujourd’hui ?'],
+        'cutpoint_end': ['Étapes du cours', 'Étapes à suivre'],
+    },
+    'en': {
+        'start_removables': ['Start:', 'START:'],
+        'cutpoint_start': ['Why start today?'],
+        'cutpoint_end': ['Steps in the course']
+    }
+}
+
+
+
+def get_descriptions_from_coursestart_html(content):
+    """
+    Extracts the course and activity description from the course start HTML content.
+    """
+    doc = BeautifulSoup(content, 'html5lib')
+    body = doc.find('body')
+
+    couse_description = None
+
+    title_div = body.find('div', class_='field-name-field-hplife-activ-display-title')
+    if title_div:
+        couse_description = extract_course_description_typeA(doc)
+
+    if couse_description is None:
+        title_p = body.find('p', class_='MsoNormal')
+        if title_p:
+            couse_description = extract_course_description_typeB(doc)
+
+    print(couse_description)
+
+
+def extract_course_description_typeA(doc):
+    body = doc.find('body')
+    # text = html2text(str(body), bodywidth=0)
+    # return text
+    display_title_div = body.find('div', class_='field-name-field-hplife-activ-display-title')
+    container_div_parent = display_title_div.find('div', class_='field-items')
+    container_div_candidates = container_div_parent.find_all('div', class_='field-items')
+    title_str = None
+    if not container_div_candidates:
+        container_div = container_div_parent
+    else:
+        container_div = container_div_candidates[0]
+        title_str = container_div.text.strip()
+        if not title_str:
+            container_div = container_div_candidates[1]
+            title_str = container_div.text.strip()
+
+    # Handle edge case Démarrer : Comment trouver un financement pour créer ou développer une entreprise ?
+    # that resembles typeA but is actually typeB
+    if title_str is None or len(title_str)==0:
+        return extract_course_description_typeB(doc)
+    return title_str
+    
+def extract_course_description_typeB(doc):
+    body = doc.find('body')
+    # text = html2text(str(body), bodywidth=0)
+    # return text
+    title_ps = body.find_all('p', class_='MsoNormal')
+    first_title_p = title_ps[0]
+    if len(first_title_p) == 0:
+        title_ps = body.find_all('p')
+        first_title_p = title_ps[0]
+
+    title_str = first_title_p.text.strip()
+    if len(title_str) < 9:
+        second_title_p = title_ps[1]
+        if not title_str.endswith(':'):
+            title_str += ': ' + second_title_p.text.strip()
+    if len(title_str) < 9:
+        first_title_p = naked_ps[0]
+        title_str = first_title_p.text.strip()
+        second_title_p = title_ps[1]
+        if title_str and not title_str.endswith(':'):
+            title_str += ': ' + second_title_p.text.strip()
+
+    return title_str
+    
+
+
 
 def get_resources_from_articulate_storyline(contentdir, activity_ref):
     """
