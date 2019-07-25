@@ -26,7 +26,6 @@ cd sushi-chef-hplife
 
 TODO
 ----
-  - parse intro
   - parse HTML (extract downlodable_resources)
   - parse ariculate storyline (extract downlodable_resources)
   - handle final "thank you" picture in ariculate storyline (add to parse_storyline)

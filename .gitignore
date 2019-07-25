@@ -8,6 +8,9 @@ chefdata/Courses
 
 chefdata/trees/course_tree*json
 
+notebooks/resources
+notebooks/downloads
+
 
 # OLD
 chefdata/tmp

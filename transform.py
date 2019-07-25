@@ -200,6 +200,28 @@ def get_course_description_from_coursestart_html(content, lang):
     return couse_description.strip()
 
 
+def get_activity_descriptions_from_coursestart_html(content, lang):
+    """
+    Extracts the activity descriptions from the course start HTML content.
+    """
+    doc = BeautifulSoup(content, 'html5lib')
+    tables = doc.find_all('table')
+    assert len(tables) == 1, 'uhoh'
+    table = tables[0]
+    rows = table.find_all('tr')
+    assert len(rows) == 5, 'uhoh, expecting table with five rows in coursestart'
+    second_col_strings = []
+    for row in rows:
+        tds = row.find_all('td')
+        assert len(tds) == 2, 'uhoh, table has too many cols in coursestart'
+        second_col_string = tds[1].text.strip()
+        second_col_strings.append(second_col_string)
+    return {
+        'story': second_col_strings[0],
+        'businessconcept': second_col_strings[1],
+        'technologyskill': second_col_strings[2],
+        'nextsteps': second_col_strings[4],
+    }
 
 
 def get_resources_from_articulate_storyline(contentdir, activity_ref):
