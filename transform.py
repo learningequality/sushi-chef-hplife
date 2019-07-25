@@ -69,98 +69,136 @@ def transform_html(content):
     return metadata
 
 
-# PARSE CONTENT FOLDERS
+# PARSE HTML CONTENT
 ################################################################################
 
-
-COURSE_START_STRINGS = {
+COURSE_START_SPLIT_STRINGS = {
     'es': {
         'start_removables': ['Inicio:', 'INICIO:'],
-        'cutpoint_start': ['¿Por qué empezar hoy?'],
-        'cutpoint': ['Pasos en el curso'],
+        'cutpoint_starts': [
+            '¿Por qué empezar hoy?',
+            '¿Por qué comenzar hoy?',
+            '¿Por qué comenzar hoy mismo?',
+            '¿Por qué debo empezar hoy mismo?',
+        ],
+        'cutpoint_start_and_includes': [
+            'En este curso',
+        ],
+        'cutpoint_ends': [
+            'Pasos en el curso',
+            'Pasos del curso',
+            'Etapas del curso',
+            'Pasos en el Curso',
+            'Pasosen el curso',
+            'Este curso fue desarrollado',
+            'Este curso se desarrolló',
+        ],
     },
     'fr': {
         'start_removables': ['Démarrer:', 'Démarrer :', 'DEMARRER :', 'DEMARRER:'],
-        'cutpoint_start': ['Pourquoi commencer aujourd\'hui ?', 'Pourquoi commencer aujourd’hui ?'],
-        'cutpoint_end': ['Étapes du cours', 'Étapes à suivre'],
+        'cutpoint_starts': [
+            'Pourquoi commencer aujourd\'hui ?',
+            'Pourquoi commencer aujourd’hui ?',
+            'Pourquoi démarrer aujourd\'hui ?',
+            'Pourquoi démarrer le cours dès aujourd\'hui?',
+        ],
+        'cutpoint_start_and_includes': [
+            'Durant ce cours, vous allez :',
+        ],
+        'cutpoint_ends': [
+            'Étapes du cours',
+            'Etapes du cours',
+            'Étapes à suivre',
+            'Ce cours a été élaboré',
+        ],
     },
     'en': {
         'start_removables': ['Start:', 'START:'],
-        'cutpoint_start': ['Why start today?'],
-        'cutpoint_end': ['Steps in the course']
+        'cutpoint_starts': [
+            'Why start today?',
+        ],
+        'cutpoint_start_and_includes': [
+            'In this course, you will:'
+        ],
+        'cutpoint_ends': [
+            'Steps in the course',
+            'This course was developed',
+        ]
     }
 }
 
-
-
-def get_descriptions_from_coursestart_html(content):
+def get_course_description_from_coursestart_html(content, lang):
     """
-    Extracts the course and activity description from the course start HTML content.
+    Extracts the course description from the course start HTML content.
     """
     doc = BeautifulSoup(content, 'html5lib')
     body = doc.find('body')
+    page_text = html2text(str(body), bodywidth=0)
 
-    couse_description = None
+    SPLIT_STRINGS = COURSE_START_SPLIT_STRINGS[lang]
+    course_description_lines = []
 
-    title_div = body.find('div', class_='field-name-field-hplife-activ-display-title')
-    if title_div:
-        couse_description = extract_course_description_typeA(doc)
+    # Process markdown lines
+    found_start = False
+    found_end = False
+    started = False
+    for line in page_text.split('\n'):
+        if found_start:
+            started = True
+        if found_end:
+            break
 
-    if couse_description is None:
-        title_p = body.find('p', class_='MsoNormal')
-        if title_p:
-            couse_description = extract_course_description_typeB(doc)
+        for pattern in SPLIT_STRINGS['cutpoint_starts']:
+            if pattern in line:
+                found_start = True
+        for pattern in SPLIT_STRINGS['cutpoint_start_and_includes']:
+            if not found_start and pattern in line:
+                found_start = True
+                course_description_lines.append(line)
+        for pattern in SPLIT_STRINGS['cutpoint_ends']:
+            if pattern in line and not line.startswith('●'):
+                found_end = True
 
-    print(couse_description)
+        if started and not found_end:
+            course_description_lines.append(line)
+        else:
+            pass
 
+    if not found_start or not found_end:
+        print('ERROR: failed to parse markdown...')
+        print(page_text)
+        print('\n')
 
-def extract_course_description_typeA(doc):
-    body = doc.find('body')
-    # text = html2text(str(body), bodywidth=0)
-    # return text
-    display_title_div = body.find('div', class_='field-name-field-hplife-activ-display-title')
-    container_div_parent = display_title_div.find('div', class_='field-items')
-    container_div_candidates = container_div_parent.find_all('div', class_='field-items')
-    title_str = None
-    if not container_div_candidates:
-        container_div = container_div_parent
-    else:
-        container_div = container_div_candidates[0]
-        title_str = container_div.text.strip()
-        if not title_str:
-            container_div = container_div_candidates[1]
-            title_str = container_div.text.strip()
+    non_blank_lines = [line for line in course_description_lines if line.strip()]
 
-    # Handle edge case Démarrer : Comment trouver un financement pour créer ou développer une entreprise ?
-    # that resembles typeA but is actually typeB
-    if title_str is None or len(title_str)==0:
-        return extract_course_description_typeB(doc)
-    return title_str
-    
-def extract_course_description_typeB(doc):
-    body = doc.find('body')
-    # text = html2text(str(body), bodywidth=0)
-    # return text
-    title_ps = body.find_all('p', class_='MsoNormal')
-    first_title_p = title_ps[0]
-    if len(first_title_p) == 0:
-        title_ps = body.find_all('p')
-        first_title_p = title_ps[0]
+    # Clean and standardize line outputs
+    clean_lines = []
+    BOLD_RE = re.compile('\*\*')
+    for line in non_blank_lines:
+        line = line.replace('**', '').strip()
+        line = line.replace('###', '').strip()
+        line = line.replace('* · ', '•')
+        line = line.replace('·', '•')
+        line = line.replace('●', '•')
+        line = line.replace('*', '•')
+        if line.startswith('_'):
+            line = line[1:]
+        if line.endswith('_'):
+            line = line[:-1]
+        #
+        if line:
+            clean_lines.append(line)
 
-    title_str = first_title_p.text.strip()
-    if len(title_str) < 9:
-        second_title_p = title_ps[1]
-        if not title_str.endswith(':'):
-            title_str += ': ' + second_title_p.text.strip()
-    if len(title_str) < 9:
-        first_title_p = naked_ps[0]
-        title_str = first_title_p.text.strip()
-        second_title_p = title_ps[1]
-        if title_str and not title_str.endswith(':'):
-            title_str += ': ' + second_title_p.text.strip()
+    # prepare output
+    couse_description = ''
+    for line in clean_lines:
+        if len(couse_description) < 400:
+            couse_description += ' ' + line.strip()
+        else:
+            print('SKIPPING desription line', line)
 
-    return title_str
-    
+    return couse_description.strip()
+
 
 
 
