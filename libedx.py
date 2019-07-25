@@ -178,7 +178,7 @@ def parse_html_file(coursedir, kind, name, ext='html'):
             entrypoint = None,
             url=link['href'],
         )
-        print('Found resources_folder', data['activity'])
+        # print('Found resources_folder', data['activity'])
     return data
 
 

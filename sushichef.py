@@ -64,6 +64,84 @@ HPLIFE_COURSE_STRUCTURE_CHECK_STRINGS = {
 
 
 
+# PRE-VALIDATE
+################################################################################
+
+CONTENT_FOLDER_RENAMES = {
+    '2355hpl-es06': {
+        'YTA_TS_ES_FIXED_reload': 'TU6_Tech_Skill_PRO_es - Storyline output',
+    },
+    '2422hpl-fr06': {
+        'YTA_TS_FR_FIXED_reload': 'TU6_Tech_Skill_fr - Storyline output',
+    },
+    '2287hpl-en06': {
+        'YTA_TS_EN_fixed_TEST_reload_3': 'TU6_Tech_Skill_PRO_en - Storyline output',
+    }
+}
+
+def tranform_and_prevalidate(course_data, lang, coursedir, contentdir):
+    """
+    Performs necessary checks to know we have a valid course:
+      - Exports the hpstyryline legacy files by running `download_hpstoryline`
+      - Rename non-standard articulate storyline folder names
+      - Ensure all activity files are present
+    Returns validated, modified `course_data` dict or `None` if validation fails.
+    """
+
+    # Missing data for Marketing de medios sociales
+    if course_data['display_name'] == 'Marketing de medios sociales':
+        return None
+
+    parsed_tree = parse_course_tree(course_data, lang)
+    missing_activity_refs = []
+    for key in ['story', 'businessconcept', 'technologyskill']:
+        item = parsed_tree[key]
+        kind = item['kind']
+        assert kind == 'problem'
+
+        # Old-style hpstoryline
+        if kind == 'problem' and 'activity' in item and item['activity']['kind'] == 'hpstoryline':
+            story_id = item['activity']['story_id']
+            contentdir_story_id_path = os.path.join(contentdir, story_id)
+            if not os.path.exists(contentdir_story_id_path):
+                download_hpstoryline(contentdir, story_id)
+            assert os.path.exists(contentdir_story_id_path)
+
+        # New-style Articulate Storyline
+        elif kind == 'problem' and 'activity' in item:
+            course_id = course_data['course']
+            activity_ref = item['activity']['activity_ref']
+
+            if course_id in CONTENT_FOLDER_RENAMES and activity_ref in CONTENT_FOLDER_RENAMES[course_id]:
+                activity_ref = CONTENT_FOLDER_RENAMES[course_id][activity_ref]
+                item['activity']['activity_ref'] = activity_ref
+
+            activity_ref_sourcedir = os.path.join(contentdir, activity_ref)
+            if not os.path.exists(activity_ref_sourcedir):
+                missing_activity_refs.append(activity_ref)
+        else:
+            print('EEEEE Unrecognized problem item', item)
+
+    if not missing_activity_refs:
+        return course_data
+    else:
+        print('in course name', course_data['display_name'], 'with course id', course_data['course'])
+        print('in coursedir', coursedir)
+        print('we\'re missing activity folders', missing_activity_refs)
+        folders = os.listdir(contentdir)
+        candidate_folders = []
+        for folder in folders:
+            if not folder.endswith('_webroot') \
+                and not folder.startswith('Downloadab') \
+                and not folder.startswith('es_') \
+                and not folder.startswith('fr_') \
+                and not folder.startswith('en_') \
+                and not folder == '.DS_Store':
+                    candidate_folders.append(folder)
+        print('available', candidate_folders)
+        return None
+
+
 # PARSE TREEE
 ################################################################################
 
@@ -97,7 +175,7 @@ def parse_course_tree(course_data, lang):
             'nextsteps_video': {},
         }
     """
-    print('in parse_course_tree', course_data['course'])
+    # print('in parse_course_tree', course_data['course'])
 
     parsed_tree = {
         'coursestart': {},
@@ -136,7 +214,8 @@ def parse_course_tree(course_data, lang):
     assert content_item['kind'] == 'problem', 'unexpected item kind in story'
     parsed_tree['story'] = content_item
     if len(content_items) == 2:
-        print('skipping content_item', content_items[1])
+        pass
+        # print('skipping content_item', content_items[1])
 
     # businessconcept
     chapter = chapters[2]
@@ -249,14 +328,14 @@ def new_build_subtree_from_course(course, containerdir):
     coursedir = os.path.join(basedir, 'course')
     course_data = extract_course_tree(coursedir)
     course_dict['source_id'] = course_data['course']
-    # Jul 17: handle duplicate course ID `2352hpl-es03` which is used for both
-    # 'Ganancias y pérdidas' and 'Marketing de medios sociales'
-    if course_data['course'] == '2352hpl-es03' and course['name'] == 'Marketing de medios sociales':
-        course_dict['source_id'] = course_data['course'] + '-2'
 
+    course_data = tranform_and_prevalidate(course_data, lang, coursedir, contentdir)
+    if course_data is None:
+        return None
 
     parsed_tree = parse_course_tree(course_data, lang)
     transfomed_tree = transform_course_tree(parsed_tree, lang, contentdir)
+
 
     # course_dict['description'] = parsed_tree['description']
 
@@ -400,8 +479,10 @@ class HPLifeChef(JsonTreeChef):
         course_list = json.load(open(os.path.join(containerdir, 'course_list.json')))
         for course in course_list['courses']:
             course_dict = new_build_subtree_from_course(course, containerdir)
-            ricecooker_json_tree['children'].append(course_dict)
-
+            if course_dict:
+                ricecooker_json_tree['children'].append(course_dict)
+            else:
+                print('WARNING: Skipping course', course_dict['name'], 'because it failed to pre-validate')
         json_tree_path = self.get_json_tree_path(lang=lang)
         write_tree_to_json_tree(json_tree_path, ricecooker_json_tree)
 
