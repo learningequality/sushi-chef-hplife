@@ -674,7 +674,7 @@ def extract_and_download_mp3path(jscode_str, destdir, mediadirname=MEDIA_DIR_NAM
 ################################################################################
 
 
-def extract_course_resouces(parsed_tree, contentdir, course_data):
+def extract_course_resouces(parsed_tree, contentdir, course_id):
     """
     Go through the parsed_tree and:
      - extract all the downloadable resources
@@ -692,7 +692,7 @@ def extract_course_resouces(parsed_tree, contentdir, course_data):
                     'filename': 'Hoja de trabajo.docx',
                     'title': 'Hoja de trabajo',
                     'convertedfilename': 'Hoja de trabajo.pdf',
-                    'convetedpath': '{contentdir}/converted/Hoja de trabajo.pdf',
+                    'convertedpath': '{contentdir}/converted/Hoja de trabajo.pdf',
                 },
             ]
         }
@@ -705,7 +705,7 @@ def extract_course_resouces(parsed_tree, contentdir, course_data):
     # 1A. Process the downloadable_resources item
     downloadable_resources_item = parsed_tree['downloadable_resources']
     assert downloadable_resources_item['kind'] == 'html'
-    downloadable_resources = get_resources_from_downloadable_resouces_item(contentdir, downloadable_resources_item, course_data)
+    downloadable_resources = get_resources_from_downloadable_resouces_item(contentdir, downloadable_resources_item, course_id)
     downloaded_resources = []
     for downloadable_resource in downloadable_resources:
         downloaded_resource = download_resource(downloadable_resource, contentdir)
@@ -766,7 +766,7 @@ DEFAULT_EXT_BY_CONTENT_TYPE = {
 }
 
 
-def get_resources_from_downloadable_resouces_item(contentdir, item, course_data):
+def get_resources_from_downloadable_resouces_item(contentdir, item, course_id):
     """
     Extracts the resource links from the downloadable resources HTML content of item.
     Returns:
@@ -795,7 +795,7 @@ def get_resources_from_downloadable_resouces_item(contentdir, item, course_data)
 
         filename = os.path.basename(href)
         if href.startswith('/'):
-            url = ASSETS_URL.format(course_id=course_data['course'], filename=filename)
+            url = ASSETS_URL.format(course_id=course_id, filename=filename)
         else:
             url = href
 
@@ -968,15 +968,15 @@ def convert_resource(resource, contentdir):
             'title': 'Hoja de trabajo',
         }
     Output:
-      - Saves converted-to-pdf file at `convetedpath` in converted/ dir
-      - Modifies the resouce dict to contain convertedfilename and convetedpath
+      - Saves converted-to-pdf file at `convertedpath` in converted/ dir
+      - Modifies the resouce dict to contain convertedfilename and convertedpath
             resource = {
                 'path': '{contentdir}/downloads/Hoja+de+trabajo.docx',
                 'ext': 'docx',
                 'filename': 'Hoja de trabajo.docx',
                 'title': 'Hoja de trabajo',
                 'convertedfilename': 'Hoja de trabajo.pdf',
-                'convetedpath': '{contentdir}/converted/Hoja de trabajo.pdf',
+                'convertedpath': '{contentdir}/converted/Hoja de trabajo.pdf',
             }
     """
     path = resource['path']
@@ -1005,7 +1005,7 @@ def convert_resource(resource, contentdir):
 
     # add info to resource dict
     resource['convertedfilename'] = dest_filename
-    resource['convetedpath'] = destpath
+    resource['convertedpath'] = destpath
 
 
 

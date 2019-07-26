@@ -1,4 +1,5 @@
 ricecooker>=0.6.31
+youtube-dl>=2019.7.2
 
 # Extract HTML part
 html2text>=2018.1.9

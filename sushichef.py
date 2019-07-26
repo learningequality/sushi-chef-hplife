@@ -14,10 +14,13 @@ from libedx import extract_course_tree
 from libedx import print_course
 
 from transform import download_hpstoryline
+from transform import extract_course_resouces
 # from transform import transform_resource_folder
+from transform import get_activity_descriptions_from_coursestart_html
+from transform import get_course_description_from_coursestart_html
 from transform import transform_html
-from transform import transform_hpstoryline_folder, transform_articulate_storyline_folder
-
+from transform import transform_hpstoryline_folder
+from transform import transform_articulate_storyline_folder
 
 
 DEBUG_MODE = True
@@ -60,6 +63,21 @@ HPLIFE_COURSE_STRUCTURE_CHECK_STRINGS = {
 }
 
 
+
+HPLIFE_STRINGS = {
+    'en': {
+        'resources': 'Resources',
+        'downloadable_resources': 'Downloadable resources',
+    },
+    'es': {
+        'resources': 'Recursos',
+        'downloadable_resources': 'Recursos descargables',
+    },
+    'fr': {
+        'resources': 'Ressources',
+        'downloadable_resources': 'Ressources téléchargeables',
+    }
+}
 
 
 
@@ -276,35 +294,47 @@ def parse_course_tree(course_data, lang):
 
 
 
-def transform_course_tree(parsed_tree, lang, contentdir):
+def process_course_tree(parsed_tree, lang, contentdir, course_id):
     """
     Tranform the parsed_tree for a course into channel subfolder for this course.
     Includes:
-     - extract info from coursestart
-     - modify next steps
-     - scrape hpstoryline stories (if applicable)
-
-    Returns a trasformed tree:
-
-        trasformed_tree = {
-            'title': "",
+    1. extract info from coursestart
+    2. download resources
+    3. modify next steps
+    Returns a parsed_tree with extra info:
+        parsed_tree = {
             'description': "",
             'story': {},
             'businessconcept': {},
             'technologyskill': {},
             'nextsteps': {},
             'nextsteps_video': {},
-            'resources': {
-                '<download_url>': {
-                    'download_url': "",
-                    'ext': "",
-                    'title': "",
-                    'description': "",
-                }
-            }
+            'resources': [
+                {
+                    'title': 'Hoja de trabajo',
+                    'path': '{contentdir}/downloads/Hoja+de+trabajo.docx',
+                    'ext': 'docx',
+                    'filename': 'Hoja de trabajo.docx',
+                    'convertedfilename': 'Hoja de trabajo.pdf',
+                    'convertedpath': '{contentdir}/converted/Hoja de trabajo.pdf',
+                },
+            ]
         }    
     """
-    print('in transform_course_tree')
+    # Extract descriptions from coursestart 
+    coursestart = parsed_tree['coursestart']
+    course_description = get_course_description_from_coursestart_html(coursestart['content'], lang)
+    parsed_tree['description'] = course_description
+    #
+    activity_descriptions = get_activity_descriptions_from_coursestart_html(coursestart['content'], lang)
+    for key in ['story', 'businessconcept', 'technologyskill', 'nextsteps']:
+        parsed_tree[key]['description'] = activity_descriptions[key]
+
+    # Extract resouces
+    parsed_tree = extract_course_resouces(parsed_tree, contentdir, course_id)
+
+    # TODO: process next step
+
     return parsed_tree
 
 
@@ -313,7 +343,7 @@ def transform_course_tree(parsed_tree, lang, contentdir):
 # BUILD RICECOOKER TREE
 ################################################################################
 
-def new_build_subtree_from_course(course, containerdir):
+def build_subtree_from_course(course, containerdir):
     print('Building a tree from course', course)
     lang = course['lang']
     course_dict = dict(
@@ -333,88 +363,164 @@ def new_build_subtree_from_course(course, containerdir):
         return None
 
     parsed_tree = parse_course_tree(course_data, lang)
-    transfomed_tree = transform_course_tree(parsed_tree, lang, contentdir)
+    parsed_tree = process_course_tree(parsed_tree, lang, contentdir, course_data['course'])
+    course_dict['description'] = parsed_tree['description']
+
+    for key in ['story', 'businessconcept', 'technologyskill', 'resources', 'nextsteps', 'nextsteps_video']:
+
+        if key == 'resources':
+            resources = parsed_tree['resources']
+            # First add the Resources folder
+            topic_dict = dict(
+                kind=content_kinds.TOPIC,
+                title=HPLIFE_STRINGS[lang]['resources'],
+                source_id=course_dict['title'] + '___' + key,
+                license=HPLIFE_LICENSE,
+                language=lang,
+                children=[],
+            )
+            course_dict['children'].append(topic_dict)
+
+            # Now all the pdf resources
+
+            resource_urls_seen = []
+            for resource in resources:
+                if resource['url'] not in resource_urls_seen:
+                    ext = resource['ext']
+                    if ext == 'pdf' or 'convertedpath' in resource:
+                        pdf_node = dict(
+                            kind=content_kinds.DOCUMENT,
+                            title=resource['title'],
+                            description=resource.get('description', ''),
+                            source_id=resource['url'],
+                            license=HPLIFE_LICENSE,
+                            language=lang,
+                            files=[],
+                        )
+                        if ext == 'pdf':
+                            path = resource['path']
+                        elif 'convertedpath' in resource:
+                            path = resource['convertedpath']
+                        else:
+                            raise ValueError('unexpected situation yo!')
+                        file_dict = dict(
+                            file_type=file_types.DOCUMENT,
+                            path=path,
+                            language=lang,
+                        )
+                        pdf_node['files'].append(file_dict)
+                        topic_dict['children'].append(pdf_node)
+                        resource_urls_seen.append(resource['url'])
+                else:
+                    print('skipping duplicate resource', resource)
+
+            # html5_dict = dict(
+            #     kind=content_kinds.HTML5,
+            #     title=HPLIFE_STRINGS[lang]['downloadable_resources'],
+            #     description=item.get('description', ''),
+            #     source_id=course_dict['title'] + '__' + key + '__downloadable_resources',
+            #     license=HPLIFE_LICENSE,
+            #     language=lang,
+            #     files=[],
+            # )
+
+        elif key == 'nextsteps_video':
+            nextsteps_video = parsed_tree[key]
+            if nextsteps_video:
+                youtube_id = nextsteps_video['youtube_id_1_0']
+                video_node = dict(
+                    kind=content_kinds.VIDEO,
+                    source_id=youtube_id,
+                    language=lang,
+                    title=nextsteps_video['title'],
+                    description=nextsteps_video.get('description', ''),
+                    license=HPLIFE_LICENSE,
+                    files=[],
+                )
+                video_file = dict(
+                    file_type=file_types.VIDEO,
+                    youtube_id=youtube_id,
+                    language=lang,
+                    high_resolution=False,
+                )
+                video_node['files'].append(video_file)
+                course_dict['children'].append(video_node)
 
 
-    # course_dict['description'] = parsed_tree['description']
-
-    # resources
-    for key in ['coursestart', 'story', 'businessconcept', 'technologyskill', 'downloadable_resources', 'nextsteps']: # , 'nextsteps_video']:
-        item = transfomed_tree[key]
-
-        html5_dict = dict(
-            kind=content_kinds.HTML5,
-            title=item['title'],
-            description=item.get('description', ''),
-            source_id=course_dict['title'] + '___' + key,
-            license=HPLIFE_LICENSE,
-            language=lang,
-            files=[],
-        )
-
-        kind = item['kind']
-
-        # # Local resouce folder
-        # if kind == 'html' and 'activity' in item:
-        #     activity_ref = item['activity']['activity_ref']
-        #     zip_info = transform_resource_folder(contentdir, activity_ref, item['content'])
-        #     if zip_info:
-        #         zippath = zip_info['zippath']
-        #         html5_dict['source_id'] = zip_info['source_id']
-        #         html5_dict['description'] = 'Content taken from ' + zip_info['source_id']
-        #     else:
-        #         continue
-
-        # Generic HTML
-        if kind == 'html':
-            zip_info = transform_html(item['content'])
-            if zip_info:
-                zippath = zip_info['zippath']
-                html5_dict['source_id'] = zip_info['source_id']
-                html5_dict['description'] = 'Content taken from ' + zip_info['source_id']
-            else:
-                continue
-
-        # Old-style hpstoryline
-        elif kind == 'problem' and 'activity' in item and item['activity']['kind'] == 'hpstoryline':
-            story_id = item['activity']['story_id']
-            contentdir_story_id_path = os.path.join(contentdir, story_id)
-            if not os.path.exists(contentdir_story_id_path):
-                download_hpstoryline(contentdir, story_id)
-            zip_info = transform_hpstoryline_folder(contentdir, story_id, item)
-            if zip_info:
-                html5_dict['thumbnail'] = zip_info['thumbnail']
-                html5_dict['source_id'] = zip_info['source_id']
-                html5_dict['description'] = 'Content taken from ' + zip_info['source_id']
-                zippath = zip_info['zippath']
-            else:
-                print('EEEE2 transform_hpstoryline_folder', item['activity'])
-                continue
-
-        # New-style Articulate Storyline
-        elif kind == 'problem' and 'activity' in item:
-            activity_ref = item['activity']['activity_ref']
-            zip_info = transform_articulate_storyline_folder(contentdir, activity_ref)
-            if zip_info:
-                html5_dict['thumbnail'] = zip_info['thumbnail']
-                html5_dict['source_id'] = zip_info['source_id']
-                html5_dict['description'] = 'Content taken from ' + zip_info['source_id']
-                zippath = zip_info['zippath']
-            else:
-                print('EEEE transform_articulate_storyline_folder', item['activity'])
-                continue
         else:
-            print('EEEEE Unrecognized item', item)
-            continue
+            item = parsed_tree[key]
+            html5_dict = dict(
+                kind=content_kinds.HTML5,
+                title=item['title'],
+                description=item.get('description', ''),
+                source_id=course_dict['title'] + '___' + key,
+                license=HPLIFE_LICENSE,
+                language=lang,
+                files=[],
+            )
 
-        file_dict = dict(
-            file_type=file_types.HTML5,
-            path=zippath,
-            language=lang,
-        )
-        html5_dict['files'].append(file_dict)
-        
-        course_dict['children'].append(html5_dict)
+            kind = item['kind']
+
+            # # Local resouce folder
+            # if kind == 'html' and 'activity' in item:
+            #     activity_ref = item['activity']['activity_ref']
+            #     zip_info = transform_resource_folder(contentdir, activity_ref, item['content'])
+            #     if zip_info:
+            #         zippath = zip_info['zippath']
+            #         html5_dict['source_id'] = zip_info['source_id']
+            #         html5_dict['description'] = 'Content taken from ' + zip_info['source_id']
+            #     else:
+            #         continue
+
+            # Generic HTML
+            if kind == 'html':
+                zip_info = transform_html(item['content'])
+                if zip_info:
+                    zippath = zip_info['zippath']
+                    html5_dict['source_id'] = zip_info['source_id']
+                    # html5_dict['description'] = 'Content taken from ' + zip_info['source_id']
+                else:
+                    continue
+
+            # Old-style hpstoryline
+            elif kind == 'problem' and 'activity' in item and item['activity']['kind'] == 'hpstoryline':
+                story_id = item['activity']['story_id']
+                contentdir_story_id_path = os.path.join(contentdir, story_id)
+                if not os.path.exists(contentdir_story_id_path):
+                    download_hpstoryline(contentdir, story_id)
+                zip_info = transform_hpstoryline_folder(contentdir, story_id, item)
+                if zip_info:
+                    html5_dict['thumbnail'] = zip_info['thumbnail']
+                    html5_dict['source_id'] = zip_info['source_id']
+                    # html5_dict['description'] = 'Content taken from ' + zip_info['source_id']
+                    zippath = zip_info['zippath']
+                else:
+                    print('EEEE2 transform_hpstoryline_folder', item['activity'])
+                    continue
+
+            # New-style Articulate Storyline
+            elif kind == 'problem' and 'activity' in item:
+                activity_ref = item['activity']['activity_ref']
+                zip_info = transform_articulate_storyline_folder(contentdir, activity_ref)
+                if zip_info:
+                    html5_dict['thumbnail'] = zip_info['thumbnail']
+                    html5_dict['source_id'] = zip_info['source_id']
+                    # html5_dict['description'] = 'Content taken from ' + zip_info['source_id']
+                    zippath = zip_info['zippath']
+                else:
+                    print('EEEE transform_articulate_storyline_folder', item['activity'])
+                    continue
+            else:
+                print('EEEEE Unrecognized item', item)
+                continue
+
+            file_dict = dict(
+                file_type=file_types.HTML5,
+                path=zippath,
+                language=lang,
+            )
+            html5_dict['files'].append(file_dict)
+            course_dict['children'].append(html5_dict)
 
     return course_dict
 
@@ -477,11 +583,11 @@ class HPLifeChef(JsonTreeChef):
         containerdir = os.path.join(COURSES_DIR, lang)
         course_list = json.load(open(os.path.join(containerdir, 'course_list.json')))
         for course in course_list['courses']:
-            course_dict = new_build_subtree_from_course(course, containerdir)
+            course_dict = build_subtree_from_course(course, containerdir)
             if course_dict:
                 ricecooker_json_tree['children'].append(course_dict)
             else:
-                print('WARNING: Skipping course', course_dict['name'], 'because it failed to pre-validate')
+                print('WARNING: Skipping course', course['name'], 'because it failed to pre-validate')
         json_tree_path = self.get_json_tree_path(lang=lang)
         write_tree_to_json_tree(json_tree_path, ricecooker_json_tree)
 
