@@ -14,7 +14,8 @@ from libedx import extract_course_tree
 from libedx import print_course
 
 from transform import download_hpstoryline
-from transform import transform_resource_folder, transform_html
+# from transform import transform_resource_folder
+from transform import transform_html
 from transform import transform_hpstoryline_folder, transform_articulate_storyline_folder
 
 
@@ -296,8 +297,6 @@ def transform_course_tree(parsed_tree, lang, contentdir):
             'resources': {
                 '<download_url>': {
                     'download_url': "",
-                    'path': "",
-                    'md5hash': "",
                     'ext': "",
                     'title': "",
                     'description': "",
@@ -355,19 +354,19 @@ def new_build_subtree_from_course(course, containerdir):
 
         kind = item['kind']
 
-        # Local resouce folder
-        if kind == 'html' and 'activity' in item:
-            activity_ref = item['activity']['activity_ref']
-            zip_info = transform_resource_folder(contentdir, activity_ref, item['content'])
-            if zip_info:
-                zippath = zip_info['zippath']
-                html5_dict['source_id'] = zip_info['source_id']
-                html5_dict['description'] = 'Content taken from ' + zip_info['source_id']
-            else:
-                continue
+        # # Local resouce folder
+        # if kind == 'html' and 'activity' in item:
+        #     activity_ref = item['activity']['activity_ref']
+        #     zip_info = transform_resource_folder(contentdir, activity_ref, item['content'])
+        #     if zip_info:
+        #         zippath = zip_info['zippath']
+        #         html5_dict['source_id'] = zip_info['source_id']
+        #         html5_dict['description'] = 'Content taken from ' + zip_info['source_id']
+        #     else:
+        #         continue
 
         # Generic HTML
-        elif kind == 'html':
+        if kind == 'html':
             zip_info = transform_html(item['content'])
             if zip_info:
                 zippath = zip_info['zippath']

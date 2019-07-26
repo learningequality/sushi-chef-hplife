@@ -673,6 +673,84 @@ def extract_and_download_mp3path(jscode_str, destdir, mediadirname=MEDIA_DIR_NAM
 # RESOURCES EXTRACTORS
 ################################################################################
 
+
+def extract_course_resouces(parsed_tree, contentdir, course_data):
+    """
+    Go through the parsed_tree and:
+     - extract all the downloadable resources
+     - download them
+     - convert any that are in CONVERTIBLE_EXTS
+
+    Modifies the `parsed_tree` to add the new property `resources`:
+        parsed_tree = {
+            ...
+            'resources': [
+                {
+                    'url': 'https://s3.amazonaws.com/hp-life-content/.../Hoja+de+trabajo.docx',
+                    'path': '{contentdir}/downloads/Hoja+de+trabajo.docx',
+                    'ext': 'docx',
+                    'filename': 'Hoja de trabajo.docx',
+                    'title': 'Hoja de trabajo',
+                    'convertedfilename': 'Hoja de trabajo.pdf',
+                    'convetedpath': '{contentdir}/converted/Hoja de trabajo.pdf',
+                },
+            ]
+        }
+    """
+    resources = []
+
+    # 1. EXTRACT
+    ####################################################################
+
+    # 1A. Process the downloadable_resources item
+    downloadable_resources_item = parsed_tree['downloadable_resources']
+    assert downloadable_resources_item['kind'] == 'html'
+    downloadable_resources = get_resources_from_downloadable_resouces_item(contentdir, downloadable_resources_item, course_data)
+    downloaded_resources = []
+    for downloadable_resource in downloadable_resources:
+        downloaded_resource = download_resource(downloadable_resource, contentdir)
+        if downloaded_resource:
+            downloaded_resources.append(downloaded_resource)
+        else:
+            print('ERROR: failed to download', downloadable_resource)
+    resources.extend(downloaded_resources)
+
+
+    # 1B. Check for resources in atriculate storyline items
+    for key in ['story', 'businessconcept', 'technologyskill']:
+        item = parsed_tree[key]
+        kind = item['kind']
+
+        if kind == 'html':
+            raise ValueError('unexpected html activity item' + str(item) )
+
+        elif kind == 'problem' and 'activity' in item and item['activity']['kind'] == 'hpstoryline':
+            story_id = item['activity']['story_id']
+            # print('Skipping hpstoryline resouce', story_id)
+
+        # New-style Articulate Storyline
+        elif kind == 'problem' and 'activity' in item:
+            activity_ref = item['activity']['activity_ref']
+            articulate_storyline_resources = get_resources_from_articulate_storyline(contentdir, activity_ref)
+            # print('articulate_storyline_resources=', articulate_storyline_resources)
+            resources.extend(articulate_storyline_resources)
+
+    # 2. TRANSFORM TO PDF all CONVERTIBEL
+    ####################################################################
+    if resources:
+        for resource in resources:
+            ext = resource['ext']
+            if ext in CONVERTIBLE_EXTS:
+                convert_resource(resource, contentdir)
+
+    # return annotated parsed_tree
+    parsed_tree['resources'] = resources
+    return parsed_tree
+
+
+
+
+
 EXTRACTED_DIR_NAME = 'extracted'
 
 
@@ -704,7 +782,6 @@ def get_resources_from_downloadable_resouces_item(contentdir, item, course_data)
     """
     resources = []
     assert item['kind'] == 'html'
-    print('processing', item['url_name'])
     indexhtml = item['content']
     doc = BeautifulSoup(indexhtml, 'html5lib')
     links = doc.find_all('a')
@@ -739,6 +816,8 @@ def get_resources_from_downloadable_resouces_item(contentdir, item, course_data)
 
         unquoted_filename = unquote_plus(filename)
         unquoted_filename = unquoted_filename.replace('+', '_')
+        if '@' in unquoted_filename:
+            unquoted_filename = unquoted_filename.split('@')[-1]
         name, _ = os.path.splitext(unquoted_filename)
         localfilename = name + '.' + ext
         resource = dict(
@@ -939,10 +1018,11 @@ def print_parsed_course_dict(parsed_course):
     """
     Display course tree hierarchy for debugging purposes.
     """
-    PARSED_KEYS = ['coursestart', 'story', 'businessconcept', 'technologyskill',
-                   'downloadable_resources', 'nextsteps', 'nextsteps_video']
-    TRANSFORMED_EXTRA_KEYS = ['title', 'description', 'resources']
-    
+    PARSED_KEYS = [# 'coursestart',
+                   'story', 'businessconcept', 'technologyskill',
+                   # 'downloadable_resources',
+                   'nextsteps', 'nextsteps_video']
+
     for key in PARSED_KEYS:
         if key in parsed_course and parsed_course[key]:
             item = parsed_course[key]
@@ -958,4 +1038,11 @@ def print_parsed_course_dict(parsed_course):
                     extra += 'activity_ref=' + str(item['activity']['activity_ref'])
             # print(item)
             print('   -', key,  'kind='+item['kind'], ' \t', extra)
+
+    if 'resources' in parsed_course:
+        resources = parsed_course['resources']
+        print('   - resouces:')
+        for resource in resources:
+            print('       > ', resource['filename'] ) # '   converted =', bool('convertedfilename' in resource) )
+
     print('\n')
