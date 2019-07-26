@@ -8,6 +8,8 @@ import shutil
 import tempfile
 from urllib.parse import unquote_plus
 from urllib.parse import urljoin
+
+
 from html2text import html2text
 
 from le_utils.constants import content_kinds, file_types, licenses
@@ -25,12 +27,6 @@ slimit.parser.ply.yacc.PlyLogger = \
   type('_NullLogger', (slimit.lexer.ply.lex.NullLogger,),
        dict(__init__=lambda s, *_, **__: (None, s.super().__init__())[0]))
 
-
-
-
-
-# CONSTANTS
-################################################################################
 
 
 
@@ -69,7 +65,9 @@ def transform_html(content):
     return metadata
 
 
-# PARSE HTML CONTENT
+
+
+# PARSE COURSE INTRO HTML
 ################################################################################
 
 COURSE_START_SPLIT_STRINGS = {
@@ -224,55 +222,6 @@ def get_activity_descriptions_from_coursestart_html(content, lang):
     }
 
 
-def get_resources_from_articulate_storyline(contentdir, activity_ref):
-    """
-    Extracts the resource links from the articulate storyline 'frame.json'.
-    resources = {
-        'relpath': 'story_content/external_files/Additional_Excel_Tips.pdf',
-        'title': 'Additional Excel Tips',
-        'iconrelpath': 'story_content/6OiyTv2LR5V.png',
-    }
-    """
-    #print('in get_resource_articulate_storyline for', contentdir, activity_ref)
-    resources = []
-
-    story_content_path = os.path.join(contentdir, activity_ref, 'story_content')
-    if not os.path.exists(story_content_path):
-        print( 'No story_content folder in', os.path.join(contentdir,activity_ref) )
-    if os.path.exists(story_content_path):
-        framepath = os.path.join(story_content_path, 'frame.json')
-        if os.path.exists(framepath):
-            frame_data = json.load(open(framepath))
-            resource_data = frame_data["resource_data"]
-            json_resources = resource_data['resources']
-            if json_resources:
-                for json_resource in json_resources:
-                    resource = dict(
-                        title=json_resource['title'],
-                        relpath=json_resource['url'],
-                        iconrelpath=json_resource.get('image', None),
-                    )
-                    resources.append(resource)
-        else:
-            # if 'frame.json' not found, try to parse 'frame.xml' as fallback
-            xmlframepath = os.path.join(story_content_path, 'frame.xml')
-            if os.path.exists(xmlframepath):
-                # print(xmlframepath)
-                frame_data = BeautifulSoup(open(xmlframepath).read(), 'xml')
-                resource_data = frame_data.find("resource_data")
-                if resource_data:
-                    xml_resources = resource_data.find_all('resource')
-                    if xml_resources:
-                        for xml_resource in xml_resources:
-                            resource = dict(
-                                title=xml_resource['title'],
-                                relpath=xml_resource['url'],
-                                iconrelpath=xml_resource.get('image', None),
-                            )
-                            resources.append(resource)
-    return resources
-
-
 
 
 # TRANSFORM CONTENT FOLDERS
@@ -408,69 +357,69 @@ def transform_hpstoryline_folder(contentdir, story_id, node):
     return metadata
 
 
-def transform_resource_folder(contentdir, activity_ref, content):
-    """
-    Transform the contents of the folder of kind `resources_folder` called
-    `activity_ref` located in the directory `contentdir`, turning it into a
-    standalone zip file with an index.html taken from `content` (str).
-    Return the neceesary metadata as a dict.
-    """
-    sourcedir = os.path.join(contentdir, activity_ref)            # source folder
-    webroot = os.path.join(contentdir, activity_ref+'_webroot')   # transformed dir
-
-    if not os.path.exists(sourcedir):
-        print('missing sourcedir', sourcedir)
-        return None
-
-    if os.path.exists(webroot):
-        shutil.rmtree(webroot)
-    
-    # Copy source dir to webroot dir where we'll do the edits and transformations
-    shutil.copytree(sourcedir, webroot)
-    
-    metadata = dict(
-        kind = 'resources_folder',
-        source_id = activity_ref,
-        zippath = None,  # to be set below
-    )
-
-    doc = BeautifulSoup(content, 'html5lib')
-
-    # Rewrite links
-    links = doc.find_all('a')
-    for link in links:
-        if 'href' in link.attrs:
-            url = link['href']
-            print(url)
-            url_parts = url.split('/')
-            parentdir = unquote_plus(url_parts[-2])
-            assert parentdir == activity_ref, 'Found link to another resouce folder'
-            filename = unquote_plus(url_parts[-1])
-            link['href'] = filename
-            link['target'] = '_blank'
-
-    meta = Tag(name='meta', attrs={'charset':'utf-8'})
-    doc.head.append(meta)
-    # TODO: add meta language (in case of right-to-left languages)
-
-    # Writeout new index.html
-    indexhtmlpath = os.path.join(webroot, 'index.html')
-    with open(indexhtmlpath, 'w') as indexfilewrite:
-        indexfilewrite.write(str(doc))
-
-    # Zip it
-    zippath = create_predictable_zip(webroot)
-    metadata['zippath'] = zippath
-
-    return metadata
-
-
+# def transform_resource_folder(contentdir, activity_ref, content):
+#     """
+#     Transform the contents of the folder of kind `resources_folder` called
+#     `activity_ref` located in the directory `contentdir`, turning it into a
+#     standalone zip file with an index.html taken from `content` (str).
+#     Return the neceesary metadata as a dict.
+#     """
+#     sourcedir = os.path.join(contentdir, activity_ref)            # source folder
+#     webroot = os.path.join(contentdir, activity_ref+'_webroot')   # transformed dir
+# 
+#     if not os.path.exists(sourcedir):
+#         print('missing sourcedir', sourcedir)
+#         return None
+# 
+#     if os.path.exists(webroot):
+#         shutil.rmtree(webroot)
+# 
+#     # Copy source dir to webroot dir where we'll do the edits and transformations
+#     shutil.copytree(sourcedir, webroot)
+# 
+#     metadata = dict(
+#         kind = 'resources_folder',
+#         source_id = activity_ref,
+#         zippath = None,  # to be set below
+#     )
+# 
+#     doc = BeautifulSoup(content, 'html5lib')
+# 
+#     # Rewrite links
+#     links = doc.find_all('a')
+#     for link in links:
+#         if 'href' in link.attrs:
+#             url = link['href']
+#             print(url)
+#             url_parts = url.split('/')
+#             parentdir = unquote_plus(url_parts[-2])
+#             assert parentdir == activity_ref, 'Found link to another resouce folder'
+#             filename = unquote_plus(url_parts[-1])
+#             link['href'] = filename
+#             link['target'] = '_blank'
+# 
+#     meta = Tag(name='meta', attrs={'charset':'utf-8'})
+#     doc.head.append(meta)
+#     # TODO: add meta language (in case of right-to-left languages)
+# 
+#     # Writeout new index.html
+#     indexhtmlpath = os.path.join(webroot, 'index.html')
+#     with open(indexhtmlpath, 'w') as indexfilewrite:
+#         indexfilewrite.write(str(doc))
+# 
+#     # Zip it
+#     zippath = create_predictable_zip(webroot)
+#     metadata['zippath'] = zippath
+# 
+#     return metadata
 
 
 
 
 
-# DOWNLOADER FOR LEGACY hpstoryline STORIES
+
+
+# EXPORT LEGACY hpstoryline STORIES
 ################################################################################
 
 HPSTORYLINE_BASE_URL = 'https://hpstoryline.edcastcloud.com/hp_storyline/story?story='
@@ -714,6 +663,64 @@ def extract_and_download_mp3path(jscode_str, destdir, mediadirname=MEDIA_DIR_NAM
         return tree.to_ecma()
     else:
         raise ValueError('Could not extract mp3path')
+
+
+
+
+
+
+
+# DOWNLOAD RESOURCES
+################################################################################
+
+
+def get_resources_from_articulate_storyline(contentdir, activity_ref):
+    """
+    Extracts the resource links from the articulate storyline 'frame.json'.
+    resources = {
+        'relpath': 'story_content/external_files/Additional_Excel_Tips.pdf',
+        'title': 'Additional Excel Tips',
+        'iconrelpath': 'story_content/6OiyTv2LR5V.png',
+    }
+    """
+    #print('in get_resource_articulate_storyline for', contentdir, activity_ref)
+    resources = []
+
+    story_content_path = os.path.join(contentdir, activity_ref, 'story_content')
+    if not os.path.exists(story_content_path):
+        print( 'No story_content folder in', os.path.join(contentdir,activity_ref) )
+    if os.path.exists(story_content_path):
+        framepath = os.path.join(story_content_path, 'frame.json')
+        if os.path.exists(framepath):
+            frame_data = json.load(open(framepath))
+            resource_data = frame_data["resource_data"]
+            json_resources = resource_data['resources']
+            if json_resources:
+                for json_resource in json_resources:
+                    resource = dict(
+                        title=json_resource['title'],
+                        relpath=json_resource['url'],
+                        iconrelpath=json_resource.get('image', None),
+                    )
+                    resources.append(resource)
+        else:
+            # if 'frame.json' not found, try to parse 'frame.xml' as fallback
+            xmlframepath = os.path.join(story_content_path, 'frame.xml')
+            if os.path.exists(xmlframepath):
+                # print(xmlframepath)
+                frame_data = BeautifulSoup(open(xmlframepath).read(), 'xml')
+                resource_data = frame_data.find("resource_data")
+                if resource_data:
+                    xml_resources = resource_data.find_all('resource')
+                    if xml_resources:
+                        for xml_resource in xml_resources:
+                            resource = dict(
+                                title=xml_resource['title'],
+                                relpath=xml_resource['url'],
+                                iconrelpath=xml_resource.get('image', None),
+                            )
+                            resources.append(resource)
+    return resources
 
 
 
