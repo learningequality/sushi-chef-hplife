@@ -670,21 +670,100 @@ def extract_and_download_mp3path(jscode_str, destdir, mediadirname=MEDIA_DIR_NAM
 
 
 
-# DOWNLOAD RESOURCES
+# RESOURCES EXTRACTORS
 ################################################################################
+
+EXTRACTED_DIR_NAME = 'extracted'
+
+
+ASSETS_URL = 'https://cms-245-hplife.edcastcloud.com/asset-v1:hp-life-e-learning+{course_id}+open+type@asset+block@{filename}'
+
+DEFAULT_EXT_BY_CONTENT_TYPE = {
+    'application/pdf': 'pdf',
+    'application/vnd.openxmlformats-officedocument.wordprocessingml.document': 'docx',
+    'application/vnd.openxmlformats-officedocument.spreadsheetml.sheet': 'xlsx',
+    'application/vnd.openxmlformats-officedocument.presentationml.presentation': 'pptx',
+    'application/vnd.oasis.opendocument.spreadsheet': 'ods',
+    'application/vnd.ms-excel': 'xls',
+}
+
+
+def get_resources_from_downloadable_resouces_item(contentdir, item, course_data):
+    """
+    Extracts the resource links from the downloadable resources HTML content of item.
+    Returns:
+        resources = [
+            {
+                'url': 'https://s3.amazonaws.com/hp-life-content/.../Hoja+de+trabajo.docx',
+                'ext': 'docx',
+                'filename': 'Hoja de trabajo.docx',
+                'title': 'Hoja de trabajo',
+            },
+            ...
+        ]
+    """
+    resources = []
+    assert item['kind'] == 'html'
+    print('processing', item['url_name'])
+    indexhtml = item['content']
+    doc = BeautifulSoup(indexhtml, 'html5lib')
+    links = doc.find_all('a')
+    for link in links:
+        href = link['href'].strip()
+        if 'adobe.com' in href \
+            or 'openoffice.org' in href \
+            or 'libreoffice.org' in href \
+            or 'evernote.com' in href:
+            continue
+
+        filename = os.path.basename(href)
+        if href.startswith('/'):
+            url = ASSETS_URL.format(course_id=course_data['course'], filename=filename)
+        else:
+            url = href
+
+        response = requests.head(url)
+        if response.ok:
+            if 'Content-Type' in response.headers:
+                content_type = response.headers['Content-Type']
+            else:
+                print('ERROR: No content_type in header', url, response.status_code, response.headers)
+        else:
+            print('PROBLEM', url, response.status_code, response.headers)
+
+        _, dotext = os.path.splitext(filename)
+        if dotext:
+            ext = dotext[1:].lower()
+        else:
+            ext = DEFAULT_EXT_BY_CONTENT_TYPE[content_type]
+
+        unquoted_filename = unquote_plus(filename)
+        unquoted_filename = unquoted_filename.replace('+', '_')
+        name, _ = os.path.splitext(unquoted_filename)
+        localfilename = name + '.' + ext
+        resource = dict(
+            url=url,
+            ext=ext,
+            filename=localfilename,
+            title=link.text.strip(),
+        )
+        resources.append(resource)
+    return resources
 
 
 def get_resources_from_articulate_storyline(contentdir, activity_ref):
     """
     Extracts the resource links from the articulate storyline 'frame.json'.
-    resources = {
-        'relpath': 'story_content/external_files/Additional_Excel_Tips.pdf',
-        'title': 'Additional Excel Tips',
-        'iconrelpath': 'story_content/6OiyTv2LR5V.png',
-    }
+    resources = [dict(
+        url='chefdata/{lang}/{course_name}/content/{activity_ref}/story_content/external_files/Additional_Excel_Tips.doc',
+        path='chefdata/{lang}/{course_name}/content/extracted/Additional_Excel_Tips.doc',
+        ext='doc',
+        title='Additional Excel Tips',
+    ), ...]
     """
     #print('in get_resource_articulate_storyline for', contentdir, activity_ref)
-    resources = []
+
+    resources_links = []
 
     story_content_path = os.path.join(contentdir, activity_ref, 'story_content')
     if not os.path.exists(story_content_path):
@@ -702,7 +781,7 @@ def get_resources_from_articulate_storyline(contentdir, activity_ref):
                         relpath=json_resource['url'],
                         iconrelpath=json_resource.get('image', None),
                     )
-                    resources.append(resource)
+                    resources_links.append(resource)
         else:
             # if 'frame.json' not found, try to parse 'frame.xml' as fallback
             xmlframepath = os.path.join(story_content_path, 'frame.xml')
@@ -719,79 +798,135 @@ def get_resources_from_articulate_storyline(contentdir, activity_ref):
                                 relpath=xml_resource['url'],
                                 iconrelpath=xml_resource.get('image', None),
                             )
-                            resources.append(resource)
+                            resources_links.append(resource)
+    resources = []
+    if resources_links:
+        extracteddir = os.path.join(contentdir, EXTRACTED_DIR_NAME)
+        if not os.path.exists(extracteddir):
+            os.makedirs(extracteddir)
+        for resources_link in resources_links:
+            abspath = os.path.join(contentdir, activity_ref, resources_link['relpath'])
+            _, dotext = os.path.splitext(resources_link['relpath'])
+            filename = os.path.basename(abspath)
+            destpath = os.path.join(extracteddir, filename)
+            if not os.path.exists(abspath):
+                continue
+            if not os.path.exists(destpath):
+                shutil.move(abspath, destpath)
+            resource = dict(
+                url=abspath,
+                path=destpath,
+                ext=dotext[1:],
+                filename=filename,
+                title=resources_link['title'],
+            )
+            resources.append(resource)
     return resources
 
 
 
+# DOWNLOAD RESOURCES
+################################################################################
+DOWNLOADS_DIR_NAME = 'downloads'
+
+def download_resource(resource, contentdir):
+    """
+    Downloads the resource path to a local path in {contentdir}/downloads/
+    Input:
+        resource = {
+            'url': 'https://s3.amazonaws.com/hp-life-content/.../Hoja+de+trabajo.docx',
+            'ext': 'docx',
+            'filename': 'Hoja de trabajo.docx',
+            'title': 'Hoja de trabajo',
+        }
+    Output:
+        resource = {
+            'url': 'https://s3.amazonaws.com/hp-life-content/.../Hoja+de+trabajo.docx',
+            'ext': 'docx',
+            'filename': 'Hoja de trabajo.docx',
+            'title': 'Hoja de trabajo',
+            'path': '{contentdir}/downloads/Hoja+de+trabajo.docx',
+        }
+        or None if error.
+    """
+    downloadsdir = os.path.join(contentdir, DOWNLOADS_DIR_NAME)
+    if not os.path.exists(downloadsdir):
+        os.makedirs(downloadsdir)
+    filename = resource['filename']
+    destpath = os.path.join(downloadsdir, filename)
+    if not os.path.exists(destpath):
+        download_url = resource['url']
+        print('Downloading resource from', download_url)
+        # go GET a sample.docx
+        response = requests.get(download_url)
+        if response.ok:
+            with open(destpath, 'wb') as localfile:
+                localfile.write(response.content)
+        else:
+            return None
+    assert os.path.exists(destpath), 'ERROR no file saved to ' + str(destpath)
+    resource['path'] = destpath
+    return resource
 
 
 
 # DOCUMENT CONVERSION HELPER
 ################################################################################
 
-def is_downloadable_resource(download_url):
-    if download_url.strip().startswith('https://s3.amazonaws.com/hp-life-content'):
-        return True
-    else:
-        return False
+CONVERTIBLE_EXTS = ['doc', 'docx',   'pptx',   'ods', 'xls', 'xlsx']
+CONVERTED_DIR_NAME = 'converted'
 
 
-def transform_downloadable_resource(title, download_url, description=''):
-    """
-    
-    """
-    pass
-
-
-
-def download_resource(basedir, download_url):
-    """
-    Downloads the pdf/docx/pptx resource from download_url and returns localpath.
-    """
-    pass
-
-
-CONVERTIBLE_DOC_FORMATS = ['.doc', '.docx', '.pptx']
-
-def convert_resource(basedir, download_url):
+def convert_resource(resource, contentdir):
     """
     Convert a Kolibri-imcopatible document format like pptx or docx to pdf
     using the microwave document conversion service.
+    Input:
+        resource = {
+            'path': '{contentdir}/downloads/Hoja+de+trabajo.docx',
+            'ext': 'docx',
+            'filename': 'Hoja de trabajo.docx',
+            'title': 'Hoja de trabajo',
+        }
+    Output:
+      - Saves converted-to-pdf file at `convetedpath` in converted/ dir
+      - Modifies the resouce dict to contain convertedfilename and convetedpath
+            resource = {
+                'path': '{contentdir}/downloads/Hoja+de+trabajo.docx',
+                'ext': 'docx',
+                'filename': 'Hoja de trabajo.docx',
+                'title': 'Hoja de trabajo',
+                'convertedfilename': 'Hoja de trabajo.pdf',
+                'convetedpath': '{contentdir}/converted/Hoja de trabajo.pdf',
+            }
     """
-    #
-    downloadsdirname = 'downloads'
-    downloadsdir = os.path.join(basedir, downloadsdirname)
-    if not os.path.exists(downloadsdir):
-        os.makedirs(downloadsdir)
-    #
-    resourcesdirname = 'resources'
-    destdir = os.path.join(basedir, resourcesdirname)
+    path = resource['path']
+
+    destdir = os.path.join(contentdir, CONVERTED_DIR_NAME)
     if not os.path.exists(destdir):
         os.makedirs(destdir)
-    #
-    src_filename = os.path.basename(download_url)
-    name, ext = os.path.splitext(src_filename)
-    if ext in CONVERTIBLE_DOC_FORMATS:
-        # destination path for converted file
-        dest_filename = name + '.pdf'
-        destpath = os.path.join(destdir, dest_filename)
-        if not os.path.exists(destpath):
-            print('Downloading convertible resource from', download_url)
-            # go GET a sample.docx
-            response = requests.get(download_url)
-            downloadpath = os.path.join(downloadsdir, src_filename)
-            with open(downloadpath, 'wb') as localfile:
-                localfile.write(response.content)
-            # convert it
-            microwave_url = 'http://35.185.105.222:8989/unoconv/pdf'
-            files = {'file': open(downloadpath, 'rb')}
-            response2 = requests.post(microwave_url, files=files)
-            # save converted output to destination path
-            with open(destpath, 'wb') as localfile:
-                localfile.write(response2.content)
-    else:
-        print('ERROR non-convertible file extension', ext, 'at', download_url)
+
+    src_filename = resource['filename']
+    name, dotext = os.path.splitext(src_filename)
+    ext = dotext[1:]
+    assert ext == resource['ext']
+    assert ext in CONVERTIBLE_EXTS
+
+    # destination path for converted file
+    dest_filename = name + '.pdf'
+    destpath = os.path.join(destdir, dest_filename)
+    if not os.path.exists(destpath):
+        print('Convering file', path)
+        microwave_url = 'http://35.185.105.222:8989/unoconv/pdf'
+        files = {'file': open(path, 'rb')}
+        response = requests.post(microwave_url, files=files)
+        # save converted output to destination path
+        with open(destpath, 'wb') as localfile:
+            localfile.write(response.content)
+
+    # add info to resource dict
+    resource['convertedfilename'] = dest_filename
+    resource['convetedpath'] = destpath
 
 
 
