@@ -1,5 +1,6 @@
 
 from bs4 import BeautifulSoup, Tag
+from jinja2 import Template
 import json
 import os
 import re
@@ -14,6 +15,7 @@ from html2text import html2text
 
 from le_utils.constants import content_kinds, file_types, licenses
 from ricecooker.utils.zip import create_predictable_zip
+from ricecooker.utils.html_writer import HTMLWriter
 
 
 import slimit
@@ -1008,6 +1010,57 @@ def convert_resource(resource, contentdir):
     resource['convertedpath'] = destpath
 
 
+# Downloadable Resouces HTML5App generator
+################################################################################
+
+HTML5APP_TEMPLATE = 'chefdata/downloadable_resources_template'
+DOWNLOADABLE_RESOURCES_NAME = 'downloadable_resources_webroot'
+
+
+
+def make_html5zip_from_resources(resources, contentdir, lang):
+    """
+    """
+    zip_path = os.path.join(contentdir, DOWNLOADABLE_RESOURCES_NAME + '.zip')
+    if os.path.exists(zip_path):
+        os.remove(zip_path)
+
+    # load template
+    template_path = os.path.join(HTML5APP_TEMPLATE, 'index.template.html')
+    template_src = open(template_path).read()
+    template = Template(template_src)
+
+    # prepare template context values
+    from sushichef import HPLIFE_STRINGS
+    title = HPLIFE_STRINGS[lang]['downloadable_resources']
+    content = '    <ul>\n'
+    line_template = '      <li><a href="{localhref}" target="_blank">{title}</a></li>\n'
+    for resource in resources:
+        localhref = './' + resource['filename']
+        line = line_template.format(localhref=localhref, title=resource['title'])
+        content += line
+    content += '    </ul>'
+
+    # save to zip file
+    with HTMLWriter(zip_path, 'w') as zipper:
+        # index.html = render template to string
+        index_html = template.render(
+            title=title,
+            content=content,
+        )
+        zipper.write_index_contents(index_html)
+
+        # css/styles.css
+        with open(os.path.join(HTML5APP_TEMPLATE, 'css/styles.css')) as stylesf:
+            zipper.write_contents('styles.css', stylesf.read(), directory='css/')
+
+        # add files to zip
+        for resource in resources:
+            filename = resource['filename']
+            srcpath = resource['path']
+            zipper.write_file(srcpath, filename=filename)
+
+    return zip_path
 
 
 

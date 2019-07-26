@@ -18,6 +18,7 @@ from transform import extract_course_resouces
 # from transform import transform_resource_folder
 from transform import get_activity_descriptions_from_coursestart_html
 from transform import get_course_description_from_coursestart_html
+from transform import make_html5zip_from_resources
 from transform import transform_html
 from transform import transform_hpstoryline_folder
 from transform import transform_articulate_storyline_folder
@@ -88,14 +89,25 @@ HPLIFE_STRINGS = {
 
 CONTENT_FOLDER_RENAMES = {
     '2355hpl-es06': {
-        'YTA_TS_ES_FIXED_reload': 'TU6_Tech_Skill_PRO_es - Storyline output',
+        'technologyskill' : {
+            'YTA_TS_ES_FIXED_reload': 'TU6_Tech_Skill_PRO_es - Storyline output',
+        },
     },
     '2422hpl-fr06': {
-        'YTA_TS_FR_FIXED_reload': 'TU6_Tech_Skill_fr - Storyline output',
+        'technologyskill' : {
+            'YTA_TS_FR_FIXED_reload': 'TU6_Tech_Skill_fr - Storyline output',
+        },
     },
     '2287hpl-en06': {
-        'YTA_TS_EN_fixed_TEST_reload_3': 'TU6_Tech_Skill_PRO_en - Storyline output',
-    }
+        'technologyskill' : {
+            'YTA_TS_EN_fixed_TEST_reload_3': 'TU6_Tech_Skill_PRO_en - Storyline output',
+        },
+    },
+    '4788hpl-fr27': {
+        'businessconcept': {
+            '27-DT1-ST-FR-NR-MOB': '27-DT2-BC-FR-NR-MOB',  # fixes bug in course
+        },
+    },
 }
 
 def tranform_and_prevalidate(course_data, lang, coursedir, contentdir):
@@ -131,8 +143,10 @@ def tranform_and_prevalidate(course_data, lang, coursedir, contentdir):
             course_id = course_data['course']
             activity_ref = item['activity']['activity_ref']
 
-            if course_id in CONTENT_FOLDER_RENAMES and activity_ref in CONTENT_FOLDER_RENAMES[course_id]:
-                activity_ref = CONTENT_FOLDER_RENAMES[course_id][activity_ref]
+            if course_id in CONTENT_FOLDER_RENAMES \
+                and key in CONTENT_FOLDER_RENAMES[course_id] \
+                and activity_ref in CONTENT_FOLDER_RENAMES[course_id][key]:
+                activity_ref = CONTENT_FOLDER_RENAMES[course_id][key][activity_ref]
                 item['activity']['activity_ref'] = activity_ref
 
             activity_ref_sourcedir = os.path.join(contentdir, activity_ref)
@@ -321,7 +335,7 @@ def process_course_tree(parsed_tree, lang, contentdir, course_id):
             ]
         }    
     """
-    # Extract descriptions from coursestart 
+    # Extract descriptions from coursestart
     coursestart = parsed_tree['coursestart']
     course_description = get_course_description_from_coursestart_html(coursestart['content'], lang)
     parsed_tree['description'] = course_description
@@ -370,6 +384,7 @@ def build_subtree_from_course(course, containerdir):
 
         if key == 'resources':
             resources = parsed_tree['resources']
+
             # First add the Resources folder
             topic_dict = dict(
                 kind=content_kinds.TOPIC,
@@ -381,8 +396,7 @@ def build_subtree_from_course(course, containerdir):
             )
             course_dict['children'].append(topic_dict)
 
-            # Now all the pdf resources
-
+            # Second add all the converted resources as PDFs
             resource_urls_seen = []
             for resource in resources:
                 if resource['url'] not in resource_urls_seen:
@@ -414,15 +428,25 @@ def build_subtree_from_course(course, containerdir):
                 else:
                     print('skipping duplicate resource', resource)
 
-            # html5_dict = dict(
-            #     kind=content_kinds.HTML5,
-            #     title=HPLIFE_STRINGS[lang]['downloadable_resources'],
-            #     description=item.get('description', ''),
-            #     source_id=course_dict['title'] + '__' + key + '__downloadable_resources',
-            #     license=HPLIFE_LICENSE,
-            #     language=lang,
-            #     files=[],
-            # )
+            # Third add the zip file containing all downloadable resources
+            html5_node = dict(
+                kind=content_kinds.HTML5,
+                title=HPLIFE_STRINGS[lang]['downloadable_resources'],
+                description=resource.get('description', ''),
+                source_id=course_dict['title'] + '__' + key + '__downloadable_resources',
+                license=HPLIFE_LICENSE,
+                language=lang,
+                files=[],
+            )
+            zip_path = make_html5zip_from_resources(resources, contentdir, lang)
+            zip_file = dict(
+                file_type=file_types.HTML5,
+                path=zip_path,
+                language=lang,
+            )
+            html5_node['files'].append(zip_file)
+            topic_dict['children'].append(html5_node)
+
 
         elif key == 'nextsteps_video':
             nextsteps_video = parsed_tree[key]
