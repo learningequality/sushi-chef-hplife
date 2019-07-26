@@ -392,6 +392,7 @@ def build_subtree_from_course(course, containerdir):
                 source_id=course_dict['title'] + '___' + key,
                 license=HPLIFE_LICENSE,
                 language=lang,
+                thumbnail='chefdata/thumbnails/resources_folder_thumbnail.png',
                 children=[],
             )
             course_dict['children'].append(topic_dict)
@@ -436,6 +437,7 @@ def build_subtree_from_course(course, containerdir):
                 source_id=course_dict['title'] + '__' + key + '__downloadable_resources',
                 license=HPLIFE_LICENSE,
                 language=lang,
+                thumbnail='chefdata/thumbnails/downloadable_resources_thumbnail.png',
                 files=[],
             )
             zip_path = make_html5zip_from_resources(resources, contentdir, lang)
@@ -598,7 +600,7 @@ class HPLifeChef(JsonTreeChef):
             source_domain='life-global.org',
             source_id='hp-life-courses-{}'.format(lang),
             description=CHANNEL_DESCRIPTION_LOOKUP[lang],
-            thumbnail='chefdata/channel_thumbnail.png',
+            thumbnail='chefdata/thumbnails/channel_thumbnail.png',
             language=lang,
             children=[],
         )
