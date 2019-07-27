@@ -365,7 +365,7 @@ def build_subtree_from_course(course, containerdir):
         kind=content_kinds.TOPIC,
         title=course['name'],
         language=lang,
-        thumbnail='chefdata/thumbnails/channel_thumbnail_wide.png',
+        thumbnail='chefdata/thumbnails/new_channel_thumbnail.png',
         children = [],
     )
     basedir = os.path.join(containerdir, course['path'])
@@ -386,70 +386,72 @@ def build_subtree_from_course(course, containerdir):
 
         if key == 'resources':
             resources = parsed_tree['resources']
+            if resources:
+                # First add the Resources folder
+                topic_dict = dict(
+                    kind=content_kinds.TOPIC,
+                    title=HPLIFE_STRINGS[lang]['resources'],
+                    source_id=course_dict['title'] + '___' + key,
+                    license=HPLIFE_LICENSE,
+                    language=lang,
+                    thumbnail='chefdata/thumbnails/resources_folder_thumbnail.png',
+                    children=[],
+                )
+                course_dict['children'].append(topic_dict)
 
-            # First add the Resources folder
-            topic_dict = dict(
-                kind=content_kinds.TOPIC,
-                title=HPLIFE_STRINGS[lang]['resources'],
-                source_id=course_dict['title'] + '___' + key,
-                license=HPLIFE_LICENSE,
-                language=lang,
-                thumbnail='chefdata/thumbnails/resources_folder_thumbnail.png',
-                children=[],
-            )
-            course_dict['children'].append(topic_dict)
+                # Second add all the converted resources as PDFs
+                resource_urls_seen = []
+                for resource in resources:
+                    if resource['url'] not in resource_urls_seen:
+                        ext = resource['ext']
+                        if ext == 'pdf' or 'convertedpath' in resource:
+                            pdf_node = dict(
+                                kind=content_kinds.DOCUMENT,
+                                title=resource['title'],
+                                description=resource.get('description', ''),
+                                source_id=resource['url'],
+                                license=HPLIFE_LICENSE,
+                                language=lang,
+                                files=[],
+                            )
+                            if ext == 'pdf':
+                                path = resource['path']
+                            elif 'convertedpath' in resource:
+                                path = resource['convertedpath']
+                            else:
+                                raise ValueError('unexpected situation yo!')
+                            file_dict = dict(
+                                file_type=file_types.DOCUMENT,
+                                path=path,
+                                language=lang,
+                            )
+                            pdf_node['files'].append(file_dict)
+                            topic_dict['children'].append(pdf_node)
+                            resource_urls_seen.append(resource['url'])
+                    else:
+                        print('skipping duplicate resource', resource)
 
-            # Second add all the converted resources as PDFs
-            resource_urls_seen = []
-            for resource in resources:
-                if resource['url'] not in resource_urls_seen:
-                    ext = resource['ext']
-                    if ext == 'pdf' or 'convertedpath' in resource:
-                        pdf_node = dict(
-                            kind=content_kinds.DOCUMENT,
-                            title=resource['title'],
-                            description=resource.get('description', ''),
-                            source_id=resource['url'],
-                            license=HPLIFE_LICENSE,
-                            language=lang,
-                            files=[],
-                        )
-                        if ext == 'pdf':
-                            path = resource['path']
-                        elif 'convertedpath' in resource:
-                            path = resource['convertedpath']
-                        else:
-                            raise ValueError('unexpected situation yo!')
-                        file_dict = dict(
-                            file_type=file_types.DOCUMENT,
-                            path=path,
-                            language=lang,
-                        )
-                        pdf_node['files'].append(file_dict)
-                        topic_dict['children'].append(pdf_node)
-                        resource_urls_seen.append(resource['url'])
-                else:
-                    print('skipping duplicate resource', resource)
-
-            # Third add the zip file containing all downloadable resources
-            html5_node = dict(
-                kind=content_kinds.HTML5,
-                title=HPLIFE_STRINGS[lang]['downloadable_resources'],
-                description=resource.get('description', ''),
-                source_id=course_dict['title'] + '__' + key + '__downloadable_resources',
-                license=HPLIFE_LICENSE,
-                language=lang,
-                thumbnail='chefdata/thumbnails/downloadable_resources_thumbnail.png',
-                files=[],
-            )
-            zip_path = make_html5zip_from_resources(resources, contentdir, lang)
-            zip_file = dict(
-                file_type=file_types.HTML5,
-                path=zip_path,
-                language=lang,
-            )
-            html5_node['files'].append(zip_file)
-            topic_dict['children'].append(html5_node)
+                # Third add the zip file containing all non-pdf downloadable resources
+                nonpdfresources = [r for r in resources if r['ext'] != 'pdf']
+                if nonpdfresources:
+                    html5_node = dict(
+                        kind=content_kinds.HTML5,
+                        title=HPLIFE_STRINGS[lang]['downloadable_resources'],
+                        description=resource.get('description', ''),
+                        source_id=course_dict['title'] + '__' + key + '__downloadable_resources',
+                        license=HPLIFE_LICENSE,
+                        language=lang,
+                        thumbnail='chefdata/thumbnails/downloadable_resources_thumbnail.png',
+                        files=[],
+                    )
+                    zip_path = make_html5zip_from_resources(nonpdfresources, contentdir, lang)
+                    zip_file = dict(
+                        file_type=file_types.HTML5,
+                        path=zip_path,
+                        language=lang,
+                    )
+                    html5_node['files'].append(zip_file)
+                    topic_dict['children'].append(html5_node)
 
 
         elif key == 'nextsteps_video':
@@ -602,7 +604,7 @@ class HPLifeChef(JsonTreeChef):
             source_domain='life-global.org',
             source_id='hp-life-courses-{}'.format(lang),
             description=CHANNEL_DESCRIPTION_LOOKUP[lang],
-            thumbnail='chefdata/thumbnails/channel_thumbnail_wide.png',
+            thumbnail='chefdata/thumbnails/new_channel_thumbnail.png',
             language=lang,
             children=[],
         )
