@@ -1034,11 +1034,12 @@ def make_html5zip_from_resources(resources, contentdir, lang):
     from sushichef import HPLIFE_STRINGS
     title = HPLIFE_STRINGS[lang]['downloadable_resources']
     content = '    <ul>\n'
-    line_template = '      <li><a href="{localhref}" target="_blank">{title}</a></li>\n'
+    line_template = '      <li><a href="{localhref}">{title}</a></li>\n'
     for resource in resources:
-        localhref = './' + resource['filename']
-        line = line_template.format(localhref=localhref, title=resource['title'])
-        content += line
+        if resource['ext'] != 'pdf':
+            localhref = './' + resource['filename']
+            line = line_template.format(localhref=localhref, title=resource['title'])
+            content += line
     content += '    </ul>'
 
     # save to zip file
@@ -1056,9 +1057,10 @@ def make_html5zip_from_resources(resources, contentdir, lang):
 
         # add files to zip
         for resource in resources:
-            filename = resource['filename']
-            srcpath = resource['path']
-            zipper.write_file(srcpath, filename=filename)
+            if resource['ext'] != 'pdf':
+                filename = resource['filename']
+                srcpath = resource['path']
+                zipper.write_file(srcpath, filename=filename)
 
     return zip_path
 

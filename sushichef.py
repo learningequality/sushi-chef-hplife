@@ -110,6 +110,7 @@ CONTENT_FOLDER_RENAMES = {
     },
 }
 
+
 def tranform_and_prevalidate(course_data, lang, coursedir, contentdir):
     """
     Performs necessary checks to know we have a valid course:
@@ -364,6 +365,7 @@ def build_subtree_from_course(course, containerdir):
         kind=content_kinds.TOPIC,
         title=course['name'],
         language=lang,
+        thumbnail='chefdata/thumbnails/channel_thumbnail_wide.png',
         children = [],
     )
     basedir = os.path.join(containerdir, course['path'])
@@ -600,7 +602,7 @@ class HPLifeChef(JsonTreeChef):
             source_domain='life-global.org',
             source_id='hp-life-courses-{}'.format(lang),
             description=CHANNEL_DESCRIPTION_LOOKUP[lang],
-            thumbnail='chefdata/thumbnails/channel_thumbnail.png',
+            thumbnail='chefdata/thumbnails/channel_thumbnail_wide.png',
             language=lang,
             children=[],
         )
