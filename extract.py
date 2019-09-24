@@ -271,7 +271,7 @@ def _strip_course_number(name):
     """
     Removes the prefix of the form HPL-FR33 followed by : _ or space.
     """
-    couse_number_pat = re.compile('HPL-..\d\d[: _]')
+    couse_number_pat = re.compile('HPL-..\d\d[: _-]')
     m = couse_number_pat.search(name)
     if m:
         clean_name = couse_number_pat.sub('', name)
@@ -290,6 +290,7 @@ def _normalize_course_name(course_name):
         'Eficiencia de la energía_ hacer más con menos': 'Eficiencia de la energía - hacer más con menos',
         'Efficacité énergétique Faire davantage avec moins': 'Efficacité énergétique - Faire davantage avec moins',
         'Efficacité énergétique _ Faire davantage avec moins': 'Efficacité énergétique - Faire davantage avec moins',
+        '3D प्रिंटिंग.FDwab0': '3D प्रिंटिंग',
     }
     for source_str, replacement_str in HPLIFE_COURSE_FOLDER_RENAMES.items():
         if source_str in course_name:
@@ -437,7 +438,6 @@ def extract(lang):
     print('Extracting lang', lang)
     course_names = extract_courses(lang)
     print('\textracting course_names', course_names)
-    
 
     course_list = {
         "title": "HP LIFE ({})".format(lang),

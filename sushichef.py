@@ -30,7 +30,7 @@ COURSES_DIR = 'chefdata/Courses'
 
 HPLIFE_LICENSE = get_license(licenses.CC_BY, copyright_holder='HP LIFE').as_dict()
 
-HPLIFE_LANGS = ['es', 'fr', 'en']
+HPLIFE_LANGS = ['es', 'fr', 'en', 'ar', 'hi']
 
 
 HPLIFE_COURSE_STRUCTURE_CHECK_STRINGS = {
@@ -562,16 +562,22 @@ def build_subtree_from_course(course, containerdir):
 # CHEF
 ################################################################################
 
+
 CHANNEL_TITLE_LOOKUP = {
-    'en': 'HP LIFE Courses (English)',
-    'es': 'Cursos HP LIFE (Español)',
-    'fr': 'Cours HP LIFE (Français)',
+    'ar': 'HP LIFE - Cours (العَرَبِيَّة‎)',
+    'en': 'HP LIFE - Courses (English)',
+    'es': 'HP LIFE - Cursos (Español)',
+    'fr': 'HP LIFE - Cours (Français)',
+    'hi': 'HP LIFE - Cours (हिन्दी)',
 }
 
+
 CHANNEL_DESCRIPTION_LOOKUP = {
+    'ar': "HP LIFE in Arabic",
     'en': "A program of the HP Foundation, this collection of short introductory courses helps adults learn independently various digital and entrepreneurship skills, including information technology, starting a business, online sales, and marketing. Appropriate for adults who are curious to develop their professional skills or simply learn about new opportunities.",
     'es': "Una iniciativa de HP Foundation, esta colección de cursos introductorios y breves ayuda a los adultos a adquirir habilidades en tecnología y emprendimiento de forma independiente, incluye tecnologías de la información, empezar  un negocio, venta en línea y marketing. Son apropiados para adultos con curiosidad por desarrollarse profesionalmente o por aprender nuevas oportunidades.",
     'fr': "Un programme de HP Foundation, les cours HP LIFE sont conçus pour aider les adultes à apprendre de manière autonome diverses compétences numériques, y compris les technologies de l'information, la création d'entreprise, les ventes en ligne et le marketing. Ces cours conviennent aux adultes qui sont curieux de développer leurs compétences professionnelles ou poursuivre de nouvelles opportunités.",
+    'hi': "HP LIFE in Hindi",
 }
 
 
