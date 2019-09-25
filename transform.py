@@ -30,6 +30,9 @@ slimit.parser.ply.yacc.PlyLogger = \
        dict(__init__=lambda s, *_, **__: (None, s.super().__init__())[0]))
 
 
+# Disable no SSL verify warnings
+import urllib3
+urllib3.disable_warnings(urllib3.exceptions.InsecureRequestWarning)
 
 
 
@@ -73,6 +76,23 @@ def transform_html(content):
 ################################################################################
 
 COURSE_START_SPLIT_STRINGS = {
+    'ar': {
+        'start_removables': ['استكشف'],
+        'cutpoint_starts': [
+            'لماذا تبدأ اليوم؟',
+            'لماذا نبدأ اليوم؟',
+            'لماذا** ******تبدأ** ******اليوم؟**'
+        ],
+        'cutpoint_start_and_includes': [
+            'في هذه الدورة، ستتمكن من:',
+        ],
+        'cutpoint_ends': [
+            'الخطوات في هذه الدورة',
+            'خطوات في الدورة التدريبية',
+            'خطوات في',
+            'الخطوات** ******في** ******الدورة',
+        ],
+    },
     'es': {
         'start_removables': ['Inicio:', 'INICIO:'],
         'cutpoint_starts': [
@@ -142,22 +162,23 @@ def get_course_description_from_coursestart_html(content, lang):
     found_start = False
     found_end = False
     started = False
+
     for line in page_text.split('\n'):
         if found_start:
             started = True
         if found_end:
             break
 
-        for pattern in SPLIT_STRINGS['cutpoint_starts']:
-            if pattern in line:
-                found_start = True
-        for pattern in SPLIT_STRINGS['cutpoint_start_and_includes']:
-            if not found_start and pattern in line:
-                found_start = True
-                course_description_lines.append(line)
-        for pattern in SPLIT_STRINGS['cutpoint_ends']:
-            if pattern in line and not line.startswith('●'):
+        if any(p in line for p in SPLIT_STRINGS['cutpoint_starts']):
+            found_start = True
+        if any(p in line for p in SPLIT_STRINGS['cutpoint_start_and_includes']) and not found_start:
+            found_start = True
+            course_description_lines.append(line)
+        if any(p in line for p in SPLIT_STRINGS['cutpoint_ends']) and started and not line.startswith('●'):
+            if len(''.join(course_description_lines).strip()) > 5:
                 found_end = True
+            else:
+                continue  # keep going if description is too short (workaround for 2455hpl-ar03)
 
         if started and not found_end:
             course_description_lines.append(line)
@@ -297,7 +318,7 @@ def transform_articulate_storyline_folder(contentdir, activity_ref):
     for script in scripts:
         script_url = script['src']
         script_basename = os.path.basename(script_url)
-        response = requests.get(script_url)
+        response = requests.get(script_url, verify=False)
         with open(os.path.join(scriptsdir, script_basename), 'wb') as scriptfile:
             scriptfile.write(response.content)
         scriptrelpath = os.path.join('scripts', script_basename)
@@ -452,7 +473,7 @@ def download_hpstoryline(contentdir, story_id):
 
 
     source_url = HPSTORYLINE_BASE_URL + story_id
-    html = requests.get(source_url).text
+    html = requests.get(source_url, verify=False).text
     doc = BeautifulSoup(html, 'html5lib')
 
     # A. Localize js libs
@@ -466,7 +487,7 @@ def download_hpstoryline(contentdir, story_id):
             script_basename = os.path.basename(script_url)
             destpath = os.path.join(scriptsdir, script_basename)
             if not os.path.exists(destpath):
-                response = requests.get(script_url)
+                response = requests.get(script_url, verify=False)
                 script_src = response.text
                 edited_script_src = script_src.replace('/assets', 'assets')
                 with open(destpath, 'w') as scriptfile:
@@ -485,7 +506,7 @@ def download_hpstoryline(contentdir, story_id):
         destpath = os.path.join(assetsdir, style_basename)
 
         if not os.path.exists(destpath):
-            response = requests.get(style_url)
+            response = requests.get(style_url, verify=False)
             if response.status_code == 200:
                 style_str = response.text
                 new_style_str = css_rewriter(style_str, source_url, destdir)
@@ -539,7 +560,7 @@ def download_hpstoryline(contentdir, story_id):
     overlay_url = 'https://hpstoryline.edcastcloud.com/assets/' + overlay_basename
     destpath = os.path.join(assetsdir, overlay_basename)
     if not os.path.exists(destpath):
-        response = requests.get(overlay_url)
+        response = requests.get(overlay_url, verify=False)
         if response.status_code == 200:
             with open(destpath, 'wb') as overlayimgfile:
                 overlayimgfile.write(response.content)
@@ -569,7 +590,7 @@ def img_rewriter(div, source_url, mediadir):
             img_basename = img_basename.replace('%20','_')
         destpath = os.path.join(mediadir, img_basename)
         if not os.path.exists(destpath):
-            response = requests.get(img_url)
+            response = requests.get(img_url, verify=False)
             if response.status_code == 200:
                 with open(destpath, 'wb') as imgfile:
                     imgfile.write(response.content)
@@ -607,7 +628,7 @@ def css_rewriter(style_str, source_url, destdir):
         resource_basename = os.path.basename(resource_url)
         destpath = os.path.join(assetsdir, resource_basename)
         if not os.path.exists(destpath):
-            response = requests.get(resource_url)
+            response = requests.get(resource_url, verify=False)
             if response.status_code == 200:
                 with open(destpath, 'wb') as resourcefile:
                     resourcefile.write(response.content)
@@ -655,7 +676,7 @@ def extract_and_download_mp3path(jscode_str, destdir, mediadirname=MEDIA_DIR_NAM
     if found:
         destpath = os.path.join(destdir, assets_path)
         if not os.path.exists(destpath):
-            response = requests.get(mp3path)
+            response = requests.get(mp3path, verify=False)
             with open(destpath, 'wb') as destfile:
                 destfile.write(response.content)
                 print('Saved file to', destpath)
@@ -939,7 +960,7 @@ def download_resource(resource, contentdir):
         download_url = resource['url']
         print('Downloading resource from', download_url)
         # go GET a sample.docx
-        response = requests.get(download_url)
+        response = requests.get(download_url, verify=False)
         if response.ok:
             with open(destpath, 'wb') as localfile:
                 localfile.write(response.content)
