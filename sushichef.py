@@ -34,38 +34,60 @@ HPLIFE_LANGS = ['es', 'fr', 'en', 'ar', 'hi']
 
 
 HPLIFE_COURSE_STRUCTURE_CHECK_STRINGS = {
+    'ar': {
+        'coursestart': ['بدء دورة'],
+        'story': ['تاريخ', 'قصة'],
+        'businessconcept': ['مفهوم الأعمال'],
+        'technologyskill': ['مهارات تكنولوجيا', 'التكنولوجيا المهارة'],
+        'coursefeedback': ['الاستطلاع'],
+        'nextsteps': ['خطوات القادمة'],
+        'downloadable_resources': ['موارد المهارات'],
+    },
     'en': {
-        'coursestart': 'Start Course',
-        'story': 'Story',
-        'businessconcept': 'Business Concept',
+        'coursestart': ['Start Course'],
+        'story': ['Story'],
+        'businessconcept': ['Business Concept'],
         'technologyskill': 'Technology Skill',
-        'coursefeedback': 'Course',
-        'nextsteps': 'Steps',
-        'downloadable_resources': 'Downloadable Resources',
+        'coursefeedback': ['Course'],
+        'nextsteps': ['Steps'],
+        'downloadable_resources': ['Downloadable Resources'],
     },
     'es': {
-        'coursestart': 'Inicio',
-        'story': 'Narración',
-        'businessconcept': 'Concepto',
+        'coursestart': ['Inicio'],
+        'story': ['Narración'],
+        'businessconcept': ['Concepto'],
         'technologyskill': 'Habilidad',
-        'coursefeedback': 'Encuesta',
-        'nextsteps': 'asos', # 'Pasos siguientes'
-        'downloadable_resources': 'Recursos descargable',
+        'coursefeedback': ['Encuesta'],
+        'nextsteps': ['asos'], # 'Pasos siguientes'
+        'downloadable_resources': ['Recursos descargable'],
     },
     'fr': {
-        'coursestart': 'Démarrer',
-        'story': 'Histoire',
-        'businessconcept': 'Concept commercial',
+        'coursestart': ['Démarrer'],
+        'story': ['Histoire'],
+        'businessconcept': ['Concept commercial'],
         'technologyskill': 'Compétence technologiqu',
-        'coursefeedback': 'Sondage',
-        'nextsteps': 'Étapes suivantes',
-        'downloadable_resources': 'Ressources',
-    }
+        'coursefeedback': ['Sondage'],
+        'nextsteps': ['Étapes suivantes'],
+        'downloadable_resources': ['Ressources'],
+    },
+    'hi': {
+        'coursestart': ['Start Course'],
+        'story': ['Story'],
+        'businessconcept': ['Business Concept'],
+        'technologyskill': 'Technology Skill',
+        'coursefeedback': ['Course'],
+        'nextsteps': ['Steps'],
+        'downloadable_resources': ['Downloadable Resources'],
+    },
 }
 
 
 
 HPLIFE_STRINGS = {
+    'ar': {
+        'resources': 'موارد المهارات',
+        'downloadable_resources': '(download) موارد المهارات',
+    },
     'en': {
         'resources': 'Resources',
         'downloadable_resources': 'Downloadable resources',
@@ -77,10 +99,14 @@ HPLIFE_STRINGS = {
     'fr': {
         'resources': 'Ressources',
         'downloadable_resources': 'Ressources téléchargeables',
-    }
+    },
+    'hi': {
+        'resources': 'Resources',
+        'downloadable_resources': 'Downloadable resources',
+    },
 }
 
-
+NON_RESOURCE_FOLDER_PREFIXES = ['Downloadab', '.DS_Store', 'es_', 'fr_', 'en_', 'ar_', 'hi_']
 
 
 
@@ -109,6 +135,29 @@ CONTENT_FOLDER_RENAMES = {
         },
     },
 }
+
+
+def find_activity_ref(contentdir, activity_ref):
+    """
+    Look for the resource folder called `activity_ref` in content/ and subdirs.
+    Return None if not found.
+    """
+    activity_ref_sourcedir = os.path.join(contentdir, activity_ref)
+    if os.path.exists(activity_ref_sourcedir):
+        return activity_ref_sourcedir
+    else:
+        folders = os.listdir(contentdir)
+        candidate_folders = []
+        for folder in folders:
+            if any(folder.startswith(p) for p in NON_RESOURCE_FOLDER_PREFIXES) or folder.endswith('_webroot'):
+                continue
+            candidate_folders.append(folder)
+        for candidate_folder in candidate_folders:
+            activity_ref_sourcedir = os.path.join(contentdir, candidate_folder, activity_ref)
+            if os.path.exists(activity_ref_sourcedir):
+                return activity_ref_sourcedir
+    return None
+
 
 
 def tranform_and_prevalidate(course_data, lang, coursedir, contentdir):
@@ -150,9 +199,15 @@ def tranform_and_prevalidate(course_data, lang, coursedir, contentdir):
                 activity_ref = CONTENT_FOLDER_RENAMES[course_id][key][activity_ref]
                 item['activity']['activity_ref'] = activity_ref
 
-            activity_ref_sourcedir = os.path.join(contentdir, activity_ref)
-            if not os.path.exists(activity_ref_sourcedir):
+            activity_ref_sourcedir = find_activity_ref(contentdir, activity_ref)
+            if activity_ref_sourcedir is None:
                 missing_activity_refs.append(activity_ref)
+            else:
+                activity_ref_sourcedir_rel_path = activity_ref_sourcedir.replace(contentdir, '')[1:]
+                if activity_ref_sourcedir_rel_path != activity_ref:
+                    # print('rewriting activity_ref', activity_ref, 'to', activity_ref_sourcedir_rel_path)
+                    item['activity']['activity_ref'] = activity_ref_sourcedir_rel_path
+
         else:
             print('EEEEE Unrecognized problem item', item)
 
@@ -165,13 +220,9 @@ def tranform_and_prevalidate(course_data, lang, coursedir, contentdir):
         folders = os.listdir(contentdir)
         candidate_folders = []
         for folder in folders:
-            if not folder.endswith('_webroot') \
-                and not folder.startswith('Downloadab') \
-                and not folder.startswith('es_') \
-                and not folder.startswith('fr_') \
-                and not folder.startswith('en_') \
-                and not folder == '.DS_Store':
-                    candidate_folders.append(folder)
+            if any(folder.startswith(p) for p in NON_RESOURCE_FOLDER_PREFIXES) or folder.endswith('_webroot'):
+                continue
+            candidate_folders.append(folder)
         print('available', candidate_folders)
         return None
 
@@ -229,7 +280,7 @@ def parse_course_tree(course_data, lang):
     # course start
     chapter = chapters[0]
     chapter_title = chapter['display_name']
-    assert check_strings['coursestart'] in chapter_title, 'bad ch. title ' + chapter_title
+    assert any(cs in chapter_title for cs in check_strings['coursestart']), 'bad ch. title ' + chapter_title
     content_items = flatten_chapter(chapter)
     assert len(content_items) == 1, 'unexpected # of items in course start'
     content_item = content_items[0]
@@ -240,7 +291,7 @@ def parse_course_tree(course_data, lang):
     # story
     chapter = chapters[1]
     chapter_title = chapter['display_name']
-    assert check_strings['story'] in chapter_title, 'bad ch. title ' + chapter_title
+    assert any(cs in chapter_title for cs in check_strings['story']), 'bad ch. title ' + chapter_title
     content_items = flatten_chapter(chapter)
     assert len(content_items) <= 2, 'unexpected # of items in story'
     content_item = content_items[0]
@@ -254,7 +305,7 @@ def parse_course_tree(course_data, lang):
     # businessconcept
     chapter = chapters[2]
     chapter_title = chapter['display_name'].strip()
-    assert check_strings['businessconcept'] in chapter_title, 'bad ch. title ' + chapter_title
+    assert any(cs in chapter_title for cs in check_strings['businessconcept']), 'bad ch. title ' + chapter_title
     content_items = flatten_chapter(chapter)
     assert len(content_items) == 1, 'unexpected # of items in businessconcept'
     content_item = content_items[0]
@@ -265,7 +316,7 @@ def parse_course_tree(course_data, lang):
     # technologyskill
     chapter = chapters[3]
     chapter_title = chapter['display_name']
-    assert check_strings['technologyskill'] in chapter_title, 'bad ch. title ' + chapter_title
+    assert any(cs in chapter_title for cs in check_strings['technologyskill']), 'bad ch. title ' + chapter_title
     content_items = flatten_chapter(chapter)
     assert len(content_items) == 2, 'unexpected # of items in technologyskill'
     # technologyskill activity
@@ -282,12 +333,12 @@ def parse_course_tree(course_data, lang):
     # skip course feedback
     chapter = chapters[4]
     chapter_title = chapter['display_name']
-    assert check_strings['coursefeedback'] in chapter_title, 'bad ch. title ' + chapter_title
+    assert any(cs in chapter_title for cs in check_strings['coursefeedback']), 'bad ch. title ' + chapter_title
 
     # next steps
     chapter = chapters[5]
     chapter_title = chapter['display_name']
-    assert check_strings['nextsteps'] in chapter_title, 'bad ch. title ' + chapter_title
+    assert any(cs in chapter_title for cs in check_strings['nextsteps']), 'bad ch. title ' + chapter_title
     content_items = flatten_chapter(chapter)
     assert len(content_items) <= 2, 'unexpected # of items in nextsteps'
     content_item = content_items[0]
@@ -564,11 +615,11 @@ def build_subtree_from_course(course, containerdir):
 
 
 CHANNEL_TITLE_LOOKUP = {
-    'ar': 'HP LIFE - Cours (العَرَبِيَّة‎)',
+    'ar': 'HP LIFE - Courses (العربية)',
     'en': 'HP LIFE - Courses (English)',
     'es': 'HP LIFE - Cursos (Español)',
     'fr': 'HP LIFE - Cours (Français)',
-    'hi': 'HP LIFE - Cours (हिन्दी)',
+    'hi': 'HP LIFE - Courses (हिन्दी)',
 }
 
 
