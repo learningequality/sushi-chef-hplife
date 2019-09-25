@@ -1,0 +1,4723 @@
+{
+  "title": "Cursos HP LIFE (Español)",
+  "source_domain": "life-global.org",
+  "source_id": "hp-life-courses-es",
+  "description": "Una iniciativa de HP Foundation, esta colección de cursos introductorios y breves ayuda a los adultos a adquirir habilidades en tecnología y emprendimiento de forma independiente, incluye tecnologías de la información, empezar  un negocio, venta en línea y marketing. Son apropiados para adultos con curiosidad por desarrollarse profesionalmente o por aprender nuevas oportunidades.",
+  "thumbnail": "chefdata/thumbnails/new_channel_thumbnail.png",
+  "language": "es",
+  "children": [
+    {
+      "kind": "topic",
+      "title": "Encontrar financiamiento",
+      "language": "es",
+      "thumbnail": "chefdata/thumbnails/new_channel_thumbnail.png",
+      "children": [
+        {
+          "kind": "html5",
+          "title": "Narración",
+          "description": "Mariam se da cuenta de que necesita financiamiento para agregar una nueva línea de productos.",
+          "source_id": "es_9",
+          "license": {
+            "license_id": "CC BY",
+            "copyright_holder": "HP LIFE",
+            "description": null
+          },
+          "language": "es",
+          "files": [
+            {
+              "file_type": "html5",
+              "path": "/var/folders/wc/2r44j8gs4gn56t1xtw5f6wlm0000gn/T/tmp9isng3xj.zip",
+              "language": "es"
+            }
+          ],
+          "thumbnail": null
+        },
+        {
+          "kind": "html5",
+          "title": "Concepto de negocio",
+          "description": "Determine cuánto dinero necesita. Explore fuentes de financiamiento y aprenda cómo seleccionar la o las fuentes más adecuadas a su negocio.",
+          "source_id": "FF_BC_ES2",
+          "license": {
+            "license_id": "CC BY",
+            "copyright_holder": "HP LIFE",
+            "description": null
+          },
+          "language": "es",
+          "files": [
+            {
+              "file_type": "html5",
+              "path": "/var/folders/wc/2r44j8gs4gn56t1xtw5f6wlm0000gn/T/tmpcvx5jk9z.zip",
+              "language": "es"
+            }
+          ],
+          "thumbnail": "chefdata/Courses/es/Encontrar financiamiento/content/FF_BC_ES2_webroot/story_content/thumbnail.jpg"
+        },
+        {
+          "kind": "html5",
+          "title": "Habilidad Tecnología",
+          "description": "Aprenda sobre crowdfunding y cómo buscar fuentes de financiamiento potenciales.",
+          "source_id": "FF_TS_ES2",
+          "license": {
+            "license_id": "CC BY",
+            "copyright_holder": "HP LIFE",
+            "description": null
+          },
+          "language": "es",
+          "files": [
+            {
+              "file_type": "html5",
+              "path": "/var/folders/wc/2r44j8gs4gn56t1xtw5f6wlm0000gn/T/tmp1wus8o0e.zip",
+              "language": "es"
+            }
+          ],
+          "thumbnail": "chefdata/Courses/es/Encontrar financiamiento/content/FF_TS_ES2_webroot/story_content/thumbnail.jpg"
+        },
+        {
+          "kind": "topic",
+          "title": "Recursos",
+          "source_id": "Encontrar financiamiento___resources",
+          "license": {
+            "license_id": "CC BY",
+            "copyright_holder": "HP LIFE",
+            "description": null
+          },
+          "language": "es",
+          "thumbnail": "chefdata/thumbnails/resources_folder_thumbnail.png",
+          "children": [
+            {
+              "kind": "document",
+              "title": "Conozca cómo otros han encontrado financiación empresarial",
+              "description": "",
+              "source_id": "https://s3.amazonaws.com/hp-life-content/Tech+Class+Academy/Finding+Funding+/Finding+Funding+(ES)+Downloadable+Resource/Conozca+c%C3%B3mo+otros+han+encontrado+financiaci%C3%B3n+empresarial",
+              "license": {
+                "license_id": "CC BY",
+                "copyright_holder": "HP LIFE",
+                "description": null
+              },
+              "language": "es",
+              "files": [
+                {
+                  "file_type": "document",
+                  "path": "chefdata/Courses/es/Encontrar financiamiento/content/downloads/Conozca cómo otros han encontrado financiación empresarial.pdf",
+                  "language": "es"
+                }
+              ]
+            },
+            {
+              "kind": "document",
+              "title": "Cinco consejos para un buen plan de negocios",
+              "description": "",
+              "source_id": "https://s3.amazonaws.com/hp-life-content/Tech+Class+Academy/Finding+Funding+/Finding+Funding+(ES)+Downloadable+Resource/Cinco+consejos+para+un+buen+plan+de+negocios",
+              "license": {
+                "license_id": "CC BY",
+                "copyright_holder": "HP LIFE",
+                "description": null
+              },
+              "language": "es",
+              "files": [
+                {
+                  "file_type": "document",
+                  "path": "chefdata/Courses/es/Encontrar financiamiento/content/downloads/Cinco consejos para un buen plan de negocios.pdf",
+                  "language": "es"
+                }
+              ]
+            },
+            {
+              "kind": "document",
+              "title": "Fuentes de financiamiento",
+              "description": "",
+              "source_id": "https://s3.amazonaws.com/hp-life-content/Tech+Class+Academy/Finding+Funding+/Finding+Funding+(ES)+Downloadable+Resource/Fuentes+de+financiamiento",
+              "license": {
+                "license_id": "CC BY",
+                "copyright_holder": "HP LIFE",
+                "description": null
+              },
+              "language": "es",
+              "files": [
+                {
+                  "file_type": "document",
+                  "path": "chefdata/Courses/es/Encontrar financiamiento/content/downloads/Fuentes de financiamiento.pdf",
+                  "language": "es"
+                }
+              ]
+            },
+            {
+              "kind": "document",
+              "title": "Guía para presentar ante un inversor",
+              "description": "",
+              "source_id": "https://s3.amazonaws.com/hp-life-content/Tech+Class+Academy/Finding+Funding+/Finding+Funding+(ES)+Downloadable+Resource/Gu%C3%ADa+para+presentar+ante+un+inversor",
+              "license": {
+                "license_id": "CC BY",
+                "copyright_holder": "HP LIFE",
+                "description": null
+              },
+              "language": "es",
+              "files": [
+                {
+                  "file_type": "document",
+                  "path": "chefdata/Courses/es/Encontrar financiamiento/content/downloads/Guía para presentar ante un inversor.pdf",
+                  "language": "es"
+                }
+              ]
+            },
+            {
+              "kind": "document",
+              "title": "Listado de requisitos para solicitar préstamos para pequeñas empresas",
+              "description": "",
+              "source_id": "https://s3.amazonaws.com/hp-life-content/Tech+Class+Academy/Finding+Funding+/Finding+Funding+(ES)+Downloadable+Resource/Listado+de+requisitos+para+solicitar+pr%C3%A9stamos+para+peque%C3%B1as+empresas",
+              "license": {
+                "license_id": "CC BY",
+                "copyright_holder": "HP LIFE",
+                "description": null
+              },
+              "language": "es",
+              "files": [
+                {
+                  "file_type": "document",
+                  "path": "chefdata/Courses/es/Encontrar financiamiento/content/downloads/Listado de requisitos para solicitar préstamos para pequeñas empresas.pdf",
+                  "language": "es"
+                }
+              ]
+            },
+            {
+              "kind": "document",
+              "title": "Hoja de trabajo para hacer seguimiento de sus posibilidades de financiación",
+              "description": "",
+              "source_id": "https://s3.amazonaws.com/hp-life-content/Tech+Class+Academy/Finding+Funding+/Finding+Funding+(ES)+Downloadable+Resource/Hoja+de+trabajo+para+hacer+seguimiento+de+sus+posibilidades+de+financiaci%C3%B3n",
+              "license": {
+                "license_id": "CC BY",
+                "copyright_holder": "HP LIFE",
+                "description": null
+              },
+              "language": "es",
+              "files": [
+                {
+                  "file_type": "document",
+                  "path": "chefdata/Courses/es/Encontrar financiamiento/content/converted/Hoja de trabajo para hacer seguimiento de sus posibilidades de financiación.pdf",
+                  "language": "es"
+                }
+              ]
+            },
+            {
+              "kind": "document",
+              "title": "Información general sobre el curso Encontrar Financiamiento",
+              "description": "",
+              "source_id": "https://s3.amazonaws.com/hp-life-content/Tech+Class+Academy/Finding+Funding+/Finding+Funding+(ES)+Downloadable+Resource/Informaci%C3%B3n+general+sobre+el+curso++Encontrar+Financiamiento",
+              "license": {
+                "license_id": "CC BY",
+                "copyright_holder": "HP LIFE",
+                "description": null
+              },
+              "language": "es",
+              "files": [
+                {
+                  "file_type": "document",
+                  "path": "chefdata/Courses/es/Encontrar financiamiento/content/downloads/Información general sobre el curso  Encontrar Financiamiento.pdf",
+                  "language": "es"
+                }
+              ]
+            },
+            {
+              "kind": "html5",
+              "title": "Recursos descargables",
+              "description": "",
+              "source_id": "Encontrar financiamiento__resources__downloadable_resources",
+              "license": {
+                "license_id": "CC BY",
+                "copyright_holder": "HP LIFE",
+                "description": null
+              },
+              "language": "es",
+              "thumbnail": "chefdata/thumbnails/downloadable_resources_thumbnail.png",
+              "files": [
+                {
+                  "file_type": "html5",
+                  "path": "chefdata/Courses/es/Encontrar financiamiento/content/downloadable_resources_webroot.zip",
+                  "language": "es"
+                }
+              ]
+            }
+          ]
+        },
+        {
+          "kind": "html5",
+          "title": "Pasos siguientes",
+          "description": "Descubra los pasos siguientes y recursos adicionales.",
+          "source_id": "<p><strong>Para recibir el cer",
+          "license": {
+            "license_id": "CC BY",
+            "copyright_holder": "HP LIFE",
+            "description": null
+          },
+          "language": "es",
+          "files": [
+            {
+              "file_type": "html5",
+              "path": "/var/folders/wc/2r44j8gs4gn56t1xtw5f6wlm0000gn/T/tmpoj9b3hf9.zip",
+              "language": "es"
+            }
+          ]
+        }
+      ],
+      "source_id": "2359hpl-es09",
+      "description": "Explore fuentes de financiamiento para su negocio. Identifique qué fuentes son las más adecuadas a sus necesidades y aprenda qué debe considerar antes de presentar su solicitud. Explore cómo usar Internet para encontrar posibles financiadores. Aprenda cómo: • Determinar cuánto dinero necesita • Entender qué periodo de tiempo necesitará el dinero • Identificar las fuentes de financiamiento más adecuadas para las necesidades de su negocio"
+    },
+    {
+      "kind": "topic",
+      "title": "Pensamiento de diseño",
+      "language": "es",
+      "thumbnail": "chefdata/thumbnails/new_channel_thumbnail.png",
+      "children": [
+        {
+          "kind": "html5",
+          "title": "Narración",
+          "description": "Dina y Carlos, propietarios de Coffee Corner, tienen una oportunidad de negocio para ayudar a que la ciudad mejore su preparación ante emergencias. No saben cómo entender el problema o diseñar una solución para mejorar la preparación ante emergencias.",
+          "source_id": "27-DT1-ST-ES-NR-MOB",
+          "license": {
+            "license_id": "CC BY",
+            "copyright_holder": "HP LIFE",
+            "description": null
+          },
+          "language": "es",
+          "files": [
+            {
+              "file_type": "html5",
+              "path": "/var/folders/wc/2r44j8gs4gn56t1xtw5f6wlm0000gn/T/tmpzwyehyx3.zip",
+              "language": "es"
+            }
+          ],
+          "thumbnail": "chefdata/Courses/es/Pensamiento de diseño/content/27-DT1-ST-ES-NR-MOB_webroot/story_content/thumbnail.jpg"
+        },
+        {
+          "kind": "html5",
+          "title": "Concepto de negocio",
+          "description": "Entender el proceso de pensamiento de diseño y cómo puede usarse el proceso para entender problemas, crear y probar soluciones posibles.",
+          "source_id": "27-DT2-BC-ES-NR-MOB",
+          "license": {
+            "license_id": "CC BY",
+            "copyright_holder": "HP LIFE",
+            "description": null
+          },
+          "language": "es",
+          "files": [
+            {
+              "file_type": "html5",
+              "path": "/var/folders/wc/2r44j8gs4gn56t1xtw5f6wlm0000gn/T/tmpw0pmveqp.zip",
+              "language": "es"
+            }
+          ],
+          "thumbnail": "chefdata/Courses/es/Pensamiento de diseño/content/27-DT2-BC-ES-NR-MOB_webroot/story_content/thumbnail.jpg"
+        },
+        {
+          "kind": "html5",
+          "title": "Habilidad tecnológica",
+          "description": "Aprender a crear una presentación para un producto o servicio nuevo para un financiador.",
+          "source_id": "27-DT3-TS-ES-NR-MOB",
+          "license": {
+            "license_id": "CC BY",
+            "copyright_holder": "HP LIFE",
+            "description": null
+          },
+          "language": "es",
+          "files": [
+            {
+              "file_type": "html5",
+              "path": "/var/folders/wc/2r44j8gs4gn56t1xtw5f6wlm0000gn/T/tmpbbbu7xl8.zip",
+              "language": "es"
+            }
+          ],
+          "thumbnail": "chefdata/Courses/es/Pensamiento de diseño/content/27-DT3-TS-ES-NR-MOB_webroot/story_content/thumbnail.jpg"
+        },
+        {
+          "kind": "topic",
+          "title": "Recursos",
+          "source_id": "Pensamiento de diseño___resources",
+          "license": {
+            "license_id": "CC BY",
+            "copyright_holder": "HP LIFE",
+            "description": null
+          },
+          "language": "es",
+          "thumbnail": "chefdata/thumbnails/resources_folder_thumbnail.png",
+          "children": [
+            {
+              "kind": "document",
+              "title": "Las entrevistas con Mai y Suraj",
+              "description": "",
+              "source_id": "https://s3.amazonaws.com/hp-life-content/Sweet_Rush/Design+Thinking/Downloadable+Resources+(Sweet+Rush)/Las+entrevistas+con+Mai+y+Suraj.pdf",
+              "license": {
+                "license_id": "CC BY",
+                "copyright_holder": "HP LIFE",
+                "description": null
+              },
+              "language": "es",
+              "files": [
+                {
+                  "file_type": "document",
+                  "path": "chefdata/Courses/es/Pensamiento de diseño/content/downloads/Las entrevistas con Mai y Suraj.pdf",
+                  "language": "es"
+                }
+              ]
+            },
+            {
+              "kind": "document",
+              "title": "Una guía de entrevista para Design Thinking",
+              "description": "",
+              "source_id": "https://s3.amazonaws.com/hp-life-content/Sweet_Rush/Design+Thinking/Downloadable+Resources+(Sweet+Rush)/Una+gu%C3%ADa+de+entrevista+para+Design+Thinking.pdf",
+              "license": {
+                "license_id": "CC BY",
+                "copyright_holder": "HP LIFE",
+                "description": null
+              },
+              "language": "es",
+              "files": [
+                {
+                  "file_type": "document",
+                  "path": "chefdata/Courses/es/Pensamiento de diseño/content/downloads/Una guía de entrevista para Design Thinking.pdf",
+                  "language": "es"
+                }
+              ]
+            },
+            {
+              "kind": "document",
+              "title": "Un escenario basado en Mai",
+              "description": "",
+              "source_id": "https://s3.amazonaws.com/hp-life-content/Sweet_Rush/Design+Thinking/Downloadable+Resources+(Sweet+Rush)/Un+escenario+basado+en+Mai.pdf",
+              "license": {
+                "license_id": "CC BY",
+                "copyright_holder": "HP LIFE",
+                "description": null
+              },
+              "language": "es",
+              "files": [
+                {
+                  "file_type": "document",
+                  "path": "chefdata/Courses/es/Pensamiento de diseño/content/downloads/Un escenario basado en Mai.pdf",
+                  "language": "es"
+                }
+              ]
+            },
+            {
+              "kind": "document",
+              "title": "Una muestra de persona forma: Mai",
+              "description": "",
+              "source_id": "https://s3.amazonaws.com/hp-life-content/Sweet_Rush/Design+Thinking/Downloadable+Resources+(Sweet+Rush)/Una+muestra+de+persona+forma+Mai.pdf",
+              "license": {
+                "license_id": "CC BY",
+                "copyright_holder": "HP LIFE",
+                "description": null
+              },
+              "language": "es",
+              "files": [
+                {
+                  "file_type": "document",
+                  "path": "chefdata/Courses/es/Pensamiento de diseño/content/downloads/Una muestra de persona forma Mai.pdf",
+                  "language": "es"
+                }
+              ]
+            },
+            {
+              "kind": "document",
+              "title": "Comprender el proceso de Design Thinking",
+              "description": "",
+              "source_id": "https://s3.amazonaws.com/hp-life-content/Sweet_Rush/Design+Thinking/Downloadable+Resources+(Sweet+Rush)/Comprender+el+proceso+de+Design+Thinking.pdf",
+              "license": {
+                "license_id": "CC BY",
+                "copyright_holder": "HP LIFE",
+                "description": null
+              },
+              "language": "es",
+              "files": [
+                {
+                  "file_type": "document",
+                  "path": "chefdata/Courses/es/Pensamiento de diseño/content/downloads/Comprender el proceso de Design Thinking.pdf",
+                  "language": "es"
+                }
+              ]
+            },
+            {
+              "kind": "document",
+              "title": "Hoja de trabajo de ideación y prototipo de pensamiento de diseño",
+              "description": "",
+              "source_id": "https://s3.amazonaws.com/hp-life-content/Sweet_Rush/Design+Thinking/Downloadable+Resources+(Sweet+Rush)/Hoja+de+trabajo+de+ideaci%C3%B3n+y+prototipo+de+pensamiento+de+dise%C3%B1o.docx",
+              "license": {
+                "license_id": "CC BY",
+                "copyright_holder": "HP LIFE",
+                "description": null
+              },
+              "language": "es",
+              "files": [
+                {
+                  "file_type": "document",
+                  "path": "chefdata/Courses/es/Pensamiento de diseño/content/converted/Hoja de trabajo de ideación y prototipo de pensamiento de diseño.pdf",
+                  "language": "es"
+                }
+              ]
+            },
+            {
+              "kind": "html5",
+              "title": "Recursos descargables",
+              "description": "",
+              "source_id": "Pensamiento de diseño__resources__downloadable_resources",
+              "license": {
+                "license_id": "CC BY",
+                "copyright_holder": "HP LIFE",
+                "description": null
+              },
+              "language": "es",
+              "thumbnail": "chefdata/thumbnails/downloadable_resources_thumbnail.png",
+              "files": [
+                {
+                  "file_type": "html5",
+                  "path": "chefdata/Courses/es/Pensamiento de diseño/content/downloadable_resources_webroot.zip",
+                  "language": "es"
+                }
+              ]
+            }
+          ]
+        },
+        {
+          "kind": "html5",
+          "title": "Próximos pasos",
+          "description": "Descubrir los próximos pasos en este curso y los recursos adicionales.",
+          "source_id": "<p class=\"MsoNormal\"><strong><",
+          "license": {
+            "license_id": "CC BY",
+            "copyright_holder": "HP LIFE",
+            "description": null
+          },
+          "language": "es",
+          "files": [
+            {
+              "file_type": "html5",
+              "path": "/var/folders/wc/2r44j8gs4gn56t1xtw5f6wlm0000gn/T/tmpzpee7sr9.zip",
+              "language": "es"
+            }
+          ]
+        }
+      ],
+      "source_id": "4853hpl-es27",
+      "description": "Aprender los conceptos básicos para identificar, definir, explorar, generar y probar ideas para resolver problemas difíciles. Los usuarios desarrollarán conocimientos del trabajo del proceso de pensamiento de diseño. Aprender cómo: • Definir un problema y crear el enunciado de un problema • Conducir entrevistas para aprender acerca de clientes potenciales y entender sus problemas o necesidades no atendidas"
+    },
+    {
+      "kind": "topic",
+      "title": "Administrando información de contacto",
+      "language": "es",
+      "thumbnail": "chefdata/thumbnails/new_channel_thumbnail.png",
+      "children": [
+        {
+          "kind": "html5",
+          "title": "Narración",
+          "description": "Ming trata de encontrar la información de contacto que necesita para realizar un trabajo importante.",
+          "source_id": "es_8",
+          "license": {
+            "license_id": "CC BY",
+            "copyright_holder": "HP LIFE",
+            "description": null
+          },
+          "language": "es",
+          "files": [
+            {
+              "file_type": "html5",
+              "path": "/var/folders/wc/2r44j8gs4gn56t1xtw5f6wlm0000gn/T/tmpbexj7eyi.zip",
+              "language": "es"
+            }
+          ],
+          "thumbnail": null
+        },
+        {
+          "kind": "html5",
+          "title": "Concepto de negocio",
+          "description": "Explore cómo capturar información adecuada sobre clientes y otros contactos con software de libreta de direcciones.",
+          "source_id": "TU8_Business_Concept_PRO-es - Storyline output",
+          "license": {
+            "license_id": "CC BY",
+            "copyright_holder": "HP LIFE",
+            "description": null
+          },
+          "language": "es",
+          "files": [
+            {
+              "file_type": "html5",
+              "path": "/var/folders/wc/2r44j8gs4gn56t1xtw5f6wlm0000gn/T/tmpska0_ckd.zip",
+              "language": "es"
+            }
+          ],
+          "thumbnail": "chefdata/Courses/es/Administrando información de contacto/content/TU8_Business_Concept_PRO-es - Storyline output_webroot/story_content/thumbnail.jpg"
+        },
+        {
+          "kind": "html5",
+          "title": "Habilidad Tecnología",
+          "description": "Aprenda cómo usar funciones de búsqueda en diferentes formas para encontrar los contactos que busca.",
+          "source_id": "TU8_Tech_Skill_PRO_es - Storyline output",
+          "license": {
+            "license_id": "CC BY",
+            "copyright_holder": "HP LIFE",
+            "description": null
+          },
+          "language": "es",
+          "files": [
+            {
+              "file_type": "html5",
+              "path": "/var/folders/wc/2r44j8gs4gn56t1xtw5f6wlm0000gn/T/tmp_mnif2ow.zip",
+              "language": "es"
+            }
+          ],
+          "thumbnail": "chefdata/Courses/es/Administrando información de contacto/content/TU8_Tech_Skill_PRO_es - Storyline output_webroot/story_content/thumbnail.jpg"
+        },
+        {
+          "kind": "topic",
+          "title": "Recursos",
+          "source_id": "Administrando información de contacto___resources",
+          "license": {
+            "license_id": "CC BY",
+            "copyright_holder": "HP LIFE",
+            "description": null
+          },
+          "language": "es",
+          "thumbnail": "chefdata/thumbnails/resources_folder_thumbnail.png",
+          "children": [
+            {
+              "kind": "document",
+              "title": "Hoja de trabajo de información de contactos (PDF)",
+              "description": "",
+              "source_id": "https://s3.amazonaws.com/hp-life-content/DownloadableSpanish/Downloadable+-+Managing+Contact+Information-es.pdf",
+              "license": {
+                "license_id": "CC BY",
+                "copyright_holder": "HP LIFE",
+                "description": null
+              },
+              "language": "es",
+              "files": [
+                {
+                  "file_type": "document",
+                  "path": "chefdata/Courses/es/Administrando información de contacto/content/downloads/Downloadable - Managing Contact Information-es.pdf",
+                  "language": "es"
+                }
+              ]
+            }
+          ]
+        },
+        {
+          "kind": "html5",
+          "title": "Pasos siguientes",
+          "description": "Descubra los pasos siguientes y recursos adicionales para administrar la información sobre los contactos de su negocio.",
+          "source_id": "<p><strong>Para recibir el cer",
+          "license": {
+            "license_id": "CC BY",
+            "copyright_holder": "HP LIFE",
+            "description": null
+          },
+          "language": "es",
+          "files": [
+            {
+              "file_type": "html5",
+              "path": "/var/folders/wc/2r44j8gs4gn56t1xtw5f6wlm0000gn/T/tmp5h3f16yx.zip",
+              "language": "es"
+            }
+          ]
+        }
+      ],
+      "source_id": "2358hpl-es08",
+      "description": "Explore cómo recolectar y acceder a información clave acerca de sus clientes, clientes potenciales, proveedores y otros contactos. Aprenda cómo: • Registrar información importante sobre sus contactos de negocios • Crear nuevos contactos en un sistema de administración de contactos • Buscar contactos en un sistema de administración de contactos"
+    },
+    {
+      "kind": "topic",
+      "title": "Efectivos Sitios Web de negocios",
+      "language": "es",
+      "thumbnail": "chefdata/thumbnails/new_channel_thumbnail.png",
+      "children": [
+        {
+          "kind": "html5",
+          "title": "Narración",
+          "description": "¿Cómo puede construir Walid un sitio web que satisfaga sus metas de negocios?",
+          "source_id": "es_17",
+          "license": {
+            "license_id": "CC BY",
+            "copyright_holder": "HP LIFE",
+            "description": null
+          },
+          "language": "es",
+          "files": [
+            {
+              "file_type": "html5",
+              "path": "/var/folders/wc/2r44j8gs4gn56t1xtw5f6wlm0000gn/T/tmp_rzt2puw.zip",
+              "language": "es"
+            }
+          ],
+          "thumbnail": null
+        },
+        {
+          "kind": "html5",
+          "title": "Concepto de negocio",
+          "description": "Aprenda cómo crear un sitio web de fácil uso que satisfaga sus metas de negocios al llegar con efectividad a su público objetivo.",
+          "source_id": "TU17_Business_Concept_PRO_es - Storyline output",
+          "license": {
+            "license_id": "CC BY",
+            "copyright_holder": "HP LIFE",
+            "description": null
+          },
+          "language": "es",
+          "files": [
+            {
+              "file_type": "html5",
+              "path": "/var/folders/wc/2r44j8gs4gn56t1xtw5f6wlm0000gn/T/tmpwx9f_44p.zip",
+              "language": "es"
+            }
+          ],
+          "thumbnail": "chefdata/Courses/es/Efectivos Sitios Web de negocios/content/TU17_Business_Concept_PRO_es - Storyline output_webroot/story_content/thumbnail.jpg"
+        },
+        {
+          "kind": "html5",
+          "title": "Habilidad Tecnología",
+          "description": "Aprenda cómo usar el software de diseño web en línea para crear un sitio web de su negocio.",
+          "source_id": "TU17_Tech_Skill_PRO_es - Storyline output",
+          "license": {
+            "license_id": "CC BY",
+            "copyright_holder": "HP LIFE",
+            "description": null
+          },
+          "language": "es",
+          "files": [
+            {
+              "file_type": "html5",
+              "path": "/var/folders/wc/2r44j8gs4gn56t1xtw5f6wlm0000gn/T/tmpe6qynfx7.zip",
+              "language": "es"
+            }
+          ],
+          "thumbnail": "chefdata/Courses/es/Efectivos Sitios Web de negocios/content/TU17_Tech_Skill_PRO_es - Storyline output_webroot/story_content/thumbnail.jpg"
+        },
+        {
+          "kind": "topic",
+          "title": "Recursos",
+          "source_id": "Efectivos Sitios Web de negocios___resources",
+          "license": {
+            "license_id": "CC BY",
+            "copyright_holder": "HP LIFE",
+            "description": null
+          },
+          "language": "es",
+          "thumbnail": "chefdata/thumbnails/resources_folder_thumbnail.png",
+          "children": [
+            {
+              "kind": "document",
+              "title": "Hoja de trabajo de planificación de sitios web de negocios (PDF)",
+              "description": "",
+              "source_id": "https://s3.amazonaws.com/hp-life-content/DownloadableSpanish/Downloadable-Business_Website_Planning_Worksheet-es.pdf",
+              "license": {
+                "license_id": "CC BY",
+                "copyright_holder": "HP LIFE",
+                "description": null
+              },
+              "language": "es",
+              "files": [
+                {
+                  "file_type": "document",
+                  "path": "chefdata/Courses/es/Efectivos Sitios Web de negocios/content/downloads/Downloadable-Business_Website_Planning_Worksheet-es.pdf",
+                  "language": "es"
+                }
+              ]
+            },
+            {
+              "kind": "document",
+              "title": "Mejores prácticas sobre la experiencia del usuario de sitios web (PDF)",
+              "description": "",
+              "source_id": "https://s3.amazonaws.com/hp-life-content/DownloadableSpanish/Downloadable-Website_User_Experience_Best_Practices-es.pdf",
+              "license": {
+                "license_id": "CC BY",
+                "copyright_holder": "HP LIFE",
+                "description": null
+              },
+              "language": "es",
+              "files": [
+                {
+                  "file_type": "document",
+                  "path": "chefdata/Courses/es/Efectivos Sitios Web de negocios/content/downloads/Downloadable-Website_User_Experience_Best_Practices-es.pdf",
+                  "language": "es"
+                }
+              ]
+            }
+          ]
+        },
+        {
+          "kind": "html5",
+          "title": "Pasos siguientes",
+          "description": "Descubra pasos siguientes y recursos adicionales que le ayudarán a crear un sitio web de fácil uso que satisfaga sus metas de negocios.",
+          "source_id": "<p><strong>Para recibir el cer",
+          "license": {
+            "license_id": "CC BY",
+            "copyright_holder": "HP LIFE",
+            "description": null
+          },
+          "language": "es",
+          "files": [
+            {
+              "file_type": "html5",
+              "path": "/var/folders/wc/2r44j8gs4gn56t1xtw5f6wlm0000gn/T/tmp8c7eeec1.zip",
+              "language": "es"
+            }
+          ]
+        }
+      ],
+      "source_id": "2367hpl-es17",
+      "description": "Aprenda cómo construir un sitio web que satisfaga con efectividad sus metas de negocios y cómo usar una herramienta web para crear un sitio web. Aprenda cómo: • Crear un sitio web de fácil uso que satisfaga sus metas de negocios y llegue con efectividad a su público objetivo • Usar software de diseño web en línea para crear un sitio web de su negocio"
+    },
+    {
+      "kind": "topic",
+      "title": "Presentaciones efectivas",
+      "language": "es",
+      "thumbnail": "chefdata/thumbnails/new_channel_thumbnail.png",
+      "children": [
+        {
+          "kind": "html5",
+          "title": "Narración",
+          "description": "Alejandro se prepara para impartir una presentación de diapositivas importante cuyo fin es obtener nuevo financiamiento y aumentar las ventas para que crezca su negocio.",
+          "source_id": "es_10",
+          "license": {
+            "license_id": "CC BY",
+            "copyright_holder": "HP LIFE",
+            "description": null
+          },
+          "language": "es",
+          "files": [
+            {
+              "file_type": "html5",
+              "path": "/var/folders/wc/2r44j8gs4gn56t1xtw5f6wlm0000gn/T/tmptxpvgq4c.zip",
+              "language": "es"
+            }
+          ],
+          "thumbnail": null
+        },
+        {
+          "kind": "html5",
+          "title": "Concepto de negocio",
+          "description": "Aprenda lo que se debe hacer y lo que no se debe hacer en las presentaciones de diapositivas y aplique sus conocimientos para ayudar a Alejandro en la elaboración de sus presentaciones para alcanzar las metas de su negocio.",
+          "source_id": "TU10_Business_Concept_PRO_es - Storyline output",
+          "license": {
+            "license_id": "CC BY",
+            "copyright_holder": "HP LIFE",
+            "description": null
+          },
+          "language": "es",
+          "files": [
+            {
+              "file_type": "html5",
+              "path": "/var/folders/wc/2r44j8gs4gn56t1xtw5f6wlm0000gn/T/tmpy1oo9d2z.zip",
+              "language": "es"
+            }
+          ],
+          "thumbnail": "chefdata/Courses/es/Presentaciones efectivas/content/TU10_Business_Concept_PRO_es - Storyline output_webroot/story_content/thumbnail.jpg"
+        },
+        {
+          "kind": "html5",
+          "title": "Habilidad Tecnología",
+          "description": "Aprenda los aspectos básicos de cómo agregar temas, diseños y gráficas a las presentaciones de PowerPoint.",
+          "source_id": "TU10_Tech_Skill_PRO_es - Storyline output",
+          "license": {
+            "license_id": "CC BY",
+            "copyright_holder": "HP LIFE",
+            "description": null
+          },
+          "language": "es",
+          "files": [
+            {
+              "file_type": "html5",
+              "path": "/var/folders/wc/2r44j8gs4gn56t1xtw5f6wlm0000gn/T/tmpdw17bsl8.zip",
+              "language": "es"
+            }
+          ],
+          "thumbnail": "chefdata/Courses/es/Presentaciones efectivas/content/TU10_Tech_Skill_PRO_es - Storyline output_webroot/story_content/thumbnail.jpg"
+        },
+        {
+          "kind": "topic",
+          "title": "Recursos",
+          "source_id": "Presentaciones efectivas___resources",
+          "license": {
+            "license_id": "CC BY",
+            "copyright_holder": "HP LIFE",
+            "description": null
+          },
+          "language": "es",
+          "thumbnail": "chefdata/thumbnails/resources_folder_thumbnail.png",
+          "children": [
+            {
+              "kind": "document",
+              "title": "Cómo planear su presentación (PDF)",
+              "description": "",
+              "source_id": "https://s3.amazonaws.com/hp-life-content/DownloadableSpanish/Unit+10+-+Planning+Your+Presentation-es.pdf",
+              "license": {
+                "license_id": "CC BY",
+                "copyright_holder": "HP LIFE",
+                "description": null
+              },
+              "language": "es",
+              "files": [
+                {
+                  "file_type": "document",
+                  "path": "chefdata/Courses/es/Presentaciones efectivas/content/downloads/Unit 10 - Planning Your Presentation-es.pdf",
+                  "language": "es"
+                }
+              ]
+            },
+            {
+              "kind": "document",
+              "title": "Consejos para diseñar su presentación (PDF)",
+              "description": "",
+              "source_id": "https://s3.amazonaws.com/hp-life-content/DownloadableSpanish/Unit+10+-+Tips+for+Designing+Your+Presentation-es.pdf",
+              "license": {
+                "license_id": "CC BY",
+                "copyright_holder": "HP LIFE",
+                "description": null
+              },
+              "language": "es",
+              "files": [
+                {
+                  "file_type": "document",
+                  "path": "chefdata/Courses/es/Presentaciones efectivas/content/downloads/Unit 10 - Tips for Designing Your Presentation-es.pdf",
+                  "language": "es"
+                }
+              ]
+            }
+          ]
+        },
+        {
+          "kind": "html5",
+          "title": "Pasos siguientes",
+          "description": "Descubra los pasos siguientes y recursos adicionales que le ayudarán a crear presentaciones de diapositivas efectivas.",
+          "source_id": "<p><strong>Para recibir el cer",
+          "license": {
+            "license_id": "CC BY",
+            "copyright_holder": "HP LIFE",
+            "description": null
+          },
+          "language": "es",
+          "files": [
+            {
+              "file_type": "html5",
+              "path": "/var/folders/wc/2r44j8gs4gn56t1xtw5f6wlm0000gn/T/tmp31o3uv1h.zip",
+              "language": "es"
+            }
+          ]
+        }
+      ],
+      "source_id": "2360hpl-es10",
+      "description": "Aprenda cómo crear presentaciones de diapositivas que están bien diseñadas y dirigidas a públicos específicos. Aprenda cómo: • Determinar qué información es pertinente para un público en particular • Crear presentaciones de diapositivas efectivas y bien diseñadas"
+    },
+    {
+      "kind": "topic",
+      "title": "Mentalidad Exitosa",
+      "language": "es",
+      "thumbnail": "chefdata/thumbnails/new_channel_thumbnail.png",
+      "children": [
+        {
+          "kind": "html5",
+          "title": "Narración",
+          "description": "Gianna cumplió el sueño de tener su propio taller y sala de exposición para crear y vender arte y muebles de madera.",
+          "source_id": "30-SM1-ST-ES",
+          "license": {
+            "license_id": "CC BY",
+            "copyright_holder": "HP LIFE",
+            "description": null
+          },
+          "language": "es",
+          "files": [
+            {
+              "file_type": "html5",
+              "path": "/var/folders/wc/2r44j8gs4gn56t1xtw5f6wlm0000gn/T/tmpc7titrhb.zip",
+              "language": "es"
+            }
+          ],
+          "thumbnail": "chefdata/Courses/es/Mentalidad Exitosa/content/30-SM1-ST-ES_webroot/story_content/thumbnail.jpg"
+        },
+        {
+          "kind": "html5",
+          "title": "Concepto de negocio",
+          "description": "Aprende a crear una visión para tu futuro, tus metas y un plan exitoso.",
+          "source_id": "30-SM2-BC-ES",
+          "license": {
+            "license_id": "CC BY",
+            "copyright_holder": "HP LIFE",
+            "description": null
+          },
+          "language": "es",
+          "files": [
+            {
+              "file_type": "html5",
+              "path": "/var/folders/wc/2r44j8gs4gn56t1xtw5f6wlm0000gn/T/tmpbdko7r7h.zip",
+              "language": "es"
+            }
+          ],
+          "thumbnail": "chefdata/Courses/es/Mentalidad Exitosa/content/30-SM2-BC-ES_webroot/story_content/thumbnail.jpg"
+        },
+        {
+          "kind": "html5",
+          "title": "Habilidad tecnológica",
+          "description": "Aprende como mejorar tus fortalezas y desarrollar buenos hábitos de negocio para ayudarte a ser exitoso.",
+          "source_id": "30-SM3-TS-ES",
+          "license": {
+            "license_id": "CC BY",
+            "copyright_holder": "HP LIFE",
+            "description": null
+          },
+          "language": "es",
+          "files": [
+            {
+              "file_type": "html5",
+              "path": "/var/folders/wc/2r44j8gs4gn56t1xtw5f6wlm0000gn/T/tmpjqsy65ur.zip",
+              "language": "es"
+            }
+          ],
+          "thumbnail": "chefdata/Courses/es/Mentalidad Exitosa/content/30-SM3-TS-ES_webroot/story_content/thumbnail.jpg"
+        },
+        {
+          "kind": "topic",
+          "title": "Recursos",
+          "source_id": "Mentalidad Exitosa___resources",
+          "license": {
+            "license_id": "CC BY",
+            "copyright_holder": "HP LIFE",
+            "description": null
+          },
+          "language": "es",
+          "thumbnail": "chefdata/thumbnails/resources_folder_thumbnail.png",
+          "children": [
+            {
+              "kind": "document",
+              "title": "Hoja de trabajo de Mentalidad Exitosa",
+              "description": "",
+              "source_id": "https://s3.amazonaws.com/hp-life-content/Antonio+TechClass+Academy/Success+Mindset/Spanish/Downloadable+Resources/Success%2BMindshet%2BWorksheetES.docx",
+              "license": {
+                "license_id": "CC BY",
+                "copyright_holder": "HP LIFE",
+                "description": null
+              },
+              "language": "es",
+              "files": [
+                {
+                  "file_type": "document",
+                  "path": "chefdata/Courses/es/Mentalidad Exitosa/content/converted/Success_Mindshet_WorksheetES.pdf",
+                  "language": "es"
+                }
+              ]
+            },
+            {
+              "kind": "document",
+              "title": "Instrucciones de la encuesta de Valores en Acción",
+              "description": "",
+              "source_id": "https://s3.amazonaws.com/hp-life-content/Antonio+TechClass+Academy/Success+Mindset/Spanish/Downloadable+Resources/Values%2Bin%2Baction%2Bsurvey%2Binstructions-ES.docx",
+              "license": {
+                "license_id": "CC BY",
+                "copyright_holder": "HP LIFE",
+                "description": null
+              },
+              "language": "es",
+              "files": [
+                {
+                  "file_type": "document",
+                  "path": "chefdata/Courses/es/Mentalidad Exitosa/content/converted/Values_in_action_survey_instructions-ES.pdf",
+                  "language": "es"
+                }
+              ]
+            },
+            {
+              "kind": "document",
+              "title": "Evaluación de fortalezas",
+              "description": "",
+              "source_id": "https://s3.amazonaws.com/hp-life-content/Antonio+TechClass+Academy/Success+Mindset/Spanish/Downloadable+Resources/Strengths%2Bassessment%2BHP%2BLIFE-ES.pptx",
+              "license": {
+                "license_id": "CC BY",
+                "copyright_holder": "HP LIFE",
+                "description": null
+              },
+              "language": "es",
+              "files": [
+                {
+                  "file_type": "document",
+                  "path": "chefdata/Courses/es/Mentalidad Exitosa/content/converted/Strengths_assessment_HP_LIFE-ES.pdf",
+                  "language": "es"
+                }
+              ]
+            },
+            {
+              "kind": "document",
+              "title": "Manejo del tiempo",
+              "description": "",
+              "source_id": "https://s3.amazonaws.com/hp-life-content/Antonio+TechClass+Academy/Success+Mindset/Spanish/Downloadable+Resources/Time%2BManagement%2BHP%2BLIFE-ES.pptx",
+              "license": {
+                "license_id": "CC BY",
+                "copyright_holder": "HP LIFE",
+                "description": null
+              },
+              "language": "es",
+              "files": [
+                {
+                  "file_type": "document",
+                  "path": "chefdata/Courses/es/Mentalidad Exitosa/content/converted/Time_Management_HP_LIFE-ES.pdf",
+                  "language": "es"
+                }
+              ]
+            },
+            {
+              "kind": "html5",
+              "title": "Recursos descargables",
+              "description": "",
+              "source_id": "Mentalidad Exitosa__resources__downloadable_resources",
+              "license": {
+                "license_id": "CC BY",
+                "copyright_holder": "HP LIFE",
+                "description": null
+              },
+              "language": "es",
+              "thumbnail": "chefdata/thumbnails/downloadable_resources_thumbnail.png",
+              "files": [
+                {
+                  "file_type": "html5",
+                  "path": "chefdata/Courses/es/Mentalidad Exitosa/content/downloadable_resources_webroot.zip",
+                  "language": "es"
+                }
+              ]
+            }
+          ]
+        },
+        {
+          "kind": "html5",
+          "title": "Próximos pasos",
+          "description": "Descubre los próximos pasos en este curso y recursos adicionales.",
+          "source_id": "<p class=\"MsoNormal\"><span col",
+          "license": {
+            "license_id": "CC BY",
+            "copyright_holder": "HP LIFE",
+            "description": null
+          },
+          "language": "es",
+          "files": [
+            {
+              "file_type": "html5",
+              "path": "/var/folders/wc/2r44j8gs4gn56t1xtw5f6wlm0000gn/T/tmpqxkw05dl.zip",
+              "language": "es"
+            }
+          ]
+        }
+      ],
+      "source_id": "6704hpl-es30",
+      "description": "En este curso : • Comprenderás lo que te hace feliz - tus valores, intereses y prioridades • Crearás una visión para tu futuro, te plantearás metas personales/profesionales y desarrollarás un plan exitoso • Aprenderás a realizar tu plan, desarrollando buenos hábitos de negocio y aprovechando las fortalezas que pueden llevarte al éxito."
+    },
+    {
+      "kind": "topic",
+      "title": "Liderazgo eficaz",
+      "language": "es",
+      "thumbnail": "chefdata/thumbnails/new_channel_thumbnail.png",
+      "children": [
+        {
+          "kind": "html5",
+          "title": "Narración",
+          "description": "Bethari enfrenta desafíos para liderar a sus empleados eficazmente.",
+          "source_id": "es_23",
+          "license": {
+            "license_id": "CC BY",
+            "copyright_holder": "HP LIFE",
+            "description": null
+          },
+          "language": "es",
+          "files": [
+            {
+              "file_type": "html5",
+              "path": "/var/folders/wc/2r44j8gs4gn56t1xtw5f6wlm0000gn/T/tmpddyr89op.zip",
+              "language": "es"
+            }
+          ],
+          "thumbnail": null
+        },
+        {
+          "kind": "html5",
+          "title": "Concepto de negocio",
+          "description": "Aprenda acerca de los diferentes estilos de liderazgo y a ser un líder más eficaz.",
+          "source_id": "TU23_Business_Concept_PRO_es - Storyline output",
+          "license": {
+            "license_id": "CC BY",
+            "copyright_holder": "HP LIFE",
+            "description": null
+          },
+          "language": "es",
+          "files": [
+            {
+              "file_type": "html5",
+              "path": "/var/folders/wc/2r44j8gs4gn56t1xtw5f6wlm0000gn/T/tmp7xmctuir.zip",
+              "language": "es"
+            }
+          ],
+          "thumbnail": "chefdata/Courses/es/Liderazgo eficaz/content/TU23_Business_Concept_PRO_es - Storyline output_webroot/story_content/thumbnail.jpg"
+        },
+        {
+          "kind": "html5",
+          "title": "Habilidad Tecnología",
+          "description": "Aprenda a usar el software para colaborar y comunicarse de manera más productiva.",
+          "source_id": "TU23_Tech_Skill_PRO_es - Storyline output",
+          "license": {
+            "license_id": "CC BY",
+            "copyright_holder": "HP LIFE",
+            "description": null
+          },
+          "language": "es",
+          "files": [
+            {
+              "file_type": "html5",
+              "path": "/var/folders/wc/2r44j8gs4gn56t1xtw5f6wlm0000gn/T/tmpxyzcsm5j.zip",
+              "language": "es"
+            }
+          ],
+          "thumbnail": "chefdata/Courses/es/Liderazgo eficaz/content/TU23_Tech_Skill_PRO_es - Storyline output_webroot/story_content/thumbnail.jpg"
+        },
+        {
+          "kind": "topic",
+          "title": "Recursos",
+          "source_id": "Liderazgo eficaz___resources",
+          "license": {
+            "license_id": "CC BY",
+            "copyright_holder": "HP LIFE",
+            "description": null
+          },
+          "language": "es",
+          "thumbnail": "chefdata/thumbnails/resources_folder_thumbnail.png",
+          "children": [
+            {
+              "kind": "document",
+              "title": "Los seis enfoques de liderazgo (PDF)",
+              "description": "",
+              "source_id": "https://s3.amazonaws.com/hp-life-content/DownloadableSpanish/Downloadable_C23_The_six_leadership_approaches-es.pdf",
+              "license": {
+                "license_id": "CC BY",
+                "copyright_holder": "HP LIFE",
+                "description": null
+              },
+              "language": "es",
+              "files": [
+                {
+                  "file_type": "document",
+                  "path": "chefdata/Courses/es/Liderazgo eficaz/content/downloads/Downloadable_C23_The_six_leadership_approaches-es.pdf",
+                  "language": "es"
+                }
+              ]
+            },
+            {
+              "kind": "document",
+              "title": "Tecnologías de comunicación para el liderazgo eficaz (PDF)",
+              "description": "",
+              "source_id": "https://s3.amazonaws.com/hp-life-content/DownloadableSpanish/Downloadable_C23_Communication_technologies_for_effective_leadership-es.pdf",
+              "license": {
+                "license_id": "CC BY",
+                "copyright_holder": "HP LIFE",
+                "description": null
+              },
+              "language": "es",
+              "files": [
+                {
+                  "file_type": "document",
+                  "path": "chefdata/Courses/es/Liderazgo eficaz/content/downloads/Downloadable_C23_Communication_technologies_for_effective_leadership-es.pdf",
+                  "language": "es"
+                }
+              ]
+            }
+          ]
+        },
+        {
+          "kind": "html5",
+          "title": "Pasos siguientes",
+          "description": "Descubra los siguientes pasos y recursos adicionales que le permitirán convertirse en un líder más eficaz.",
+          "source_id": "<p><strong>Para recibir el cer",
+          "license": {
+            "license_id": "CC BY",
+            "copyright_holder": "HP LIFE",
+            "description": null
+          },
+          "language": "es",
+          "files": [
+            {
+              "file_type": "html5",
+              "path": "/var/folders/wc/2r44j8gs4gn56t1xtw5f6wlm0000gn/T/tmp1oxeswaf.zip",
+              "language": "es"
+            }
+          ]
+        }
+      ],
+      "source_id": "2373hpl-es23",
+      "description": "Aprenda a ser un líder eficaz. Aprenda cómo: • Evaluar qué enfoques de liderazgo son adecuados para diferentes situaciones • Use el software de escritorio o móvil para colaborar y comunicarse de manera más productiva como líder"
+    },
+    {
+      "kind": "topic",
+      "title": "Comunicación empresarial",
+      "language": "es",
+      "thumbnail": "chefdata/thumbnails/new_channel_thumbnail.png",
+      "children": [
+        {
+          "kind": "html5",
+          "title": "Narración",
+          "description": "Julian aprende cómo un simple pedido comunicado de manera deficiente puede ocasionar un serio malentendido.",
+          "source_id": "26-BCOM1-ST-ES-NR-MOB",
+          "license": {
+            "license_id": "CC BY",
+            "copyright_holder": "HP LIFE",
+            "description": null
+          },
+          "language": "es",
+          "files": [
+            {
+              "file_type": "html5",
+              "path": "/var/folders/wc/2r44j8gs4gn56t1xtw5f6wlm0000gn/T/tmp8qkgf1ec.zip",
+              "language": "es"
+            }
+          ],
+          "thumbnail": "chefdata/Courses/es/Comunicación empresarial/content/26-BCOM1-ST-ES-NR-MOB_webroot/story_content/thumbnail.jpg"
+        },
+        {
+          "kind": "html5",
+          "title": "Concepto empresarial",
+          "description": "Comprenda cómo comunicarse de forma eficaz en un ámbito empresarial.",
+          "source_id": "26-BCOM2-BC-ES-NR-MOB-fix",
+          "license": {
+            "license_id": "CC BY",
+            "copyright_holder": "HP LIFE",
+            "description": null
+          },
+          "language": "es",
+          "files": [
+            {
+              "file_type": "html5",
+              "path": "/var/folders/wc/2r44j8gs4gn56t1xtw5f6wlm0000gn/T/tmpzqng0t44.zip",
+              "language": "es"
+            }
+          ],
+          "thumbnail": "chefdata/Courses/es/Comunicación empresarial/content/26-BCOM2-BC-ES-NR-MOB-fix_webroot/story_content/thumbnail.jpg"
+        },
+        {
+          "kind": "html5",
+          "title": "Habilidades tecnológicas",
+          "description": "Aprenda a usar la tecnología para lograr una comunicación efectiva.",
+          "source_id": "26-BCOM3-TS-ES-NR-MOB",
+          "license": {
+            "license_id": "CC BY",
+            "copyright_holder": "HP LIFE",
+            "description": null
+          },
+          "language": "es",
+          "files": [
+            {
+              "file_type": "html5",
+              "path": "/var/folders/wc/2r44j8gs4gn56t1xtw5f6wlm0000gn/T/tmptufsh00j.zip",
+              "language": "es"
+            }
+          ],
+          "thumbnail": "chefdata/Courses/es/Comunicación empresarial/content/26-BCOM3-TS-ES-NR-MOB_webroot/story_content/thumbnail.jpg"
+        },
+        {
+          "kind": "topic",
+          "title": "Recursos",
+          "source_id": "Comunicación empresarial___resources",
+          "license": {
+            "license_id": "CC BY",
+            "copyright_holder": "HP LIFE",
+            "description": null
+          },
+          "language": "es",
+          "thumbnail": "chefdata/thumbnails/resources_folder_thumbnail.png",
+          "children": [
+            {
+              "kind": "document",
+              "title": "Plan de acción de la comunicación empresarial",
+              "description": "",
+              "source_id": "https://cms-245-hplife.edcastcloud.com/asset-v1:hp-life-e-learning+4543hpl-es26+open+type@asset+block@BC_JA_APLAN.pdf",
+              "license": {
+                "license_id": "CC BY",
+                "copyright_holder": "HP LIFE",
+                "description": null
+              },
+              "language": "es",
+              "files": [
+                {
+                  "file_type": "document",
+                  "path": "chefdata/Courses/es/Comunicación empresarial/content/downloads/BC_JA_APLAN.pdf",
+                  "language": "es"
+                }
+              ]
+            },
+            {
+              "kind": "document",
+              "title": "Plantilla de planificación de la comunicación empresarial",
+              "description": "",
+              "source_id": "https://cms-245-hplife.edcastcloud.com/asset-v1:hp-life-e-learning+4543hpl-es26+open+type@asset+block@BC_JA_COMMTEMP_es.DOCX",
+              "license": {
+                "license_id": "CC BY",
+                "copyright_holder": "HP LIFE",
+                "description": null
+              },
+              "language": "es",
+              "files": [
+                {
+                  "file_type": "document",
+                  "path": "chefdata/Courses/es/Comunicación empresarial/content/converted/BC_JA_COMMTEMP_es.pdf",
+                  "language": "es"
+                }
+              ]
+            },
+            {
+              "kind": "document",
+              "title": "Consejos de comunicación empresarial",
+              "description": "",
+              "source_id": "https://cms-245-hplife.edcastcloud.com/asset-v1:hp-life-e-learning+4543hpl-es26+open+type@asset+block@BC_JA_TIPS.pdf",
+              "license": {
+                "license_id": "CC BY",
+                "copyright_holder": "HP LIFE",
+                "description": null
+              },
+              "language": "es",
+              "files": [
+                {
+                  "file_type": "document",
+                  "path": "chefdata/Courses/es/Comunicación empresarial/content/downloads/BC_JA_TIPS.pdf",
+                  "language": "es"
+                }
+              ]
+            },
+            {
+              "kind": "html5",
+              "title": "Recursos descargables",
+              "description": "",
+              "source_id": "Comunicación empresarial__resources__downloadable_resources",
+              "license": {
+                "license_id": "CC BY",
+                "copyright_holder": "HP LIFE",
+                "description": null
+              },
+              "language": "es",
+              "thumbnail": "chefdata/thumbnails/downloadable_resources_thumbnail.png",
+              "files": [
+                {
+                  "file_type": "html5",
+                  "path": "chefdata/Courses/es/Comunicación empresarial/content/downloadable_resources_webroot.zip",
+                  "language": "es"
+                }
+              ]
+            }
+          ]
+        },
+        {
+          "kind": "html5",
+          "title": "Pasos siguientes",
+          "description": "Conozca los próximos pasos de este curso y los recursos adicionales..",
+          "source_id": "<p><strong>Para recibir el cer",
+          "license": {
+            "license_id": "CC BY",
+            "copyright_holder": "HP LIFE",
+            "description": null
+          },
+          "language": "es",
+          "files": [
+            {
+              "file_type": "html5",
+              "path": "/var/folders/wc/2r44j8gs4gn56t1xtw5f6wlm0000gn/T/tmpc23y7cm7.zip",
+              "language": "es"
+            }
+          ]
+        }
+      ],
+      "source_id": "4543hpl-es26",
+      "description": "Aprenda a comunicarse de manera efectiva con el público objetivo. Aprenda a: • Identificar las características de una comunicación empresarial efectiva • Identificar los factores de éxito de una comunicación efectiva • Identificar y analizar el público objetivo • Usar los medios de comunicación para transmitir mensajes de manera eficaz"
+    },
+    {
+      "kind": "topic",
+      "title": "Dirección de correo electrónico de negocios",
+      "language": "es",
+      "thumbnail": "chefdata/thumbnails/new_channel_thumbnail.png",
+      "children": [
+        {
+          "kind": "html5",
+          "title": "Narración",
+          "description": "El DJ Vijay Singh se pregunta por qué los clientes potenciales no están respondiendo a sus mensajes de correo.",
+          "source_id": "es_11",
+          "license": {
+            "license_id": "CC BY",
+            "copyright_holder": "HP LIFE",
+            "description": null
+          },
+          "language": "es",
+          "files": [
+            {
+              "file_type": "html5",
+              "path": "/var/folders/wc/2r44j8gs4gn56t1xtw5f6wlm0000gn/T/tmp7yxhin7m.zip",
+              "language": "es"
+            }
+          ],
+          "thumbnail": null
+        },
+        {
+          "kind": "html5",
+          "title": "Concepto de negocio",
+          "description": "Explore cómo redactar mensajes de correo de negocios efectivos.",
+          "source_id": "TU11_Business_Concept_PRO_es - Storyline output",
+          "license": {
+            "license_id": "CC BY",
+            "copyright_holder": "HP LIFE",
+            "description": null
+          },
+          "language": "es",
+          "files": [
+            {
+              "file_type": "html5",
+              "path": "/var/folders/wc/2r44j8gs4gn56t1xtw5f6wlm0000gn/T/tmprba6ns14.zip",
+              "language": "es"
+            }
+          ],
+          "thumbnail": "chefdata/Courses/es/Dirección de correo electrónico de negocios/content/TU11_Business_Concept_PRO_es - Storyline output_webroot/story_content/thumbnail.jpg"
+        },
+        {
+          "kind": "html5",
+          "title": "Habilidad Tecnología",
+          "description": "Conozca las partes de un mensaje de correo y cómo dirigir un mensaje, agregar un archivo adjunto y crear una firma de correo.",
+          "source_id": "TU11_Tech_Skill_DEV_es - Storyline output",
+          "license": {
+            "license_id": "CC BY",
+            "copyright_holder": "HP LIFE",
+            "description": null
+          },
+          "language": "es",
+          "files": [
+            {
+              "file_type": "html5",
+              "path": "/var/folders/wc/2r44j8gs4gn56t1xtw5f6wlm0000gn/T/tmpv2bee54e.zip",
+              "language": "es"
+            }
+          ],
+          "thumbnail": "chefdata/Courses/es/Dirección de correo electrónico de negocios/content/TU11_Tech_Skill_DEV_es - Storyline output_webroot/story_content/thumbnail.jpg"
+        },
+        {
+          "kind": "topic",
+          "title": "Recursos",
+          "source_id": "Dirección de correo electrónico de negocios___resources",
+          "license": {
+            "license_id": "CC BY",
+            "copyright_holder": "HP LIFE",
+            "description": null
+          },
+          "language": "es",
+          "thumbnail": "chefdata/thumbnails/resources_folder_thumbnail.png",
+          "children": [
+            {
+              "kind": "document",
+              "title": "Consejos de mensajes de correo de negocios",
+              "description": "",
+              "source_id": "https://s3.amazonaws.com/hp-life-content/DownloadableSpanish/Business_Email_downloadable-es.pdf",
+              "license": {
+                "license_id": "CC BY",
+                "copyright_holder": "HP LIFE",
+                "description": null
+              },
+              "language": "es",
+              "files": [
+                {
+                  "file_type": "document",
+                  "path": "chefdata/Courses/es/Dirección de correo electrónico de negocios/content/downloads/Business_Email_downloadable-es.pdf",
+                  "language": "es"
+                }
+              ]
+            }
+          ]
+        },
+        {
+          "kind": "html5",
+          "title": "Pasos siguientes",
+          "description": "Descubra los pasos siguientes y recursos adicionales que le ayudarán a comunicarse con efectividad a través del correo electrónico.",
+          "source_id": "<p><strong>Para recibir el cer",
+          "license": {
+            "license_id": "CC BY",
+            "copyright_holder": "HP LIFE",
+            "description": null
+          },
+          "language": "es",
+          "files": [
+            {
+              "file_type": "html5",
+              "path": "/var/folders/wc/2r44j8gs4gn56t1xtw5f6wlm0000gn/T/tmp2hntlshl.zip",
+              "language": "es"
+            }
+          ]
+        }
+      ],
+      "source_id": "2361hpl-es11",
+      "description": "Aprenda cómo crear mensajes de correo de negocios profesionales y apropiados. Aprenda cómo: • Reconocer lo que se debe y lo que no se debe hacer en los mensajes de correo de negocios • Dirigir un mensaje de correo • Adjuntar un archivo a un mensaje de correo • Crear una firma de correo electrónico"
+    },
+    {
+      "kind": "topic",
+      "title": "Pronósticos de ventas",
+      "language": "es",
+      "thumbnail": "chefdata/thumbnails/new_channel_thumbnail.png",
+      "children": [
+        {
+          "kind": "html5",
+          "title": "Narración",
+          "description": "¿Cómo puede predecir Walid las ventas que tendrá cada mes?",
+          "source_id": "SF_Story_ES1",
+          "license": {
+            "license_id": "CC BY",
+            "copyright_holder": "HP LIFE",
+            "description": null
+          },
+          "language": "es",
+          "files": [
+            {
+              "file_type": "html5",
+              "path": "/var/folders/wc/2r44j8gs4gn56t1xtw5f6wlm0000gn/T/tmpcuepjlmf.zip",
+              "language": "es"
+            }
+          ],
+          "thumbnail": "chefdata/Courses/es/Pronósticos de ventas/content/SF_Story_ES1_webroot/story_content/thumbnail.jpg"
+        },
+        {
+          "kind": "html5",
+          "title": "Concepto de negocio",
+          "description": "Aprenda cómo reunir información importante para elaborar el pronóstico de ventas de su negocio.",
+          "source_id": "SF_BC_ES1",
+          "license": {
+            "license_id": "CC BY",
+            "copyright_holder": "HP LIFE",
+            "description": null
+          },
+          "language": "es",
+          "files": [
+            {
+              "file_type": "html5",
+              "path": "/var/folders/wc/2r44j8gs4gn56t1xtw5f6wlm0000gn/T/tmpm90tddac.zip",
+              "language": "es"
+            }
+          ],
+          "thumbnail": "chefdata/Courses/es/Pronósticos de ventas/content/SF_BC_ES1_webroot/story_content/thumbnail.jpg"
+        },
+        {
+          "kind": "html5",
+          "title": "Habilidad Tecnología",
+          "description": "Aprenda cómo personalizar una hoja de cálculo que le ayuda a pronosticar sus ventas.",
+          "source_id": "SF_TS_ES1",
+          "license": {
+            "license_id": "CC BY",
+            "copyright_holder": "HP LIFE",
+            "description": null
+          },
+          "language": "es",
+          "files": [
+            {
+              "file_type": "html5",
+              "path": "/var/folders/wc/2r44j8gs4gn56t1xtw5f6wlm0000gn/T/tmpra22665o.zip",
+              "language": "es"
+            }
+          ],
+          "thumbnail": "chefdata/Courses/es/Pronósticos de ventas/content/SF_TS_ES1_webroot/story_content/thumbnail.jpg"
+        },
+        {
+          "kind": "topic",
+          "title": "Recursos",
+          "source_id": "Pronósticos de ventas___resources",
+          "license": {
+            "license_id": "CC BY",
+            "copyright_holder": "HP LIFE",
+            "description": null
+          },
+          "language": "es",
+          "thumbnail": "chefdata/thumbnails/resources_folder_thumbnail.png",
+          "children": [
+            {
+              "kind": "document",
+              "title": "Consejos para pronósticos de ventas (PDF)",
+              "description": "",
+              "source_id": "https://s3.amazonaws.com/hp-life-content/DownloadableSpanish/Downloadable_-_Sales_Forecasting_Tips-es.pdf",
+              "license": {
+                "license_id": "CC BY",
+                "copyright_holder": "HP LIFE",
+                "description": null
+              },
+              "language": "es",
+              "files": [
+                {
+                  "file_type": "document",
+                  "path": "chefdata/Courses/es/Pronósticos de ventas/content/downloads/Downloadable_-_Sales_Forecasting_Tips-es.pdf",
+                  "language": "es"
+                }
+              ]
+            },
+            {
+              "kind": "document",
+              "title": "Hoja de trabajo de pronóstico de ventas (Excel)",
+              "description": "",
+              "source_id": "https://s3.amazonaws.com/hp-life-content/DownloadableSpanish/Sales_Forecast-es.xlsx",
+              "license": {
+                "license_id": "CC BY",
+                "copyright_holder": "HP LIFE",
+                "description": null
+              },
+              "language": "es",
+              "files": [
+                {
+                  "file_type": "document",
+                  "path": "chefdata/Courses/es/Pronósticos de ventas/content/converted/Sales_Forecast-es.pdf",
+                  "language": "es"
+                }
+              ]
+            },
+            {
+              "kind": "document",
+              "title": "Plantilla de hoja de cálculo de previsión de ventas",
+              "description": "",
+              "source_id": "chefdata/Courses/es/Pronósticos de ventas/content/SF_TS_ES1/story_content/external_files/Sales_Forecast-es.xlsx",
+              "license": {
+                "license_id": "CC BY",
+                "copyright_holder": "HP LIFE",
+                "description": null
+              },
+              "language": "es",
+              "files": [
+                {
+                  "file_type": "document",
+                  "path": "chefdata/Courses/es/Pronósticos de ventas/content/converted/Sales_Forecast-es.pdf",
+                  "language": "es"
+                }
+              ]
+            },
+            {
+              "kind": "document",
+              "title": "Resumen de pronóstico de ventas",
+              "description": "",
+              "source_id": "chefdata/Courses/es/Pronósticos de ventas/content/SF_TS_ES1/story_content/external_files/SFC_summary_ES.pdf",
+              "license": {
+                "license_id": "CC BY",
+                "copyright_holder": "HP LIFE",
+                "description": null
+              },
+              "language": "es",
+              "files": [
+                {
+                  "file_type": "document",
+                  "path": "chefdata/Courses/es/Pronósticos de ventas/content/extracted/SFC_summary_ES.pdf",
+                  "language": "es"
+                }
+              ]
+            },
+            {
+              "kind": "document",
+              "title": "Consejos Adicionales de Excel",
+              "description": "",
+              "source_id": "chefdata/Courses/es/Pronósticos de ventas/content/SF_TS_ES1/story_content/external_files/SFC_Additional Excel Tips_ES.pdf",
+              "license": {
+                "license_id": "CC BY",
+                "copyright_holder": "HP LIFE",
+                "description": null
+              },
+              "language": "es",
+              "files": [
+                {
+                  "file_type": "document",
+                  "path": "chefdata/Courses/es/Pronósticos de ventas/content/extracted/SFC_Additional Excel Tips_ES.pdf",
+                  "language": "es"
+                }
+              ]
+            },
+            {
+              "kind": "html5",
+              "title": "Recursos descargables",
+              "description": "",
+              "source_id": "Pronósticos de ventas__resources__downloadable_resources",
+              "license": {
+                "license_id": "CC BY",
+                "copyright_holder": "HP LIFE",
+                "description": null
+              },
+              "language": "es",
+              "thumbnail": "chefdata/thumbnails/downloadable_resources_thumbnail.png",
+              "files": [
+                {
+                  "file_type": "html5",
+                  "path": "chefdata/Courses/es/Pronósticos de ventas/content/downloadable_resources_webroot.zip",
+                  "language": "es"
+                }
+              ]
+            }
+          ]
+        },
+        {
+          "kind": "html5",
+          "title": "Pasos siguientes",
+          "description": "Descubra los pasos siguientes y recursos adicionales útiles que le ayudarán a pronosticar las ventas de su negocio.",
+          "source_id": "<p><strong>Para recibir el cer",
+          "license": {
+            "license_id": "CC BY",
+            "copyright_holder": "HP LIFE",
+            "description": null
+          },
+          "language": "es",
+          "files": [
+            {
+              "file_type": "html5",
+              "path": "/var/folders/wc/2r44j8gs4gn56t1xtw5f6wlm0000gn/T/tmpw6rwou2r.zip",
+              "language": "es"
+            }
+          ]
+        }
+      ],
+      "source_id": "2368hpl-es18",
+      "description": "Aprenda cómo reunir información importante para crear su pronóstico de ventas y como documentar su pronóstico de ventas usando software de hoja de cálculo. Aprenda cómo: • Reunir información para elaborar un pronóstico de ventas de su negocio • Usar software de hoja de cálculo para vigilar su pronóstico de ventas"
+    },
+    {
+      "kind": "topic",
+      "title": "Ventas en línea",
+      "language": "es",
+      "thumbnail": "chefdata/thumbnails/new_channel_thumbnail.png",
+      "children": [
+        {
+          "kind": "html5",
+          "title": "Narración",
+          "description": "Mariam se da cuenta de que ya no tiene nuevos clientes en su vecindario y necesita encontrar nuevos sitios donde vender sus bolsos..",
+          "source_id": "es_7",
+          "license": {
+            "license_id": "CC BY",
+            "copyright_holder": "HP LIFE",
+            "description": null
+          },
+          "language": "es",
+          "files": [
+            {
+              "file_type": "html5",
+              "path": "/var/folders/wc/2r44j8gs4gn56t1xtw5f6wlm0000gn/T/tmpm5n68ome.zip",
+              "language": "es"
+            }
+          ],
+          "thumbnail": null
+        },
+        {
+          "kind": "html5",
+          "title": "Concepto de negocio",
+          "description": "Explore los elementos de las listas de productos en línea y aprenda cómo crear listas convincentes para clientes potenciales.",
+          "source_id": "TU7_Business_Concept_PRO_es - Storyline output",
+          "license": {
+            "license_id": "CC BY",
+            "copyright_holder": "HP LIFE",
+            "description": null
+          },
+          "language": "es",
+          "files": [
+            {
+              "file_type": "html5",
+              "path": "/var/folders/wc/2r44j8gs4gn56t1xtw5f6wlm0000gn/T/tmpvgd53orf.zip",
+              "language": "es"
+            }
+          ],
+          "thumbnail": "chefdata/Courses/es/Ventas en línea/content/TU7_Business_Concept_PRO_es - Storyline output_webroot/story_content/thumbnail.jpg"
+        },
+        {
+          "kind": "html5",
+          "title": "Habilidad Tecnología",
+          "description": "Aprenda los fundamentos de cómo editar fotografías con el uso de software de edición fotográfica.",
+          "source_id": "TU7_Tech_Skill_PRO_es - Storyline output",
+          "license": {
+            "license_id": "CC BY",
+            "copyright_holder": "HP LIFE",
+            "description": null
+          },
+          "language": "es",
+          "files": [
+            {
+              "file_type": "html5",
+              "path": "/var/folders/wc/2r44j8gs4gn56t1xtw5f6wlm0000gn/T/tmpknm1zu14.zip",
+              "language": "es"
+            }
+          ],
+          "thumbnail": "chefdata/Courses/es/Ventas en línea/content/TU7_Tech_Skill_PRO_es - Storyline output_webroot/story_content/thumbnail.jpg"
+        },
+        {
+          "kind": "topic",
+          "title": "Recursos",
+          "source_id": "Ventas en línea___resources",
+          "license": {
+            "license_id": "CC BY",
+            "copyright_holder": "HP LIFE",
+            "description": null
+          },
+          "language": "es",
+          "thumbnail": "chefdata/thumbnails/resources_folder_thumbnail.png",
+          "children": [
+            {
+              "kind": "document",
+              "title": "Mercados en línea populares (PDF)",
+              "description": "",
+              "source_id": "https://s3.amazonaws.com/hp-life-content/DownloadableSpanish/HP_LIFE-Where_Can_I_List-es_0.pdf",
+              "license": {
+                "license_id": "CC BY",
+                "copyright_holder": "HP LIFE",
+                "description": null
+              },
+              "language": "es",
+              "files": [
+                {
+                  "file_type": "document",
+                  "path": "chefdata/Courses/es/Ventas en línea/content/downloads/HP_LIFE-Where_Can_I_List-es_0.pdf",
+                  "language": "es"
+                }
+              ]
+            },
+            {
+              "kind": "document",
+              "title": "Planificación de la lista en línea (PDF)",
+              "description": "",
+              "source_id": "https://s3.amazonaws.com/hp-life-content/DownloadableSpanish/HP_LIFE-Planning+Your+Online+Listing-es.pdf",
+              "license": {
+                "license_id": "CC BY",
+                "copyright_holder": "HP LIFE",
+                "description": null
+              },
+              "language": "es",
+              "files": [
+                {
+                  "file_type": "document",
+                  "path": "chefdata/Courses/es/Ventas en línea/content/downloads/HP_LIFE-Planning Your Online Listing-es.pdf",
+                  "language": "es"
+                }
+              ]
+            }
+          ]
+        },
+        {
+          "kind": "html5",
+          "title": "Pasos siguientes",
+          "description": "Descubra los pasos siguientes y recursos adicionales útiles para mejorar las estrategias de marketing de su negocio.",
+          "source_id": "<p><strong>Para recibir el cer",
+          "license": {
+            "license_id": "CC BY",
+            "copyright_holder": "HP LIFE",
+            "description": null
+          },
+          "language": "es",
+          "files": [
+            {
+              "file_type": "html5",
+              "path": "/var/folders/wc/2r44j8gs4gn56t1xtw5f6wlm0000gn/T/tmpll_gtsxu.zip",
+              "language": "es"
+            }
+          ]
+        }
+      ],
+      "source_id": "2356hpl-es07",
+      "description": "Aprenda cómo maximizar la efectividad de sus listas de productos en línea. Aprenda cómo: • Crear títulos, descripciones y fotografías efectivas para su lista de productos en línea • Mejorar las fotografías de sus productos con el uso de software de edición de fotografías"
+    },
+    {
+      "kind": "topic",
+      "title": "Fijación de precios",
+      "language": "es",
+      "thumbnail": "chefdata/thumbnails/new_channel_thumbnail.png",
+      "children": [
+        {
+          "kind": "html5",
+          "title": "Narración",
+          "description": "¿Debe aumentar Alejandro el precio de su popular café?",
+          "source_id": "es_15",
+          "license": {
+            "license_id": "CC BY",
+            "copyright_holder": "HP LIFE",
+            "description": null
+          },
+          "language": "es",
+          "files": [
+            {
+              "file_type": "html5",
+              "path": "/var/folders/wc/2r44j8gs4gn56t1xtw5f6wlm0000gn/T/tmp14uldtyi.zip",
+              "language": "es"
+            }
+          ],
+          "thumbnail": null
+        },
+        {
+          "kind": "html5",
+          "title": "Concepto de negocio",
+          "description": "Explore los tipos de gráficos que puede usar para presentar datos.",
+          "source_id": "TU15_Business_Concept_PRO_es - Storyline output",
+          "license": {
+            "license_id": "CC BY",
+            "copyright_holder": "HP LIFE",
+            "description": null
+          },
+          "language": "es",
+          "files": [
+            {
+              "file_type": "html5",
+              "path": "/var/folders/wc/2r44j8gs4gn56t1xtw5f6wlm0000gn/T/tmpmq4frmrq.zip",
+              "language": "es"
+            }
+          ],
+          "thumbnail": "chefdata/Courses/es/Fijación de precios/content/TU15_Business_Concept_PRO_es - Storyline output_webroot/story_content/thumbnail.jpg"
+        },
+        {
+          "kind": "html5",
+          "title": "Habilidad Tecnología",
+          "description": "Aprenda cómo usar el software de procesamiento de texto en la creación y personalización de tablas para registrar su investigación.",
+          "source_id": "TU15_Tech_Skill_Mobile_es - Storyline output",
+          "license": {
+            "license_id": "CC BY",
+            "copyright_holder": "HP LIFE",
+            "description": null
+          },
+          "language": "es",
+          "files": [
+            {
+              "file_type": "html5",
+              "path": "/var/folders/wc/2r44j8gs4gn56t1xtw5f6wlm0000gn/T/tmp6p3xbkkc.zip",
+              "language": "es"
+            }
+          ],
+          "thumbnail": "chefdata/Courses/es/Fijación de precios/content/TU15_Tech_Skill_Mobile_es - Storyline output_webroot/story_content/thumbnail.jpg"
+        },
+        {
+          "kind": "topic",
+          "title": "Recursos",
+          "source_id": "Fijación de precios___resources",
+          "license": {
+            "license_id": "CC BY",
+            "copyright_holder": "HP LIFE",
+            "description": null
+          },
+          "language": "es",
+          "thumbnail": "chefdata/thumbnails/resources_folder_thumbnail.png",
+          "children": [
+            {
+              "kind": "document",
+              "title": "Hoja de trabajo de comparación de precios (Word)",
+              "description": "",
+              "source_id": "https://s3.amazonaws.com/hp-life-content/DownloadableSpanish/Downloadable_Price-Comparison-Worksheet-es.docx",
+              "license": {
+                "license_id": "CC BY",
+                "copyright_holder": "HP LIFE",
+                "description": null
+              },
+              "language": "es",
+              "files": [
+                {
+                  "file_type": "document",
+                  "path": "chefdata/Courses/es/Fijación de precios/content/converted/Downloadable_Price-Comparison-Worksheet-es.pdf",
+                  "language": "es"
+                }
+              ]
+            },
+            {
+              "kind": "html5",
+              "title": "Recursos descargables",
+              "description": "",
+              "source_id": "Fijación de precios__resources__downloadable_resources",
+              "license": {
+                "license_id": "CC BY",
+                "copyright_holder": "HP LIFE",
+                "description": null
+              },
+              "language": "es",
+              "thumbnail": "chefdata/thumbnails/downloadable_resources_thumbnail.png",
+              "files": [
+                {
+                  "file_type": "html5",
+                  "path": "chefdata/Courses/es/Fijación de precios/content/downloadable_resources_webroot.zip",
+                  "language": "es"
+                }
+              ]
+            }
+          ]
+        },
+        {
+          "kind": "html5",
+          "title": "Pasos siguientes",
+          "description": "Descubra los pasos siguientes y recursos adicionales útiles que le ayudarán a fijar los precios en su negocio.",
+          "source_id": "<p><strong>Para recibir el cer",
+          "license": {
+            "license_id": "CC BY",
+            "copyright_holder": "HP LIFE",
+            "description": null
+          },
+          "language": "es",
+          "files": [
+            {
+              "file_type": "html5",
+              "path": "/var/folders/wc/2r44j8gs4gn56t1xtw5f6wlm0000gn/T/tmpfxfc_fiw.zip",
+              "language": "es"
+            }
+          ]
+        }
+      ],
+      "source_id": "2365hpl-es15",
+      "description": "Aprenda qué debe investigar para determinar los precios de sus productos y servicios, así como la manera de personalizar una tabla en software de procesamiento de texto para registrar su investigación. Aprenda cómo: • Fijar precios de productos y servicios • Usar software de procesamiento de texto para personalizar tablas"
+    },
+    {
+      "kind": "topic",
+      "title": "Comparación entre beneficios de marketing y características",
+      "language": "es",
+      "thumbnail": "chefdata/thumbnails/new_channel_thumbnail.png",
+      "children": [
+        {
+          "kind": "html5",
+          "title": "Narración",
+          "description": "¿Cómo puede comercializar Wassim sus productos con mayor efectividad?",
+          "source_id": "es_19",
+          "license": {
+            "license_id": "CC BY",
+            "copyright_holder": "HP LIFE",
+            "description": null
+          },
+          "language": "es",
+          "files": [
+            {
+              "file_type": "html5",
+              "path": "/var/folders/wc/2r44j8gs4gn56t1xtw5f6wlm0000gn/T/tmpfp_b0x3v.zip",
+              "language": "es"
+            }
+          ],
+          "thumbnail": null
+        },
+        {
+          "kind": "html5",
+          "title": "Concepto de negocio",
+          "description": "Aprenda cómo promover con efectividad las ventajas de sus productos o servicios en su mercado objetivo.",
+          "source_id": "TU19_Business_Concept_PRO_es - Storyline output",
+          "license": {
+            "license_id": "CC BY",
+            "copyright_holder": "HP LIFE",
+            "description": null
+          },
+          "language": "es",
+          "files": [
+            {
+              "file_type": "html5",
+              "path": "/var/folders/wc/2r44j8gs4gn56t1xtw5f6wlm0000gn/T/tmp8l28i5tg.zip",
+              "language": "es"
+            }
+          ],
+          "thumbnail": "chefdata/Courses/es/Comparación entre beneficios de marketing y características/content/TU19_Business_Concept_PRO_es - Storyline output_webroot/story_content/thumbnail.jpg"
+        },
+        {
+          "kind": "html5",
+          "title": "Habilidad Tecnología",
+          "description": "Aprenda cómo usar una plantilla de procesador de texto en la creación de un volante para su negocio.",
+          "source_id": "TU19_Tech_Skill_PRO_es - Storyline output",
+          "license": {
+            "license_id": "CC BY",
+            "copyright_holder": "HP LIFE",
+            "description": null
+          },
+          "language": "es",
+          "files": [
+            {
+              "file_type": "html5",
+              "path": "/var/folders/wc/2r44j8gs4gn56t1xtw5f6wlm0000gn/T/tmpjjdver5m.zip",
+              "language": "es"
+            }
+          ],
+          "thumbnail": "chefdata/Courses/es/Comparación entre beneficios de marketing y características/content/TU19_Tech_Skill_PRO_es - Storyline output_webroot/story_content/thumbnail.jpg"
+        },
+        {
+          "kind": "topic",
+          "title": "Recursos",
+          "source_id": "Comparación entre beneficios de marketing y características___resources",
+          "license": {
+            "license_id": "CC BY",
+            "copyright_holder": "HP LIFE",
+            "description": null
+          },
+          "language": "es",
+          "thumbnail": "chefdata/thumbnails/resources_folder_thumbnail.png",
+          "children": [
+            {
+              "kind": "document",
+              "title": "Hoja de trabajo de marketing de beneficios contra características (PDF)",
+              "description": "",
+              "source_id": "https://s3.amazonaws.com/hp-life-content/DownloadableSpanish/Benefits_v_Features_Worksheet-es.pdf",
+              "license": {
+                "license_id": "CC BY",
+                "copyright_holder": "HP LIFE",
+                "description": null
+              },
+              "language": "es",
+              "files": [
+                {
+                  "file_type": "document",
+                  "path": "chefdata/Courses/es/Comparación entre beneficios de marketing y características/content/downloads/Benefits_v_Features_Worksheet-es.pdf",
+                  "language": "es"
+                }
+              ]
+            }
+          ]
+        },
+        {
+          "kind": "html5",
+          "title": "Pasos siguientes",
+          "description": "Descubra pasos siguientes y recursos adicionales útiles para promover los beneficios de sus productos o servicios.",
+          "source_id": "<p><strong>Para recibir el cer",
+          "license": {
+            "license_id": "CC BY",
+            "copyright_holder": "HP LIFE",
+            "description": null
+          },
+          "language": "es",
+          "files": [
+            {
+              "file_type": "html5",
+              "path": "/var/folders/wc/2r44j8gs4gn56t1xtw5f6wlm0000gn/T/tmp_frhkj2u.zip",
+              "language": "es"
+            }
+          ]
+        }
+      ],
+      "source_id": "2369hpl-es19",
+      "description": "Aprenda cómo promover con efectividad las ventajas de sus productos o servicios con el fin de incrementar sus ventas. Aprenda cómo usar plantillas en la creación de materiales de marketing. Aprenda cómo: • Distinguir entre los beneficios y características de sus productos o servicios y promoverlos con efectividad en su mercado objetivo • Usar plantillas en línea para crear un volante de su negocio"
+    },
+    {
+      "kind": "topic",
+      "title": "Administración del inventario",
+      "language": "es",
+      "thumbnail": "chefdata/thumbnails/new_channel_thumbnail.png",
+      "children": [
+        {
+          "kind": "html5",
+          "title": "Narración",
+          "description": "¿Cómo pueden Ahmed y Moshen llevar el control de cuántas existencias tienen en inventario?",
+          "source_id": "es_20",
+          "license": {
+            "license_id": "CC BY",
+            "copyright_holder": "HP LIFE",
+            "description": null
+          },
+          "language": "es",
+          "files": [
+            {
+              "file_type": "html5",
+              "path": "/var/folders/wc/2r44j8gs4gn56t1xtw5f6wlm0000gn/T/tmp48lf29mt.zip",
+              "language": "es"
+            }
+          ],
+          "thumbnail": null
+        },
+        {
+          "kind": "html5",
+          "title": "Concepto de negocio",
+          "description": "Aprenda cómo administrar su inventario para que su negocio tenga más éxito.",
+          "source_id": "TU20_Business_Concept_PRO - Storyline output",
+          "license": {
+            "license_id": "CC BY",
+            "copyright_holder": "HP LIFE",
+            "description": null
+          },
+          "language": "es",
+          "files": [
+            {
+              "file_type": "html5",
+              "path": "/var/folders/wc/2r44j8gs4gn56t1xtw5f6wlm0000gn/T/tmpqfpk1yv7.zip",
+              "language": "es"
+            }
+          ],
+          "thumbnail": "chefdata/Courses/es/Administración del inventario/content/TU20_Business_Concept_PRO - Storyline output_webroot/story_content/thumbnail.jpg"
+        },
+        {
+          "kind": "html5",
+          "title": "Habilidad Tecnología",
+          "description": "Aprenda cómo usar diferentes tecnologías en la administración de su inventario.",
+          "source_id": "TU20_Tech_Skill_PRO-es - Storyline output",
+          "license": {
+            "license_id": "CC BY",
+            "copyright_holder": "HP LIFE",
+            "description": null
+          },
+          "language": "es",
+          "files": [
+            {
+              "file_type": "html5",
+              "path": "/var/folders/wc/2r44j8gs4gn56t1xtw5f6wlm0000gn/T/tmpbq03l1qx.zip",
+              "language": "es"
+            }
+          ],
+          "thumbnail": "chefdata/Courses/es/Administración del inventario/content/TU20_Tech_Skill_PRO-es - Storyline output_webroot/story_content/thumbnail.jpg"
+        },
+        {
+          "kind": "topic",
+          "title": "Recursos",
+          "source_id": "Administración del inventario___resources",
+          "license": {
+            "license_id": "CC BY",
+            "copyright_holder": "HP LIFE",
+            "description": null
+          },
+          "language": "es",
+          "thumbnail": "chefdata/thumbnails/resources_folder_thumbnail.png",
+          "children": [
+            {
+              "kind": "document",
+              "title": "Consejos para la administración del inventario (PDF)",
+              "description": "",
+              "source_id": "https://s3.amazonaws.com/hp-life-content/DownloadableSpanish/Inventory_Management_Tips-es.pdf",
+              "license": {
+                "license_id": "CC BY",
+                "copyright_holder": "HP LIFE",
+                "description": null
+              },
+              "language": "es",
+              "files": [
+                {
+                  "file_type": "document",
+                  "path": "chefdata/Courses/es/Administración del inventario/content/downloads/Inventory_Management_Tips-es.pdf",
+                  "language": "es"
+                }
+              ]
+            },
+            {
+              "kind": "document",
+              "title": "Hoja de cálculo Gestión de Inventario (Excel)",
+              "description": "",
+              "source_id": "https://s3.amazonaws.com/hp-life-content/DownloadableSpanish/Inventory_Management_Spreadsheet-es.xlsx",
+              "license": {
+                "license_id": "CC BY",
+                "copyright_holder": "HP LIFE",
+                "description": null
+              },
+              "language": "es",
+              "files": [
+                {
+                  "file_type": "document",
+                  "path": "chefdata/Courses/es/Administración del inventario/content/converted/Inventory_Management_Spreadsheet-es.pdf",
+                  "language": "es"
+                }
+              ]
+            },
+            {
+              "kind": "document",
+              "title": "Consejos para la administración del inventario (PDF)",
+              "description": "",
+              "source_id": "https://s3.amazonaws.com/hp-life-content/DownloadableSpanish/Tech_Resources-es.pdf",
+              "license": {
+                "license_id": "CC BY",
+                "copyright_holder": "HP LIFE",
+                "description": null
+              },
+              "language": "es",
+              "files": [
+                {
+                  "file_type": "document",
+                  "path": "chefdata/Courses/es/Administración del inventario/content/downloads/Tech_Resources-es.pdf",
+                  "language": "es"
+                }
+              ]
+            },
+            {
+              "kind": "html5",
+              "title": "Recursos descargables",
+              "description": "",
+              "source_id": "Administración del inventario__resources__downloadable_resources",
+              "license": {
+                "license_id": "CC BY",
+                "copyright_holder": "HP LIFE",
+                "description": null
+              },
+              "language": "es",
+              "thumbnail": "chefdata/thumbnails/downloadable_resources_thumbnail.png",
+              "files": [
+                {
+                  "file_type": "html5",
+                  "path": "chefdata/Courses/es/Administración del inventario/content/downloadable_resources_webroot.zip",
+                  "language": "es"
+                }
+              ]
+            }
+          ]
+        },
+        {
+          "kind": "html5",
+          "title": "Pasos siguientes",
+          "description": "Descubra pasos siguientes y recursos adicionales que le ayudarán a administrar su inventario.",
+          "source_id": "<p><strong>Para recibir el cer",
+          "license": {
+            "license_id": "CC BY",
+            "copyright_holder": "HP LIFE",
+            "description": null
+          },
+          "language": "es",
+          "files": [
+            {
+              "file_type": "html5",
+              "path": "/var/folders/wc/2r44j8gs4gn56t1xtw5f6wlm0000gn/T/tmpxmxt4rpd.zip",
+              "language": "es"
+            }
+          ]
+        }
+      ],
+      "source_id": "2370hpl-es20",
+      "description": "Aprenda porqué la administración del inventario es esencial para mantener operaciones exitosas de un negocio y optimizar la ganancia. Aprenda cómo: • Seleccionar el mejor método de administración del inventario para su negocio • Usar diferentes tecnologías para administrar su inventario"
+    },
+    {
+      "kind": "topic",
+      "title": "Contratación de personal",
+      "language": "es",
+      "thumbnail": "chefdata/thumbnails/new_channel_thumbnail.png",
+      "children": [
+        {
+          "kind": "html5",
+          "title": "Narración",
+          "description": "El negocio de Ming está creciendo tan rápidamente que necesita contratar a un gerente de oficina.",
+          "source_id": "es_13",
+          "license": {
+            "license_id": "CC BY",
+            "copyright_holder": "HP LIFE",
+            "description": null
+          },
+          "language": "es",
+          "files": [
+            {
+              "file_type": "html5",
+              "path": "/var/folders/wc/2r44j8gs4gn56t1xtw5f6wlm0000gn/T/tmpgh0_a_ph.zip",
+              "language": "es"
+            }
+          ],
+          "thumbnail": null
+        },
+        {
+          "kind": "html5",
+          "title": "Concepto de negocio",
+          "description": "Explore el proceso de contratar al empleado adecuado.",
+          "source_id": "TU13_Business_Concept_PRO_es - Storyline output",
+          "license": {
+            "license_id": "CC BY",
+            "copyright_holder": "HP LIFE",
+            "description": null
+          },
+          "language": "es",
+          "files": [
+            {
+              "file_type": "html5",
+              "path": "/var/folders/wc/2r44j8gs4gn56t1xtw5f6wlm0000gn/T/tmpfgplzwwj.zip",
+              "language": "es"
+            }
+          ],
+          "thumbnail": "chefdata/Courses/es/Contratación de personal/content/TU13_Business_Concept_PRO_es - Storyline output_webroot/story_content/thumbnail.jpg"
+        },
+        {
+          "kind": "html5",
+          "title": "Habilidad Tecnología",
+          "description": "Aprenda cómo usar el software de procesamiento de texto para dar formato a un documento de formulario de solicitud de empleo.",
+          "source_id": "TU13_Tech_Skill_PRO_es - Storyline output",
+          "license": {
+            "license_id": "CC BY",
+            "copyright_holder": "HP LIFE",
+            "description": null
+          },
+          "language": "es",
+          "files": [
+            {
+              "file_type": "html5",
+              "path": "/var/folders/wc/2r44j8gs4gn56t1xtw5f6wlm0000gn/T/tmpyc0gq981.zip",
+              "language": "es"
+            }
+          ],
+          "thumbnail": "chefdata/Courses/es/Contratación de personal/content/TU13_Tech_Skill_PRO_es - Storyline output_webroot/story_content/thumbnail.jpg"
+        },
+        {
+          "kind": "topic",
+          "title": "Recursos",
+          "source_id": "Contratación de personal___resources",
+          "license": {
+            "license_id": "CC BY",
+            "copyright_holder": "HP LIFE",
+            "description": null
+          },
+          "language": "es",
+          "thumbnail": "chefdata/thumbnails/resources_folder_thumbnail.png",
+          "children": [
+            {
+              "kind": "document",
+              "title": "Consejos para entrevistar a solicitantes",
+              "description": "",
+              "source_id": "https://s3.amazonaws.com/hp-life-content/DownloadableSpanish/Downloadable_-_Conducting_Interview_Tips-es.pdf",
+              "license": {
+                "license_id": "CC BY",
+                "copyright_holder": "HP LIFE",
+                "description": null
+              },
+              "language": "es",
+              "files": [
+                {
+                  "file_type": "document",
+                  "path": "chefdata/Courses/es/Contratación de personal/content/downloads/Downloadable_-_Conducting_Interview_Tips-es.pdf",
+                  "language": "es"
+                }
+              ]
+            }
+          ]
+        },
+        {
+          "kind": "html5",
+          "title": "Pasos siguientes",
+          "description": "Descubra pasos siguientes y recursos adicionales que le ayudarán a contratar personal.",
+          "source_id": "<p><strong>Para recibir el cer",
+          "license": {
+            "license_id": "CC BY",
+            "copyright_holder": "HP LIFE",
+            "description": null
+          },
+          "language": "es",
+          "files": [
+            {
+              "file_type": "html5",
+              "path": "/var/folders/wc/2r44j8gs4gn56t1xtw5f6wlm0000gn/T/tmptil2__qo.zip",
+              "language": "es"
+            }
+          ]
+        }
+      ],
+      "source_id": "2363hpl-es13",
+      "description": "Aprenda cómo contratar el personal de su negocio y cómo crear una solicitud de empleo. Aprenda cómo: • Seguir un procedimiento estructurado para contratar un empleado • Usar software de procesamiento de texto para crear una solicitud de empleo"
+    },
+    {
+      "kind": "topic",
+      "title": "Planificación estratégica",
+      "language": "es",
+      "thumbnail": "chefdata/thumbnails/new_channel_thumbnail.png",
+      "children": [
+        {
+          "kind": "html5",
+          "title": "Narración",
+          "description": "Aung y Cho consideran sus opciones para mejorar el negocio en su farmacia.",
+          "source_id": "es_25",
+          "license": {
+            "license_id": "CC BY",
+            "copyright_holder": "HP LIFE",
+            "description": null
+          },
+          "language": "es",
+          "files": [
+            {
+              "file_type": "html5",
+              "path": "/var/folders/wc/2r44j8gs4gn56t1xtw5f6wlm0000gn/T/tmpkkqq86ut.zip",
+              "language": "es"
+            }
+          ],
+          "thumbnail": null
+        },
+        {
+          "kind": "html5",
+          "title": "Concepto de negocio",
+          "description": "Aprenda a usar el análisis FODA para seleccionar las estrategias más eficaces para el éxito de su negocio.",
+          "source_id": "TU25_Business_Concept_PRO_es - Storyline output",
+          "license": {
+            "license_id": "CC BY",
+            "copyright_holder": "HP LIFE",
+            "description": null
+          },
+          "language": "es",
+          "files": [
+            {
+              "file_type": "html5",
+              "path": "/var/folders/wc/2r44j8gs4gn56t1xtw5f6wlm0000gn/T/tmp1fd6zw1a.zip",
+              "language": "es"
+            }
+          ],
+          "thumbnail": "chefdata/Courses/es/Planificación estratégica/content/TU25_Business_Concept_PRO_es - Storyline output_webroot/story_content/thumbnail.jpg"
+        },
+        {
+          "kind": "html5",
+          "title": "Habilidad Tecnología",
+          "description": "Aprenda a integrar documentos de procesamiento de texto y de hojas de cálculo para apoyar su planificación estratégica.",
+          "source_id": "TU25_Tech_Skill_PRO_es - Storyline output",
+          "license": {
+            "license_id": "CC BY",
+            "copyright_holder": "HP LIFE",
+            "description": null
+          },
+          "language": "es",
+          "files": [
+            {
+              "file_type": "html5",
+              "path": "/var/folders/wc/2r44j8gs4gn56t1xtw5f6wlm0000gn/T/tmpcbjbb3op.zip",
+              "language": "es"
+            }
+          ],
+          "thumbnail": "chefdata/Courses/es/Planificación estratégica/content/TU25_Tech_Skill_PRO_es - Storyline output_webroot/story_content/thumbnail.jpg"
+        },
+        {
+          "kind": "topic",
+          "title": "Recursos",
+          "source_id": "Planificación estratégica___resources",
+          "license": {
+            "license_id": "CC BY",
+            "copyright_holder": "HP LIFE",
+            "description": null
+          },
+          "language": "es",
+          "thumbnail": "chefdata/thumbnails/resources_folder_thumbnail.png",
+          "children": [
+            {
+              "kind": "document",
+              "title": "Matriz FODA (Archivo Word)",
+              "description": "",
+              "source_id": "https://s3.amazonaws.com/hp-life-content/DownloadableSpanish/Downloadable_C25_SWOT_matrix-es.docx",
+              "license": {
+                "license_id": "CC BY",
+                "copyright_holder": "HP LIFE",
+                "description": null
+              },
+              "language": "es",
+              "files": [
+                {
+                  "file_type": "document",
+                  "path": "chefdata/Courses/es/Planificación estratégica/content/converted/Downloadable_C25_SWOT_matrix-es.pdf",
+                  "language": "es"
+                }
+              ]
+            },
+            {
+              "kind": "document",
+              "title": "Priorización de factores del FODA (Archivo Word)",
+              "description": "",
+              "source_id": "https://s3.amazonaws.com/hp-life-content/DownloadableSpanish/Downloadable_C25_SWOT_factor_prioritization-es_0.docx",
+              "license": {
+                "license_id": "CC BY",
+                "copyright_holder": "HP LIFE",
+                "description": null
+              },
+              "language": "es",
+              "files": [
+                {
+                  "file_type": "document",
+                  "path": "chefdata/Courses/es/Planificación estratégica/content/converted/Downloadable_C25_SWOT_factor_prioritization-es_0.pdf",
+                  "language": "es"
+                }
+              ]
+            },
+            {
+              "kind": "html5",
+              "title": "Recursos descargables",
+              "description": "",
+              "source_id": "Planificación estratégica__resources__downloadable_resources",
+              "license": {
+                "license_id": "CC BY",
+                "copyright_holder": "HP LIFE",
+                "description": null
+              },
+              "language": "es",
+              "thumbnail": "chefdata/thumbnails/downloadable_resources_thumbnail.png",
+              "files": [
+                {
+                  "file_type": "html5",
+                  "path": "chefdata/Courses/es/Planificación estratégica/content/downloadable_resources_webroot.zip",
+                  "language": "es"
+                }
+              ]
+            }
+          ]
+        },
+        {
+          "kind": "html5",
+          "title": "Pasos siguientes",
+          "description": "Descubra los próximos pasos y recursos adicionales para obtener más información sobre cómo realizar un análisis FODA, y encuentre otras herramientas y ejemplos útiles que pueden ayudarle con su planificación estratégica.",
+          "source_id": "<p><strong>Para recibir el cer",
+          "license": {
+            "license_id": "CC BY",
+            "copyright_holder": "HP LIFE",
+            "description": null
+          },
+          "language": "es",
+          "files": [
+            {
+              "file_type": "html5",
+              "path": "/var/folders/wc/2r44j8gs4gn56t1xtw5f6wlm0000gn/T/tmp9l0zkgi2.zip",
+              "language": "es"
+            }
+          ]
+        }
+      ],
+      "source_id": "2375hpl-es25",
+      "description": "Aprenda a usar un proceso de planificación estratégica para aumentar el éxito de su negocio. Aprenda a hacer lo siguiente: • Usar un análisis FODA para considerar las \"fortalezas\", \"oportunidades\", \"debilidades\" y \"amenazas\" a fin de seleccionar las estrategias más eficaces para el éxito de su negocio. • Facilite el proceso mediante la integración de documentos de procesamiento de textos y hojas de cálculo."
+    },
+    {
+      "kind": "topic",
+      "title": "Impresión 3D",
+      "language": "es",
+      "thumbnail": "chefdata/thumbnails/new_channel_thumbnail.png",
+      "children": [
+        {
+          "kind": "html5",
+          "title": "Narración",
+          "description": "Marco necesita una pieza impresa en 3D para reparar una tubería.",
+          "source_id": "29-3DP1-ST-ES-TAB",
+          "license": {
+            "license_id": "CC BY",
+            "copyright_holder": "HP LIFE",
+            "description": null
+          },
+          "language": "es",
+          "files": [
+            {
+              "file_type": "html5",
+              "path": "/var/folders/wc/2r44j8gs4gn56t1xtw5f6wlm0000gn/T/tmp68nh04s8.zip",
+              "language": "es"
+            }
+          ],
+          "thumbnail": "chefdata/Courses/es/Impresión 3D/content/29-3DP1-ST-ES-TAB_webroot/story_content/thumbnail.jpg"
+        },
+        {
+          "kind": "html5",
+          "title": "Concepto de negocio",
+          "description": "Aprende sobre la impresión 3D y las oportunidades de emprendimiento que ofrece. Aprende sobre los recursos de impresión 3D disponibles para ti.",
+          "source_id": "29-3DP2-BC-ES-fix2-FINAL",
+          "license": {
+            "license_id": "CC BY",
+            "copyright_holder": "HP LIFE",
+            "description": null
+          },
+          "language": "es",
+          "files": [
+            {
+              "file_type": "html5",
+              "path": "/var/folders/wc/2r44j8gs4gn56t1xtw5f6wlm0000gn/T/tmpsyo4wi1s.zip",
+              "language": "es"
+            }
+          ],
+          "thumbnail": "chefdata/Courses/es/Impresión 3D/content/29-3DP2-BC-ES-fix2-FINAL_webroot/story_content/thumbnail.jpg"
+        },
+        {
+          "kind": "html5",
+          "title": "Habilidad tecnológica",
+          "description": "Aprende a imprimir en 3D y las habilidades requeridas.",
+          "source_id": "29-3DP3-TS-ES-fix2-FINAL",
+          "license": {
+            "license_id": "CC BY",
+            "copyright_holder": "HP LIFE",
+            "description": null
+          },
+          "language": "es",
+          "files": [
+            {
+              "file_type": "html5",
+              "path": "/var/folders/wc/2r44j8gs4gn56t1xtw5f6wlm0000gn/T/tmpxengiqpt.zip",
+              "language": "es"
+            }
+          ],
+          "thumbnail": "chefdata/Courses/es/Impresión 3D/content/29-3DP3-TS-ES-fix2-FINAL_webroot/story_content/thumbnail.jpg"
+        },
+        {
+          "kind": "topic",
+          "title": "Recursos",
+          "source_id": "Impresión 3D___resources",
+          "license": {
+            "license_id": "CC BY",
+            "copyright_holder": "HP LIFE",
+            "description": null
+          },
+          "language": "es",
+          "thumbnail": "chefdata/thumbnails/resources_folder_thumbnail.png",
+          "children": [
+            {
+              "kind": "document",
+              "title": "Áreas de uso de impresión 3D",
+              "description": "",
+              "source_id": "https://s3.amazonaws.com/hp-life-content/Antonio+TechClass+Academy/3D+Printing+(Spanish)/Downloadable+Resources/3D%2Bprinting%2Bapplication%2Bareas%2BES.pdf",
+              "license": {
+                "license_id": "CC BY",
+                "copyright_holder": "HP LIFE",
+                "description": null
+              },
+              "language": "es",
+              "files": [
+                {
+                  "file_type": "document",
+                  "path": "chefdata/Courses/es/Impresión 3D/content/downloads/3D_printing_application_areas_ES.pdf",
+                  "language": "es"
+                }
+              ]
+            },
+            {
+              "kind": "document",
+              "title": "Impresión 3D, mercados, servicios y recursos",
+              "description": "",
+              "source_id": "https://s3.amazonaws.com/hp-life-content/Antonio+TechClass+Academy/3D+Printing+(Spanish)/Downloadable+Resources/3D%2Bprinting%2Bmarketplaces%2Bservices%2Bresources%2BES.pdf",
+              "license": {
+                "license_id": "CC BY",
+                "copyright_holder": "HP LIFE",
+                "description": null
+              },
+              "language": "es",
+              "files": [
+                {
+                  "file_type": "document",
+                  "path": "chefdata/Courses/es/Impresión 3D/content/downloads/3D_printing_marketplaces_services_resources_ES.pdf",
+                  "language": "es"
+                }
+              ]
+            },
+            {
+              "kind": "document",
+              "title": "Tecnologías y procesos de impresión 3D",
+              "description": "",
+              "source_id": "https://s3.amazonaws.com/hp-life-content/Antonio+TechClass+Academy/3D+Printing+(Spanish)/Downloadable+Resources/3D%2Bprinting%2Bprocesses%2Band%2Btechnologies%2BES.pdf",
+              "license": {
+                "license_id": "CC BY",
+                "copyright_holder": "HP LIFE",
+                "description": null
+              },
+              "language": "es",
+              "files": [
+                {
+                  "file_type": "document",
+                  "path": "chefdata/Courses/es/Impresión 3D/content/downloads/3D_printing_processes_and_technologies_ES.pdf",
+                  "language": "es"
+                }
+              ]
+            },
+            {
+              "kind": "document",
+              "title": "Materiales de impresión 3D",
+              "description": "",
+              "source_id": "https://s3.amazonaws.com/hp-life-content/Antonio+TechClass+Academy/3D+Printing+(Spanish)/Downloadable+Resources/3D%2Bprinting%2Bmaterials%2BES.pdf",
+              "license": {
+                "license_id": "CC BY",
+                "copyright_holder": "HP LIFE",
+                "description": null
+              },
+              "language": "es",
+              "files": [
+                {
+                  "file_type": "document",
+                  "path": "chefdata/Courses/es/Impresión 3D/content/downloads/3D_printing_materials_ES.pdf",
+                  "language": "es"
+                }
+              ]
+            },
+            {
+              "kind": "document",
+              "title": "Consejos de impresión 3D",
+              "description": "",
+              "source_id": "https://s3.amazonaws.com/hp-life-content/Antonio+TechClass+Academy/3D+Printing+(Spanish)/Downloadable+Resources/3D%2Bprinting%2Btips%2BES.pdf",
+              "license": {
+                "license_id": "CC BY",
+                "copyright_holder": "HP LIFE",
+                "description": null
+              },
+              "language": "es",
+              "files": [
+                {
+                  "file_type": "document",
+                  "path": "chefdata/Courses/es/Impresión 3D/content/downloads/3D_printing_tips_ES.pdf",
+                  "language": "es"
+                }
+              ]
+            },
+            {
+              "kind": "html5",
+              "title": "Recursos descargables",
+              "description": "",
+              "source_id": "Impresión 3D__resources__downloadable_resources",
+              "license": {
+                "license_id": "CC BY",
+                "copyright_holder": "HP LIFE",
+                "description": null
+              },
+              "language": "es",
+              "thumbnail": "chefdata/thumbnails/downloadable_resources_thumbnail.png",
+              "files": [
+                {
+                  "file_type": "html5",
+                  "path": "chefdata/Courses/es/Impresión 3D/content/downloadable_resources_webroot.zip",
+                  "language": "es"
+                }
+              ]
+            }
+          ]
+        },
+        {
+          "kind": "html5",
+          "title": "Próximos pasos",
+          "description": "Descubre los siguientes pasos de este curso y recursos adicionales.",
+          "source_id": "<p class=\"MsoNormal\"><span col",
+          "license": {
+            "license_id": "CC BY",
+            "copyright_holder": "HP LIFE",
+            "description": null
+          },
+          "language": "es",
+          "files": [
+            {
+              "file_type": "html5",
+              "path": "/var/folders/wc/2r44j8gs4gn56t1xtw5f6wlm0000gn/T/tmpkfsgiy6p.zip",
+              "language": "es"
+            }
+          ]
+        }
+      ],
+      "source_id": "6675hpl-es29",
+      "description": "Los emprendedores pueden usar impresoras 3D para crear prototipos y productos tales como prótesis, vestimenta y hasta piezas ligeras automotrices y aeroespaciales. Aprende como: • La impresión 3D puede permitirte diseñar, hacer prototipos y manufacturar nuevos productos. • Las habilidades que necesitas y los recursos disponibles para imprimir en 3D."
+    },
+    {
+      "kind": "topic",
+      "title": "Propuesta única de valor",
+      "language": "es",
+      "thumbnail": "chefdata/thumbnails/new_channel_thumbnail.png",
+      "children": [
+        {
+          "kind": "html5",
+          "title": "Narración",
+          "description": "Paul y Loretta tratan de descubrir cómo atraer más clientes a su casa de huéspedes.",
+          "source_id": "es_4",
+          "license": {
+            "license_id": "CC BY",
+            "copyright_holder": "HP LIFE",
+            "description": null
+          },
+          "language": "es",
+          "files": [
+            {
+              "file_type": "html5",
+              "path": "/var/folders/wc/2r44j8gs4gn56t1xtw5f6wlm0000gn/T/tmpa36sik2m.zip",
+              "language": "es"
+            }
+          ],
+          "thumbnail": null
+        },
+        {
+          "kind": "html5",
+          "title": "Concepto de negocio",
+          "description": "Explore de qué modo los comentarios sobre un negocio y su competencia pueden ayudar a identificar el valor único del negocio.",
+          "source_id": "TU4_Business_Concept_PRO_es - Storyline output",
+          "license": {
+            "license_id": "CC BY",
+            "copyright_holder": "HP LIFE",
+            "description": null
+          },
+          "language": "es",
+          "files": [
+            {
+              "file_type": "html5",
+              "path": "/var/folders/wc/2r44j8gs4gn56t1xtw5f6wlm0000gn/T/tmpzr70ejk2.zip",
+              "language": "es"
+            }
+          ],
+          "thumbnail": "chefdata/Courses/es/Propuesta única de valor/content/TU4_Business_Concept_PRO_es - Storyline output_webroot/story_content/thumbnail.jpg"
+        },
+        {
+          "kind": "html5",
+          "title": "Habilidad Tecnología",
+          "description": "¿Cómo puedo investigar más eficazmente la Internet en búsqueda de información acerca de mi negocio y el de mis competidores?",
+          "source_id": "TU4_Tech_Skill_PRO_Search_es - Storyline output",
+          "license": {
+            "license_id": "CC BY",
+            "copyright_holder": "HP LIFE",
+            "description": null
+          },
+          "language": "es",
+          "files": [
+            {
+              "file_type": "html5",
+              "path": "/var/folders/wc/2r44j8gs4gn56t1xtw5f6wlm0000gn/T/tmp449i3505.zip",
+              "language": "es"
+            }
+          ],
+          "thumbnail": "chefdata/Courses/es/Propuesta única de valor/content/TU4_Tech_Skill_PRO_Search_es - Storyline output_webroot/story_content/thumbnail.jpg"
+        },
+        {
+          "kind": "topic",
+          "title": "Recursos",
+          "source_id": "Propuesta única de valor___resources",
+          "license": {
+            "license_id": "CC BY",
+            "copyright_holder": "HP LIFE",
+            "description": null
+          },
+          "language": "es",
+          "thumbnail": "chefdata/thumbnails/resources_folder_thumbnail.png",
+          "children": [
+            {
+              "kind": "document",
+              "title": "Tabla de propuesta de valor único (UVP, por sus siglas en inglés) (PDF)",
+              "description": "",
+              "source_id": "https://s3.amazonaws.com/hp-life-content/DownloadableSpanish/Unit_4_downloadable-es.pdf",
+              "license": {
+                "license_id": "CC BY",
+                "copyright_holder": "HP LIFE",
+                "description": null
+              },
+              "language": "es",
+              "files": [
+                {
+                  "file_type": "document",
+                  "path": "chefdata/Courses/es/Propuesta única de valor/content/downloads/Unit_4_downloadable-es.pdf",
+                  "language": "es"
+                }
+              ]
+            }
+          ]
+        },
+        {
+          "kind": "html5",
+          "title": "Pasos siguientes",
+          "description": "Descubra los pasos siguientes y recursos adicionales útiles para mejorar las estrategias de marketing de su negocio.",
+          "source_id": "<p><strong>Para recibir el cer",
+          "license": {
+            "license_id": "CC BY",
+            "copyright_holder": "HP LIFE",
+            "description": null
+          },
+          "language": "es",
+          "files": [
+            {
+              "file_type": "html5",
+              "path": "/var/folders/wc/2r44j8gs4gn56t1xtw5f6wlm0000gn/T/tmpb216gtrw.zip",
+              "language": "es"
+            }
+          ]
+        }
+      ],
+      "source_id": "2353hpl-es04",
+      "description": "Explore cómo diferenciar su negocio de los negocios de sus competidores. Aprenda cómo: • Evaluar los puntos fuertes y débiles de su negocio. • Examinar los puntos fuertes y débiles de los negocios de sus competidores. • Conducir una búsqueda eficaz en Internet de información acerca de los negocios de sus competidores."
+    },
+    {
+      "kind": "topic",
+      "title": "Iniciando un Pequeño Negocio",
+      "language": "es",
+      "thumbnail": "chefdata/thumbnails/new_channel_thumbnail.png",
+      "children": [
+        {
+          "kind": "html5",
+          "title": "Narración",
+          "description": "Chet descubre una oportunidad de negocio potencial que proviene de su afición de reparar y recolectar equipo pequeño.",
+          "source_id": "28-SSB1-ST-ES-NR-MOB",
+          "license": {
+            "license_id": "CC BY",
+            "copyright_holder": "HP LIFE",
+            "description": null
+          },
+          "language": "es",
+          "files": [
+            {
+              "file_type": "html5",
+              "path": "/var/folders/wc/2r44j8gs4gn56t1xtw5f6wlm0000gn/T/tmphn4onvpc.zip",
+              "language": "es"
+            }
+          ],
+          "thumbnail": "chefdata/Courses/es/Iniciando un Pequeño Negocio/content/28-SSB1-ST-ES-NR-MOB_webroot/story_content/thumbnail.jpg"
+        },
+        {
+          "kind": "html5",
+          "title": "Concepto de negocio",
+          "description": "Aprenda sobre el emprendimiento y los pasos para iniciar un pequeño negocio.",
+          "source_id": "28-SSB2-BC-ES-NR-MOB",
+          "license": {
+            "license_id": "CC BY",
+            "copyright_holder": "HP LIFE",
+            "description": null
+          },
+          "language": "es",
+          "files": [
+            {
+              "file_type": "html5",
+              "path": "/var/folders/wc/2r44j8gs4gn56t1xtw5f6wlm0000gn/T/tmpba1ymsf5.zip",
+              "language": "es"
+            }
+          ],
+          "thumbnail": "chefdata/Courses/es/Iniciando un Pequeño Negocio/content/28-SSB2-BC-ES-NR-MOB_webroot/story_content/thumbnail.jpg"
+        },
+        {
+          "kind": "html5",
+          "title": "Habilidad tecnológica",
+          "description": "Aprenda a usar las métricas para medir el éxito de un pequeño negocio.",
+          "source_id": "28-SSB3-TS-ES-NR-MOB",
+          "license": {
+            "license_id": "CC BY",
+            "copyright_holder": "HP LIFE",
+            "description": null
+          },
+          "language": "es",
+          "files": [
+            {
+              "file_type": "html5",
+              "path": "/var/folders/wc/2r44j8gs4gn56t1xtw5f6wlm0000gn/T/tmp_a0757ec.zip",
+              "language": "es"
+            }
+          ],
+          "thumbnail": "chefdata/Courses/es/Iniciando un Pequeño Negocio/content/28-SSB3-TS-ES-NR-MOB_webroot/story_content/thumbnail.jpg"
+        },
+        {
+          "kind": "topic",
+          "title": "Recursos",
+          "source_id": "Iniciando un Pequeño Negocio___resources",
+          "license": {
+            "license_id": "CC BY",
+            "copyright_holder": "HP LIFE",
+            "description": null
+          },
+          "language": "es",
+          "thumbnail": "chefdata/thumbnails/resources_folder_thumbnail.png",
+          "children": [
+            {
+              "kind": "document",
+              "title": "Mi inventario de emprendimiento",
+              "description": "",
+              "source_id": "https://s3.amazonaws.com/hp-life-content/Antonio+TechClass+Academy/Starting+A+Small+Business/Spanish/DOWNLOADABLES/My%2Bentrepreneurship%2Binventory_ES.docx",
+              "license": {
+                "license_id": "CC BY",
+                "copyright_holder": "HP LIFE",
+                "description": null
+              },
+              "language": "es",
+              "files": [
+                {
+                  "file_type": "document",
+                  "path": "chefdata/Courses/es/Iniciando un Pequeño Negocio/content/converted/My_entrepreneurship_inventory_ES.pdf",
+                  "language": "es"
+                }
+              ]
+            },
+            {
+              "kind": "document",
+              "title": "Pasos para comenzar una pequeña empresa",
+              "description": "",
+              "source_id": "https://s3.amazonaws.com/hp-life-content/Antonio+TechClass+Academy/Starting+A+Small+Business/Spanish/DOWNLOADABLES/Steps+to+starting+a+small+business_ES.pdf",
+              "license": {
+                "license_id": "CC BY",
+                "copyright_holder": "HP LIFE",
+                "description": null
+              },
+              "language": "es",
+              "files": [
+                {
+                  "file_type": "document",
+                  "path": "chefdata/Courses/es/Iniciando un Pequeño Negocio/content/downloads/Steps to starting a small business_ES.pdf",
+                  "language": "es"
+                }
+              ]
+            },
+            {
+              "kind": "document",
+              "title": "Ideas para pequeñas empresas",
+              "description": "",
+              "source_id": "https://s3.amazonaws.com/hp-life-content/Antonio+TechClass+Academy/Starting+A+Small+Business/Spanish/DOWNLOADABLES/Small%2Bbusiness%2Bideas.docx",
+              "license": {
+                "license_id": "CC BY",
+                "copyright_holder": "HP LIFE",
+                "description": null
+              },
+              "language": "es",
+              "files": [
+                {
+                  "file_type": "document",
+                  "path": "chefdata/Courses/es/Iniciando un Pequeño Negocio/content/converted/Small_business_ideas.pdf",
+                  "language": "es"
+                }
+              ]
+            },
+            {
+              "kind": "document",
+              "title": "Plantilla del mercado objetivo",
+              "description": "",
+              "source_id": "https://s3.amazonaws.com/hp-life-content/Antonio+TechClass+Academy/Starting+A+Small+Business/Spanish/DOWNLOADABLES/Target%2Bmarket%2Btemplate_ES.docx",
+              "license": {
+                "license_id": "CC BY",
+                "copyright_holder": "HP LIFE",
+                "description": null
+              },
+              "language": "es",
+              "files": [
+                {
+                  "file_type": "document",
+                  "path": "chefdata/Courses/es/Iniciando un Pequeño Negocio/content/converted/Target_market_template_ES.pdf",
+                  "language": "es"
+                }
+              ]
+            },
+            {
+              "kind": "document",
+              "title": "Plantilla de análisis competitivo",
+              "description": "",
+              "source_id": "https://s3.amazonaws.com/hp-life-content/Antonio+TechClass+Academy/Starting+A+Small+Business/Spanish/DOWNLOADABLES/Competitive%2Banalysis%2Btemplate_ES.docx",
+              "license": {
+                "license_id": "CC BY",
+                "copyright_holder": "HP LIFE",
+                "description": null
+              },
+              "language": "es",
+              "files": [
+                {
+                  "file_type": "document",
+                  "path": "chefdata/Courses/es/Iniciando un Pequeño Negocio/content/converted/Competitive_analysis_template_ES.pdf",
+                  "language": "es"
+                }
+              ]
+            },
+            {
+              "kind": "document",
+              "title": "Métricas de pequeñas empresas",
+              "description": "",
+              "source_id": "https://s3.amazonaws.com/hp-life-content/Antonio+TechClass+Academy/Starting+A+Small+Business/Spanish/DOWNLOADABLES/Small+business+metrics_ES.pdf",
+              "license": {
+                "license_id": "CC BY",
+                "copyright_holder": "HP LIFE",
+                "description": null
+              },
+              "language": "es",
+              "files": [
+                {
+                  "file_type": "document",
+                  "path": "chefdata/Courses/es/Iniciando un Pequeño Negocio/content/downloads/Small business metrics_ES.pdf",
+                  "language": "es"
+                }
+              ]
+            },
+            {
+              "kind": "document",
+              "title": "Recursos para pequeñas empresas",
+              "description": "",
+              "source_id": "https://s3.amazonaws.com/hp-life-content/Antonio+TechClass+Academy/Starting+A+Small+Business/Spanish/DOWNLOADABLES/Small+business+resources_ES.pdf",
+              "license": {
+                "license_id": "CC BY",
+                "copyright_holder": "HP LIFE",
+                "description": null
+              },
+              "language": "es",
+              "files": [
+                {
+                  "file_type": "document",
+                  "path": "chefdata/Courses/es/Iniciando un Pequeño Negocio/content/downloads/Small business resources_ES.pdf",
+                  "language": "es"
+                }
+              ]
+            },
+            {
+              "kind": "html5",
+              "title": "Recursos descargables",
+              "description": "",
+              "source_id": "Iniciando un Pequeño Negocio__resources__downloadable_resources",
+              "license": {
+                "license_id": "CC BY",
+                "copyright_holder": "HP LIFE",
+                "description": null
+              },
+              "language": "es",
+              "thumbnail": "chefdata/thumbnails/downloadable_resources_thumbnail.png",
+              "files": [
+                {
+                  "file_type": "html5",
+                  "path": "chefdata/Courses/es/Iniciando un Pequeño Negocio/content/downloadable_resources_webroot.zip",
+                  "language": "es"
+                }
+              ]
+            }
+          ]
+        },
+        {
+          "kind": "html5",
+          "title": "Próximos pasos",
+          "description": "Descubra los próximos pasos en este curso y recursos adicionales.",
+          "source_id": "<p class=\"MsoNormal\"><strong><",
+          "license": {
+            "license_id": "CC BY",
+            "copyright_holder": "HP LIFE",
+            "description": null
+          },
+          "language": "es",
+          "files": [
+            {
+              "file_type": "html5",
+              "path": "/var/folders/wc/2r44j8gs4gn56t1xtw5f6wlm0000gn/T/tmp__x6ef53.zip",
+              "language": "es"
+            }
+          ]
+        }
+      ],
+      "source_id": "6434hpl-es28",
+      "description": "Explore •Emprendimiento •Pasos para comenzar un negocio •Mi Plan de Negocio: una herramienta para ayudarle a crear un plan de negocios •Métricas para medir el éxito empresarial"
+    },
+    {
+      "kind": "topic",
+      "title": "Flujo de caja",
+      "language": "es",
+      "thumbnail": "chefdata/thumbnails/new_channel_thumbnail.png",
+      "children": [
+        {
+          "kind": "html5",
+          "title": "Narración",
+          "description": "Bethari descubre que no tiene efectivo suficiente para pagar sus facturas.",
+          "source_id": "es_16",
+          "license": {
+            "license_id": "CC BY",
+            "copyright_holder": "HP LIFE",
+            "description": null
+          },
+          "language": "es",
+          "files": [
+            {
+              "file_type": "html5",
+              "path": "/var/folders/wc/2r44j8gs4gn56t1xtw5f6wlm0000gn/T/tmp1wfibgyt.zip",
+              "language": "es"
+            }
+          ],
+          "thumbnail": null
+        },
+        {
+          "kind": "html5",
+          "title": "Concepto de negocio",
+          "description": "Aprenda cómo el flujo de caja puede afectar la salud de su negocio.",
+          "source_id": "CF_BC_ES1",
+          "license": {
+            "license_id": "CC BY",
+            "copyright_holder": "HP LIFE",
+            "description": null
+          },
+          "language": "es",
+          "files": [
+            {
+              "file_type": "html5",
+              "path": "/var/folders/wc/2r44j8gs4gn56t1xtw5f6wlm0000gn/T/tmpls3gkjux.zip",
+              "language": "es"
+            }
+          ],
+          "thumbnail": "chefdata/Courses/es/Flujo de caja/content/CF_BC_ES1_webroot/story_content/thumbnail.jpg"
+        },
+        {
+          "kind": "html5",
+          "title": "Habilidad Tecnología",
+          "description": "Aprenda cómo aplicar formato a hojas de cálculo y pestañas de hojas de trabajo.",
+          "source_id": "CF_TS_ES2",
+          "license": {
+            "license_id": "CC BY",
+            "copyright_holder": "HP LIFE",
+            "description": null
+          },
+          "language": "es",
+          "files": [
+            {
+              "file_type": "html5",
+              "path": "/var/folders/wc/2r44j8gs4gn56t1xtw5f6wlm0000gn/T/tmpbkmanr8q.zip",
+              "language": "es"
+            }
+          ],
+          "thumbnail": "chefdata/Courses/es/Flujo de caja/content/CF_TS_ES2_webroot/story_content/thumbnail.jpg"
+        },
+        {
+          "kind": "topic",
+          "title": "Recursos",
+          "source_id": "Flujo de caja___resources",
+          "license": {
+            "license_id": "CC BY",
+            "copyright_holder": "HP LIFE",
+            "description": null
+          },
+          "language": "es",
+          "thumbnail": "chefdata/thumbnails/resources_folder_thumbnail.png",
+          "children": [
+            {
+              "kind": "document",
+              "title": "Hoja de trabajo de proyección de flujo de caja (Excel)",
+              "description": "",
+              "source_id": "https://s3.amazonaws.com/hp-life-content/DownloadableSpanish/Cashflow_Worksheet-es.xlsx",
+              "license": {
+                "license_id": "CC BY",
+                "copyright_holder": "HP LIFE",
+                "description": null
+              },
+              "language": "es",
+              "files": [
+                {
+                  "file_type": "document",
+                  "path": "chefdata/Courses/es/Flujo de caja/content/converted/Cashflow_Worksheet-es.pdf",
+                  "language": "es"
+                }
+              ]
+            },
+            {
+              "kind": "html5",
+              "title": "Recursos descargables",
+              "description": "",
+              "source_id": "Flujo de caja__resources__downloadable_resources",
+              "license": {
+                "license_id": "CC BY",
+                "copyright_holder": "HP LIFE",
+                "description": null
+              },
+              "language": "es",
+              "thumbnail": "chefdata/thumbnails/downloadable_resources_thumbnail.png",
+              "files": [
+                {
+                  "file_type": "html5",
+                  "path": "chefdata/Courses/es/Flujo de caja/content/downloadable_resources_webroot.zip",
+                  "language": "es"
+                }
+              ]
+            }
+          ]
+        },
+        {
+          "kind": "html5",
+          "title": "Pasos siguientes",
+          "description": "Descubra los pasos siguientes y recursos adicionales útiles que le ayudarán a manejar el flujo de caja en su negocio.",
+          "source_id": "<p><strong>Para recibir el cer",
+          "license": {
+            "license_id": "CC BY",
+            "copyright_holder": "HP LIFE",
+            "description": null
+          },
+          "language": "es",
+          "files": [
+            {
+              "file_type": "html5",
+              "path": "/var/folders/wc/2r44j8gs4gn56t1xtw5f6wlm0000gn/T/tmpjn6ntkq0.zip",
+              "language": "es"
+            }
+          ]
+        }
+      ],
+      "source_id": "2366hpl-es16",
+      "description": "Aprenda por qué es importante el flujo de caja para su negocio y cómo vigilar su flujo de caja usando software de hoja de cálculo. Aprenda cómo: • Tomar decisiones de cómo administrar su efectivo • Usar software de hoja de cálculo para vigilar su flujo de caja"
+    },
+    {
+      "kind": "topic",
+      "title": "Eficiencia de la energía - hacer más con menos",
+      "language": "es",
+      "thumbnail": "chefdata/thumbnails/new_channel_thumbnail.png",
+      "children": [
+        {
+          "kind": "html5",
+          "title": "Narración",
+          "description": "¿Cómo puede reducir Ahmed su consumo de energía?",
+          "source_id": "es_22",
+          "license": {
+            "license_id": "CC BY",
+            "copyright_holder": "HP LIFE",
+            "description": null
+          },
+          "language": "es",
+          "files": [
+            {
+              "file_type": "html5",
+              "path": "/var/folders/wc/2r44j8gs4gn56t1xtw5f6wlm0000gn/T/tmpj3w90zt_.zip",
+              "language": "es"
+            }
+          ],
+          "thumbnail": null
+        },
+        {
+          "kind": "html5",
+          "title": "Concepto de negocio",
+          "description": "Aprenda cómo evaluar y reducir su consumo de energía para ahorrar dinero, preservar los recursos naturales y disminuir la contaminación.",
+          "source_id": "TU22_Business_Concept_PRO_es - Storyline output",
+          "license": {
+            "license_id": "CC BY",
+            "copyright_holder": "HP LIFE",
+            "description": null
+          },
+          "language": "es",
+          "files": [
+            {
+              "file_type": "html5",
+              "path": "/var/folders/wc/2r44j8gs4gn56t1xtw5f6wlm0000gn/T/tmpdkk_zyeb.zip",
+              "language": "es"
+            }
+          ],
+          "thumbnail": "chefdata/Courses/es/Eficiencia de la energía - hacer más con menos/content/TU22_Business_Concept_PRO_es - Storyline output_webroot/story_content/thumbnail.jpg"
+        },
+        {
+          "kind": "html5",
+          "title": "Habilidad Tecnología",
+          "description": "Aprenda cómo usar una hoja de cálculo para vigilar su consumo de energía.",
+          "source_id": "TU22_Tech_Skill_PRO_es - Storyline output",
+          "license": {
+            "license_id": "CC BY",
+            "copyright_holder": "HP LIFE",
+            "description": null
+          },
+          "language": "es",
+          "files": [
+            {
+              "file_type": "html5",
+              "path": "/var/folders/wc/2r44j8gs4gn56t1xtw5f6wlm0000gn/T/tmpnb5ga7mt.zip",
+              "language": "es"
+            }
+          ],
+          "thumbnail": "chefdata/Courses/es/Eficiencia de la energía - hacer más con menos/content/TU22_Tech_Skill_PRO_es - Storyline output_webroot/story_content/thumbnail.jpg"
+        },
+        {
+          "kind": "topic",
+          "title": "Recursos",
+          "source_id": "Eficiencia de la energía - hacer más con menos___resources",
+          "license": {
+            "license_id": "CC BY",
+            "copyright_holder": "HP LIFE",
+            "description": null
+          },
+          "language": "es",
+          "thumbnail": "chefdata/thumbnails/resources_folder_thumbnail.png",
+          "children": [
+            {
+              "kind": "document",
+              "title": "Lista de control de ahorros de energía (PDF)",
+              "description": "",
+              "source_id": "https://s3.amazonaws.com/hp-life-content/DownloadableSpanish/Downloadable22_Energy_Checklist-es.pdf",
+              "license": {
+                "license_id": "CC BY",
+                "copyright_holder": "HP LIFE",
+                "description": null
+              },
+              "language": "es",
+              "files": [
+                {
+                  "file_type": "document",
+                  "path": "chefdata/Courses/es/Eficiencia de la energía - hacer más con menos/content/downloads/Downloadable22_Energy_Checklist-es.pdf",
+                  "language": "es"
+                }
+              ]
+            },
+            {
+              "kind": "document",
+              "title": "Plantilla de auditoría de energía (Excel)",
+              "description": "",
+              "source_id": "https://s3.amazonaws.com/hp-life-content/DownloadableSpanish/Downloadable22_Energy_Audit_Template-es.xlsx",
+              "license": {
+                "license_id": "CC BY",
+                "copyright_holder": "HP LIFE",
+                "description": null
+              },
+              "language": "es",
+              "files": [
+                {
+                  "file_type": "document",
+                  "path": "chefdata/Courses/es/Eficiencia de la energía - hacer más con menos/content/converted/Downloadable22_Energy_Audit_Template-es.pdf",
+                  "language": "es"
+                }
+              ]
+            },
+            {
+              "kind": "html5",
+              "title": "Recursos descargables",
+              "description": "",
+              "source_id": "Eficiencia de la energía - hacer más con menos__resources__downloadable_resources",
+              "license": {
+                "license_id": "CC BY",
+                "copyright_holder": "HP LIFE",
+                "description": null
+              },
+              "language": "es",
+              "thumbnail": "chefdata/thumbnails/downloadable_resources_thumbnail.png",
+              "files": [
+                {
+                  "file_type": "html5",
+                  "path": "chefdata/Courses/es/Eficiencia de la energía - hacer más con menos/content/downloadable_resources_webroot.zip",
+                  "language": "es"
+                }
+              ]
+            }
+          ]
+        },
+        {
+          "kind": "html5",
+          "title": "Pasos siguientes",
+          "description": "Descubra pasos siguientes y recursos adicionales que le ayudarán a reducir su consumo de energía.",
+          "source_id": "<p><strong>Para recibir el cer",
+          "license": {
+            "license_id": "CC BY",
+            "copyright_holder": "HP LIFE",
+            "description": null
+          },
+          "language": "es",
+          "files": [
+            {
+              "file_type": "html5",
+              "path": "/var/folders/wc/2r44j8gs4gn56t1xtw5f6wlm0000gn/T/tmp65zv12zx.zip",
+              "language": "es"
+            }
+          ]
+        }
+      ],
+      "source_id": "2372hpl-es22",
+      "description": "Averigüe cómo evaluar y reducir el consumo de energía de su negocio para ahorrar dinero y proteger el medio ambiente. Aprenda cómo usar hojas de cálculo para vigilar su consumo de energía. Aprenda cómo: • Evaluar su consumo de energía y de qué modo conservar energía ahorra dinero en su negocio, preserva los recursos naturales y disminuye la contaminación • Usar una hoja de cálculo para evaluar el consumo de energía de su negocio"
+    },
+    {
+      "kind": "topic",
+      "title": "Ganancias y pérdidas",
+      "language": "es",
+      "thumbnail": "chefdata/thumbnails/new_channel_thumbnail.png",
+      "children": [
+        {
+          "kind": "html5",
+          "title": "Narración",
+          "description": "Lorenzo descubre que tener ventas no significa necesariamente obtener ganancias.",
+          "source_id": "es_3",
+          "license": {
+            "license_id": "CC BY",
+            "copyright_holder": "HP LIFE",
+            "description": null
+          },
+          "language": "es",
+          "files": [
+            {
+              "file_type": "html5",
+              "path": "/var/folders/wc/2r44j8gs4gn56t1xtw5f6wlm0000gn/T/tmpadmcg_m1.zip",
+              "language": "es"
+            }
+          ],
+          "thumbnail": null
+        },
+        {
+          "kind": "html5",
+          "title": "Concepto de negocio",
+          "description": "Examine los gastos que con frecuencia y facilidad se pasan por alto y pueden afectar sus ganancias.",
+          "source_id": "TU3_Business_Concept_PRO_es - Storyline output",
+          "license": {
+            "license_id": "CC BY",
+            "copyright_holder": "HP LIFE",
+            "description": null
+          },
+          "language": "es",
+          "files": [
+            {
+              "file_type": "html5",
+              "path": "/var/folders/wc/2r44j8gs4gn56t1xtw5f6wlm0000gn/T/tmpsf_9w45_.zip",
+              "language": "es"
+            }
+          ],
+          "thumbnail": "chefdata/Courses/es/Ganancias y pérdidas/content/TU3_Business_Concept_PRO_es - Storyline output_webroot/story_content/thumbnail.jpg"
+        },
+        {
+          "kind": "html5",
+          "title": "Habilidad Tecnología",
+          "description": "Aprenda cómo personalizar una hoja de cálculo para calcular sus ganancias.",
+          "source_id": "TU3_Tech_Skill_PRO_es - Storyline output",
+          "license": {
+            "license_id": "CC BY",
+            "copyright_holder": "HP LIFE",
+            "description": null
+          },
+          "language": "es",
+          "files": [
+            {
+              "file_type": "html5",
+              "path": "/var/folders/wc/2r44j8gs4gn56t1xtw5f6wlm0000gn/T/tmp2bzdbwad.zip",
+              "language": "es"
+            }
+          ],
+          "thumbnail": "chefdata/Courses/es/Ganancias y pérdidas/content/TU3_Tech_Skill_PRO_es - Storyline output_webroot/story_content/thumbnail.jpg"
+        },
+        {
+          "kind": "topic",
+          "title": "Recursos",
+          "source_id": "Ganancias y pérdidas___resources",
+          "license": {
+            "license_id": "CC BY",
+            "copyright_holder": "HP LIFE",
+            "description": null
+          },
+          "language": "es",
+          "thumbnail": "chefdata/thumbnails/resources_folder_thumbnail.png",
+          "children": [
+            {
+              "kind": "document",
+              "title": "Plantilla básica de hoja de cálculo (XLS)",
+              "description": "",
+              "source_id": "https://s3.amazonaws.com/hp-life-content/DownloadableSpanish/Income+Statement+-+Single+Step-es.xls",
+              "license": {
+                "license_id": "CC BY",
+                "copyright_holder": "HP LIFE",
+                "description": null
+              },
+              "language": "es",
+              "files": [
+                {
+                  "file_type": "document",
+                  "path": "chefdata/Courses/es/Ganancias y pérdidas/content/converted/Income Statement - Single Step-es.pdf",
+                  "language": "es"
+                }
+              ]
+            },
+            {
+              "kind": "document",
+              "title": "Plantilla básica de hoja de cálculo (ODS)",
+              "description": "",
+              "source_id": "https://s3.amazonaws.com/hp-life-content/DownloadableSpanish/Income+Statement+-+Libre-es.ods",
+              "license": {
+                "license_id": "CC BY",
+                "copyright_holder": "HP LIFE",
+                "description": null
+              },
+              "language": "es",
+              "files": [
+                {
+                  "file_type": "document",
+                  "path": "chefdata/Courses/es/Ganancias y pérdidas/content/converted/Income Statement - Libre-es.pdf",
+                  "language": "es"
+                }
+              ]
+            },
+            {
+              "kind": "html5",
+              "title": "Recursos descargables",
+              "description": "",
+              "source_id": "Ganancias y pérdidas__resources__downloadable_resources",
+              "license": {
+                "license_id": "CC BY",
+                "copyright_holder": "HP LIFE",
+                "description": null
+              },
+              "language": "es",
+              "thumbnail": "chefdata/thumbnails/downloadable_resources_thumbnail.png",
+              "files": [
+                {
+                  "file_type": "html5",
+                  "path": "chefdata/Courses/es/Ganancias y pérdidas/content/downloadable_resources_webroot.zip",
+                  "language": "es"
+                }
+              ]
+            }
+          ]
+        },
+        {
+          "kind": "html5",
+          "title": "Pasos siguientes",
+          "description": "Descubra los pasos siguientes y recursos adicionales útiles para mejorar las ganancias de su negocio.",
+          "source_id": "<p><strong>Para recibir el cer",
+          "license": {
+            "license_id": "CC BY",
+            "copyright_holder": "HP LIFE",
+            "description": null
+          },
+          "language": "es",
+          "files": [
+            {
+              "file_type": "html5",
+              "path": "/var/folders/wc/2r44j8gs4gn56t1xtw5f6wlm0000gn/T/tmptn765wju.zip",
+              "language": "es"
+            }
+          ]
+        }
+      ],
+      "source_id": "2352hpl-es03",
+      "description": "Aprenda a calcular las ganancias y pérdidas, tomando en cuenta todos sus costos. Aprenda cómo: • Encontrar sus gastos ocultos • Calcular las ganancias y pérdidas"
+    },
+    {
+      "kind": "topic",
+      "title": "Maximización de la capacidad",
+      "language": "es",
+      "thumbnail": "chefdata/thumbnails/new_channel_thumbnail.png",
+      "children": [
+        {
+          "kind": "html5",
+          "title": "Narración",
+          "description": "Ming se esfuerza para responder a los pedidos que llegan a su negocio en crecimiento.",
+          "source_id": "es_5",
+          "license": {
+            "license_id": "CC BY",
+            "copyright_holder": "HP LIFE",
+            "description": null
+          },
+          "language": "es",
+          "files": [
+            {
+              "file_type": "html5",
+              "path": "/var/folders/wc/2r44j8gs4gn56t1xtw5f6wlm0000gn/T/tmp249hlri0.zip",
+              "language": "es"
+            }
+          ],
+          "thumbnail": null
+        },
+        {
+          "kind": "html5",
+          "title": "Concepto de negocio",
+          "description": "Explore las opciones que le ayudarán a maximizar la capacidad con el fin de cumplir sus metas.",
+          "source_id": "TU5_Business_Concept_PRO-es - Storyline output",
+          "license": {
+            "license_id": "CC BY",
+            "copyright_holder": "HP LIFE",
+            "description": null
+          },
+          "language": "es",
+          "files": [
+            {
+              "file_type": "html5",
+              "path": "/var/folders/wc/2r44j8gs4gn56t1xtw5f6wlm0000gn/T/tmp2g_yufw4.zip",
+              "language": "es"
+            }
+          ],
+          "thumbnail": "chefdata/Courses/es/Maximización de la capacidad/content/TU5_Business_Concept_PRO-es - Storyline output_webroot/story_content/thumbnail.jpg"
+        },
+        {
+          "kind": "html5",
+          "title": "Habilidad Tecnología",
+          "description": "Aprenda a usar una hoja de cálculo para entender cómo el tiempo del personal podría limitar la capacidad de su negocio.",
+          "source_id": "TU5_Tech_Skill_PRO_es - Storyline output",
+          "license": {
+            "license_id": "CC BY",
+            "copyright_holder": "HP LIFE",
+            "description": null
+          },
+          "language": "es",
+          "files": [
+            {
+              "file_type": "html5",
+              "path": "/var/folders/wc/2r44j8gs4gn56t1xtw5f6wlm0000gn/T/tmptrwnjej_.zip",
+              "language": "es"
+            }
+          ],
+          "thumbnail": "chefdata/Courses/es/Maximización de la capacidad/content/TU5_Tech_Skill_PRO_es - Storyline output_webroot/story_content/thumbnail.jpg"
+        },
+        {
+          "kind": "topic",
+          "title": "Recursos",
+          "source_id": "Maximización de la capacidad___resources",
+          "license": {
+            "license_id": "CC BY",
+            "copyright_holder": "HP LIFE",
+            "description": null
+          },
+          "language": "es",
+          "thumbnail": "chefdata/thumbnails/resources_folder_thumbnail.png",
+          "children": [
+            {
+              "kind": "document",
+              "title": "Hoja de cálculo de la capacidad de tiempo del personal (Excel)",
+              "description": "",
+              "source_id": "https://s3.amazonaws.com/hp-life-content/DownloadableSpanish/Staff+Time+Capacity+Calculator-es.xlsx",
+              "license": {
+                "license_id": "CC BY",
+                "copyright_holder": "HP LIFE",
+                "description": null
+              },
+              "language": "es",
+              "files": [
+                {
+                  "file_type": "document",
+                  "path": "chefdata/Courses/es/Maximización de la capacidad/content/converted/Staff Time Capacity Calculator-es.pdf",
+                  "language": "es"
+                }
+              ]
+            },
+            {
+              "kind": "document",
+              "title": "Hoja de cálculo de la capacidad de tiempo del personal (LibreOffice)",
+              "description": "",
+              "source_id": "https://s3.amazonaws.com/hp-life-content/DownloadableSpanish/Staff+Time+Capacity+Calculator-es.ods",
+              "license": {
+                "license_id": "CC BY",
+                "copyright_holder": "HP LIFE",
+                "description": null
+              },
+              "language": "es",
+              "files": [
+                {
+                  "file_type": "document",
+                  "path": "chefdata/Courses/es/Maximización de la capacidad/content/converted/Staff Time Capacity Calculator-es.pdf",
+                  "language": "es"
+                }
+              ]
+            },
+            {
+              "kind": "document",
+              "title": "Guía de capacidad de producción",
+              "description": "",
+              "source_id": "https://s3.amazonaws.com/hp-life-content/DownloadableSpanish/Production+Capacity+Guide-es.pdf",
+              "license": {
+                "license_id": "CC BY",
+                "copyright_holder": "HP LIFE",
+                "description": null
+              },
+              "language": "es",
+              "files": [
+                {
+                  "file_type": "document",
+                  "path": "chefdata/Courses/es/Maximización de la capacidad/content/downloads/Production Capacity Guide-es.pdf",
+                  "language": "es"
+                }
+              ]
+            },
+            {
+              "kind": "html5",
+              "title": "Recursos descargables",
+              "description": "",
+              "source_id": "Maximización de la capacidad__resources__downloadable_resources",
+              "license": {
+                "license_id": "CC BY",
+                "copyright_holder": "HP LIFE",
+                "description": null
+              },
+              "language": "es",
+              "thumbnail": "chefdata/thumbnails/downloadable_resources_thumbnail.png",
+              "files": [
+                {
+                  "file_type": "html5",
+                  "path": "chefdata/Courses/es/Maximización de la capacidad/content/downloadable_resources_webroot.zip",
+                  "language": "es"
+                }
+              ]
+            }
+          ]
+        },
+        {
+          "kind": "html5",
+          "title": "Pasos siguientes",
+          "description": "Descubra los pasos siguientes y recursos adicionales útiles como ayuda para mejorar la capacidad de su negocio.",
+          "source_id": "<p><strong>Para recibir el cer",
+          "license": {
+            "license_id": "CC BY",
+            "copyright_holder": "HP LIFE",
+            "description": null
+          },
+          "language": "es",
+          "files": [
+            {
+              "file_type": "html5",
+              "path": "/var/folders/wc/2r44j8gs4gn56t1xtw5f6wlm0000gn/T/tmpaq05k2wi.zip",
+              "language": "es"
+            }
+          ]
+        }
+      ],
+      "source_id": "2354hpl-es05",
+      "description": "Aprenda cómo maximizar la capacidad de su negocio para producir bienes o servicios y explore cómo puede ayudarle una hoja de cálculo a entender cómo se usa el tiempo del personal en su negocio."
+    },
+    {
+      "kind": "topic",
+      "title": "Su público objetivo",
+      "language": "es",
+      "thumbnail": "chefdata/thumbnails/new_channel_thumbnail.png",
+      "children": [
+        {
+          "kind": "html5",
+          "title": "Narración",
+          "description": "Paul y Loretta intentan averiguar quiénes son sus clientes para poder dirigir mejor sus esfuerzos de marketing.",
+          "source_id": "es_6",
+          "license": {
+            "license_id": "CC BY",
+            "copyright_holder": "HP LIFE",
+            "description": null
+          },
+          "language": "es",
+          "files": [
+            {
+              "file_type": "html5",
+              "path": "/var/folders/wc/2r44j8gs4gn56t1xtw5f6wlm0000gn/T/tmpudik4ah_.zip",
+              "language": "es"
+            }
+          ],
+          "thumbnail": null
+        },
+        {
+          "kind": "html5",
+          "title": "Concepto de negocio",
+          "description": "Explore cómo las encuestas a clientes ayudan a determinar su público objetivo y perfeccionar su marketing.",
+          "source_id": "TU6_Business_Concept_PRO_es - Storyline output",
+          "license": {
+            "license_id": "CC BY",
+            "copyright_holder": "HP LIFE",
+            "description": null
+          },
+          "language": "es",
+          "files": [
+            {
+              "file_type": "html5",
+              "path": "/var/folders/wc/2r44j8gs4gn56t1xtw5f6wlm0000gn/T/tmpi3xjg90o.zip",
+              "language": "es"
+            }
+          ],
+          "thumbnail": "chefdata/Courses/es/Su público objetivo/content/TU6_Business_Concept_PRO_es - Storyline output_webroot/story_content/thumbnail.jpg"
+        },
+        {
+          "kind": "html5",
+          "title": "Habilidad Tecnología",
+          "description": "¿Cómo puedo crear una encuesta en línea para averiguar los datos demográficos de mis clientes/clientes potenciales y saber más acerca de lo que ellos valoran más?",
+          "source_id": "TU6_Tech_Skill_PRO_es - Storyline output",
+          "license": {
+            "license_id": "CC BY",
+            "copyright_holder": "HP LIFE",
+            "description": null
+          },
+          "language": "es",
+          "files": [
+            {
+              "file_type": "html5",
+              "path": "/var/folders/wc/2r44j8gs4gn56t1xtw5f6wlm0000gn/T/tmpq6g3xayt.zip",
+              "language": "es"
+            }
+          ],
+          "thumbnail": "chefdata/Courses/es/Su público objetivo/content/TU6_Tech_Skill_PRO_es - Storyline output_webroot/story_content/thumbnail.jpg"
+        },
+        {
+          "kind": "topic",
+          "title": "Recursos",
+          "source_id": "Su público objetivo___resources",
+          "license": {
+            "license_id": "CC BY",
+            "copyright_holder": "HP LIFE",
+            "description": null
+          },
+          "language": "es",
+          "thumbnail": "chefdata/thumbnails/resources_folder_thumbnail.png",
+          "children": [
+            {
+              "kind": "document",
+              "title": "Hoja de trabajo de perfil de público objetivo (PDF)",
+              "description": "",
+              "source_id": "https://s3.amazonaws.com/hp-life-content/DownloadableSpanish/TU6_Target+Audience+Downloadable-es.pdf",
+              "license": {
+                "license_id": "CC BY",
+                "copyright_holder": "HP LIFE",
+                "description": null
+              },
+              "language": "es",
+              "files": [
+                {
+                  "file_type": "document",
+                  "path": "chefdata/Courses/es/Su público objetivo/content/downloads/TU6_Target Audience Downloadable-es.pdf",
+                  "language": "es"
+                }
+              ]
+            }
+          ]
+        },
+        {
+          "kind": "html5",
+          "title": "Pasos siguientes",
+          "description": "Descubra los pasos siguientes y recursos adicionales útiles para mejorar las estrategias de marketing de su negocio.",
+          "source_id": "<p><strong>Para recibir el cer",
+          "license": {
+            "license_id": "CC BY",
+            "copyright_holder": "HP LIFE",
+            "description": null
+          },
+          "language": "es",
+          "files": [
+            {
+              "file_type": "html5",
+              "path": "/var/folders/wc/2r44j8gs4gn56t1xtw5f6wlm0000gn/T/tmpgwfbx0nq.zip",
+              "language": "es"
+            }
+          ]
+        }
+      ],
+      "source_id": "2355hpl-es06",
+      "description": "Explore cómo recolectar información acerca de sus clientes y clientes potenciales. Aprenda cómo: • Redactar preguntas para saber más acerca de sus clientes • Crear una encuesta en línea para reunir información acerca de sus clientes"
+    },
+    {
+      "kind": "topic",
+      "title": "Emprendedores sociales",
+      "language": "es",
+      "thumbnail": "chefdata/thumbnails/new_channel_thumbnail.png",
+      "children": [
+        {
+          "kind": "html5",
+          "title": "Narración",
+          "description": "Leanne explora cómo solucionar un problema importante en su comunidad.",
+          "source_id": "es_21",
+          "license": {
+            "license_id": "CC BY",
+            "copyright_holder": "HP LIFE",
+            "description": null
+          },
+          "language": "es",
+          "files": [
+            {
+              "file_type": "html5",
+              "path": "/var/folders/wc/2r44j8gs4gn56t1xtw5f6wlm0000gn/T/tmp2tq1_czi.zip",
+              "language": "es"
+            }
+          ],
+          "thumbnail": null
+        },
+        {
+          "kind": "html5",
+          "title": "Concepto de negocio",
+          "description": "Aprenda cómo evaluar una idea de negocios que genere un impacto social y sea sólida en lo financiero.",
+          "source_id": "TU21_Business_Concept_PRO_es - Storyline output",
+          "license": {
+            "license_id": "CC BY",
+            "copyright_holder": "HP LIFE",
+            "description": null
+          },
+          "language": "es",
+          "files": [
+            {
+              "file_type": "html5",
+              "path": "/var/folders/wc/2r44j8gs4gn56t1xtw5f6wlm0000gn/T/tmpel3qxy0a.zip",
+              "language": "es"
+            }
+          ],
+          "thumbnail": "chefdata/Courses/es/Emprendedores sociales/content/TU21_Business_Concept_PRO_es - Storyline output_webroot/story_content/thumbnail.jpg"
+        },
+        {
+          "kind": "html5",
+          "title": "Habilidad Tecnología",
+          "description": "Aprenda cómo usar software para capturar la información de una investigación de un problema social y conformar una idea de empresa social.",
+          "source_id": "TU21_Tech_Skill_PRO_es - Storyline output",
+          "license": {
+            "license_id": "CC BY",
+            "copyright_holder": "HP LIFE",
+            "description": null
+          },
+          "language": "es",
+          "files": [
+            {
+              "file_type": "html5",
+              "path": "/var/folders/wc/2r44j8gs4gn56t1xtw5f6wlm0000gn/T/tmpdec_8pt4.zip",
+              "language": "es"
+            }
+          ],
+          "thumbnail": "chefdata/Courses/es/Emprendedores sociales/content/TU21_Tech_Skill_PRO_es - Storyline output_webroot/story_content/thumbnail.jpg"
+        },
+        {
+          "kind": "topic",
+          "title": "Recursos",
+          "source_id": "Emprendedores sociales___resources",
+          "license": {
+            "license_id": "CC BY",
+            "copyright_holder": "HP LIFE",
+            "description": null
+          },
+          "language": "es",
+          "thumbnail": "chefdata/thumbnails/resources_folder_thumbnail.png",
+          "children": [
+            {
+              "kind": "document",
+              "title": "Travesía del emprendedor social (PDF)",
+              "description": "",
+              "source_id": "https://s3.amazonaws.com/hp-life-content/DownloadableSpanish/Downloadable_-C21_Social_entrepreneur_journey-es.pdf",
+              "license": {
+                "license_id": "CC BY",
+                "copyright_holder": "HP LIFE",
+                "description": null
+              },
+              "language": "es",
+              "files": [
+                {
+                  "file_type": "document",
+                  "path": "chefdata/Courses/es/Emprendedores sociales/content/downloads/Downloadable_-C21_Social_entrepreneur_journey-es.pdf",
+                  "language": "es"
+                }
+              ]
+            },
+            {
+              "kind": "document",
+              "title": "Cómo crear su idea de empresa social (PDF)",
+              "description": "",
+              "source_id": "https://s3.amazonaws.com/hp-life-content/DownloadableSpanish/Downloadable_C21_Building_your_social_enterprise_idea-es.pdf",
+              "license": {
+                "license_id": "CC BY",
+                "copyright_holder": "HP LIFE",
+                "description": null
+              },
+              "language": "es",
+              "files": [
+                {
+                  "file_type": "document",
+                  "path": "chefdata/Courses/es/Emprendedores sociales/content/downloads/Downloadable_C21_Building_your_social_enterprise_idea-es.pdf",
+                  "language": "es"
+                }
+              ]
+            }
+          ]
+        },
+        {
+          "kind": "html5",
+          "title": "Pasos siguientes",
+          "description": "Descubra pasos siguientes y recursos adicionales que le ayudarán a iniciar una empresa social.",
+          "source_id": "<p><strong>Para recibir el cer",
+          "license": {
+            "license_id": "CC BY",
+            "copyright_holder": "HP LIFE",
+            "description": null
+          },
+          "language": "es",
+          "files": [
+            {
+              "file_type": "html5",
+              "path": "/var/folders/wc/2r44j8gs4gn56t1xtw5f6wlm0000gn/T/tmpx_fj_ddm.zip",
+              "language": "es"
+            }
+          ]
+        }
+      ],
+      "source_id": "2371hpl-es21",
+      "description": "Descubra cómo crear una idea de negocio sólido en lo financiero que resolverá un problema en su comunidad. Aprenda cómo: • Evaluar si una idea de empresa social puede tener impacto social y ser sólida en lo financiero • Usar software para registrar información a medida que cree su idea de empresa social. Este curso se preparó en colaboración con Volans."
+    },
+    {
+      "kind": "topic",
+      "title": "Tecnología de la información para el éxito en los negocios",
+      "language": "es",
+      "thumbnail": "chefdata/thumbnails/new_channel_thumbnail.png",
+      "children": [
+        {
+          "kind": "html5",
+          "title": "Narración",
+          "description": "Tarek y Jamel enfrentan alternativas sobre los mejores proyectos tecnológicos para su agencia de viajes.",
+          "source_id": "es_24",
+          "license": {
+            "license_id": "CC BY",
+            "copyright_holder": "HP LIFE",
+            "description": null
+          },
+          "language": "es",
+          "files": [
+            {
+              "file_type": "html5",
+              "path": "/var/folders/wc/2r44j8gs4gn56t1xtw5f6wlm0000gn/T/tmpip25kif1.zip",
+              "language": "es"
+            }
+          ],
+          "thumbnail": null
+        },
+        {
+          "kind": "html5",
+          "title": "Concepto de negocio",
+          "description": "Aprenda a escoger las soluciones tecnológicas que podrían beneficiar más su negocio.",
+          "source_id": "TU24_Business_Concept_PRO_es - Storyline output",
+          "license": {
+            "license_id": "CC BY",
+            "copyright_holder": "HP LIFE",
+            "description": null
+          },
+          "language": "es",
+          "files": [
+            {
+              "file_type": "html5",
+              "path": "/var/folders/wc/2r44j8gs4gn56t1xtw5f6wlm0000gn/T/tmppu0v7uzy.zip",
+              "language": "es"
+            }
+          ],
+          "thumbnail": "chefdata/Courses/es/Tecnología de la información para el éxito en los negocios/content/TU24_Business_Concept_PRO_es - Storyline output_webroot/story_content/thumbnail.jpg"
+        },
+        {
+          "kind": "html5",
+          "title": "Habilidad Tecnología",
+          "description": "Aprenda a escoger el mejor enfoque al implementar tecnología.",
+          "source_id": "TU24_Tech_Skill_Mobile_es - Storyline output",
+          "license": {
+            "license_id": "CC BY",
+            "copyright_holder": "HP LIFE",
+            "description": null
+          },
+          "language": "es",
+          "files": [
+            {
+              "file_type": "html5",
+              "path": "/var/folders/wc/2r44j8gs4gn56t1xtw5f6wlm0000gn/T/tmpr8dxgs15.zip",
+              "language": "es"
+            }
+          ],
+          "thumbnail": "chefdata/Courses/es/Tecnología de la información para el éxito en los negocios/content/TU24_Tech_Skill_Mobile_es - Storyline output_webroot/story_content/thumbnail.jpg"
+        },
+        {
+          "kind": "topic",
+          "title": "Recursos",
+          "source_id": "Tecnología de la información para el éxito en los negocios___resources",
+          "license": {
+            "license_id": "CC BY",
+            "copyright_holder": "HP LIFE",
+            "description": null
+          },
+          "language": "es",
+          "thumbnail": "chefdata/thumbnails/resources_folder_thumbnail.png",
+          "children": [
+            {
+              "kind": "document",
+              "title": "Plantilla de planificación de iniciativas tecnológicas (Word)",
+              "description": "",
+              "source_id": "https://s3.amazonaws.com/hp-life-content/DownloadableSpanish/Downloadable_C24_Technology_initiative_planning_template-es.docx",
+              "license": {
+                "license_id": "CC BY",
+                "copyright_holder": "HP LIFE",
+                "description": null
+              },
+              "language": "es",
+              "files": [
+                {
+                  "file_type": "document",
+                  "path": "chefdata/Courses/es/Tecnología de la información para el éxito en los negocios/content/converted/Downloadable_C24_Technology_initiative_planning_template-es.pdf",
+                  "language": "es"
+                }
+              ]
+            },
+            {
+              "kind": "html5",
+              "title": "Recursos descargables",
+              "description": "",
+              "source_id": "Tecnología de la información para el éxito en los negocios__resources__downloadable_resources",
+              "license": {
+                "license_id": "CC BY",
+                "copyright_holder": "HP LIFE",
+                "description": null
+              },
+              "language": "es",
+              "thumbnail": "chefdata/thumbnails/downloadable_resources_thumbnail.png",
+              "files": [
+                {
+                  "file_type": "html5",
+                  "path": "chefdata/Courses/es/Tecnología de la información para el éxito en los negocios/content/downloadable_resources_webroot.zip",
+                  "language": "es"
+                }
+              ]
+            }
+          ]
+        },
+        {
+          "kind": "html5",
+          "title": "Pasos siguientes",
+          "description": "Descubra los siguientes pasos y recursos adicionales que lo ayudarán a seleccionar e implementar soluciones tecnológicas para su negocio.",
+          "source_id": "<p><strong>Para recibir el cer",
+          "license": {
+            "license_id": "CC BY",
+            "copyright_holder": "HP LIFE",
+            "description": null
+          },
+          "language": "es",
+          "files": [
+            {
+              "file_type": "html5",
+              "path": "/var/folders/wc/2r44j8gs4gn56t1xtw5f6wlm0000gn/T/tmpqq8pjv5n.zip",
+              "language": "es"
+            }
+          ]
+        }
+      ],
+      "source_id": "2374hpl-es24",
+      "description": "Aprenda a hacer lo siguiente: • Determine los tipos de soluciones tecnológicas que abordan mejor sus metas comerciales • Decida la mejor forma de implementar una solución tecnológica dadas las circunstancias de su negocio en particular"
+    },
+    {
+      "kind": "topic",
+      "title": "Presentación de datos",
+      "language": "es",
+      "thumbnail": "chefdata/thumbnails/new_channel_thumbnail.png",
+      "children": [
+        {
+          "kind": "html5",
+          "title": "Narración",
+          "description": "Bethari tiene la oportunidad de obtener un préstamo para hacerse publicidad en línea.",
+          "source_id": "es_14",
+          "license": {
+            "license_id": "CC BY",
+            "copyright_holder": "HP LIFE",
+            "description": null
+          },
+          "language": "es",
+          "files": [
+            {
+              "file_type": "html5",
+              "path": "/var/folders/wc/2r44j8gs4gn56t1xtw5f6wlm0000gn/T/tmpg8_ynq_2.zip",
+              "language": "es"
+            }
+          ],
+          "thumbnail": null
+        },
+        {
+          "kind": "html5",
+          "title": "Concepto de negocio",
+          "description": "Explore los tipos de gráficos que puede usar para presentar datos.",
+          "source_id": "PD_BC_ES2",
+          "license": {
+            "license_id": "CC BY",
+            "copyright_holder": "HP LIFE",
+            "description": null
+          },
+          "language": "es",
+          "files": [
+            {
+              "file_type": "html5",
+              "path": "/var/folders/wc/2r44j8gs4gn56t1xtw5f6wlm0000gn/T/tmpsx3ba51g.zip",
+              "language": "es"
+            }
+          ],
+          "thumbnail": "chefdata/Courses/es/Presentación de datos/content/PD_BC_ES2_webroot/story_content/thumbnail.jpg"
+        },
+        {
+          "kind": "html5",
+          "title": "Habilidad Tecnología",
+          "description": "Aprenda cómo usar el software de hoja de cálculo para crear gráficos y gráficas.",
+          "source_id": "PD_TS_ES1",
+          "license": {
+            "license_id": "CC BY",
+            "copyright_holder": "HP LIFE",
+            "description": null
+          },
+          "language": "es",
+          "files": [
+            {
+              "file_type": "html5",
+              "path": "/var/folders/wc/2r44j8gs4gn56t1xtw5f6wlm0000gn/T/tmpm8u4jd1b.zip",
+              "language": "es"
+            }
+          ],
+          "thumbnail": "chefdata/Courses/es/Presentación de datos/content/PD_TS_ES1_webroot/story_content/thumbnail.jpg"
+        },
+        {
+          "kind": "topic",
+          "title": "Recursos",
+          "source_id": "Presentación de datos___resources",
+          "license": {
+            "license_id": "CC BY",
+            "copyright_holder": "HP LIFE",
+            "description": null
+          },
+          "language": "es",
+          "thumbnail": "chefdata/thumbnails/resources_folder_thumbnail.png",
+          "children": [
+            {
+              "kind": "document",
+              "title": "Consejos para la creación de gráficos y gráficas",
+              "description": "",
+              "source_id": "https://s3.amazonaws.com/hp-life-content/DownloadableSpanish/HP+LIFE+-+Creating+Charts+and+Graphs-es.pdf",
+              "license": {
+                "license_id": "CC BY",
+                "copyright_holder": "HP LIFE",
+                "description": null
+              },
+              "language": "es",
+              "files": [
+                {
+                  "file_type": "document",
+                  "path": "chefdata/Courses/es/Presentación de datos/content/downloads/HP LIFE - Creating Charts and Graphs-es.pdf",
+                  "language": "es"
+                }
+              ]
+            }
+          ]
+        },
+        {
+          "kind": "html5",
+          "title": "Pasos siguientes",
+          "description": "Descubra pasos siguientes y recursos adicionales que le ayudarán a presentar sus datos con efectividad.",
+          "source_id": "<p><strong>Para recibir el cer",
+          "license": {
+            "license_id": "CC BY",
+            "copyright_holder": "HP LIFE",
+            "description": null
+          },
+          "language": "es",
+          "files": [
+            {
+              "file_type": "html5",
+              "path": "/var/folders/wc/2r44j8gs4gn56t1xtw5f6wlm0000gn/T/tmp50qn402j.zip",
+              "language": "es"
+            }
+          ]
+        }
+      ],
+      "source_id": "2364hpl-es14",
+      "description": "Aprenda cómo seleccionar el tipo adecuado de gráfico para la información que desea comunicar y descubra cómo crear gráficos usando software de hoja de cálculo. Aprenda cómo: • Decidir cuál tipo de gráfico usar para presentar sus datos con efectividad • Usar software de hoja de cálculo en la creación de gráficos y gráficas"
+    },
+    {
+      "kind": "topic",
+      "title": "Aspectos básicos de finanzas",
+      "language": "es",
+      "thumbnail": "chefdata/thumbnails/new_channel_thumbnail.png",
+      "children": [
+        {
+          "kind": "html5",
+          "title": "Narración",
+          "description": "Mariam se hace preguntas mientras busca dinero para iniciar su negocio.",
+          "source_id": "es_1",
+          "license": {
+            "license_id": "CC BY",
+            "copyright_holder": "HP LIFE",
+            "description": null
+          },
+          "language": "es",
+          "files": [
+            {
+              "file_type": "html5",
+              "path": "/var/folders/wc/2r44j8gs4gn56t1xtw5f6wlm0000gn/T/tmp96yxnz_l.zip",
+              "language": "es"
+            }
+          ],
+          "thumbnail": null
+        },
+        {
+          "kind": "html5",
+          "title": "Concepto empresarial",
+          "description": "Explore los tipos de gastos y cómo afectan cuando usted tiene una ganancia.",
+          "source_id": "BoF_BC_ES2",
+          "license": {
+            "license_id": "CC BY",
+            "copyright_holder": "HP LIFE",
+            "description": null
+          },
+          "language": "es",
+          "files": [
+            {
+              "file_type": "html5",
+              "path": "/var/folders/wc/2r44j8gs4gn56t1xtw5f6wlm0000gn/T/tmp2hcdfhqh.zip",
+              "language": "es"
+            }
+          ],
+          "thumbnail": "chefdata/Courses/es/Aspectos básicos de finanzas/content/BoF_BC_ES2_webroot/story_content/thumbnail.jpg"
+        },
+        {
+          "kind": "html5",
+          "title": "Habilidades tecnológicas",
+          "description": "Aprenda los aspectos básicos del uso de una hoja de cálculo para realizar cálculos.",
+          "source_id": "BoF_TS_ES3",
+          "license": {
+            "license_id": "CC BY",
+            "copyright_holder": "HP LIFE",
+            "description": null
+          },
+          "language": "es",
+          "files": [
+            {
+              "file_type": "html5",
+              "path": "/var/folders/wc/2r44j8gs4gn56t1xtw5f6wlm0000gn/T/tmpfo5z61r0.zip",
+              "language": "es"
+            }
+          ],
+          "thumbnail": "chefdata/Courses/es/Aspectos básicos de finanzas/content/BoF_TS_ES3_webroot/story_content/thumbnail.jpg"
+        },
+        {
+          "kind": "topic",
+          "title": "Recursos",
+          "source_id": "Aspectos básicos de finanzas___resources",
+          "license": {
+            "license_id": "CC BY",
+            "copyright_holder": "HP LIFE",
+            "description": null
+          },
+          "language": "es",
+          "thumbnail": "chefdata/thumbnails/resources_folder_thumbnail.png",
+          "children": [
+            {
+              "kind": "document",
+              "title": "Instrucciones para la hoja de cálculo del punto de equilibrio (PDF)",
+              "description": "",
+              "source_id": "https://s3.amazonaws.com/hp-life-content/DownloadableSpanish/Instructions_Break-Even_Spreadsheet-es.pdf",
+              "license": {
+                "license_id": "CC BY",
+                "copyright_holder": "HP LIFE",
+                "description": null
+              },
+              "language": "es",
+              "files": [
+                {
+                  "file_type": "document",
+                  "path": "chefdata/Courses/es/Aspectos básicos de finanzas/content/downloads/Instructions_Break-Even_Spreadsheet-es.pdf",
+                  "language": "es"
+                }
+              ]
+            },
+            {
+              "kind": "document",
+              "title": "Hoja de cálculo para punto de equilibrio (XLS)",
+              "description": "",
+              "source_id": "https://s3.amazonaws.com/hp-life-content/DownloadableSpanish/Break-Even+Spreadsheet_0-es.xls",
+              "license": {
+                "license_id": "CC BY",
+                "copyright_holder": "HP LIFE",
+                "description": null
+              },
+              "language": "es",
+              "files": [
+                {
+                  "file_type": "document",
+                  "path": "chefdata/Courses/es/Aspectos básicos de finanzas/content/converted/Break-Even Spreadsheet_0-es.pdf",
+                  "language": "es"
+                }
+              ]
+            },
+            {
+              "kind": "document",
+              "title": "Hoja de cálculo para punto de equilibrio (ODS)",
+              "description": "",
+              "source_id": "https://s3.amazonaws.com/hp-life-content/DownloadableSpanish/Break-Even+Spreadsheet-es.ods",
+              "license": {
+                "license_id": "CC BY",
+                "copyright_holder": "HP LIFE",
+                "description": null
+              },
+              "language": "es",
+              "files": [
+                {
+                  "file_type": "document",
+                  "path": "chefdata/Courses/es/Aspectos básicos de finanzas/content/converted/Break-Even Spreadsheet-es.pdf",
+                  "language": "es"
+                }
+              ]
+            },
+            {
+              "kind": "html5",
+              "title": "Recursos descargables",
+              "description": "",
+              "source_id": "Aspectos básicos de finanzas__resources__downloadable_resources",
+              "license": {
+                "license_id": "CC BY",
+                "copyright_holder": "HP LIFE",
+                "description": null
+              },
+              "language": "es",
+              "thumbnail": "chefdata/thumbnails/downloadable_resources_thumbnail.png",
+              "files": [
+                {
+                  "file_type": "html5",
+                  "path": "chefdata/Courses/es/Aspectos básicos de finanzas/content/downloadable_resources_webroot.zip",
+                  "language": "es"
+                }
+              ]
+            }
+          ]
+        },
+        {
+          "kind": "html5",
+          "title": "Pasos siguientes",
+          "description": "Descubra los pasos siguientes de este curso y recursos adicionales.",
+          "source_id": "<p><strong>Para recibir el cer",
+          "license": {
+            "license_id": "CC BY",
+            "copyright_holder": "HP LIFE",
+            "description": null
+          },
+          "language": "es",
+          "files": [
+            {
+              "file_type": "html5",
+              "path": "/var/folders/wc/2r44j8gs4gn56t1xtw5f6wlm0000gn/T/tmpwnx74sro.zip",
+              "language": "es"
+            }
+          ]
+        }
+      ],
+      "source_id": "2348hpl-es01",
+      "description": "Aprenda los conceptos básicos de finanzas de negocios, que le ayudarán a calcular los gastos y descubrir cuándo tendrá ganancias. Aprenda cómo: • Determinar los tipos de gastos • Calcular su punto de equilibrio • Usar una hoja de cálculo para realizar cálculos más fácilmente"
+    },
+    {
+      "kind": "topic",
+      "title": "Administración de la relación con los clientes (ARC)",
+      "language": "es",
+      "thumbnail": "chefdata/thumbnails/new_channel_thumbnail.png",
+      "children": [
+        {
+          "kind": "html5",
+          "title": "Narración",
+          "description": "Dmitri se topa con problemas inesperados cuando intenta realizar una venta.",
+          "source_id": "es_12",
+          "license": {
+            "license_id": "CC BY",
+            "copyright_holder": "HP LIFE",
+            "description": null
+          },
+          "language": "es",
+          "files": [
+            {
+              "file_type": "html5",
+              "path": "/var/folders/wc/2r44j8gs4gn56t1xtw5f6wlm0000gn/T/tmp286m4dvv.zip",
+              "language": "es"
+            }
+          ],
+          "thumbnail": null
+        },
+        {
+          "kind": "html5",
+          "title": "Concepto de negocio",
+          "description": "Explore cómo un proceso efectivo de administración de clientes es parecido al cuidado de un jardín.",
+          "source_id": "TU12_Business_Concept_PRO_es - Storyline output",
+          "license": {
+            "license_id": "CC BY",
+            "copyright_holder": "HP LIFE",
+            "description": null
+          },
+          "language": "es",
+          "files": [
+            {
+              "file_type": "html5",
+              "path": "/var/folders/wc/2r44j8gs4gn56t1xtw5f6wlm0000gn/T/tmpdzbc250g.zip",
+              "language": "es"
+            }
+          ],
+          "thumbnail": "chefdata/Courses/es/Administración de la relación con los clientes (ARC)/content/TU12_Business_Concept_PRO_es - Storyline output_webroot/story_content/thumbnail.jpg"
+        },
+        {
+          "kind": "html5",
+          "title": "Habilidad Tecnología",
+          "description": "Aprenda cómo usar una herramienta de administración de la relación con los clientes para administrar el ciclo de ventas e incrementar su negocio.",
+          "source_id": "TU12_Tech_Skill_PRO-es - Storyline output",
+          "license": {
+            "license_id": "CC BY",
+            "copyright_holder": "HP LIFE",
+            "description": null
+          },
+          "language": "es",
+          "files": [
+            {
+              "file_type": "html5",
+              "path": "/var/folders/wc/2r44j8gs4gn56t1xtw5f6wlm0000gn/T/tmp51tik5o7.zip",
+              "language": "es"
+            }
+          ],
+          "thumbnail": "chefdata/Courses/es/Administración de la relación con los clientes (ARC)/content/TU12_Tech_Skill_PRO-es - Storyline output_webroot/story_content/thumbnail.jpg"
+        },
+        {
+          "kind": "topic",
+          "title": "Recursos",
+          "source_id": "Administración de la relación con los clientes (ARC)___resources",
+          "license": {
+            "license_id": "CC BY",
+            "copyright_holder": "HP LIFE",
+            "description": null
+          },
+          "language": "es",
+          "thumbnail": "chefdata/thumbnails/resources_folder_thumbnail.png",
+          "children": [
+            {
+              "kind": "document",
+              "title": "Usar Outlook 2010 como su herramienta de ARC (PDF)",
+              "description": "",
+              "source_id": "https://s3.amazonaws.com/hp-life-content/DownloadableSpanish/CRM+downloadable+-+Using+Outlook+2010+as+Your+CRM-es.pdf",
+              "license": {
+                "license_id": "CC BY",
+                "copyright_holder": "HP LIFE",
+                "description": null
+              },
+              "language": "es",
+              "files": [
+                {
+                  "file_type": "document",
+                  "path": "chefdata/Courses/es/Administración de la relación con los clientes (ARC)/content/downloads/CRM downloadable - Using Outlook 2010 as Your CRM-es.pdf",
+                  "language": "es"
+                }
+              ]
+            },
+            {
+              "kind": "document",
+              "title": "Nueve pasos para implementar su sistema de ARC (PDF)",
+              "description": "",
+              "source_id": "https://s3.amazonaws.com/hp-life-content/DownloadableSpanish/9_Steps_to_Implementing_Your_CRM_System-es.pdf",
+              "license": {
+                "license_id": "CC BY",
+                "copyright_holder": "HP LIFE",
+                "description": null
+              },
+              "language": "es",
+              "files": [
+                {
+                  "file_type": "document",
+                  "path": "chefdata/Courses/es/Administración de la relación con los clientes (ARC)/content/downloads/9_Steps_to_Implementing_Your_CRM_System-es.pdf",
+                  "language": "es"
+                }
+              ]
+            }
+          ]
+        },
+        {
+          "kind": "html5",
+          "title": "Pasos siguientes",
+          "description": "Descubra los pasos siguientes y recursos adicionales útiles que le ayudarán a mejorar las relaciones con los clientes.",
+          "source_id": "<p><strong>Para recibir el cer",
+          "license": {
+            "license_id": "CC BY",
+            "copyright_holder": "HP LIFE",
+            "description": null
+          },
+          "language": "es",
+          "files": [
+            {
+              "file_type": "html5",
+              "path": "/var/folders/wc/2r44j8gs4gn56t1xtw5f6wlm0000gn/T/tmp3p3nouvb.zip",
+              "language": "es"
+            }
+          ]
+        }
+      ],
+      "source_id": "2362hpl-es12",
+      "description": "Aprenda los conceptos básicos de finanzas de negocios, que le ayudarán a calcular los gastos y descubrir cuándo tendrá ganancias. Aprenda cómo: • Determinar los tipos de gastos • Calcular su punto de equilibrio • Usar una hoja de cálculo para realizar cálculos más fácilmente"
+    }
+  ]
+}
