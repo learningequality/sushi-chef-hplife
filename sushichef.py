@@ -134,8 +134,12 @@ CONTENT_FOLDER_RENAMES = {
             '27-DT1-ST-FR-NR-MOB': '27-DT2-BC-FR-NR-MOB',  # fixes bug in course
         },
     },
+    '2464hpl-ar06': {
+        'technologyskill' : {
+            'YTA_TS_AR_FIXED_reload': 'TU6_Tech_Skill_PRO_ar - Storyline output',
+        }
+    }
 }
-
 
 def find_activity_ref(contentdir, activity_ref):
     """

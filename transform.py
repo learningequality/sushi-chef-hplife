@@ -621,7 +621,7 @@ def css_rewriter(style_str, source_url, destdir):
             return 'url()'
         # Don't download data: files
         if src.startswith('data:'):
-            print('\t\tfound data')
+            # print('\t\tfound data')
             return match.group(0)
 
         resource_url = urljoin(source_url, src)
