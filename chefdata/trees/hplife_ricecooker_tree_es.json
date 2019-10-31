@@ -1,11 +1,267 @@
 {
-  "title": "Cursos HP LIFE (Español)",
+  "title": "HP LIFE - Cursos (Español)",
   "source_domain": "life-global.org",
   "source_id": "hp-life-courses-es",
   "description": "Una iniciativa de HP Foundation, esta colección de cursos introductorios y breves ayuda a los adultos a adquirir habilidades en tecnología y emprendimiento de forma independiente, incluye tecnologías de la información, empezar  un negocio, venta en línea y marketing. Son apropiados para adultos con curiosidad por desarrollarse profesionalmente o por aprender nuevas oportunidades.",
   "thumbnail": "chefdata/thumbnails/new_channel_thumbnail.png",
   "language": "es",
   "children": [
+    {
+      "kind": "topic",
+      "title": "Marketing de medios sociales",
+      "language": "es",
+      "thumbnail": "chefdata/thumbnails/new_channel_thumbnail.png",
+      "children": [
+        {
+          "kind": "html5",
+          "title": "Narración",
+          "description": "Alejandro intenta descubrir nuevas formas de aumentar los negocios para su café.",
+          "source_id": "es_2",
+          "license": {
+            "license_id": "CC BY",
+            "copyright_holder": "HP LIFE",
+            "description": null
+          },
+          "language": "es",
+          "files": [
+            {
+              "file_type": "html5",
+              "path": "/var/folders/wc/2r44j8gs4gn56t1xtw5f6wlm0000gn/T/tmp8hqsws24.zip",
+              "language": "es"
+            }
+          ],
+          "thumbnail": null
+        },
+        {
+          "kind": "html5",
+          "title": "Concepto de negocio",
+          "description": "Saber lo que es un medio social, porque usarlo, los pasos para crear un plan de marketing de medios sociales exitoso.",
+          "source_id": "02-SMM2-BC-ES-NR-MOB",
+          "license": {
+            "license_id": "CC BY",
+            "copyright_holder": "HP LIFE",
+            "description": null
+          },
+          "language": "es",
+          "files": [
+            {
+              "file_type": "html5",
+              "path": "/var/folders/wc/2r44j8gs4gn56t1xtw5f6wlm0000gn/T/tmpkecbkrpf.zip",
+              "language": "es"
+            }
+          ],
+          "thumbnail": "chefdata/Courses/es/Marketing de medios sociales/content/02-SMM2-BC-ES-NR-MOB_webroot/story_content/thumbnail.jpg"
+        },
+        {
+          "kind": "html5",
+          "title": "Habilidad Tecnología",
+          "description": "Aprender cómo crear un anuncio y una página comercial en Facebook que llegue a su demografía deseada.",
+          "source_id": "02-SMM3-TS-ES-NR-MOB",
+          "license": {
+            "license_id": "CC BY",
+            "copyright_holder": "HP LIFE",
+            "description": null
+          },
+          "language": "es",
+          "files": [
+            {
+              "file_type": "html5",
+              "path": "/var/folders/wc/2r44j8gs4gn56t1xtw5f6wlm0000gn/T/tmpzynkhi88.zip",
+              "language": "es"
+            }
+          ],
+          "thumbnail": "chefdata/Courses/es/Marketing de medios sociales/content/02-SMM3-TS-ES-NR-MOB_webroot/story_content/thumbnail.jpg"
+        },
+        {
+          "kind": "topic",
+          "title": "Recursos",
+          "source_id": "Marketing de medios sociales___resources",
+          "license": {
+            "license_id": "CC BY",
+            "copyright_holder": "HP LIFE",
+            "description": null
+          },
+          "language": "es",
+          "thumbnail": "chefdata/thumbnails/resources_folder_thumbnail.png",
+          "children": [
+            {
+              "kind": "document",
+              "title": "Descripción General del Curso de Marketing en Medios Sociales",
+              "description": "",
+              "source_id": "https://s3.amazonaws.com/hp-life-content/Antonio+TechClass+Academy/SMM_ES/Downloadable+Resourse/HP+LIFE+SMM+Course_Course+Overview_ESP.docx",
+              "license": {
+                "license_id": "CC BY",
+                "copyright_holder": "HP LIFE",
+                "description": null
+              },
+              "language": "es",
+              "files": [
+                {
+                  "file_type": "document",
+                  "path": "chefdata/Courses/es/Marketing de medios sociales/content/converted/HP LIFE SMM Course_Course Overview_ESP.pdf",
+                  "language": "es"
+                }
+              ]
+            },
+            {
+              "kind": "document",
+              "title": "Plantilla de planificación de medios sociales",
+              "description": "",
+              "source_id": "https://s3.amazonaws.com/hp-life-content/Antonio+TechClass+Academy/SMM_ES/Downloadable+Resourse/HP+LIFE+SMM+Course_Social+Media+Planning+Template_ESP.docx",
+              "license": {
+                "license_id": "CC BY",
+                "copyright_holder": "HP LIFE",
+                "description": null
+              },
+              "language": "es",
+              "files": [
+                {
+                  "file_type": "document",
+                  "path": "chefdata/Courses/es/Marketing de medios sociales/content/converted/HP LIFE SMM Course_Social Media Planning Template_ESP.pdf",
+                  "language": "es"
+                }
+              ]
+            },
+            {
+              "kind": "document",
+              "title": "Elija una plataforma de medios sociales",
+              "description": "",
+              "source_id": "https://s3.amazonaws.com/hp-life-content/Antonio+TechClass+Academy/SMM_ES/Downloadable+Resourse/HP+LIFE+SMM+Course_Choose+a+Platform_ESP.pdf",
+              "license": {
+                "license_id": "CC BY",
+                "copyright_holder": "HP LIFE",
+                "description": null
+              },
+              "language": "es",
+              "files": [
+                {
+                  "file_type": "document",
+                  "path": "chefdata/Courses/es/Marketing de medios sociales/content/downloads/HP LIFE SMM Course_Choose a Platform_ESP.pdf",
+                  "language": "es"
+                }
+              ]
+            },
+            {
+              "kind": "document",
+              "title": "Plantilla de calendario editorial de contenido",
+              "description": "",
+              "source_id": "https://s3.amazonaws.com/hp-life-content/Antonio+TechClass+Academy/SMM_ES/Downloadable+Resourse/HP+LIFE+SMM+Course_Calendar+Template_ESP.xlsx",
+              "license": {
+                "license_id": "CC BY",
+                "copyright_holder": "HP LIFE",
+                "description": null
+              },
+              "language": "es",
+              "files": [
+                {
+                  "file_type": "document",
+                  "path": "chefdata/Courses/es/Marketing de medios sociales/content/converted/HP LIFE SMM Course_Calendar Template_ESP.pdf",
+                  "language": "es"
+                }
+              ]
+            },
+            {
+              "kind": "document",
+              "title": "Abra una Cuenta en Medios Sociales",
+              "description": "",
+              "source_id": "https://s3.amazonaws.com/hp-life-content/Antonio+TechClass+Academy/SMM_ES/Downloadable+Resourse/HP+LIFE+SMM+Course_Open+an+Account_ESP.pdf",
+              "license": {
+                "license_id": "CC BY",
+                "copyright_holder": "HP LIFE",
+                "description": null
+              },
+              "language": "es",
+              "files": [
+                {
+                  "file_type": "document",
+                  "path": "chefdata/Courses/es/Marketing de medios sociales/content/downloads/HP LIFE SMM Course_Open an Account_ESP.pdf",
+                  "language": "es"
+                }
+              ]
+            },
+            {
+              "kind": "document",
+              "title": "Crear un anuncio de Facebook",
+              "description": "",
+              "source_id": "https://s3.amazonaws.com/hp-life-content/Antonio+TechClass+Academy/SMM_ES/Downloadable+Resourse/HP+LIFE+SMM+Course_Create+a+Facebook+Ad_ESP.pdf",
+              "license": {
+                "license_id": "CC BY",
+                "copyright_holder": "HP LIFE",
+                "description": null
+              },
+              "language": "es",
+              "files": [
+                {
+                  "file_type": "document",
+                  "path": "chefdata/Courses/es/Marketing de medios sociales/content/downloads/HP LIFE SMM Course_Create a Facebook Ad_ESP.pdf",
+                  "language": "es"
+                }
+              ]
+            },
+            {
+              "kind": "document",
+              "title": "Hoja de consejos de medios sociales",
+              "description": "",
+              "source_id": "https://s3.amazonaws.com/hp-life-content/Antonio+TechClass+Academy/SMM_ES/Downloadable+Resourse/HP+LIFE+SMM+Course_Social+Media+Tip+Sheet_ESP.pdf",
+              "license": {
+                "license_id": "CC BY",
+                "copyright_holder": "HP LIFE",
+                "description": null
+              },
+              "language": "es",
+              "files": [
+                {
+                  "file_type": "document",
+                  "path": "chefdata/Courses/es/Marketing de medios sociales/content/downloads/HP LIFE SMM Course_Social Media Tip Sheet_ESP.pdf",
+                  "language": "es"
+                }
+              ]
+            },
+            {
+              "kind": "html5",
+              "title": "Recursos descargables",
+              "description": "",
+              "source_id": "Marketing de medios sociales__resources__downloadable_resources",
+              "license": {
+                "license_id": "CC BY",
+                "copyright_holder": "HP LIFE",
+                "description": null
+              },
+              "language": "es",
+              "thumbnail": "chefdata/thumbnails/downloadable_resources_thumbnail.png",
+              "files": [
+                {
+                  "file_type": "html5",
+                  "path": "chefdata/Courses/es/Marketing de medios sociales/content/downloadable_resources_webroot.zip",
+                  "language": "es"
+                }
+              ]
+            }
+          ]
+        },
+        {
+          "kind": "html5",
+          "title": "Pasos siguientes",
+          "description": "Descubra los siguientes pasos de su curso y recursos adicionales. Tenga en cuenta que los enlaces en esta página no funcionarán a menos que esté conectado a Internet. Use el botón derecho y elija \"Abrir en una nueva pestaña\" para abrir los enlaces.",
+          "source_id": "<p><strong>Para recibir el cer",
+          "license": {
+            "license_id": "CC BY",
+            "copyright_holder": "HP LIFE",
+            "description": null
+          },
+          "language": "es",
+          "files": [
+            {
+              "file_type": "html5",
+              "path": "/var/folders/wc/2r44j8gs4gn56t1xtw5f6wlm0000gn/T/tmpstlagye4.zip",
+              "language": "es"
+            }
+          ]
+        }
+      ],
+      "source_id": "2351hpl-es02",
+      "description": "Los medios sociales son una de las mejores maneras de aumentar la conciencia, mantenerse en contacto con su base de clientes y aumentar su negocio. Es barato, tiene un enfoque de marketing eficaz y cualquiera puede aprender lo esencial. Explorar • Pasos para crear un plan de marketing para los medios sociales • Plataformas de medios sociales • Crea un anuncio y una página comercial en Facebook"
+    },
     {
       "kind": "topic",
       "title": "Encontrar financiamiento",
@@ -26,7 +282,7 @@
           "files": [
             {
               "file_type": "html5",
-              "path": "/var/folders/wc/2r44j8gs4gn56t1xtw5f6wlm0000gn/T/tmp9isng3xj.zip",
+              "path": "/var/folders/wc/2r44j8gs4gn56t1xtw5f6wlm0000gn/T/tmp1ceojd8f.zip",
               "language": "es"
             }
           ],
@@ -46,7 +302,7 @@
           "files": [
             {
               "file_type": "html5",
-              "path": "/var/folders/wc/2r44j8gs4gn56t1xtw5f6wlm0000gn/T/tmpcvx5jk9z.zip",
+              "path": "/var/folders/wc/2r44j8gs4gn56t1xtw5f6wlm0000gn/T/tmp6rg1vmhf.zip",
               "language": "es"
             }
           ],
@@ -66,7 +322,7 @@
           "files": [
             {
               "file_type": "html5",
-              "path": "/var/folders/wc/2r44j8gs4gn56t1xtw5f6wlm0000gn/T/tmp1wus8o0e.zip",
+              "path": "/var/folders/wc/2r44j8gs4gn56t1xtw5f6wlm0000gn/T/tmpfqhrkzo5.zip",
               "language": "es"
             }
           ],
@@ -242,7 +498,7 @@
         {
           "kind": "html5",
           "title": "Pasos siguientes",
-          "description": "Descubra los pasos siguientes y recursos adicionales.",
+          "description": "Descubra los pasos siguientes y recursos adicionales. Tenga en cuenta que los enlaces en esta página no funcionarán a menos que esté conectado a Internet. Use el botón derecho y elija \"Abrir en una nueva pestaña\" para abrir los enlaces.",
           "source_id": "<p><strong>Para recibir el cer",
           "license": {
             "license_id": "CC BY",
@@ -253,7 +509,7 @@
           "files": [
             {
               "file_type": "html5",
-              "path": "/var/folders/wc/2r44j8gs4gn56t1xtw5f6wlm0000gn/T/tmpoj9b3hf9.zip",
+              "path": "/var/folders/wc/2r44j8gs4gn56t1xtw5f6wlm0000gn/T/tmpl0z_hane.zip",
               "language": "es"
             }
           ]
@@ -282,7 +538,7 @@
           "files": [
             {
               "file_type": "html5",
-              "path": "/var/folders/wc/2r44j8gs4gn56t1xtw5f6wlm0000gn/T/tmpzwyehyx3.zip",
+              "path": "/var/folders/wc/2r44j8gs4gn56t1xtw5f6wlm0000gn/T/tmp1nxjlr5q.zip",
               "language": "es"
             }
           ],
@@ -302,7 +558,7 @@
           "files": [
             {
               "file_type": "html5",
-              "path": "/var/folders/wc/2r44j8gs4gn56t1xtw5f6wlm0000gn/T/tmpw0pmveqp.zip",
+              "path": "/var/folders/wc/2r44j8gs4gn56t1xtw5f6wlm0000gn/T/tmpdrywsboq.zip",
               "language": "es"
             }
           ],
@@ -322,7 +578,7 @@
           "files": [
             {
               "file_type": "html5",
-              "path": "/var/folders/wc/2r44j8gs4gn56t1xtw5f6wlm0000gn/T/tmpbbbu7xl8.zip",
+              "path": "/var/folders/wc/2r44j8gs4gn56t1xtw5f6wlm0000gn/T/tmpj56_c1u7.zip",
               "language": "es"
             }
           ],
@@ -479,7 +735,7 @@
         {
           "kind": "html5",
           "title": "Próximos pasos",
-          "description": "Descubrir los próximos pasos en este curso y los recursos adicionales.",
+          "description": "Descubrir los próximos pasos en este curso y los recursos adicionales. Tenga en cuenta que los enlaces en esta página no funcionarán a menos que esté conectado a Internet. Use el botón derecho y elija \"Abrir en una nueva pestaña\" para abrir los enlaces.",
           "source_id": "<p class=\"MsoNormal\"><strong><",
           "license": {
             "license_id": "CC BY",
@@ -490,7 +746,7 @@
           "files": [
             {
               "file_type": "html5",
-              "path": "/var/folders/wc/2r44j8gs4gn56t1xtw5f6wlm0000gn/T/tmpzpee7sr9.zip",
+              "path": "/var/folders/wc/2r44j8gs4gn56t1xtw5f6wlm0000gn/T/tmp9pgg987g.zip",
               "language": "es"
             }
           ]
@@ -519,7 +775,7 @@
           "files": [
             {
               "file_type": "html5",
-              "path": "/var/folders/wc/2r44j8gs4gn56t1xtw5f6wlm0000gn/T/tmpbexj7eyi.zip",
+              "path": "/var/folders/wc/2r44j8gs4gn56t1xtw5f6wlm0000gn/T/tmpj6yyojer.zip",
               "language": "es"
             }
           ],
@@ -539,7 +795,7 @@
           "files": [
             {
               "file_type": "html5",
-              "path": "/var/folders/wc/2r44j8gs4gn56t1xtw5f6wlm0000gn/T/tmpska0_ckd.zip",
+              "path": "/var/folders/wc/2r44j8gs4gn56t1xtw5f6wlm0000gn/T/tmp5pf3e397.zip",
               "language": "es"
             }
           ],
@@ -559,7 +815,7 @@
           "files": [
             {
               "file_type": "html5",
-              "path": "/var/folders/wc/2r44j8gs4gn56t1xtw5f6wlm0000gn/T/tmp_mnif2ow.zip",
+              "path": "/var/folders/wc/2r44j8gs4gn56t1xtw5f6wlm0000gn/T/tmputt8t6u0.zip",
               "language": "es"
             }
           ],
@@ -601,7 +857,7 @@
         {
           "kind": "html5",
           "title": "Pasos siguientes",
-          "description": "Descubra los pasos siguientes y recursos adicionales para administrar la información sobre los contactos de su negocio.",
+          "description": "Descubra los pasos siguientes y recursos adicionales para administrar la información sobre los contactos de su negocio. Tenga en cuenta que los enlaces en esta página no funcionarán a menos que esté conectado a Internet. Use el botón derecho y elija \"Abrir en una nueva pestaña\" para abrir los enlaces.",
           "source_id": "<p><strong>Para recibir el cer",
           "license": {
             "license_id": "CC BY",
@@ -612,7 +868,7 @@
           "files": [
             {
               "file_type": "html5",
-              "path": "/var/folders/wc/2r44j8gs4gn56t1xtw5f6wlm0000gn/T/tmp5h3f16yx.zip",
+              "path": "/var/folders/wc/2r44j8gs4gn56t1xtw5f6wlm0000gn/T/tmpyenqcbwq.zip",
               "language": "es"
             }
           ]
@@ -641,7 +897,7 @@
           "files": [
             {
               "file_type": "html5",
-              "path": "/var/folders/wc/2r44j8gs4gn56t1xtw5f6wlm0000gn/T/tmp_rzt2puw.zip",
+              "path": "/var/folders/wc/2r44j8gs4gn56t1xtw5f6wlm0000gn/T/tmp2jauwbl_.zip",
               "language": "es"
             }
           ],
@@ -661,7 +917,7 @@
           "files": [
             {
               "file_type": "html5",
-              "path": "/var/folders/wc/2r44j8gs4gn56t1xtw5f6wlm0000gn/T/tmpwx9f_44p.zip",
+              "path": "/var/folders/wc/2r44j8gs4gn56t1xtw5f6wlm0000gn/T/tmpokjztxw5.zip",
               "language": "es"
             }
           ],
@@ -681,7 +937,7 @@
           "files": [
             {
               "file_type": "html5",
-              "path": "/var/folders/wc/2r44j8gs4gn56t1xtw5f6wlm0000gn/T/tmpe6qynfx7.zip",
+              "path": "/var/folders/wc/2r44j8gs4gn56t1xtw5f6wlm0000gn/T/tmp168pyl8h.zip",
               "language": "es"
             }
           ],
@@ -742,7 +998,7 @@
         {
           "kind": "html5",
           "title": "Pasos siguientes",
-          "description": "Descubra pasos siguientes y recursos adicionales que le ayudarán a crear un sitio web de fácil uso que satisfaga sus metas de negocios.",
+          "description": "Descubra pasos siguientes y recursos adicionales que le ayudarán a crear un sitio web de fácil uso que satisfaga sus metas de negocios. Tenga en cuenta que los enlaces en esta página no funcionarán a menos que esté conectado a Internet. Use el botón derecho y elija \"Abrir en una nueva pestaña\" para abrir los enlaces.",
           "source_id": "<p><strong>Para recibir el cer",
           "license": {
             "license_id": "CC BY",
@@ -753,7 +1009,7 @@
           "files": [
             {
               "file_type": "html5",
-              "path": "/var/folders/wc/2r44j8gs4gn56t1xtw5f6wlm0000gn/T/tmp8c7eeec1.zip",
+              "path": "/var/folders/wc/2r44j8gs4gn56t1xtw5f6wlm0000gn/T/tmpcai54m5v.zip",
               "language": "es"
             }
           ]
@@ -782,7 +1038,7 @@
           "files": [
             {
               "file_type": "html5",
-              "path": "/var/folders/wc/2r44j8gs4gn56t1xtw5f6wlm0000gn/T/tmptxpvgq4c.zip",
+              "path": "/var/folders/wc/2r44j8gs4gn56t1xtw5f6wlm0000gn/T/tmp3x0e0wpy.zip",
               "language": "es"
             }
           ],
@@ -802,7 +1058,7 @@
           "files": [
             {
               "file_type": "html5",
-              "path": "/var/folders/wc/2r44j8gs4gn56t1xtw5f6wlm0000gn/T/tmpy1oo9d2z.zip",
+              "path": "/var/folders/wc/2r44j8gs4gn56t1xtw5f6wlm0000gn/T/tmpvy4j4iz2.zip",
               "language": "es"
             }
           ],
@@ -822,7 +1078,7 @@
           "files": [
             {
               "file_type": "html5",
-              "path": "/var/folders/wc/2r44j8gs4gn56t1xtw5f6wlm0000gn/T/tmpdw17bsl8.zip",
+              "path": "/var/folders/wc/2r44j8gs4gn56t1xtw5f6wlm0000gn/T/tmpxnwrckog.zip",
               "language": "es"
             }
           ],
@@ -883,7 +1139,7 @@
         {
           "kind": "html5",
           "title": "Pasos siguientes",
-          "description": "Descubra los pasos siguientes y recursos adicionales que le ayudarán a crear presentaciones de diapositivas efectivas.",
+          "description": "Descubra los pasos siguientes y recursos adicionales que le ayudarán a crear presentaciones de diapositivas efectivas. Tenga en cuenta que los enlaces en esta página no funcionarán a menos que esté conectado a Internet. Use el botón derecho y elija \"Abrir en una nueva pestaña\" para abrir los enlaces.",
           "source_id": "<p><strong>Para recibir el cer",
           "license": {
             "license_id": "CC BY",
@@ -894,7 +1150,7 @@
           "files": [
             {
               "file_type": "html5",
-              "path": "/var/folders/wc/2r44j8gs4gn56t1xtw5f6wlm0000gn/T/tmp31o3uv1h.zip",
+              "path": "/var/folders/wc/2r44j8gs4gn56t1xtw5f6wlm0000gn/T/tmpkaz9k3fd.zip",
               "language": "es"
             }
           ]
@@ -923,7 +1179,7 @@
           "files": [
             {
               "file_type": "html5",
-              "path": "/var/folders/wc/2r44j8gs4gn56t1xtw5f6wlm0000gn/T/tmpc7titrhb.zip",
+              "path": "/var/folders/wc/2r44j8gs4gn56t1xtw5f6wlm0000gn/T/tmpcz18ufcw.zip",
               "language": "es"
             }
           ],
@@ -943,7 +1199,7 @@
           "files": [
             {
               "file_type": "html5",
-              "path": "/var/folders/wc/2r44j8gs4gn56t1xtw5f6wlm0000gn/T/tmpbdko7r7h.zip",
+              "path": "/var/folders/wc/2r44j8gs4gn56t1xtw5f6wlm0000gn/T/tmpf7c9ad40.zip",
               "language": "es"
             }
           ],
@@ -963,7 +1219,7 @@
           "files": [
             {
               "file_type": "html5",
-              "path": "/var/folders/wc/2r44j8gs4gn56t1xtw5f6wlm0000gn/T/tmpjqsy65ur.zip",
+              "path": "/var/folders/wc/2r44j8gs4gn56t1xtw5f6wlm0000gn/T/tmpcd4fa_87.zip",
               "language": "es"
             }
           ],
@@ -1082,7 +1338,7 @@
         {
           "kind": "html5",
           "title": "Próximos pasos",
-          "description": "Descubre los próximos pasos en este curso y recursos adicionales.",
+          "description": "Descubre los próximos pasos en este curso y recursos adicionales. Tenga en cuenta que los enlaces en esta página no funcionarán a menos que esté conectado a Internet. Use el botón derecho y elija \"Abrir en una nueva pestaña\" para abrir los enlaces.",
           "source_id": "<p class=\"MsoNormal\"><span col",
           "license": {
             "license_id": "CC BY",
@@ -1093,7 +1349,7 @@
           "files": [
             {
               "file_type": "html5",
-              "path": "/var/folders/wc/2r44j8gs4gn56t1xtw5f6wlm0000gn/T/tmpqxkw05dl.zip",
+              "path": "/var/folders/wc/2r44j8gs4gn56t1xtw5f6wlm0000gn/T/tmpqgwv7g4d.zip",
               "language": "es"
             }
           ]
@@ -1122,7 +1378,7 @@
           "files": [
             {
               "file_type": "html5",
-              "path": "/var/folders/wc/2r44j8gs4gn56t1xtw5f6wlm0000gn/T/tmpddyr89op.zip",
+              "path": "/var/folders/wc/2r44j8gs4gn56t1xtw5f6wlm0000gn/T/tmpcveg27p_.zip",
               "language": "es"
             }
           ],
@@ -1142,7 +1398,7 @@
           "files": [
             {
               "file_type": "html5",
-              "path": "/var/folders/wc/2r44j8gs4gn56t1xtw5f6wlm0000gn/T/tmp7xmctuir.zip",
+              "path": "/var/folders/wc/2r44j8gs4gn56t1xtw5f6wlm0000gn/T/tmpdkzri1io.zip",
               "language": "es"
             }
           ],
@@ -1162,7 +1418,7 @@
           "files": [
             {
               "file_type": "html5",
-              "path": "/var/folders/wc/2r44j8gs4gn56t1xtw5f6wlm0000gn/T/tmpxyzcsm5j.zip",
+              "path": "/var/folders/wc/2r44j8gs4gn56t1xtw5f6wlm0000gn/T/tmp3r9ysktu.zip",
               "language": "es"
             }
           ],
@@ -1223,7 +1479,7 @@
         {
           "kind": "html5",
           "title": "Pasos siguientes",
-          "description": "Descubra los siguientes pasos y recursos adicionales que le permitirán convertirse en un líder más eficaz.",
+          "description": "Descubra los siguientes pasos y recursos adicionales que le permitirán convertirse en un líder más eficaz. Tenga en cuenta que los enlaces en esta página no funcionarán a menos que esté conectado a Internet. Use el botón derecho y elija \"Abrir en una nueva pestaña\" para abrir los enlaces.",
           "source_id": "<p><strong>Para recibir el cer",
           "license": {
             "license_id": "CC BY",
@@ -1234,7 +1490,7 @@
           "files": [
             {
               "file_type": "html5",
-              "path": "/var/folders/wc/2r44j8gs4gn56t1xtw5f6wlm0000gn/T/tmp1oxeswaf.zip",
+              "path": "/var/folders/wc/2r44j8gs4gn56t1xtw5f6wlm0000gn/T/tmp_lkb3zae.zip",
               "language": "es"
             }
           ]
@@ -1263,7 +1519,7 @@
           "files": [
             {
               "file_type": "html5",
-              "path": "/var/folders/wc/2r44j8gs4gn56t1xtw5f6wlm0000gn/T/tmp8qkgf1ec.zip",
+              "path": "/var/folders/wc/2r44j8gs4gn56t1xtw5f6wlm0000gn/T/tmpg6k3j1th.zip",
               "language": "es"
             }
           ],
@@ -1283,7 +1539,7 @@
           "files": [
             {
               "file_type": "html5",
-              "path": "/var/folders/wc/2r44j8gs4gn56t1xtw5f6wlm0000gn/T/tmpzqng0t44.zip",
+              "path": "/var/folders/wc/2r44j8gs4gn56t1xtw5f6wlm0000gn/T/tmpn5o6k_b6.zip",
               "language": "es"
             }
           ],
@@ -1303,7 +1559,7 @@
           "files": [
             {
               "file_type": "html5",
-              "path": "/var/folders/wc/2r44j8gs4gn56t1xtw5f6wlm0000gn/T/tmptufsh00j.zip",
+              "path": "/var/folders/wc/2r44j8gs4gn56t1xtw5f6wlm0000gn/T/tmprz6daxxo.zip",
               "language": "es"
             }
           ],
@@ -1403,7 +1659,7 @@
         {
           "kind": "html5",
           "title": "Pasos siguientes",
-          "description": "Conozca los próximos pasos de este curso y los recursos adicionales..",
+          "description": "Conozca los próximos pasos de este curso y los recursos adicionales.. Tenga en cuenta que los enlaces en esta página no funcionarán a menos que esté conectado a Internet. Use el botón derecho y elija \"Abrir en una nueva pestaña\" para abrir los enlaces.",
           "source_id": "<p><strong>Para recibir el cer",
           "license": {
             "license_id": "CC BY",
@@ -1414,7 +1670,7 @@
           "files": [
             {
               "file_type": "html5",
-              "path": "/var/folders/wc/2r44j8gs4gn56t1xtw5f6wlm0000gn/T/tmpc23y7cm7.zip",
+              "path": "/var/folders/wc/2r44j8gs4gn56t1xtw5f6wlm0000gn/T/tmp0diy3jhe.zip",
               "language": "es"
             }
           ]
@@ -1443,7 +1699,7 @@
           "files": [
             {
               "file_type": "html5",
-              "path": "/var/folders/wc/2r44j8gs4gn56t1xtw5f6wlm0000gn/T/tmp7yxhin7m.zip",
+              "path": "/var/folders/wc/2r44j8gs4gn56t1xtw5f6wlm0000gn/T/tmp60ujklyy.zip",
               "language": "es"
             }
           ],
@@ -1463,7 +1719,7 @@
           "files": [
             {
               "file_type": "html5",
-              "path": "/var/folders/wc/2r44j8gs4gn56t1xtw5f6wlm0000gn/T/tmprba6ns14.zip",
+              "path": "/var/folders/wc/2r44j8gs4gn56t1xtw5f6wlm0000gn/T/tmpvrlogp6_.zip",
               "language": "es"
             }
           ],
@@ -1483,7 +1739,7 @@
           "files": [
             {
               "file_type": "html5",
-              "path": "/var/folders/wc/2r44j8gs4gn56t1xtw5f6wlm0000gn/T/tmpv2bee54e.zip",
+              "path": "/var/folders/wc/2r44j8gs4gn56t1xtw5f6wlm0000gn/T/tmph30olqf2.zip",
               "language": "es"
             }
           ],
@@ -1525,7 +1781,7 @@
         {
           "kind": "html5",
           "title": "Pasos siguientes",
-          "description": "Descubra los pasos siguientes y recursos adicionales que le ayudarán a comunicarse con efectividad a través del correo electrónico.",
+          "description": "Descubra los pasos siguientes y recursos adicionales que le ayudarán a comunicarse con efectividad a través del correo electrónico. Tenga en cuenta que los enlaces en esta página no funcionarán a menos que esté conectado a Internet. Use el botón derecho y elija \"Abrir en una nueva pestaña\" para abrir los enlaces.",
           "source_id": "<p><strong>Para recibir el cer",
           "license": {
             "license_id": "CC BY",
@@ -1536,7 +1792,7 @@
           "files": [
             {
               "file_type": "html5",
-              "path": "/var/folders/wc/2r44j8gs4gn56t1xtw5f6wlm0000gn/T/tmp2hntlshl.zip",
+              "path": "/var/folders/wc/2r44j8gs4gn56t1xtw5f6wlm0000gn/T/tmp5w4ltv84.zip",
               "language": "es"
             }
           ]
@@ -1565,7 +1821,7 @@
           "files": [
             {
               "file_type": "html5",
-              "path": "/var/folders/wc/2r44j8gs4gn56t1xtw5f6wlm0000gn/T/tmpcuepjlmf.zip",
+              "path": "/var/folders/wc/2r44j8gs4gn56t1xtw5f6wlm0000gn/T/tmpif9su5dr.zip",
               "language": "es"
             }
           ],
@@ -1585,7 +1841,7 @@
           "files": [
             {
               "file_type": "html5",
-              "path": "/var/folders/wc/2r44j8gs4gn56t1xtw5f6wlm0000gn/T/tmpm90tddac.zip",
+              "path": "/var/folders/wc/2r44j8gs4gn56t1xtw5f6wlm0000gn/T/tmpiw1bw1q_.zip",
               "language": "es"
             }
           ],
@@ -1605,7 +1861,7 @@
           "files": [
             {
               "file_type": "html5",
-              "path": "/var/folders/wc/2r44j8gs4gn56t1xtw5f6wlm0000gn/T/tmpra22665o.zip",
+              "path": "/var/folders/wc/2r44j8gs4gn56t1xtw5f6wlm0000gn/T/tmp2ml2sk2m.zip",
               "language": "es"
             }
           ],
@@ -1743,7 +1999,7 @@
         {
           "kind": "html5",
           "title": "Pasos siguientes",
-          "description": "Descubra los pasos siguientes y recursos adicionales útiles que le ayudarán a pronosticar las ventas de su negocio.",
+          "description": "Descubra los pasos siguientes y recursos adicionales útiles que le ayudarán a pronosticar las ventas de su negocio. Tenga en cuenta que los enlaces en esta página no funcionarán a menos que esté conectado a Internet. Use el botón derecho y elija \"Abrir en una nueva pestaña\" para abrir los enlaces.",
           "source_id": "<p><strong>Para recibir el cer",
           "license": {
             "license_id": "CC BY",
@@ -1754,7 +2010,7 @@
           "files": [
             {
               "file_type": "html5",
-              "path": "/var/folders/wc/2r44j8gs4gn56t1xtw5f6wlm0000gn/T/tmpw6rwou2r.zip",
+              "path": "/var/folders/wc/2r44j8gs4gn56t1xtw5f6wlm0000gn/T/tmpfm5ehzoq.zip",
               "language": "es"
             }
           ]
@@ -1783,7 +2039,7 @@
           "files": [
             {
               "file_type": "html5",
-              "path": "/var/folders/wc/2r44j8gs4gn56t1xtw5f6wlm0000gn/T/tmpm5n68ome.zip",
+              "path": "/var/folders/wc/2r44j8gs4gn56t1xtw5f6wlm0000gn/T/tmp5nq0_e3t.zip",
               "language": "es"
             }
           ],
@@ -1803,7 +2059,7 @@
           "files": [
             {
               "file_type": "html5",
-              "path": "/var/folders/wc/2r44j8gs4gn56t1xtw5f6wlm0000gn/T/tmpvgd53orf.zip",
+              "path": "/var/folders/wc/2r44j8gs4gn56t1xtw5f6wlm0000gn/T/tmpjlkm_ebv.zip",
               "language": "es"
             }
           ],
@@ -1823,7 +2079,7 @@
           "files": [
             {
               "file_type": "html5",
-              "path": "/var/folders/wc/2r44j8gs4gn56t1xtw5f6wlm0000gn/T/tmpknm1zu14.zip",
+              "path": "/var/folders/wc/2r44j8gs4gn56t1xtw5f6wlm0000gn/T/tmptinhc8am.zip",
               "language": "es"
             }
           ],
@@ -1884,7 +2140,7 @@
         {
           "kind": "html5",
           "title": "Pasos siguientes",
-          "description": "Descubra los pasos siguientes y recursos adicionales útiles para mejorar las estrategias de marketing de su negocio.",
+          "description": "Descubra los pasos siguientes y recursos adicionales útiles para mejorar las estrategias de marketing de su negocio. Tenga en cuenta que los enlaces en esta página no funcionarán a menos que esté conectado a Internet. Use el botón derecho y elija \"Abrir en una nueva pestaña\" para abrir los enlaces.",
           "source_id": "<p><strong>Para recibir el cer",
           "license": {
             "license_id": "CC BY",
@@ -1895,7 +2151,7 @@
           "files": [
             {
               "file_type": "html5",
-              "path": "/var/folders/wc/2r44j8gs4gn56t1xtw5f6wlm0000gn/T/tmpll_gtsxu.zip",
+              "path": "/var/folders/wc/2r44j8gs4gn56t1xtw5f6wlm0000gn/T/tmpku0aykf0.zip",
               "language": "es"
             }
           ]
@@ -1924,7 +2180,7 @@
           "files": [
             {
               "file_type": "html5",
-              "path": "/var/folders/wc/2r44j8gs4gn56t1xtw5f6wlm0000gn/T/tmp14uldtyi.zip",
+              "path": "/var/folders/wc/2r44j8gs4gn56t1xtw5f6wlm0000gn/T/tmphs82j_rq.zip",
               "language": "es"
             }
           ],
@@ -1944,7 +2200,7 @@
           "files": [
             {
               "file_type": "html5",
-              "path": "/var/folders/wc/2r44j8gs4gn56t1xtw5f6wlm0000gn/T/tmpmq4frmrq.zip",
+              "path": "/var/folders/wc/2r44j8gs4gn56t1xtw5f6wlm0000gn/T/tmppxaoouow.zip",
               "language": "es"
             }
           ],
@@ -1964,7 +2220,7 @@
           "files": [
             {
               "file_type": "html5",
-              "path": "/var/folders/wc/2r44j8gs4gn56t1xtw5f6wlm0000gn/T/tmp6p3xbkkc.zip",
+              "path": "/var/folders/wc/2r44j8gs4gn56t1xtw5f6wlm0000gn/T/tmpt7ffh8xm.zip",
               "language": "es"
             }
           ],
@@ -2026,7 +2282,7 @@
         {
           "kind": "html5",
           "title": "Pasos siguientes",
-          "description": "Descubra los pasos siguientes y recursos adicionales útiles que le ayudarán a fijar los precios en su negocio.",
+          "description": "Descubra los pasos siguientes y recursos adicionales útiles que le ayudarán a fijar los precios en su negocio. Tenga en cuenta que los enlaces en esta página no funcionarán a menos que esté conectado a Internet. Use el botón derecho y elija \"Abrir en una nueva pestaña\" para abrir los enlaces.",
           "source_id": "<p><strong>Para recibir el cer",
           "license": {
             "license_id": "CC BY",
@@ -2037,7 +2293,7 @@
           "files": [
             {
               "file_type": "html5",
-              "path": "/var/folders/wc/2r44j8gs4gn56t1xtw5f6wlm0000gn/T/tmpfxfc_fiw.zip",
+              "path": "/var/folders/wc/2r44j8gs4gn56t1xtw5f6wlm0000gn/T/tmpwh0zyc6j.zip",
               "language": "es"
             }
           ]
@@ -2066,7 +2322,7 @@
           "files": [
             {
               "file_type": "html5",
-              "path": "/var/folders/wc/2r44j8gs4gn56t1xtw5f6wlm0000gn/T/tmpfp_b0x3v.zip",
+              "path": "/var/folders/wc/2r44j8gs4gn56t1xtw5f6wlm0000gn/T/tmpuzwanv0c.zip",
               "language": "es"
             }
           ],
@@ -2086,7 +2342,7 @@
           "files": [
             {
               "file_type": "html5",
-              "path": "/var/folders/wc/2r44j8gs4gn56t1xtw5f6wlm0000gn/T/tmp8l28i5tg.zip",
+              "path": "/var/folders/wc/2r44j8gs4gn56t1xtw5f6wlm0000gn/T/tmpzivpts_g.zip",
               "language": "es"
             }
           ],
@@ -2106,7 +2362,7 @@
           "files": [
             {
               "file_type": "html5",
-              "path": "/var/folders/wc/2r44j8gs4gn56t1xtw5f6wlm0000gn/T/tmpjjdver5m.zip",
+              "path": "/var/folders/wc/2r44j8gs4gn56t1xtw5f6wlm0000gn/T/tmp9l68su6u.zip",
               "language": "es"
             }
           ],
@@ -2148,7 +2404,7 @@
         {
           "kind": "html5",
           "title": "Pasos siguientes",
-          "description": "Descubra pasos siguientes y recursos adicionales útiles para promover los beneficios de sus productos o servicios.",
+          "description": "Descubra pasos siguientes y recursos adicionales útiles para promover los beneficios de sus productos o servicios. Tenga en cuenta que los enlaces en esta página no funcionarán a menos que esté conectado a Internet. Use el botón derecho y elija \"Abrir en una nueva pestaña\" para abrir los enlaces.",
           "source_id": "<p><strong>Para recibir el cer",
           "license": {
             "license_id": "CC BY",
@@ -2159,7 +2415,7 @@
           "files": [
             {
               "file_type": "html5",
-              "path": "/var/folders/wc/2r44j8gs4gn56t1xtw5f6wlm0000gn/T/tmp_frhkj2u.zip",
+              "path": "/var/folders/wc/2r44j8gs4gn56t1xtw5f6wlm0000gn/T/tmpa0kzugdw.zip",
               "language": "es"
             }
           ]
@@ -2188,7 +2444,7 @@
           "files": [
             {
               "file_type": "html5",
-              "path": "/var/folders/wc/2r44j8gs4gn56t1xtw5f6wlm0000gn/T/tmp48lf29mt.zip",
+              "path": "/var/folders/wc/2r44j8gs4gn56t1xtw5f6wlm0000gn/T/tmp4g161oh_.zip",
               "language": "es"
             }
           ],
@@ -2208,7 +2464,7 @@
           "files": [
             {
               "file_type": "html5",
-              "path": "/var/folders/wc/2r44j8gs4gn56t1xtw5f6wlm0000gn/T/tmpqfpk1yv7.zip",
+              "path": "/var/folders/wc/2r44j8gs4gn56t1xtw5f6wlm0000gn/T/tmpp9d9wbdu.zip",
               "language": "es"
             }
           ],
@@ -2228,7 +2484,7 @@
           "files": [
             {
               "file_type": "html5",
-              "path": "/var/folders/wc/2r44j8gs4gn56t1xtw5f6wlm0000gn/T/tmpbq03l1qx.zip",
+              "path": "/var/folders/wc/2r44j8gs4gn56t1xtw5f6wlm0000gn/T/tmpmupndxoi.zip",
               "language": "es"
             }
           ],
@@ -2328,7 +2584,7 @@
         {
           "kind": "html5",
           "title": "Pasos siguientes",
-          "description": "Descubra pasos siguientes y recursos adicionales que le ayudarán a administrar su inventario.",
+          "description": "Descubra pasos siguientes y recursos adicionales que le ayudarán a administrar su inventario. Tenga en cuenta que los enlaces en esta página no funcionarán a menos que esté conectado a Internet. Use el botón derecho y elija \"Abrir en una nueva pestaña\" para abrir los enlaces.",
           "source_id": "<p><strong>Para recibir el cer",
           "license": {
             "license_id": "CC BY",
@@ -2339,7 +2595,7 @@
           "files": [
             {
               "file_type": "html5",
-              "path": "/var/folders/wc/2r44j8gs4gn56t1xtw5f6wlm0000gn/T/tmpxmxt4rpd.zip",
+              "path": "/var/folders/wc/2r44j8gs4gn56t1xtw5f6wlm0000gn/T/tmpw60apwmk.zip",
               "language": "es"
             }
           ]
@@ -2368,7 +2624,7 @@
           "files": [
             {
               "file_type": "html5",
-              "path": "/var/folders/wc/2r44j8gs4gn56t1xtw5f6wlm0000gn/T/tmpgh0_a_ph.zip",
+              "path": "/var/folders/wc/2r44j8gs4gn56t1xtw5f6wlm0000gn/T/tmphz1_zhdp.zip",
               "language": "es"
             }
           ],
@@ -2388,7 +2644,7 @@
           "files": [
             {
               "file_type": "html5",
-              "path": "/var/folders/wc/2r44j8gs4gn56t1xtw5f6wlm0000gn/T/tmpfgplzwwj.zip",
+              "path": "/var/folders/wc/2r44j8gs4gn56t1xtw5f6wlm0000gn/T/tmpcr7o_cal.zip",
               "language": "es"
             }
           ],
@@ -2408,7 +2664,7 @@
           "files": [
             {
               "file_type": "html5",
-              "path": "/var/folders/wc/2r44j8gs4gn56t1xtw5f6wlm0000gn/T/tmpyc0gq981.zip",
+              "path": "/var/folders/wc/2r44j8gs4gn56t1xtw5f6wlm0000gn/T/tmpruaz4cvb.zip",
               "language": "es"
             }
           ],
@@ -2450,7 +2706,7 @@
         {
           "kind": "html5",
           "title": "Pasos siguientes",
-          "description": "Descubra pasos siguientes y recursos adicionales que le ayudarán a contratar personal.",
+          "description": "Descubra pasos siguientes y recursos adicionales que le ayudarán a contratar personal. Tenga en cuenta que los enlaces en esta página no funcionarán a menos que esté conectado a Internet. Use el botón derecho y elija \"Abrir en una nueva pestaña\" para abrir los enlaces.",
           "source_id": "<p><strong>Para recibir el cer",
           "license": {
             "license_id": "CC BY",
@@ -2461,7 +2717,7 @@
           "files": [
             {
               "file_type": "html5",
-              "path": "/var/folders/wc/2r44j8gs4gn56t1xtw5f6wlm0000gn/T/tmptil2__qo.zip",
+              "path": "/var/folders/wc/2r44j8gs4gn56t1xtw5f6wlm0000gn/T/tmpqafe_orp.zip",
               "language": "es"
             }
           ]
@@ -2490,7 +2746,7 @@
           "files": [
             {
               "file_type": "html5",
-              "path": "/var/folders/wc/2r44j8gs4gn56t1xtw5f6wlm0000gn/T/tmpkkqq86ut.zip",
+              "path": "/var/folders/wc/2r44j8gs4gn56t1xtw5f6wlm0000gn/T/tmpnu9tnazh.zip",
               "language": "es"
             }
           ],
@@ -2510,7 +2766,7 @@
           "files": [
             {
               "file_type": "html5",
-              "path": "/var/folders/wc/2r44j8gs4gn56t1xtw5f6wlm0000gn/T/tmp1fd6zw1a.zip",
+              "path": "/var/folders/wc/2r44j8gs4gn56t1xtw5f6wlm0000gn/T/tmp1wn51n3h.zip",
               "language": "es"
             }
           ],
@@ -2530,7 +2786,7 @@
           "files": [
             {
               "file_type": "html5",
-              "path": "/var/folders/wc/2r44j8gs4gn56t1xtw5f6wlm0000gn/T/tmpcbjbb3op.zip",
+              "path": "/var/folders/wc/2r44j8gs4gn56t1xtw5f6wlm0000gn/T/tmp225kipb5.zip",
               "language": "es"
             }
           ],
@@ -2611,7 +2867,7 @@
         {
           "kind": "html5",
           "title": "Pasos siguientes",
-          "description": "Descubra los próximos pasos y recursos adicionales para obtener más información sobre cómo realizar un análisis FODA, y encuentre otras herramientas y ejemplos útiles que pueden ayudarle con su planificación estratégica.",
+          "description": "Descubra los próximos pasos y recursos adicionales para obtener más información sobre cómo realizar un análisis FODA, y encuentre otras herramientas y ejemplos útiles que pueden ayudarle con su planificación estratégica. Tenga en cuenta que los enlaces en esta página no funcionarán a menos que esté conectado a Internet. Use el botón derecho y elija \"Abrir en una nueva pestaña\" para abrir los enlaces.",
           "source_id": "<p><strong>Para recibir el cer",
           "license": {
             "license_id": "CC BY",
@@ -2622,7 +2878,7 @@
           "files": [
             {
               "file_type": "html5",
-              "path": "/var/folders/wc/2r44j8gs4gn56t1xtw5f6wlm0000gn/T/tmp9l0zkgi2.zip",
+              "path": "/var/folders/wc/2r44j8gs4gn56t1xtw5f6wlm0000gn/T/tmpbm1l3lhj.zip",
               "language": "es"
             }
           ]
@@ -2651,7 +2907,7 @@
           "files": [
             {
               "file_type": "html5",
-              "path": "/var/folders/wc/2r44j8gs4gn56t1xtw5f6wlm0000gn/T/tmp68nh04s8.zip",
+              "path": "/var/folders/wc/2r44j8gs4gn56t1xtw5f6wlm0000gn/T/tmppni3a7d3.zip",
               "language": "es"
             }
           ],
@@ -2671,7 +2927,7 @@
           "files": [
             {
               "file_type": "html5",
-              "path": "/var/folders/wc/2r44j8gs4gn56t1xtw5f6wlm0000gn/T/tmpsyo4wi1s.zip",
+              "path": "/var/folders/wc/2r44j8gs4gn56t1xtw5f6wlm0000gn/T/tmp_qc5pf0u.zip",
               "language": "es"
             }
           ],
@@ -2691,7 +2947,7 @@
           "files": [
             {
               "file_type": "html5",
-              "path": "/var/folders/wc/2r44j8gs4gn56t1xtw5f6wlm0000gn/T/tmpxengiqpt.zip",
+              "path": "/var/folders/wc/2r44j8gs4gn56t1xtw5f6wlm0000gn/T/tmpdgoo55lz.zip",
               "language": "es"
             }
           ],
@@ -2829,7 +3085,7 @@
         {
           "kind": "html5",
           "title": "Próximos pasos",
-          "description": "Descubre los siguientes pasos de este curso y recursos adicionales.",
+          "description": "Descubre los siguientes pasos de este curso y recursos adicionales. Tenga en cuenta que los enlaces en esta página no funcionarán a menos que esté conectado a Internet. Use el botón derecho y elija \"Abrir en una nueva pestaña\" para abrir los enlaces.",
           "source_id": "<p class=\"MsoNormal\"><span col",
           "license": {
             "license_id": "CC BY",
@@ -2840,7 +3096,7 @@
           "files": [
             {
               "file_type": "html5",
-              "path": "/var/folders/wc/2r44j8gs4gn56t1xtw5f6wlm0000gn/T/tmpkfsgiy6p.zip",
+              "path": "/var/folders/wc/2r44j8gs4gn56t1xtw5f6wlm0000gn/T/tmpm8dflbp2.zip",
               "language": "es"
             }
           ]
@@ -2869,7 +3125,7 @@
           "files": [
             {
               "file_type": "html5",
-              "path": "/var/folders/wc/2r44j8gs4gn56t1xtw5f6wlm0000gn/T/tmpa36sik2m.zip",
+              "path": "/var/folders/wc/2r44j8gs4gn56t1xtw5f6wlm0000gn/T/tmpmbr3g949.zip",
               "language": "es"
             }
           ],
@@ -2889,7 +3145,7 @@
           "files": [
             {
               "file_type": "html5",
-              "path": "/var/folders/wc/2r44j8gs4gn56t1xtw5f6wlm0000gn/T/tmpzr70ejk2.zip",
+              "path": "/var/folders/wc/2r44j8gs4gn56t1xtw5f6wlm0000gn/T/tmpvp9mf7p1.zip",
               "language": "es"
             }
           ],
@@ -2909,7 +3165,7 @@
           "files": [
             {
               "file_type": "html5",
-              "path": "/var/folders/wc/2r44j8gs4gn56t1xtw5f6wlm0000gn/T/tmp449i3505.zip",
+              "path": "/var/folders/wc/2r44j8gs4gn56t1xtw5f6wlm0000gn/T/tmpu5yh8rnd.zip",
               "language": "es"
             }
           ],
@@ -2951,7 +3207,7 @@
         {
           "kind": "html5",
           "title": "Pasos siguientes",
-          "description": "Descubra los pasos siguientes y recursos adicionales útiles para mejorar las estrategias de marketing de su negocio.",
+          "description": "Descubra los pasos siguientes y recursos adicionales útiles para mejorar las estrategias de marketing de su negocio. Tenga en cuenta que los enlaces en esta página no funcionarán a menos que esté conectado a Internet. Use el botón derecho y elija \"Abrir en una nueva pestaña\" para abrir los enlaces.",
           "source_id": "<p><strong>Para recibir el cer",
           "license": {
             "license_id": "CC BY",
@@ -2962,7 +3218,7 @@
           "files": [
             {
               "file_type": "html5",
-              "path": "/var/folders/wc/2r44j8gs4gn56t1xtw5f6wlm0000gn/T/tmpb216gtrw.zip",
+              "path": "/var/folders/wc/2r44j8gs4gn56t1xtw5f6wlm0000gn/T/tmpy086tess.zip",
               "language": "es"
             }
           ]
@@ -2991,7 +3247,7 @@
           "files": [
             {
               "file_type": "html5",
-              "path": "/var/folders/wc/2r44j8gs4gn56t1xtw5f6wlm0000gn/T/tmphn4onvpc.zip",
+              "path": "/var/folders/wc/2r44j8gs4gn56t1xtw5f6wlm0000gn/T/tmpskyr6zda.zip",
               "language": "es"
             }
           ],
@@ -3011,7 +3267,7 @@
           "files": [
             {
               "file_type": "html5",
-              "path": "/var/folders/wc/2r44j8gs4gn56t1xtw5f6wlm0000gn/T/tmpba1ymsf5.zip",
+              "path": "/var/folders/wc/2r44j8gs4gn56t1xtw5f6wlm0000gn/T/tmp44qa0oxx.zip",
               "language": "es"
             }
           ],
@@ -3031,7 +3287,7 @@
           "files": [
             {
               "file_type": "html5",
-              "path": "/var/folders/wc/2r44j8gs4gn56t1xtw5f6wlm0000gn/T/tmp_a0757ec.zip",
+              "path": "/var/folders/wc/2r44j8gs4gn56t1xtw5f6wlm0000gn/T/tmpzc9z5kcz.zip",
               "language": "es"
             }
           ],
@@ -3207,7 +3463,7 @@
         {
           "kind": "html5",
           "title": "Próximos pasos",
-          "description": "Descubra los próximos pasos en este curso y recursos adicionales.",
+          "description": "Descubra los próximos pasos en este curso y recursos adicionales. Tenga en cuenta que los enlaces en esta página no funcionarán a menos que esté conectado a Internet. Use el botón derecho y elija \"Abrir en una nueva pestaña\" para abrir los enlaces.",
           "source_id": "<p class=\"MsoNormal\"><strong><",
           "license": {
             "license_id": "CC BY",
@@ -3218,7 +3474,7 @@
           "files": [
             {
               "file_type": "html5",
-              "path": "/var/folders/wc/2r44j8gs4gn56t1xtw5f6wlm0000gn/T/tmp__x6ef53.zip",
+              "path": "/var/folders/wc/2r44j8gs4gn56t1xtw5f6wlm0000gn/T/tmp7mnum_7f.zip",
               "language": "es"
             }
           ]
@@ -3247,7 +3503,7 @@
           "files": [
             {
               "file_type": "html5",
-              "path": "/var/folders/wc/2r44j8gs4gn56t1xtw5f6wlm0000gn/T/tmp1wfibgyt.zip",
+              "path": "/var/folders/wc/2r44j8gs4gn56t1xtw5f6wlm0000gn/T/tmp9pmtb07s.zip",
               "language": "es"
             }
           ],
@@ -3267,7 +3523,7 @@
           "files": [
             {
               "file_type": "html5",
-              "path": "/var/folders/wc/2r44j8gs4gn56t1xtw5f6wlm0000gn/T/tmpls3gkjux.zip",
+              "path": "/var/folders/wc/2r44j8gs4gn56t1xtw5f6wlm0000gn/T/tmpt269eb_q.zip",
               "language": "es"
             }
           ],
@@ -3287,7 +3543,7 @@
           "files": [
             {
               "file_type": "html5",
-              "path": "/var/folders/wc/2r44j8gs4gn56t1xtw5f6wlm0000gn/T/tmpbkmanr8q.zip",
+              "path": "/var/folders/wc/2r44j8gs4gn56t1xtw5f6wlm0000gn/T/tmp07kn0js4.zip",
               "language": "es"
             }
           ],
@@ -3349,7 +3605,7 @@
         {
           "kind": "html5",
           "title": "Pasos siguientes",
-          "description": "Descubra los pasos siguientes y recursos adicionales útiles que le ayudarán a manejar el flujo de caja en su negocio.",
+          "description": "Descubra los pasos siguientes y recursos adicionales útiles que le ayudarán a manejar el flujo de caja en su negocio. Tenga en cuenta que los enlaces en esta página no funcionarán a menos que esté conectado a Internet. Use el botón derecho y elija \"Abrir en una nueva pestaña\" para abrir los enlaces.",
           "source_id": "<p><strong>Para recibir el cer",
           "license": {
             "license_id": "CC BY",
@@ -3360,7 +3616,7 @@
           "files": [
             {
               "file_type": "html5",
-              "path": "/var/folders/wc/2r44j8gs4gn56t1xtw5f6wlm0000gn/T/tmpjn6ntkq0.zip",
+              "path": "/var/folders/wc/2r44j8gs4gn56t1xtw5f6wlm0000gn/T/tmpve2f0o1e.zip",
               "language": "es"
             }
           ]
@@ -3389,7 +3645,7 @@
           "files": [
             {
               "file_type": "html5",
-              "path": "/var/folders/wc/2r44j8gs4gn56t1xtw5f6wlm0000gn/T/tmpj3w90zt_.zip",
+              "path": "/var/folders/wc/2r44j8gs4gn56t1xtw5f6wlm0000gn/T/tmpqna7j6p1.zip",
               "language": "es"
             }
           ],
@@ -3409,7 +3665,7 @@
           "files": [
             {
               "file_type": "html5",
-              "path": "/var/folders/wc/2r44j8gs4gn56t1xtw5f6wlm0000gn/T/tmpdkk_zyeb.zip",
+              "path": "/var/folders/wc/2r44j8gs4gn56t1xtw5f6wlm0000gn/T/tmpw67v9lla.zip",
               "language": "es"
             }
           ],
@@ -3429,7 +3685,7 @@
           "files": [
             {
               "file_type": "html5",
-              "path": "/var/folders/wc/2r44j8gs4gn56t1xtw5f6wlm0000gn/T/tmpnb5ga7mt.zip",
+              "path": "/var/folders/wc/2r44j8gs4gn56t1xtw5f6wlm0000gn/T/tmp5ucf1lg4.zip",
               "language": "es"
             }
           ],
@@ -3510,7 +3766,7 @@
         {
           "kind": "html5",
           "title": "Pasos siguientes",
-          "description": "Descubra pasos siguientes y recursos adicionales que le ayudarán a reducir su consumo de energía.",
+          "description": "Descubra pasos siguientes y recursos adicionales que le ayudarán a reducir su consumo de energía. Tenga en cuenta que los enlaces en esta página no funcionarán a menos que esté conectado a Internet. Use el botón derecho y elija \"Abrir en una nueva pestaña\" para abrir los enlaces.",
           "source_id": "<p><strong>Para recibir el cer",
           "license": {
             "license_id": "CC BY",
@@ -3521,7 +3777,7 @@
           "files": [
             {
               "file_type": "html5",
-              "path": "/var/folders/wc/2r44j8gs4gn56t1xtw5f6wlm0000gn/T/tmp65zv12zx.zip",
+              "path": "/var/folders/wc/2r44j8gs4gn56t1xtw5f6wlm0000gn/T/tmpd26ens2m.zip",
               "language": "es"
             }
           ]
@@ -3550,7 +3806,7 @@
           "files": [
             {
               "file_type": "html5",
-              "path": "/var/folders/wc/2r44j8gs4gn56t1xtw5f6wlm0000gn/T/tmpadmcg_m1.zip",
+              "path": "/var/folders/wc/2r44j8gs4gn56t1xtw5f6wlm0000gn/T/tmprde4gtrm.zip",
               "language": "es"
             }
           ],
@@ -3570,7 +3826,7 @@
           "files": [
             {
               "file_type": "html5",
-              "path": "/var/folders/wc/2r44j8gs4gn56t1xtw5f6wlm0000gn/T/tmpsf_9w45_.zip",
+              "path": "/var/folders/wc/2r44j8gs4gn56t1xtw5f6wlm0000gn/T/tmpnx1fk6qg.zip",
               "language": "es"
             }
           ],
@@ -3590,7 +3846,7 @@
           "files": [
             {
               "file_type": "html5",
-              "path": "/var/folders/wc/2r44j8gs4gn56t1xtw5f6wlm0000gn/T/tmp2bzdbwad.zip",
+              "path": "/var/folders/wc/2r44j8gs4gn56t1xtw5f6wlm0000gn/T/tmp4alfzmvm.zip",
               "language": "es"
             }
           ],
@@ -3671,7 +3927,7 @@
         {
           "kind": "html5",
           "title": "Pasos siguientes",
-          "description": "Descubra los pasos siguientes y recursos adicionales útiles para mejorar las ganancias de su negocio.",
+          "description": "Descubra los pasos siguientes y recursos adicionales útiles para mejorar las ganancias de su negocio. Tenga en cuenta que los enlaces en esta página no funcionarán a menos que esté conectado a Internet. Use el botón derecho y elija \"Abrir en una nueva pestaña\" para abrir los enlaces.",
           "source_id": "<p><strong>Para recibir el cer",
           "license": {
             "license_id": "CC BY",
@@ -3682,7 +3938,7 @@
           "files": [
             {
               "file_type": "html5",
-              "path": "/var/folders/wc/2r44j8gs4gn56t1xtw5f6wlm0000gn/T/tmptn765wju.zip",
+              "path": "/var/folders/wc/2r44j8gs4gn56t1xtw5f6wlm0000gn/T/tmpiwj0n2r6.zip",
               "language": "es"
             }
           ]
@@ -3711,7 +3967,7 @@
           "files": [
             {
               "file_type": "html5",
-              "path": "/var/folders/wc/2r44j8gs4gn56t1xtw5f6wlm0000gn/T/tmp249hlri0.zip",
+              "path": "/var/folders/wc/2r44j8gs4gn56t1xtw5f6wlm0000gn/T/tmpu531bt0_.zip",
               "language": "es"
             }
           ],
@@ -3731,7 +3987,7 @@
           "files": [
             {
               "file_type": "html5",
-              "path": "/var/folders/wc/2r44j8gs4gn56t1xtw5f6wlm0000gn/T/tmp2g_yufw4.zip",
+              "path": "/var/folders/wc/2r44j8gs4gn56t1xtw5f6wlm0000gn/T/tmpmcdu2klc.zip",
               "language": "es"
             }
           ],
@@ -3751,7 +4007,7 @@
           "files": [
             {
               "file_type": "html5",
-              "path": "/var/folders/wc/2r44j8gs4gn56t1xtw5f6wlm0000gn/T/tmptrwnjej_.zip",
+              "path": "/var/folders/wc/2r44j8gs4gn56t1xtw5f6wlm0000gn/T/tmpnpbzfdcc.zip",
               "language": "es"
             }
           ],
@@ -3851,7 +4107,7 @@
         {
           "kind": "html5",
           "title": "Pasos siguientes",
-          "description": "Descubra los pasos siguientes y recursos adicionales útiles como ayuda para mejorar la capacidad de su negocio.",
+          "description": "Descubra los pasos siguientes y recursos adicionales útiles como ayuda para mejorar la capacidad de su negocio. Tenga en cuenta que los enlaces en esta página no funcionarán a menos que esté conectado a Internet. Use el botón derecho y elija \"Abrir en una nueva pestaña\" para abrir los enlaces.",
           "source_id": "<p><strong>Para recibir el cer",
           "license": {
             "license_id": "CC BY",
@@ -3862,7 +4118,7 @@
           "files": [
             {
               "file_type": "html5",
-              "path": "/var/folders/wc/2r44j8gs4gn56t1xtw5f6wlm0000gn/T/tmpaq05k2wi.zip",
+              "path": "/var/folders/wc/2r44j8gs4gn56t1xtw5f6wlm0000gn/T/tmpcs_1vzto.zip",
               "language": "es"
             }
           ]
@@ -3891,7 +4147,7 @@
           "files": [
             {
               "file_type": "html5",
-              "path": "/var/folders/wc/2r44j8gs4gn56t1xtw5f6wlm0000gn/T/tmpudik4ah_.zip",
+              "path": "/var/folders/wc/2r44j8gs4gn56t1xtw5f6wlm0000gn/T/tmpg_v_n_9s.zip",
               "language": "es"
             }
           ],
@@ -3911,7 +4167,7 @@
           "files": [
             {
               "file_type": "html5",
-              "path": "/var/folders/wc/2r44j8gs4gn56t1xtw5f6wlm0000gn/T/tmpi3xjg90o.zip",
+              "path": "/var/folders/wc/2r44j8gs4gn56t1xtw5f6wlm0000gn/T/tmpy931ia43.zip",
               "language": "es"
             }
           ],
@@ -3931,7 +4187,7 @@
           "files": [
             {
               "file_type": "html5",
-              "path": "/var/folders/wc/2r44j8gs4gn56t1xtw5f6wlm0000gn/T/tmpq6g3xayt.zip",
+              "path": "/var/folders/wc/2r44j8gs4gn56t1xtw5f6wlm0000gn/T/tmp_6rsvrio.zip",
               "language": "es"
             }
           ],
@@ -3973,7 +4229,7 @@
         {
           "kind": "html5",
           "title": "Pasos siguientes",
-          "description": "Descubra los pasos siguientes y recursos adicionales útiles para mejorar las estrategias de marketing de su negocio.",
+          "description": "Descubra los pasos siguientes y recursos adicionales útiles para mejorar las estrategias de marketing de su negocio. Tenga en cuenta que los enlaces en esta página no funcionarán a menos que esté conectado a Internet. Use el botón derecho y elija \"Abrir en una nueva pestaña\" para abrir los enlaces.",
           "source_id": "<p><strong>Para recibir el cer",
           "license": {
             "license_id": "CC BY",
@@ -3984,7 +4240,7 @@
           "files": [
             {
               "file_type": "html5",
-              "path": "/var/folders/wc/2r44j8gs4gn56t1xtw5f6wlm0000gn/T/tmpgwfbx0nq.zip",
+              "path": "/var/folders/wc/2r44j8gs4gn56t1xtw5f6wlm0000gn/T/tmpdelq8qj1.zip",
               "language": "es"
             }
           ]
@@ -4013,7 +4269,7 @@
           "files": [
             {
               "file_type": "html5",
-              "path": "/var/folders/wc/2r44j8gs4gn56t1xtw5f6wlm0000gn/T/tmp2tq1_czi.zip",
+              "path": "/var/folders/wc/2r44j8gs4gn56t1xtw5f6wlm0000gn/T/tmpbpp6ht_6.zip",
               "language": "es"
             }
           ],
@@ -4033,7 +4289,7 @@
           "files": [
             {
               "file_type": "html5",
-              "path": "/var/folders/wc/2r44j8gs4gn56t1xtw5f6wlm0000gn/T/tmpel3qxy0a.zip",
+              "path": "/var/folders/wc/2r44j8gs4gn56t1xtw5f6wlm0000gn/T/tmpv4dbcv5q.zip",
               "language": "es"
             }
           ],
@@ -4053,7 +4309,7 @@
           "files": [
             {
               "file_type": "html5",
-              "path": "/var/folders/wc/2r44j8gs4gn56t1xtw5f6wlm0000gn/T/tmpdec_8pt4.zip",
+              "path": "/var/folders/wc/2r44j8gs4gn56t1xtw5f6wlm0000gn/T/tmp_hiamv4p.zip",
               "language": "es"
             }
           ],
@@ -4114,7 +4370,7 @@
         {
           "kind": "html5",
           "title": "Pasos siguientes",
-          "description": "Descubra pasos siguientes y recursos adicionales que le ayudarán a iniciar una empresa social.",
+          "description": "Descubra pasos siguientes y recursos adicionales que le ayudarán a iniciar una empresa social. Tenga en cuenta que los enlaces en esta página no funcionarán a menos que esté conectado a Internet. Use el botón derecho y elija \"Abrir en una nueva pestaña\" para abrir los enlaces.",
           "source_id": "<p><strong>Para recibir el cer",
           "license": {
             "license_id": "CC BY",
@@ -4125,7 +4381,7 @@
           "files": [
             {
               "file_type": "html5",
-              "path": "/var/folders/wc/2r44j8gs4gn56t1xtw5f6wlm0000gn/T/tmpx_fj_ddm.zip",
+              "path": "/var/folders/wc/2r44j8gs4gn56t1xtw5f6wlm0000gn/T/tmpgo0rf0jq.zip",
               "language": "es"
             }
           ]
@@ -4154,7 +4410,7 @@
           "files": [
             {
               "file_type": "html5",
-              "path": "/var/folders/wc/2r44j8gs4gn56t1xtw5f6wlm0000gn/T/tmpip25kif1.zip",
+              "path": "/var/folders/wc/2r44j8gs4gn56t1xtw5f6wlm0000gn/T/tmp3yszpk5w.zip",
               "language": "es"
             }
           ],
@@ -4174,7 +4430,7 @@
           "files": [
             {
               "file_type": "html5",
-              "path": "/var/folders/wc/2r44j8gs4gn56t1xtw5f6wlm0000gn/T/tmppu0v7uzy.zip",
+              "path": "/var/folders/wc/2r44j8gs4gn56t1xtw5f6wlm0000gn/T/tmp6jwln6ez.zip",
               "language": "es"
             }
           ],
@@ -4194,7 +4450,7 @@
           "files": [
             {
               "file_type": "html5",
-              "path": "/var/folders/wc/2r44j8gs4gn56t1xtw5f6wlm0000gn/T/tmpr8dxgs15.zip",
+              "path": "/var/folders/wc/2r44j8gs4gn56t1xtw5f6wlm0000gn/T/tmp0w1nsgvl.zip",
               "language": "es"
             }
           ],
@@ -4256,7 +4512,7 @@
         {
           "kind": "html5",
           "title": "Pasos siguientes",
-          "description": "Descubra los siguientes pasos y recursos adicionales que lo ayudarán a seleccionar e implementar soluciones tecnológicas para su negocio.",
+          "description": "Descubra los siguientes pasos y recursos adicionales que lo ayudarán a seleccionar e implementar soluciones tecnológicas para su negocio. Tenga en cuenta que los enlaces en esta página no funcionarán a menos que esté conectado a Internet. Use el botón derecho y elija \"Abrir en una nueva pestaña\" para abrir los enlaces.",
           "source_id": "<p><strong>Para recibir el cer",
           "license": {
             "license_id": "CC BY",
@@ -4267,7 +4523,7 @@
           "files": [
             {
               "file_type": "html5",
-              "path": "/var/folders/wc/2r44j8gs4gn56t1xtw5f6wlm0000gn/T/tmpqq8pjv5n.zip",
+              "path": "/var/folders/wc/2r44j8gs4gn56t1xtw5f6wlm0000gn/T/tmpkt1bvbnz.zip",
               "language": "es"
             }
           ]
@@ -4296,7 +4552,7 @@
           "files": [
             {
               "file_type": "html5",
-              "path": "/var/folders/wc/2r44j8gs4gn56t1xtw5f6wlm0000gn/T/tmpg8_ynq_2.zip",
+              "path": "/var/folders/wc/2r44j8gs4gn56t1xtw5f6wlm0000gn/T/tmp48bvkz4l.zip",
               "language": "es"
             }
           ],
@@ -4316,7 +4572,7 @@
           "files": [
             {
               "file_type": "html5",
-              "path": "/var/folders/wc/2r44j8gs4gn56t1xtw5f6wlm0000gn/T/tmpsx3ba51g.zip",
+              "path": "/var/folders/wc/2r44j8gs4gn56t1xtw5f6wlm0000gn/T/tmpnaqqezj_.zip",
               "language": "es"
             }
           ],
@@ -4336,7 +4592,7 @@
           "files": [
             {
               "file_type": "html5",
-              "path": "/var/folders/wc/2r44j8gs4gn56t1xtw5f6wlm0000gn/T/tmpm8u4jd1b.zip",
+              "path": "/var/folders/wc/2r44j8gs4gn56t1xtw5f6wlm0000gn/T/tmpgkuzn4k3.zip",
               "language": "es"
             }
           ],
@@ -4378,7 +4634,7 @@
         {
           "kind": "html5",
           "title": "Pasos siguientes",
-          "description": "Descubra pasos siguientes y recursos adicionales que le ayudarán a presentar sus datos con efectividad.",
+          "description": "Descubra pasos siguientes y recursos adicionales que le ayudarán a presentar sus datos con efectividad. Tenga en cuenta que los enlaces en esta página no funcionarán a menos que esté conectado a Internet. Use el botón derecho y elija \"Abrir en una nueva pestaña\" para abrir los enlaces.",
           "source_id": "<p><strong>Para recibir el cer",
           "license": {
             "license_id": "CC BY",
@@ -4389,7 +4645,7 @@
           "files": [
             {
               "file_type": "html5",
-              "path": "/var/folders/wc/2r44j8gs4gn56t1xtw5f6wlm0000gn/T/tmp50qn402j.zip",
+              "path": "/var/folders/wc/2r44j8gs4gn56t1xtw5f6wlm0000gn/T/tmp78bmcon8.zip",
               "language": "es"
             }
           ]
@@ -4418,7 +4674,7 @@
           "files": [
             {
               "file_type": "html5",
-              "path": "/var/folders/wc/2r44j8gs4gn56t1xtw5f6wlm0000gn/T/tmp96yxnz_l.zip",
+              "path": "/var/folders/wc/2r44j8gs4gn56t1xtw5f6wlm0000gn/T/tmpb3d8uuzj.zip",
               "language": "es"
             }
           ],
@@ -4438,7 +4694,7 @@
           "files": [
             {
               "file_type": "html5",
-              "path": "/var/folders/wc/2r44j8gs4gn56t1xtw5f6wlm0000gn/T/tmp2hcdfhqh.zip",
+              "path": "/var/folders/wc/2r44j8gs4gn56t1xtw5f6wlm0000gn/T/tmpyuwg26gp.zip",
               "language": "es"
             }
           ],
@@ -4458,7 +4714,7 @@
           "files": [
             {
               "file_type": "html5",
-              "path": "/var/folders/wc/2r44j8gs4gn56t1xtw5f6wlm0000gn/T/tmpfo5z61r0.zip",
+              "path": "/var/folders/wc/2r44j8gs4gn56t1xtw5f6wlm0000gn/T/tmpi8nwd59n.zip",
               "language": "es"
             }
           ],
@@ -4558,7 +4814,7 @@
         {
           "kind": "html5",
           "title": "Pasos siguientes",
-          "description": "Descubra los pasos siguientes de este curso y recursos adicionales.",
+          "description": "Descubra los pasos siguientes de este curso y recursos adicionales. Tenga en cuenta que los enlaces en esta página no funcionarán a menos que esté conectado a Internet. Use el botón derecho y elija \"Abrir en una nueva pestaña\" para abrir los enlaces.",
           "source_id": "<p><strong>Para recibir el cer",
           "license": {
             "license_id": "CC BY",
@@ -4569,7 +4825,7 @@
           "files": [
             {
               "file_type": "html5",
-              "path": "/var/folders/wc/2r44j8gs4gn56t1xtw5f6wlm0000gn/T/tmpwnx74sro.zip",
+              "path": "/var/folders/wc/2r44j8gs4gn56t1xtw5f6wlm0000gn/T/tmpqpj_pc76.zip",
               "language": "es"
             }
           ]
@@ -4598,7 +4854,7 @@
           "files": [
             {
               "file_type": "html5",
-              "path": "/var/folders/wc/2r44j8gs4gn56t1xtw5f6wlm0000gn/T/tmp286m4dvv.zip",
+              "path": "/var/folders/wc/2r44j8gs4gn56t1xtw5f6wlm0000gn/T/tmpnvjersuf.zip",
               "language": "es"
             }
           ],
@@ -4618,7 +4874,7 @@
           "files": [
             {
               "file_type": "html5",
-              "path": "/var/folders/wc/2r44j8gs4gn56t1xtw5f6wlm0000gn/T/tmpdzbc250g.zip",
+              "path": "/var/folders/wc/2r44j8gs4gn56t1xtw5f6wlm0000gn/T/tmpfsw5e7wz.zip",
               "language": "es"
             }
           ],
@@ -4638,7 +4894,7 @@
           "files": [
             {
               "file_type": "html5",
-              "path": "/var/folders/wc/2r44j8gs4gn56t1xtw5f6wlm0000gn/T/tmp51tik5o7.zip",
+              "path": "/var/folders/wc/2r44j8gs4gn56t1xtw5f6wlm0000gn/T/tmpp28u2oul.zip",
               "language": "es"
             }
           ],
@@ -4699,7 +4955,7 @@
         {
           "kind": "html5",
           "title": "Pasos siguientes",
-          "description": "Descubra los pasos siguientes y recursos adicionales útiles que le ayudarán a mejorar las relaciones con los clientes.",
+          "description": "Descubra los pasos siguientes y recursos adicionales útiles que le ayudarán a mejorar las relaciones con los clientes. Tenga en cuenta que los enlaces en esta página no funcionarán a menos que esté conectado a Internet. Use el botón derecho y elija \"Abrir en una nueva pestaña\" para abrir los enlaces.",
           "source_id": "<p><strong>Para recibir el cer",
           "license": {
             "license_id": "CC BY",
@@ -4710,7 +4966,7 @@
           "files": [
             {
               "file_type": "html5",
-              "path": "/var/folders/wc/2r44j8gs4gn56t1xtw5f6wlm0000gn/T/tmp3p3nouvb.zip",
+              "path": "/var/folders/wc/2r44j8gs4gn56t1xtw5f6wlm0000gn/T/tmpaqwgs2w4.zip",
               "language": "es"
             }
           ]
