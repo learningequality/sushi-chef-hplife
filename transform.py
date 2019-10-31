@@ -758,7 +758,7 @@ def extract_course_resouces(parsed_tree, contentdir, course_id):
             # print('articulate_storyline_resources=', articulate_storyline_resources)
             resources.extend(articulate_storyline_resources)
 
-    # 2. TRANSFORM TO PDF all CONVERTIBEL
+    # 2. TRANSFORM TO PDF all CONVERTIBLE RESOURCES
     ####################################################################
     if resources:
         for resource in resources:

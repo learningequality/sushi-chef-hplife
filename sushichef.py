@@ -87,31 +87,39 @@ HPLIFE_STRINGS = {
     'ar': {
         'resources': 'موارد المهارات',
         'downloadable_resources': '(download) موارد المهارات',
+        'nextsteps_disclaimer': 'يرجى ملاحظة أن الروابط في هذه الصفحة لن تعمل إلا إذا كنت متصلاً بالإنترنت. استخدم زر النقر بزر الماوس الأيمن واختر "فتح في علامة تبويب جديدة" لفتح الروابط.',
     },
     'en': {
         'resources': 'Resources',
         'downloadable_resources': 'Downloadable resources',
+        'nextsteps_disclaimer': 'Please note the links on this page will not work unless you are connected to the internet. Use the right-click button, and choose "Open in new tab" to open the links.',
     },
     'es': {
         'resources': 'Recursos',
         'downloadable_resources': 'Recursos descargables',
+        'nextsteps_disclaimer': 'Tenga en cuenta que los enlaces en esta página no funcionarán a menos que esté conectado a Internet. Use el botón derecho y elija "Abrir en una nueva pestaña" para abrir los enlaces.',
     },
     'fr': {
         'resources': 'Ressources',
         'downloadable_resources': 'Ressources téléchargeables',
+        'nextsteps_disclaimer': 'Veuillez noter que les liens sur cette page ne fonctionnent que si vous êtes connecté à Internet. Utilisez le bouton droit de la souris et choisissez "Ouvrir dans un nouvel onglet" pour accéder aux liens.',
     },
     'hi': {
         'resources': 'Resources',
         'downloadable_resources': 'Downloadable resources',
+        'nextsteps_disclaimer': 'Please note the links on this page will not work unless you are connected to the internet. Use the right-click button, and choose "Open in new tab" to open the links.',
     },
 }
 
-NON_RESOURCE_FOLDER_PREFIXES = ['Downloadab', '.DS_Store', 'es_', 'fr_', 'en_', 'ar_', 'hi_']
+
+
 
 
 
 # PRE-VALIDATE
 ################################################################################
+
+NON_RESOURCE_FOLDER_PREFIXES = ['Downloadab', '.DS_Store', 'es_', 'fr_', 'en_', 'ar_', 'hi_']
 
 CONTENT_FOLDER_RENAMES = {
     '2355hpl-es06': {
@@ -543,6 +551,10 @@ def build_subtree_from_course(course, containerdir):
                 language=lang,
                 files=[],
             )
+            # Add disclaimer about links not being clickable to the Next Steps node
+            if key == 'nextsteps':
+                html5_dict['description'] += ' ' + HPLIFE_STRINGS[lang]['nextsteps_disclaimer']
+
 
             kind = item['kind']
 
