@@ -181,10 +181,6 @@ def tranform_and_prevalidate(course_data, lang, coursedir, contentdir):
     Returns validated, modified `course_data` dict or `None` if validation fails.
     """
 
-    # Missing data for Marketing de medios sociales
-    if course_data['display_name'] == 'Marketing de medios sociales':
-        return None
-
     parsed_tree = parse_course_tree(course_data, lang)
     missing_activity_refs = []
     for key in ['story', 'businessconcept', 'technologyskill']:

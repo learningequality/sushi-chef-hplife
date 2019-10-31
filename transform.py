@@ -112,6 +112,7 @@ COURSE_START_SPLIT_STRINGS = {
             'Pasosen el curso',
             'Este curso fue desarrollado',
             'Este curso se desarrolló',
+            'Etapas en el curso',
         ],
     },
     'fr': {
