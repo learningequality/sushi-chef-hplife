@@ -35,12 +35,12 @@ HPLIFE_LANGS = ['es', 'fr', 'en', 'ar', 'hi']
 
 HPLIFE_COURSE_STRUCTURE_CHECK_STRINGS = {
     'ar': {
-        'coursestart': ['بدء دورة'],
+        'coursestart': ['بدء دورة', 'البدء'],
         'story': ['تاريخ', 'قصة'],
         'businessconcept': ['مفهوم الأعمال'],
-        'technologyskill': ['مهارات تكنولوجيا', 'التكنولوجيا المهارة'],
-        'coursefeedback': ['الاستطلاع'],
-        'nextsteps': ['خطوات القادمة'],
+        'technologyskill': ['مهارات تكنولوجيا', 'التكنولوجيا المهارة', 'المهارات التَقنيَّة'],
+        'coursefeedback': ['الاستطلاع', 'ردود فعل على الدورة التدريبية'],
+        'nextsteps': ['خطوات القادمة', 'الخطوات التالية'],
         'downloadable_resources': ['موارد المهارات'],
     },
     'en': {
