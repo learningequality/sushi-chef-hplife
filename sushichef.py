@@ -24,7 +24,7 @@ from transform import transform_hpstoryline_folder
 from transform import transform_articulate_storyline_folder
 
 
-DEBUG_MODE = True
+DEBUG_MODE = False
 
 COURSES_DIR = 'chefdata/Courses'
 
@@ -87,7 +87,7 @@ HPLIFE_STRINGS = {
     'ar': {
         'resources': 'موارد المهارات',
         'downloadable_resources': '(download) موارد المهارات',
-        'nextsteps_disclaimer': 'يرجى ملاحظة أن الروابط في هذه الصفحة لن تعمل إلا إذا كنت متصلاً بالإنترنت. استخدم زر النقر بزر الماوس الأيمن واختر "فتح في علامة تبويب جديدة" لفتح الروابط.',
+        'nextsteps_disclaimer': 'يرجى الإنتباه أن الروابط على هذه الصفحة غير مفعّلة إلا بتوفّر الإنترنيت. انقر بزر الماوس الأيمن واضغط على "افتح علامة تبويب جديدة" من أجل فتح الروابط.',
     },
     'en': {
         'resources': 'Resources',
@@ -627,7 +627,7 @@ def build_subtree_from_course(course, containerdir):
 
 
 CHANNEL_TITLE_LOOKUP = {
-    'ar': 'HP LIFE - Courses (العربية)',
+    'ar': 'HP LIFE - دورات ومسارات (العربية)',
     'en': 'HP LIFE - Courses (English)',
     'es': 'HP LIFE - Cursos (Español)',
     'fr': 'HP LIFE - Cours (Français)',
@@ -636,7 +636,7 @@ CHANNEL_TITLE_LOOKUP = {
 
 
 CHANNEL_DESCRIPTION_LOOKUP = {
-    'ar': "HP LIFE in Arabic",
+    'ar': "برنامج من قبل مؤسسة HP, مكوّن من مجموعة دورات تميهدية موجزة تتيح للكبار فرصة التعلـّم بشكل مستقل مهارات الريادة والرقمية وتكنولوجيا المعلومات بدءاً من تأسيس مشروع الى إدارة المبيعات عبر الإنترنيت والتسويق. برنامج مناسب للكبار المهتمين بتطوير مهاراتهم الإحترافية أو لمجرّد اكتشاف فرص جديدة.",
     'en': "A program of the HP Foundation, this collection of short introductory courses helps adults learn independently various digital and entrepreneurship skills, including information technology, starting a business, online sales, and marketing. Appropriate for adults who are curious to develop their professional skills or simply learn about new opportunities.",
     'es': "Una iniciativa de HP Foundation, esta colección de cursos introductorios y breves ayuda a los adultos a adquirir habilidades en tecnología y emprendimiento de forma independiente, incluye tecnologías de la información, empezar  un negocio, venta en línea y marketing. Son apropiados para adultos con curiosidad por desarrollarse profesionalmente o por aprender nuevas oportunidades.",
     'fr': "Un programme de HP Foundation, les cours HP LIFE sont conçus pour aider les adultes à apprendre de manière autonome diverses compétences numériques, y compris les technologies de l'information, la création d'entreprise, les ventes en ligne et le marketing. Ces cours conviennent aux adultes qui sont curieux de développer leurs compétences professionnelles ou poursuivre de nouvelles opportunités.",
