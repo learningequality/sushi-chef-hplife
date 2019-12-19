@@ -338,8 +338,8 @@ def transform_articulate_storyline_folder(contentdir, activity_ref):
     scriptsdir = os.path.join(webroot, 'scripts')
     if not os.path.exists(scriptsdir):
         os.mkdir(scriptsdir)
-    scripts = doc.find('head').find_all('script')
-    for script in scripts:
+    headscripts = doc.find('head').find_all('script')
+    for script in headscripts:
         script_url = script['src']
         script_basename = os.path.basename(script_url)
         response = requests.get(script_url, verify=False)
@@ -363,9 +363,16 @@ def transform_articulate_storyline_folder(contentdir, activity_ref):
         style.replace_with(inline_style_tag)
 
     # C. Ensure that js files exist (rewrite app.min.js --> app.js if needed)
-    #TODO
-    
-    
+    bodyscripts = doc.find('body').find_all('script')
+    for script in bodyscripts:
+        if script.has_attr('src'):
+            script_src = script['src']
+            script_path = os.path.join(webroot, script_src)
+            if not os.path.exists(script_path) and 'min.js' in script_path:
+                new_script_path = script_src.replace('min.js', 'js')
+                script['src'] = new_script_path
+                print('replaced script_src', script_src, 'with new_script_path', new_script_path)
+
     # Save modified index.html
     with open(indexhtmlpath, 'w') as indexfilewrite:
         indexfilewrite.write(str(doc))
