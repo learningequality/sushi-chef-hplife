@@ -71,12 +71,12 @@ HPLIFE_COURSE_STRUCTURE_CHECK_STRINGS = {
         'downloadable_resources': ['Ressources'],
     },
     'hi': {
-        'coursestart': ['Start Course'],
-        'story': ['Story'],
-        'businessconcept': ['Business Concept'],
-        'technologyskill': 'Technology Skill',
-        'coursefeedback': ['Course'],
-        'nextsteps': ['Steps'],
+        'coursestart': ['प्रारंभ चक्र', 'प्रारंभ'],
+        'story': ['उदाहरण', 'कहानी'],
+        'businessconcept': ['व्यापार की अवधारणा'],
+        'technologyskill': 'प्रौद्योगिकी कौशल',
+        'coursefeedback': ['सर्वेक्षण', 'बेशक प्रतिक्रिया'],
+        'nextsteps': ['अगले चरण'],
         'downloadable_resources': ['Downloadable Resources'],
     },
 }
@@ -145,6 +145,11 @@ CONTENT_FOLDER_RENAMES = {
     '2464hpl-ar06': {
         'technologyskill' : {
             'YTA_TS_AR_FIXED_reload': 'TU6_Tech_Skill_PRO_ar - Storyline output',
+        }
+    },
+    '2489hpl-hi06': {
+        'technologyskill' : {
+            'YTA_TS_HI_FIXED_reload': 'TU6_Tech_Skill_PRO_hi - Storyline output',
         }
     }
 }

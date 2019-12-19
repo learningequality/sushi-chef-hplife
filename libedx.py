@@ -217,7 +217,7 @@ def parse_problem_file(coursedir, kind, name, ext='xml'):
         url = jsinput['html_file']
 
         # old-style hpstoryline
-        if 'hpstoryline.edcastcloud.com' in url:
+        if 'hpstoryline.edcastcloud.com' in url or 'herokuapp.com/hp_storyline' in url:
             querystring = url.split('?')[1]
             story_id = querystring.replace('story=', '')
             data['activity'] = dict(

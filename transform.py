@@ -77,7 +77,6 @@ def transform_html(content):
 
 COURSE_START_SPLIT_STRINGS = {
     'ar': {
-        'start_removables': ['استكشف'],
         'cutpoint_starts': [
             'لماذا تبدأ اليوم؟',
             'لماذا نبدأ اليوم؟',
@@ -97,7 +96,6 @@ COURSE_START_SPLIT_STRINGS = {
         ],
     },
     'es': {
-        'start_removables': ['Inicio:', 'INICIO:'],
         'cutpoint_starts': [
             '¿Por qué empezar hoy?',
             '¿Por qué comenzar hoy?',
@@ -119,7 +117,6 @@ COURSE_START_SPLIT_STRINGS = {
         ],
     },
     'fr': {
-        'start_removables': ['Démarrer:', 'Démarrer :', 'DEMARRER :', 'DEMARRER:'],
         'cutpoint_starts': [
             'Pourquoi commencer aujourd\'hui ?',
             'Pourquoi commencer aujourd’hui ?',
@@ -137,7 +134,6 @@ COURSE_START_SPLIT_STRINGS = {
         ],
     },
     'en': {
-        'start_removables': ['Start:', 'START:'],
         'cutpoint_starts': [
             'Why start today?',
         ],
@@ -147,6 +143,25 @@ COURSE_START_SPLIT_STRINGS = {
         'cutpoint_ends': [
             'Steps in the course',
             'This course was developed',
+        ]
+    },
+    'hi': {
+        'cutpoint_starts': [
+            'आज क्यों प्रारंभ करें',
+            'आज ही शुरू क्यों करें',
+            'आज ही क्यों शुरू करें',
+            'आज ही क्यों आरंभ करें',
+            'आज ही आरंभ क्यों करें',
+        ],
+        'cutpoint_start_and_includes': [
+            'इस कोर्स को आपको एक विकास इंजिन के विभिन्न',
+            'इस कोर्स में आप :',
+        ],
+        'cutpoint_ends': [
+            'पाठ्यक्रम के चरण',
+            'पाठ्यक्रम में चरण',
+            'कोर्स के चरण',
+            'यह पाठ्यक्रम केली स्कूल ऑफ बिज़्नेस',
         ]
     }
 }
@@ -158,6 +173,9 @@ def get_course_description_from_coursestart_html(content, lang):
     doc = BeautifulSoup(content, 'html5lib')
     body = doc.find('body')
     page_text = html2text(str(body), bodywidth=0)
+    if lang == 'hi' and '****' in page_text:  # Dec 18: workaround for html with many **s
+        page_text = page_text.replace('**', '')
+    # print(page_text)
 
     SPLIT_STRINGS = COURSE_START_SPLIT_STRINGS[lang]
     course_description_lines = []
@@ -240,6 +258,8 @@ def get_activity_descriptions_from_coursestart_html(content, lang):
         tds = row.find_all('td')
         assert len(tds) == 2, 'uhoh, table has too many cols in coursestart'
         second_col_string = tds[1].text.strip()
+        if '\xa0' in second_col_string:
+            second_col_string = second_col_string.replace('\xa0', ' ')
         second_col_strings.append(second_col_string)
     return {
         'story': second_col_strings[0],
@@ -314,7 +334,7 @@ def transform_articulate_storyline_folder(contentdir, activity_ref):
         indexhtml = indexfileread.read()
     doc = BeautifulSoup(indexhtml, 'html5lib')
 
-    # A. Localize js libs
+    # A. Localize js libs in <HEAD>
     scriptsdir = os.path.join(webroot, 'scripts')
     if not os.path.exists(scriptsdir):
         os.mkdir(scriptsdir)
@@ -333,6 +353,8 @@ def transform_articulate_storyline_folder(contentdir, activity_ref):
     for style in styles:
         style_href = style['href']
         style_path = os.path.join(webroot, style_href)
+        if not os.path.exists(style_path) and 'min.css' in style_path:
+            style_path = style_path.replace('min.css', 'css')
         style_content = '\n' + open(style_path).read()
         inline_style_tag = doc.new_tag('style')
         inline_style_tag['data-noprefix'] = ''
@@ -340,6 +362,10 @@ def transform_articulate_storyline_folder(contentdir, activity_ref):
         inline_style_tag.string = style_content
         style.replace_with(inline_style_tag)
 
+    # C. Ensure that js files exist (rewrite app.min.js --> app.js if needed)
+    #TODO
+    
+    
     # Save modified index.html
     with open(indexhtmlpath, 'w') as indexfilewrite:
         indexfilewrite.write(str(doc))
@@ -813,6 +839,9 @@ def get_resources_from_downloadable_resouces_item(contentdir, item, course_id):
     doc = BeautifulSoup(indexhtml, 'html5lib')
     links = doc.find_all('a')
     for link in links:
+        if not link.has_attr('href'):
+            print('skipping link', link)
+            continue
         href = link['href'].strip()
         if 'adobe.com' in href \
             or 'openoffice.org' in href \
