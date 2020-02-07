@@ -106,8 +106,8 @@ HPLIFE_STRINGS = {
     },
     'hi': {
         'resources': 'Resources',
-        'downloadable_resources': 'Downloadable resources',
-        'nextsteps_disclaimer': 'Please note the links on this page will not work unless you are connected to the internet. Use the right-click button, and choose "Open in new tab" to open the links.',
+        'downloadable_resources': 'डाउनलोड के लिए',
+        'nextsteps_disclaimer': 'कृपया ध्यान दें कि इस पेज के लिंक इंटरनेट के बिना काम नहीं करेंगे। राइट-क्लिक बटन का उपयोग करें, और लिंक खोलने के लिए "नए टैब में खोलें" चुनें।',
     },
 }
 
@@ -636,7 +636,7 @@ CHANNEL_TITLE_LOOKUP = {
     'en': 'HP LIFE - Courses (English)',
     'es': 'HP LIFE - Cursos (Español)',
     'fr': 'HP LIFE - Cours (Français)',
-    'hi': 'HP LIFE - Courses (हिन्दी)',
+    'hi': 'HP LIFE - कार्यक्रम (हिन्दी)',
 }
 
 
@@ -645,7 +645,7 @@ CHANNEL_DESCRIPTION_LOOKUP = {
     'en': "A program of the HP Foundation, this collection of short introductory courses helps adults learn independently various digital and entrepreneurship skills, including information technology, starting a business, online sales, and marketing. Appropriate for adults who are curious to develop their professional skills or simply learn about new opportunities.",
     'es': "Una iniciativa de HP Foundation, esta colección de cursos introductorios y breves ayuda a los adultos a adquirir habilidades en tecnología y emprendimiento de forma independiente, incluye tecnologías de la información, empezar  un negocio, venta en línea y marketing. Son apropiados para adultos con curiosidad por desarrollarse profesionalmente o por aprender nuevas oportunidades.",
     'fr': "Un programme de HP Foundation, les cours HP LIFE sont conçus pour aider les adultes à apprendre de manière autonome diverses compétences numériques, y compris les technologies de l'information, la création d'entreprise, les ventes en ligne et le marketing. Ces cours conviennent aux adultes qui sont curieux de développer leurs compétences professionnelles ou poursuivre de nouvelles opportunités.",
-    'hi': "HP LIFE in Hindi",
+    'hi': "इस एच.पी. फाउंडेशन कार्यक्रम के साथ अपनी आई.टी. और उद्यमिता क्षमता बढ़ाएं। आप अपने खुद के कौशल विकसित कर सकते हैं या नए अवसरों के बारे में जान सकते हैं। वयस्कों को आईटी, व्यवसाय शुरू करने और विपणन जैसे डिजिटल और उद्यमिता कौशल का अध्ययन करने में मदद करने के लिए एक कार्यक्रम। अपने पेशेवर कौशल विकसित करने या नए अवसरों के बारे में जानने की चाह रखने वालों के लिए।",
 }
 
 

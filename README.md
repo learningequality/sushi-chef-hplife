@@ -24,6 +24,11 @@ cd sushi-chef-hplife
 2. Obtain credentials and place them in `credentials/` folder
 
 
+
+
+
+
+
 TODO
 ----
   - deduplicate resources list
@@ -61,16 +66,6 @@ and folders containing the HTML content of each activity.
 Extract workflow
 ----------------
 
-### POC (sample channel)
-Use a manual process for pre-processing and putting the data into the desired form
-that includes the following steps:
-  - unzip the course archive (unzip to directory `course/`)
-  - unip the content archive and rename the containing folder to `content/` and
-    make sure all the activity refs match what appears in `course/`
-  - Manually document paths in the `course_list.json`
-
-## Production (final HP LIFE channels)
-
 ### Extract from google drive
 In order to download a local copy of the HP LIFE course data and activity files,
 you'll need to complete a OAuth workflow to grant access to the GDrive Shared Folder.
@@ -89,17 +84,30 @@ source venv/bin/activate
 
 3. Click on the link that gets printed in the terminal and complete the authorization
 
-4. The download will start (and takes approximately ... hours)
+4. The download will start (and takes approximately 2 hours)
 
 
-
-
-
-### Transform
+### Rename and transform courses
+Some courses and files have non-standard names so they are renamed and normalized.
 The next step in the ETL pipeline is to process the extracted files and place them
-the in standard `course/` and `content/` folder structure expected by the chef code.
+the in standard `course/` and `content/` folder structure expected by the chef code,
+see `chefdata/Courses/{lang}/` and `chefdata/Courses/{lang}/course_list.json`.
 
 
+
+Chef Run
+--------
+The same content integration script (`sushichef.py`) is used to create all HP LIFE
+channels, based on the command line option argument `lang` that is specified:
+
+Here are the different possible commands for running the chef:
+```bash
+./sushichef.py  -v --reset --thumbnails  --token=<your-studio-token> lang=en
+./sushichef.py  -v --reset --thumbnails  --token=<your-studio-token> lang=es
+./sushichef.py  -v --reset --thumbnails  --token=<your-studio-token> lang=fr
+./sushichef.py  -v --reset --thumbnails  --token=<your-studio-token> lang=ar
+./sushichef.py  -v --reset --thumbnails  --token=<your-studio-token> lang=hi
+```
 
 
 
