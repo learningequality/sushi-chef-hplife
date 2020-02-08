@@ -24,7 +24,7 @@ from transform import transform_hpstoryline_folder
 from transform import transform_articulate_storyline_folder
 
 
-DEBUG_MODE = False
+DEBUG_MODE = True
 
 COURSES_DIR = 'chefdata/Courses'
 
@@ -32,6 +32,9 @@ HPLIFE_LICENSE = get_license(licenses.CC_BY, copyright_holder='HP LIFE').as_dict
 
 HPLIFE_LANGS = ['es', 'fr', 'en', 'ar', 'hi']
 
+COUSE_SOURCE_IDS_SKIP_LIST = [       # courses with skipped 
+    '6357hpl-hi28'                   # missing some css assets in activity files
+]
 
 HPLIFE_COURSE_STRUCTURE_CHECK_STRINGS = {
     'ar': {
@@ -41,7 +44,6 @@ HPLIFE_COURSE_STRUCTURE_CHECK_STRINGS = {
         'technologyskill': ['مهارات تكنولوجيا', 'التكنولوجيا المهارة', 'المهارات التَقنيَّة'],
         'coursefeedback': ['الاستطلاع', 'ردود فعل على الدورة التدريبية'],
         'nextsteps': ['خطوات القادمة', 'الخطوات التالية'],
-        'downloadable_resources': ['موارد المهارات'],
     },
     'en': {
         'coursestart': ['Start Course'],
@@ -50,7 +52,6 @@ HPLIFE_COURSE_STRUCTURE_CHECK_STRINGS = {
         'technologyskill': 'Technology Skill',
         'coursefeedback': ['Course'],
         'nextsteps': ['Steps'],
-        'downloadable_resources': ['Downloadable Resources'],
     },
     'es': {
         'coursestart': ['Inicio'],
@@ -59,7 +60,6 @@ HPLIFE_COURSE_STRUCTURE_CHECK_STRINGS = {
         'technologyskill': 'Habilidad',
         'coursefeedback': ['Encuesta'],
         'nextsteps': ['asos'], # 'Pasos siguientes'
-        'downloadable_resources': ['Recursos descargable'],
     },
     'fr': {
         'coursestart': ['Démarrer'],
@@ -68,7 +68,6 @@ HPLIFE_COURSE_STRUCTURE_CHECK_STRINGS = {
         'technologyskill': 'Compétence technologiqu',
         'coursefeedback': ['Sondage'],
         'nextsteps': ['Étapes suivantes'],
-        'downloadable_resources': ['Ressources'],
     },
     'hi': {
         'coursestart': ['प्रारंभ चक्र', 'प्रारंभ'],
@@ -77,7 +76,6 @@ HPLIFE_COURSE_STRUCTURE_CHECK_STRINGS = {
         'technologyskill': 'प्रौद्योगिकी कौशल',
         'coursefeedback': ['सर्वेक्षण', 'बेशक प्रतिक्रिया'],
         'nextsteps': ['अगले चरण'],
-        'downloadable_resources': ['Downloadable Resources'],
     },
 }
 
@@ -105,7 +103,7 @@ HPLIFE_STRINGS = {
         'nextsteps_disclaimer': 'Veuillez noter que les liens sur cette page ne fonctionnent que si vous êtes connecté à Internet. Utilisez le bouton droit de la souris et choisissez "Ouvrir dans un nouvel onglet" pour accéder aux liens.',
     },
     'hi': {
-        'resources': 'Resources',
+        'resources': 'साधन',
         'downloadable_resources': 'डाउनलोड के लिए',
         'nextsteps_disclaimer': 'कृपया ध्यान दें कि इस पेज के लिंक इंटरनेट के बिना काम नहीं करेंगे। राइट-क्लिक बटन का उपयोग करें, और लिंक खोलने के लिए "नए टैब में खोलें" चुनें।',
     },
@@ -373,7 +371,7 @@ def parse_course_tree(course_data, lang):
 
 
 
-def process_course_tree(parsed_tree, lang, contentdir, course_id):
+def process_course_tree(parsed_tree, lang, contentdir, course_id, chefargs=None):
     """
     Tranform the parsed_tree for a course into channel subfolder for this course.
     Includes:
@@ -410,7 +408,7 @@ def process_course_tree(parsed_tree, lang, contentdir, course_id):
         parsed_tree[key]['description'] = activity_descriptions[key]
 
     # Extract resouces
-    parsed_tree = extract_course_resouces(parsed_tree, contentdir, course_id)
+    parsed_tree = extract_course_resouces(parsed_tree, contentdir, course_id, chefargs=chefargs)
 
     # TODO: process next step
 
@@ -422,7 +420,7 @@ def process_course_tree(parsed_tree, lang, contentdir, course_id):
 # BUILD RICECOOKER TREE
 ################################################################################
 
-def build_subtree_from_course(course, containerdir):
+def build_subtree_from_course(course, containerdir, chefargs=None):
     print('Building a tree from course', course)
     lang = course['lang']
     course_dict = dict(
@@ -440,11 +438,22 @@ def build_subtree_from_course(course, containerdir):
 
     course_data = tranform_and_prevalidate(course_data, lang, coursedir, contentdir)
     if course_data is None:
+        print("ERROR: Skipping", course_dict['source_id'], course['name'], "because failed tranform_and_prevalidate")
         return None
 
+    if DEBUG_MODE:
+        # print_course(course_data)
+        course_tree_path = 'chefdata/course_trees/course_tree-{}.json'.format(course_dict['source_id'])
+        with open(course_tree_path, 'w') as json_file:
+            json.dump(course_data, json_file, indent=4, ensure_ascii=False)
+
     parsed_tree = parse_course_tree(course_data, lang)
-    parsed_tree = process_course_tree(parsed_tree, lang, contentdir, course_data['course'])
+    parsed_tree = process_course_tree(parsed_tree, lang, contentdir, course_data['course'], chefargs=chefargs)
     course_dict['description'] = parsed_tree['description']
+
+    if course_dict['source_id'] in COUSE_SOURCE_IDS_SKIP_LIST:
+        print("DECISION: Skipping", course_dict['source_id'], course['name'], "because it is in COUSE_SOURCE_IDS_SKIP_LIST")
+        return None
 
     for key in ['story', 'businessconcept', 'technologyskill', 'resources', 'nextsteps', 'nextsteps_video']:
 
@@ -687,7 +696,7 @@ class HPLifeChef(JsonTreeChef):
         containerdir = os.path.join(COURSES_DIR, lang)
         course_list = json.load(open(os.path.join(containerdir, 'course_list.json')))
         for course in course_list['courses']:
-            course_dict = build_subtree_from_course(course, containerdir)
+            course_dict = build_subtree_from_course(course, containerdir, chefargs=args)
             if course_dict:
                 ricecooker_json_tree['children'].append(course_dict)
             else:

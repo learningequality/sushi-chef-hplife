@@ -1,5 +1,6 @@
 
 from bs4 import BeautifulSoup, Tag
+import glob
 from jinja2 import Template
 import json
 import os
@@ -64,6 +65,7 @@ def transform_html(content):
         indexfilewrite.write(str(doc))
 
     # Zip it
+    localize_image_refs(webroot)
     zippath = create_predictable_zip(webroot)
     metadata['zippath'] = zippath
 
@@ -371,13 +373,14 @@ def transform_articulate_storyline_folder(contentdir, activity_ref):
             if not os.path.exists(script_path) and 'min.js' in script_path:
                 new_script_path = script_src.replace('min.js', 'js')
                 script['src'] = new_script_path
-                print('replaced script_src', script_src, 'with new_script_path', new_script_path)
+                print('    replaced script_src', script_src, 'with new_script_path', new_script_path)
 
     # Save modified index.html
     with open(indexhtmlpath, 'w') as indexfilewrite:
         indexfilewrite.write(str(doc))
 
     # Zip it
+    localize_image_refs(webroot)
     zippath = create_predictable_zip(webroot)
     metadata['zippath'] = zippath
 
@@ -411,69 +414,71 @@ def transform_hpstoryline_folder(contentdir, story_id, node):
     )
 
     # Zip it
+    localize_image_refs(webroot)
     zippath = create_predictable_zip(webroot)
     metadata['zippath'] = zippath
 
     return metadata
 
 
-# def transform_resource_folder(contentdir, activity_ref, content):
-#     """
-#     Transform the contents of the folder of kind `resources_folder` called
-#     `activity_ref` located in the directory `contentdir`, turning it into a
-#     standalone zip file with an index.html taken from `content` (str).
-#     Return the neceesary metadata as a dict.
-#     """
-#     sourcedir = os.path.join(contentdir, activity_ref)            # source folder
-#     webroot = os.path.join(contentdir, activity_ref+'_webroot')   # transformed dir
-# 
-#     if not os.path.exists(sourcedir):
-#         print('missing sourcedir', sourcedir)
-#         return None
-# 
-#     if os.path.exists(webroot):
-#         shutil.rmtree(webroot)
-# 
-#     # Copy source dir to webroot dir where we'll do the edits and transformations
-#     shutil.copytree(sourcedir, webroot)
-# 
-#     metadata = dict(
-#         kind = 'resources_folder',
-#         source_id = activity_ref,
-#         zippath = None,  # to be set below
-#     )
-# 
-#     doc = BeautifulSoup(content, 'html5lib')
-# 
-#     # Rewrite links
-#     links = doc.find_all('a')
-#     for link in links:
-#         if 'href' in link.attrs:
-#             url = link['href']
-#             print(url)
-#             url_parts = url.split('/')
-#             parentdir = unquote_plus(url_parts[-2])
-#             assert parentdir == activity_ref, 'Found link to another resouce folder'
-#             filename = unquote_plus(url_parts[-1])
-#             link['href'] = filename
-#             link['target'] = '_blank'
-# 
-#     meta = Tag(name='meta', attrs={'charset':'utf-8'})
-#     doc.head.append(meta)
-#     # TODO: add meta language (in case of right-to-left languages)
-# 
-#     # Writeout new index.html
-#     indexhtmlpath = os.path.join(webroot, 'index.html')
-#     with open(indexhtmlpath, 'w') as indexfilewrite:
-#         indexfilewrite.write(str(doc))
-# 
-#     # Zip it
-#     zippath = create_predictable_zip(webroot)
-#     metadata['zippath'] = zippath
-# 
-#     return metadata
+def localize_image_refs(webroot):
+    """
+    Go through index.html and all .js files in the folder `webroot` and replace
+    web-linked images with local ones.
+    """
+    from sushichef import DEBUG_MODE   # imported here to avoid circular depends
 
+    imagesdir = os.path.join(webroot, 'imagesdir')
+    if not os.path.exists(imagesdir):
+        os.mkdir(imagesdir)
 
+    # A. Localisze src references for img tags in index.html
+    indexhtmlpath = os.path.join(webroot,'index.html')
+    with open(indexhtmlpath, 'r') as indexfileread:
+        indexhtml = indexfileread.read()
+    doc = BeautifulSoup(indexhtml, 'html5lib')
+    imgs = doc.find_all('img')
+    for img in imgs:
+        if img.has_attr('src'):
+            img_src = img['src'].strip()
+            if img_src.startswith('http'):
+                img_basename = os.path.basename(img_src)
+                response = requests.get(img_src, verify=False)
+                with open(os.path.join(imagesdir, img_basename), 'wb') as imgfile:
+                    imgfile.write(response.content)
+                imgrelpath = os.path.join('imagesdir', img_basename)
+                img['src'] = imgrelpath
+                if DEBUG_MODE:
+                    print('     replaced img[src] from', img_src, 'to', imgrelpath)
+    with open(indexhtmlpath, 'w') as indexfilewrite:
+        indexfilewrite.write(str(doc))  # Save modified index.html
+
+    # Define the image resource RE and the download-and-replace helper function
+    http_img_pat = re.compile("'((http(s?):)([/|\.|\w|\s|\-|\+])*?\.(jpg|gif|png))'")
+    def on_http_img_url(matchobj):
+        """Replaces 'http://site/basename.jpg' with 'imagesdir/basename.jpg' """
+        img_url = matchobj.group(0)[1:-1]
+        img_basename = os.path.basename(img_url)
+        try:
+            response = requests.get(img_url, verify=False)
+            with open(os.path.join(imagesdir, img_basename), 'wb') as imgfile:
+                imgfile.write(response.content)
+                imgrelpath = os.path.join('imagesdir', img_basename)
+                if DEBUG_MODE:
+                    print('     js-rewriting img_url from', img_url, 'to', imgrelpath)
+                return "'" + imgrelpath + "'"
+        except Exception as e:
+            print('WARNING: failed to download/rewrite img_url', e)
+            return "'" + img_url + "'"
+
+    # B. Search and replace for image refs within all .js files
+    js_files_glob_pattern = os.path.join(webroot, '**', '*.js')
+    for scriptpath in glob.glob(js_files_glob_pattern, recursive=True):
+        with open(scriptpath, 'r') as scriptin:
+            script_str = scriptin.read()
+        script_out = re.sub(http_img_pat, on_http_img_url, script_str)
+        with open(scriptpath, 'w') as scriptout:
+            scriptout.write(script_out)
 
 
 
@@ -734,7 +739,7 @@ def extract_and_download_mp3path(jscode_str, destdir, mediadirname=MEDIA_DIR_NAM
 ################################################################################
 
 
-def extract_course_resouces(parsed_tree, contentdir, course_id):
+def extract_course_resouces(parsed_tree, contentdir, course_id, chefargs=None):
     """
     Go through the parsed_tree and:
      - extract all the downloadable resources
@@ -757,6 +762,7 @@ def extract_course_resouces(parsed_tree, contentdir, course_id):
             ]
         }
     """
+    update = True if (chefargs and 'update' in chefargs and chefargs['update']) else False
     resources = []
 
     # 1. EXTRACT
@@ -768,7 +774,7 @@ def extract_course_resouces(parsed_tree, contentdir, course_id):
     downloadable_resources = get_resources_from_downloadable_resouces_item(contentdir, downloadable_resources_item, course_id)
     downloaded_resources = []
     for downloadable_resource in downloadable_resources:
-        downloaded_resource = download_resource(downloadable_resource, contentdir)
+        downloaded_resource = download_resource(downloadable_resource, contentdir, update=update)
         if downloaded_resource:
             downloaded_resources.append(downloaded_resource)
         else:
@@ -801,7 +807,7 @@ def extract_course_resouces(parsed_tree, contentdir, course_id):
         for resource in resources:
             ext = resource['ext']
             if ext in CONVERTIBLE_EXTS:
-                convert_resource(resource, contentdir)
+                convert_resource(resource, contentdir, update=update)
 
     # return annotated parsed_tree
     parsed_tree['resources'] = resources
@@ -971,7 +977,7 @@ def get_resources_from_articulate_storyline(contentdir, activity_ref):
 ################################################################################
 DOWNLOADS_DIR_NAME = 'downloads'
 
-def download_resource(resource, contentdir):
+def download_resource(resource, contentdir, update=False):
     """
     Downloads the resource path to a local path in {contentdir}/downloads/
     Input:
@@ -996,7 +1002,7 @@ def download_resource(resource, contentdir):
         os.makedirs(downloadsdir)
     filename = resource['filename']
     destpath = os.path.join(downloadsdir, filename)
-    if not os.path.exists(destpath):
+    if update or not os.path.exists(destpath):
         download_url = resource['url']
         print('Downloading resource from', download_url)
         # go GET a sample.docx
@@ -1019,7 +1025,7 @@ CONVERTIBLE_EXTS = ['doc', 'docx',   'pptx',   'ods', 'xls', 'xlsx']
 CONVERTED_DIR_NAME = 'converted'
 
 
-def convert_resource(resource, contentdir):
+def convert_resource(resource, contentdir, update=False):
     """
     Convert a Kolibri-imcopatible document format like pptx or docx to pdf
     using the microwave document conversion service.
@@ -1057,7 +1063,7 @@ def convert_resource(resource, contentdir):
     # destination path for converted file
     dest_filename = name + '.pdf'
     destpath = os.path.join(destdir, dest_filename)
-    if not os.path.exists(destpath):
+    if update or not os.path.exists(destpath):
         print('Convering file', path)
         microwave_url = 'http://35.185.105.222:8989/unoconv/pdf'
         files = {'file': open(path, 'rb')}
