@@ -623,6 +623,7 @@ def download_hpstoryline(contentdir, story_id):
 # IMAGES
 
 def img_rewriter(div, source_url, mediadir):
+    from sushichef import DEBUG_MODE
     imgs = div.find_all('img')
     assert len(imgs) <= 1, 'more than one img found'
     for img in imgs:
@@ -636,7 +637,8 @@ def img_rewriter(div, source_url, mediadir):
             if response.status_code == 200:
                 with open(destpath, 'wb') as imgfile:
                     imgfile.write(response.content)
-                    print('\tdownloaded img', img_url, 'to', destpath)
+                    if DEBUG_MODE:
+                        print('\tdownloaded img', img_url, 'to', destpath)
             else:
                 print('got HTTP', response.status_code, 'for image', img_url)
         img_rel_path = os.path.join(MEDIA_DIR_NAME, img_basename)
@@ -649,6 +651,7 @@ def img_rewriter(div, source_url, mediadir):
 CSS_URL_RE = re.compile(r"url\(['\"]?(.*?)['\"]?\)")
 
 def css_rewriter(style_str, source_url, destdir):
+    from sushichef import DEBUG_MODE
     assetsdir = os.path.join(destdir, ASSETS_DIR_NAME)
     if not os.path.exists(assetsdir):
         os.makedirs(assetsdir)
@@ -674,7 +677,8 @@ def css_rewriter(style_str, source_url, destdir):
             if response.status_code == 200:
                 with open(destpath, 'wb') as resourcefile:
                     resourcefile.write(response.content)
-                    print('\tdownloaded', resource_url, 'to', destpath)
+                    if DEBUG_MODE:
+                        print('\tdownloaded', resource_url, 'to', destpath)
             else:
                 # print('got HTTP', response.status_code, 'for url', resource_url)
                 return 'url()'
@@ -743,8 +747,11 @@ def extract_course_resouces(parsed_tree, contentdir, course_id, chefargs=None):
     """
     Go through the parsed_tree and:
      - extract all the downloadable resources
+     - deduplicate based on source url
+     - set title from filename if title missing
      - download them
      - convert any that are in CONVERTIBLE_EXTS
+
 
     Modifies the `parsed_tree` to add the new property `resources`:
         parsed_tree = {
@@ -801,7 +808,33 @@ def extract_course_resouces(parsed_tree, contentdir, course_id, chefargs=None):
             # print('articulate_storyline_resources=', articulate_storyline_resources)
             resources.extend(articulate_storyline_resources)
 
-    # 2. TRANSFORM TO PDF all CONVERTIBLE RESOURCES
+    # 2. DE-DUPLICATE `resources` list, preferring resource with title
+    ####################################################################
+    if resources:
+        resources_by_url = {}
+        for resource in resources:
+            url = resource['url']
+            if url not in resources_by_url:
+                # Add new resource to the resources_by_url dictionary
+                resources_by_url[url] = resource
+            else:
+                old_resource = resources_by_url[url]
+                if not old_resource['title'].strip() and resource['title'].strip():
+                    # Repalce existing resource with new one that has a title
+                    print('Replacing', old_resource, 'with', resource)
+                    resources_by_url[url] = resource
+        resources = resources_by_url.values()
+
+    # 3. Set title from filename as fallback to avoid empty titles
+    ####################################################################
+    if resources:
+        for resource in resources:
+            if not resource['title'].strip():
+                name, _ = os.path.splitext(resource['filename'])
+                resource['title'] = name.replace('_', ' ')
+                print('Using fallback to set title from filename', resource['title'], 'for URL', resource['url'])
+
+    # 4. TRANSFORM TO PDF all CONVERTIBLE RESOURCES
     ####################################################################
     if resources:
         for resource in resources:
@@ -978,6 +1011,7 @@ def get_resources_from_articulate_storyline(contentdir, activity_ref):
 DOWNLOADS_DIR_NAME = 'downloads'
 
 def download_resource(resource, contentdir, update=False):
+    from sushichef import DEBUG_MODE
     """
     Downloads the resource path to a local path in {contentdir}/downloads/
     Input:
@@ -1004,7 +1038,8 @@ def download_resource(resource, contentdir, update=False):
     destpath = os.path.join(downloadsdir, filename)
     if update or not os.path.exists(destpath):
         download_url = resource['url']
-        print('Downloading resource from', download_url)
+        if DEBUG_MODE:
+            print('Downloading resource from', download_url)
         # go GET a sample.docx
         response = requests.get(download_url, verify=False)
         if response.ok:

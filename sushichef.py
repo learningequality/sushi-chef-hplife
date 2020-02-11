@@ -24,7 +24,7 @@ from transform import transform_hpstoryline_folder
 from transform import transform_articulate_storyline_folder
 
 
-DEBUG_MODE = True
+DEBUG_MODE = False
 
 COURSES_DIR = 'chefdata/Courses'
 
@@ -32,9 +32,8 @@ HPLIFE_LICENSE = get_license(licenses.CC_BY, copyright_holder='HP LIFE').as_dict
 
 HPLIFE_LANGS = ['es', 'fr', 'en', 'ar', 'hi']
 
-COUSE_SOURCE_IDS_SKIP_LIST = [       # courses with skipped 
-    '6357hpl-hi28'                   # missing some css assets in activity files
-]
+COUSE_SOURCE_IDS_SKIP_LIST = []  # courses to be skipped
+
 
 HPLIFE_COURSE_STRUCTURE_CHECK_STRINGS = {
     'ar': {
