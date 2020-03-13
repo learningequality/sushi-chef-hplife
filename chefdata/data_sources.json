@@ -48,5 +48,25 @@
             "folder_id": "1A571XGMqjrbC0yYoSCRbeUYTp3iIejy7",
             "name": "Hindi - Activity Files"
         }
+    },
+    "pt": {
+        "courses": {
+            "folder_id": "1U_6ILghOCVydqpmtAUlWiQLpW_g44xWV",
+            "name": "Portuguese"
+        },
+        "activityfiles": {
+        "folder_id": "1i51tuTCB7HAkDBjmVDdsUobH3O4zhCec",
+            "name": "Portuguese - Activity Files"
+        }
+    },
+    "zh": {
+        "courses": {
+            "folder_id": "1_QotCPWJbqx0kihueg_7s4Mo4ePXWQsf",
+            "name": "Chinese"
+        },
+        "activityfiles": {
+            "folder_id": "1W_g86r8TT2-KCPcuU9wujHi1sdESYmfe",
+            "name": "Chinese Activity Files"
+        }
     }
 }
