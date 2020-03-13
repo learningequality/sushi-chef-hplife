@@ -290,7 +290,9 @@ def _normalize_course_name(course_name):
         'Eficiencia de la energía_ hacer más con menos': 'Eficiencia de la energía - hacer más con menos',
         'Efficacité énergétique Faire davantage avec moins': 'Efficacité énergétique - Faire davantage avec moins',
         'Efficacité énergétique _ Faire davantage avec moins': 'Efficacité énergétique - Faire davantage avec moins',
+        'ऊर्जा कार्यक्षमता_ कम में ज़्यादा करें': 'ऊर्जा कार्यक्षमता- कम में ज़्यादा करें',
         '3D प्रिंटिंग.FDwab0': '3D प्रिंटिंग',
+        'व्यावसायिक ईमेल': 'वयावसायिक ईमेल',
     }
     for source_str, replacement_str in HPLIFE_COURSE_FOLDER_RENAMES.items():
         if source_str in course_name:
@@ -364,7 +366,15 @@ def rename_activity_files(lang):
 ################################################################################
 
 EXTRACT_DIRNAME = 'Courses'
-FILES_TO_SKIP = ['.DS_Store', 'Thumbs.db', 'ehthumbs.db', 'ehthumbs_vista.db', '.gitkeep']
+FILES_TO_SKIP = [
+    '.DS_Store', 'Thumbs.db', 'ehthumbs.db', 'ehthumbs_vista.db', '.gitkeep',
+    'CRM-Tracking-spreadsheet-PT-BR (6).xlsx',
+    'Creating-Customer-Loyalty-PT (4).docx',
+    'Creating-a-Communication-Plan-PT (4).docx',
+    'Developing-a-Communication-Strategy-PT (4).doc',
+    'crm_portuguese.jpg',
+    'Developing-a-Communication-Strategy-PT (4).doc',
+]
 
 
 def extract_courses(lang):
@@ -409,6 +419,7 @@ def process_content_for_course(lang, course_name):
     # src
     srcdir = get_renamed_dir(lang, 'activityfiles')
     coursedir = os.path.join(srcdir, course_name)
+    # print('coursedir=', coursedir)
     if not os.path.exists(coursedir):
         print('Could not find Activity-Files for course_name', course_name)
         return []
@@ -425,7 +436,7 @@ def process_content_for_course(lang, course_name):
 
         # dest
         activity_ref = srcfolder
-        # print('Processing activity_ref', activity_ref)
+        # print('          > Processing activity_ref', activity_ref)
         resource_folder = os.path.join(contentdir, activity_ref)
         if not os.path.exists(resource_folder):
             shutil.copytree(srcpath, resource_folder)
