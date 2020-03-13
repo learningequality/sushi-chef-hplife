@@ -174,9 +174,10 @@ node_modules/
 # Pycharm
 .idea/*
 
+# vscode
+.vscode
 
 # Vim
-
 *~
 *.swp
 *.swo

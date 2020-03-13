@@ -77,12 +77,12 @@ HPLIFE_COURSE_STRUCTURE_CHECK_STRINGS = {
         'nextsteps': ['अगले चरण'],
     },
     'pt': {
-        'coursestart': ['Start Course'],
-        'story': ['Story'],
-        'businessconcept': ['Business Concept'],
-        'technologyskill': 'Technology Skill',
-        'coursefeedback': ['Course'],
-        'nextsteps': ['Steps'],
+        'coursestart': ['Iniciar curso', 'Iniciar'],
+        'story': ['História'],
+        'businessconcept': ['Conceito de negócios', 'Conceito de negócio'],
+        'technologyskill': 'Habilidades tecnológicas',
+        'coursefeedback': ['Pesquisa'],
+        'nextsteps': ['Próximos passos', 'Próximas etapas'],
     },
     'zh': {
         'coursestart': ['Start Course'],
@@ -123,7 +123,7 @@ HPLIFE_STRINGS = {
         'nextsteps_disclaimer': 'कृपया ध्यान दें कि इस पेज के लिंक इंटरनेट के बिना काम नहीं करेंगे। राइट-क्लिक बटन का उपयोग करें, और लिंक खोलने के लिए "नए टैब में खोलें" चुनें।',
     },
     'pt': {
-        'resources': 'Resources',
+        'resources': 'Recursos',
         'downloadable_resources': 'Conteúdos para baixar',
         'nextsteps_disclaimer': 'Atenção: os links desta página não funcionarão se você não estiver conectado à Internet. Conecte-se a Internet e com o botão direito do mouse, escolha "Abrir em nova aba" para abrir os links.',
     },
@@ -173,6 +173,11 @@ CONTENT_FOLDER_RENAMES = {
     '2489hpl-hi06': {
         'technologyskill' : {
             'YTA_TS_HI_FIXED_reload': 'TU6_Tech_Skill_PRO_hi - Storyline output',
+        }
+    },
+    '2394hpl-pt06': {
+        'technologyskill' : {
+            'YTA_TS_PT_FIXED_reload': 'TU6_Tech_Skill_pt - Storyline output',
         }
     }
 }
@@ -354,17 +359,18 @@ def parse_course_tree(course_data, lang):
     chapter_title = chapter['display_name']
     assert any(cs in chapter_title for cs in check_strings['technologyskill']), 'bad ch. title ' + chapter_title
     content_items = flatten_chapter(chapter)
-    assert len(content_items) == 2, 'unexpected # of items in technologyskill'
+    assert len(content_items) <= 2, 'unexpected # of items in technologyskill'
     # technologyskill activity
     content_item = content_items[0]
     content_item['title'] = chapter_title
     assert content_item['kind'] == 'problem', 'unexpected item kind in technologyskill'
     parsed_tree['technologyskill'] = content_item
-    # downloadable_resources
-    second_item = content_items[1]
-    assert second_item['kind'] == 'html', 'unexpected item kind in technologyskill'
-    second_item['title'] = second_item['sequential_title'] 
-    parsed_tree['downloadable_resources'] = second_item
+    if len(content_items) == 2:
+        # downloadable_resources
+        second_item = content_items[1]
+        assert second_item['kind'] == 'html', 'unexpected item kind in technologyskill'
+        second_item['title'] = second_item['sequential_title'] 
+        parsed_tree['downloadable_resources'] = second_item
 
     # skip course feedback
     chapter = chapters[4]

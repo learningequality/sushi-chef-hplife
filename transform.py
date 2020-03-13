@@ -165,7 +165,24 @@ COURSE_START_SPLIT_STRINGS = {
             'कोर्स के चरण',
             'यह पाठ्यक्रम केली स्कूल ऑफ बिज़्नेस',
         ]
-    }
+    },
+    'pt': {
+        'cutpoint_starts': [
+            'Por que começar hoje?',
+        ],
+        'cutpoint_start_and_includes': [
+            'Aprenda o que é a arte',
+            'Neste curso, você irá',
+            'Este curso é desenvolvido para',
+        ],
+        'cutpoint_ends': [
+            'Etapas do curso',
+            'Etapas do Curso',
+            'Etapas no curso',
+            'Este curso foi desenvolvido',
+            'Grade do curso',
+        ]
+    },
 }
 
 def get_course_description_from_coursestart_html(content, lang):
@@ -776,17 +793,20 @@ def extract_course_resouces(parsed_tree, contentdir, course_id, chefargs=None):
     ####################################################################
 
     # 1A. Process the downloadable_resources item
-    downloadable_resources_item = parsed_tree['downloadable_resources']
-    assert downloadable_resources_item['kind'] == 'html'
-    downloadable_resources = get_resources_from_downloadable_resouces_item(contentdir, downloadable_resources_item, course_id)
-    downloaded_resources = []
-    for downloadable_resource in downloadable_resources:
-        downloaded_resource = download_resource(downloadable_resource, contentdir, update=update)
-        if downloaded_resource:
-            downloaded_resources.append(downloaded_resource)
-        else:
-            print('ERROR: failed to download', downloadable_resource)
-    resources.extend(downloaded_resources)
+    if 'downloadable_resources' in parsed_tree and parsed_tree['downloadable_resources']: 
+        downloadable_resources_item = parsed_tree['downloadable_resources']
+        assert downloadable_resources_item['kind'] == 'html'
+        downloadable_resources = get_resources_from_downloadable_resouces_item(contentdir, downloadable_resources_item, course_id)
+        downloaded_resources = []
+        for downloadable_resource in downloadable_resources:
+            downloaded_resource = download_resource(downloadable_resource, contentdir, update=update)
+            if downloaded_resource:
+                downloaded_resources.append(downloaded_resource)
+            else:
+                print('ERROR: failed to download', downloadable_resource)
+        resources.extend(downloaded_resources)
+    else:
+        print("Course {} doesn't have downloadable_resources".format(course_id))
 
 
     # 1B. Check for resources in atriculate storyline items
