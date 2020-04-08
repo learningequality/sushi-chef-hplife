@@ -129,8 +129,8 @@ HPLIFE_STRINGS = {
     },
     'zh': {
         'resources': 'ZH Resources',
-        'downloadable_resources': 'ZH Downloadable resources',
-        'nextsteps_disclaimer': 'ZH Please note the links on this page will not work unless you are connected to the internet. Use the right-click button, and choose "Open in new tab" to open the links.',
+        'downloadable_resources': '可下载的课程相关资源',
+        'nextsteps_disclaimer': '请注意，除非您已连接到互联网，否则此页面的链接将无法使用。请使用右键点击按钮，并选择“在新选项卡中打开”以打开链接。',
     },
 }
 
@@ -678,7 +678,7 @@ CHANNEL_TITLE_LOOKUP = {
     'fr': 'HP LIFE - Cours (Français)',
     'hi': 'HP LIFE - कार्यक्रम (हिन्दी)',
     'pt': 'HP LIFE - Cursos (Português)',
-    'zh': 'HP LIFE - Couses (Chinese)',
+    'zh': 'HP LIFE - 课程 (Chinese)',
 }
 
 
@@ -689,7 +689,7 @@ CHANNEL_DESCRIPTION_LOOKUP = {
     'fr': "Un programme de HP Foundation, les cours HP LIFE sont conçus pour aider les adultes à apprendre de manière autonome diverses compétences numériques, y compris les technologies de l'information, la création d'entreprise, les ventes en ligne et le marketing. Ces cours conviennent aux adultes qui sont curieux de développer leurs compétences professionnelles ou poursuivre de nouvelles opportunités.",
     'hi': "इस एच.पी. फाउंडेशन कार्यक्रम के साथ अपनी आई.टी. और उद्यमिता क्षमता बढ़ाएं। आप अपने खुद के कौशल विकसित कर सकते हैं या नए अवसरों के बारे में जान सकते हैं। वयस्कों को आईटी, व्यवसाय शुरू करने और विपणन जैसे डिजिटल और उद्यमिता कौशल का अध्ययन करने में मदद करने के लिए एक कार्यक्रम। अपने पेशेवर कौशल विकसित करने या नए अवसरों के बारे में जानने की चाह रखने वालों के लिए।",
     'pt': 'Uma iniciativa da Fundação HP, estes pequenos cursos introdutórios foram criados para ajudar adultos a aprender, de maneira independente, habilidades digitais, incluindo tecnologia da informação e de empreendedorismo, como "como iniciar negócios", "vendas online" e "marketing". Adequado para pessoas que desejam desenvolver suas habilidades profissionais ou simplesmente aprender novos conceitos.',
-    'zh': 'HP LIFE courses in Chinese. Chinese descr. to go here',
+    'zh': '作为惠普基金会的一个项目，这一系列简短的入门课程将帮助成年人群体独立学习各种数字化和创业技能，其中包括信息技术、创业、在线销售和市场营销等在线课程。这些课程很适合那些对发展自己的专业技能或了解新的商业机会时充满好奇心的成年人群体。',
 }
 
 
