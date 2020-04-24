@@ -183,6 +183,23 @@ COURSE_START_SPLIT_STRINGS = {
             'Grade do curso',
         ]
     },
+    'zh': {
+        'cutpoint_starts': [
+            '为什么从今天开始？',
+            '为什么要马上开始？',
+            '为何要立即开始？',
+            '为什么要从今天开始？',
+        ],
+        'cutpoint_start_and_includes': [
+            '为什么今天开始？',
+            '在本课程中，你将：',
+        ],
+        'cutpoint_ends': [
+            '课程步骤',
+            '在课程中的步骤',
+            '课程提供的步骤',
+        ]
+    },
 }
 
 def get_course_description_from_coursestart_html(content, lang):
@@ -271,7 +288,8 @@ def get_activity_descriptions_from_coursestart_html(content, lang):
     assert len(tables) == 1, 'uhoh'
     table = tables[0]
     rows = table.find_all('tr')
-    assert len(rows) == 5, 'uhoh, expecting table with five rows in coursestart'
+    # print(table)
+    assert len(rows) in [5,6], 'uhoh, expecting table with five rows in coursestart'
     second_col_strings = []
     for row in rows:
         tds = row.find_all('td')
@@ -279,12 +297,14 @@ def get_activity_descriptions_from_coursestart_html(content, lang):
         second_col_string = tds[1].text.strip()
         if '\xa0' in second_col_string:
             second_col_string = second_col_string.replace('\xa0', ' ')
+        if '\n' in second_col_string:
+            second_col_string = second_col_string.replace('\n', ' ')
         second_col_strings.append(second_col_string)
     return {
         'story': second_col_strings[0],
         'businessconcept': second_col_strings[1],
         'technologyskill': second_col_strings[2],
-        'nextsteps': second_col_strings[4],
+        'nextsteps': second_col_strings[-1],
     }
 
 

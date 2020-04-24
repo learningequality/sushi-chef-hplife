@@ -85,12 +85,12 @@ HPLIFE_COURSE_STRUCTURE_CHECK_STRINGS = {
         'nextsteps': ['Próximos passos', 'Próximas etapas'],
     },
     'zh': {
-        'coursestart': ['Start Course'],
-        'story': ['Story'],
-        'businessconcept': ['Business Concept'],
-        'technologyskill': 'Technology Skill',
-        'coursefeedback': ['Course'],
-        'nextsteps': ['Steps'],
+        'coursestart': ['开始'],
+        'story': ['故事'],
+        'businessconcept': ['经营理念', '企业理念'],
+        'technologyskill': '技术技能',
+        'coursefeedback': ['调查'],
+        'nextsteps': ['后续步骤'],
     },
 }
 
@@ -128,7 +128,7 @@ HPLIFE_STRINGS = {
         'nextsteps_disclaimer': 'Atenção: os links desta página não funcionarão se você não estiver conectado à Internet. Conecte-se a Internet e com o botão direito do mouse, escolha "Abrir em nova aba" para abrir os links.',
     },
     'zh': {
-        'resources': 'ZH Resources',
+        'resources': '可下載的資源',
         'downloadable_resources': '可下载的课程相关资源',
         'nextsteps_disclaimer': '请注意，除非您已连接到互联网，否则此页面的链接将无法使用。请使用右键点击按钮，并选择“在新选项卡中打开”以打开链接。',
     },
@@ -179,7 +179,25 @@ CONTENT_FOLDER_RENAMES = {
         'technologyskill' : {
             'YTA_TS_PT_FIXED_reload': 'TU6_Tech_Skill_pt - Storyline output',
         }
-    }
+    },
+    '2661hpl-zh09': {
+        'businessconcept': {
+            'FF_BC_CH2': 'TU9_Business_Concept_PRO_zh - Storyline output'
+        },
+        'technologyskill' : {
+            'FF_TS_CH2': 'TU9_Tech_Skill_PRO_zh - Storyline output'
+        }
+    },
+    '2658hpl-zh06': {
+        'technologyskill' : {
+            'YTA_TS_CH_FIXED_reload': 'TU6_Tech_Skill_ch - Storyline output'
+        },
+    },
+    '4857hpl-zh27': {
+        'technologyskill' : {
+            '27-DT2-BC-CH-NR-MOB': '27-DT3-TS-CH-NR-MOB'
+        }
+    },
 }
 
 def find_activity_ref(contentdir, activity_ref):
@@ -678,7 +696,7 @@ CHANNEL_TITLE_LOOKUP = {
     'fr': 'HP LIFE - Cours (Français)',
     'hi': 'HP LIFE - कार्यक्रम (हिन्दी)',
     'pt': 'HP LIFE - Cursos (Português)',
-    'zh': 'HP LIFE - 课程 (Chinese)',
+    'zh': 'HP LIFE - 课程 (中国大陆)',
 }
 
 
@@ -753,4 +771,3 @@ if __name__ == '__main__':
     """
     chef = HPLifeChef()
     chef.main()
-
