@@ -1,0 +1,5068 @@
+{
+  "title": "HP LIFE - 课程 (中国大陆)",
+  "source_domain": "life-global.org",
+  "source_id": "hp-life-courses-zh",
+  "description": "作为惠普基金会的一个项目，这一系列简短的入门课程将帮助成年人群体独立学习各种数字化和创业技能，其中包括信息技术、创业、在线销售和市场营销等在线课程。这些课程很适合那些对发展自己的专业技能或了解新的商业机会时充满好奇心的成年人群体。",
+  "thumbnail": "chefdata/thumbnails/new_channel_thumbnail.png",
+  "language": "zh",
+  "children": [
+    {
+      "kind": "topic",
+      "title": "3D 打印",
+      "language": "zh",
+      "thumbnail": "chefdata/thumbnails/new_channel_thumbnail.png",
+      "children": [
+        {
+          "kind": "html5",
+          "title": "故事",
+          "description": "为维修水管，Marco需要3D打印一个零件。",
+          "source_id": "29-3DP1-ST-CH-FINAL",
+          "license": {
+            "license_id": "CC BY",
+            "copyright_holder": "HP LIFE",
+            "description": null
+          },
+          "language": "zh",
+          "files": [
+            {
+              "file_type": "html5",
+              "path": "/var/folders/wc/2r44j8gs4gn56t1xtw5f6wlm0000gn/T/tmpmlixitlx.zip",
+              "language": "zh"
+            }
+          ],
+          "thumbnail": "chefdata/Courses/zh/3D 打印/content/29-3DP1-ST-CH-FINAL_webroot/story_content/thumbnail.jpg"
+        },
+        {
+          "kind": "html5",
+          "title": "经营理念",
+          "description": "学习了解3D打印及其带来的创业机会；学习了解可以利用的3D打印资源。",
+          "source_id": "29-3DP2-BC-CH-FINAL",
+          "license": {
+            "license_id": "CC BY",
+            "copyright_holder": "HP LIFE",
+            "description": null
+          },
+          "language": "zh",
+          "files": [
+            {
+              "file_type": "html5",
+              "path": "/var/folders/wc/2r44j8gs4gn56t1xtw5f6wlm0000gn/T/tmpwy8eiwsd.zip",
+              "language": "zh"
+            }
+          ],
+          "thumbnail": "chefdata/Courses/zh/3D 打印/content/29-3DP2-BC-CH-FINAL_webroot/story_content/thumbnail.jpg"
+        },
+        {
+          "kind": "html5",
+          "title": "技术技能",
+          "description": "学习如何进行3D打印以及需要哪些技能。",
+          "source_id": "29-3DP3-TS-CH-FINAL",
+          "license": {
+            "license_id": "CC BY",
+            "copyright_holder": "HP LIFE",
+            "description": null
+          },
+          "language": "zh",
+          "files": [
+            {
+              "file_type": "html5",
+              "path": "/var/folders/wc/2r44j8gs4gn56t1xtw5f6wlm0000gn/T/tmplazdwdo3.zip",
+              "language": "zh"
+            }
+          ],
+          "thumbnail": "chefdata/Courses/zh/3D 打印/content/29-3DP3-TS-CH-FINAL_webroot/story_content/thumbnail.jpg"
+        },
+        {
+          "kind": "topic",
+          "title": "可下載的資源",
+          "source_id": "3D 打印___resources",
+          "license": {
+            "license_id": "CC BY",
+            "copyright_holder": "HP LIFE",
+            "description": null
+          },
+          "language": "zh",
+          "thumbnail": "chefdata/thumbnails/resources_folder_thumbnail.png",
+          "children": [
+            {
+              "kind": "document",
+              "title": "3D打印的应用领域",
+              "description": "",
+              "source_id": "https://s3.amazonaws.com/hp-life-content/Antonio+TechClass+Academy/3D+Printing+(Chinese)/Downloadable+Resources/3D+printing+application+areas+CH.pdf",
+              "license": {
+                "license_id": "CC BY",
+                "copyright_holder": "HP LIFE",
+                "description": null
+              },
+              "language": "zh",
+              "files": [
+                {
+                  "file_type": "document",
+                  "path": "chefdata/Courses/zh/3D 打印/content/downloads/3D printing application areas CH.pdf",
+                  "language": "zh"
+                }
+              ]
+            },
+            {
+              "kind": "document",
+              "title": "3D打印、交易市场、服务及资源",
+              "description": "",
+              "source_id": "https://s3.amazonaws.com/hp-life-content/Antonio+TechClass+Academy/3D+Printing+(Chinese)/Downloadable+Resources/3D+printing++marketplaces+-+services+-+resources+CH.pdf",
+              "license": {
+                "license_id": "CC BY",
+                "copyright_holder": "HP LIFE",
+                "description": null
+              },
+              "language": "zh",
+              "files": [
+                {
+                  "file_type": "document",
+                  "path": "chefdata/Courses/zh/3D 打印/content/downloads/3D printing  marketplaces - services - resources CH.pdf",
+                  "language": "zh"
+                }
+              ]
+            },
+            {
+              "kind": "document",
+              "title": "3D打印的工艺与技术",
+              "description": "",
+              "source_id": "https://s3.amazonaws.com/hp-life-content/Antonio+TechClass+Academy/3D+Printing+(Chinese)/Downloadable+Resources/3D+printing+processes+and+technologies+CH.pdf",
+              "license": {
+                "license_id": "CC BY",
+                "copyright_holder": "HP LIFE",
+                "description": null
+              },
+              "language": "zh",
+              "files": [
+                {
+                  "file_type": "document",
+                  "path": "chefdata/Courses/zh/3D 打印/content/downloads/3D printing processes and technologies CH.pdf",
+                  "language": "zh"
+                }
+              ]
+            },
+            {
+              "kind": "document",
+              "title": "3D打印材料",
+              "description": "",
+              "source_id": "https://s3.amazonaws.com/hp-life-content/Antonio+TechClass+Academy/3D+Printing+(Chinese)/Downloadable+Resources/3D+printing+materials+CH.pdf",
+              "license": {
+                "license_id": "CC BY",
+                "copyright_holder": "HP LIFE",
+                "description": null
+              },
+              "language": "zh",
+              "files": [
+                {
+                  "file_type": "document",
+                  "path": "chefdata/Courses/zh/3D 打印/content/downloads/3D printing materials CH.pdf",
+                  "language": "zh"
+                }
+              ]
+            },
+            {
+              "kind": "document",
+              "title": "3D打印技巧",
+              "description": "",
+              "source_id": "https://s3.amazonaws.com/hp-life-content/Antonio+TechClass+Academy/3D+Printing+(Chinese)/Downloadable+Resources/3D+printing+tips+CH.pdf",
+              "license": {
+                "license_id": "CC BY",
+                "copyright_holder": "HP LIFE",
+                "description": null
+              },
+              "language": "zh",
+              "files": [
+                {
+                  "file_type": "document",
+                  "path": "chefdata/Courses/zh/3D 打印/content/downloads/3D printing tips CH.pdf",
+                  "language": "zh"
+                }
+              ]
+            },
+            {
+              "kind": "html5",
+              "title": "可下载的课程相关资源",
+              "description": "",
+              "source_id": "3D 打印__resources__downloadable_resources",
+              "license": {
+                "license_id": "CC BY",
+                "copyright_holder": "HP LIFE",
+                "description": null
+              },
+              "language": "zh",
+              "thumbnail": "chefdata/thumbnails/downloadable_resources_thumbnail.png",
+              "files": [
+                {
+                  "file_type": "html5",
+                  "path": "chefdata/Courses/zh/3D 打印/content/downloadable_resources_webroot.zip",
+                  "language": "zh"
+                }
+              ]
+            }
+          ]
+        },
+        {
+          "kind": "html5",
+          "title": "后续步骤",
+          "description": "发现和探索本课程的后续步骤及其他资源。 请注意，除非您已连接到互联网，否则此页面的链接将无法使用。请使用右键点击按钮，并选择“在新选项卡中打开”以打开链接。",
+          "source_id": "<p class=\"MsoNormal\"><strong><",
+          "license": {
+            "license_id": "CC BY",
+            "copyright_holder": "HP LIFE",
+            "description": null
+          },
+          "language": "zh",
+          "files": [
+            {
+              "file_type": "html5",
+              "path": "/var/folders/wc/2r44j8gs4gn56t1xtw5f6wlm0000gn/T/tmp99gskrt4.zip",
+              "language": "zh"
+            }
+          ]
+        }
+      ],
+      "source_id": "6677hpl-zh29",
+      "description": "创业者可以使用3D打印机创作原型及正式产品，从假体、服饰到轻型的航空和汽车零件等，范围十分广泛。 您将学习： • 如何利用3D打印进行设计、制作原型和制造新产品 • 3D打印所需的技能以及可以利用的资源"
+    },
+    {
+      "kind": "topic",
+      "title": "独特市场价值",
+      "language": "zh",
+      "thumbnail": "chefdata/thumbnails/new_channel_thumbnail.png",
+      "children": [
+        {
+          "kind": "html5",
+          "title": "故事",
+          "description": "Paul和Loretta试图弄清楚如何为自己的旅店吸引更多顾客。",
+          "source_id": "zh_4",
+          "license": {
+            "license_id": "CC BY",
+            "copyright_holder": "HP LIFE",
+            "description": null
+          },
+          "language": "zh",
+          "files": [
+            {
+              "file_type": "html5",
+              "path": "/var/folders/wc/2r44j8gs4gn56t1xtw5f6wlm0000gn/T/tmpnv0frkq5.zip",
+              "language": "zh"
+            }
+          ],
+          "thumbnail": null
+        },
+        {
+          "kind": "html5",
+          "title": "经营理念",
+          "description": "了解客户对某个企业及其竞争对手的评价，有助于准确地确定该企业的独特价值。",
+          "source_id": "TU4_Business_Concept_PRO_zh - Storyline output",
+          "license": {
+            "license_id": "CC BY",
+            "copyright_holder": "HP LIFE",
+            "description": null
+          },
+          "language": "zh",
+          "files": [
+            {
+              "file_type": "html5",
+              "path": "/var/folders/wc/2r44j8gs4gn56t1xtw5f6wlm0000gn/T/tmpla0nejfg.zip",
+              "language": "zh"
+            }
+          ],
+          "thumbnail": "chefdata/Courses/zh/独特市场价值/content/TU4_Business_Concept_PRO_zh - Storyline output_webroot/story_content/thumbnail.jpg"
+        },
+        {
+          "kind": "html5",
+          "title": "技术技能",
+          "description": "我如何在网上更有效地搜索与我的生意和竞争对手有关的信息？",
+          "source_id": "TU4_Tech_Skill_PRO_Search_zh - Storyline output",
+          "license": {
+            "license_id": "CC BY",
+            "copyright_holder": "HP LIFE",
+            "description": null
+          },
+          "language": "zh",
+          "files": [
+            {
+              "file_type": "html5",
+              "path": "/var/folders/wc/2r44j8gs4gn56t1xtw5f6wlm0000gn/T/tmpk3387ne1.zip",
+              "language": "zh"
+            }
+          ],
+          "thumbnail": "chefdata/Courses/zh/独特市场价值/content/TU4_Tech_Skill_PRO_Search_zh - Storyline output_webroot/story_content/thumbnail.jpg"
+        },
+        {
+          "kind": "topic",
+          "title": "可下載的資源",
+          "source_id": "独特市场价值___resources",
+          "license": {
+            "license_id": "CC BY",
+            "copyright_holder": "HP LIFE",
+            "description": null
+          },
+          "language": "zh",
+          "thumbnail": "chefdata/thumbnails/resources_folder_thumbnail.png",
+          "children": [
+            {
+              "kind": "document",
+              "title": "独特市场价值(UVP)表格(PDF)",
+              "description": "",
+              "source_id": "https://s3.amazonaws.com/hp-life-content/DownloadableChinese/Unit_4_downloadable-zh.pdf",
+              "license": {
+                "license_id": "CC BY",
+                "copyright_holder": "HP LIFE",
+                "description": null
+              },
+              "language": "zh",
+              "files": [
+                {
+                  "file_type": "document",
+                  "path": "chefdata/Courses/zh/独特市场价值/content/downloads/Unit_4_downloadable-zh.pdf",
+                  "language": "zh"
+                }
+              ]
+            }
+          ]
+        },
+        {
+          "kind": "html5",
+          "title": "后续步骤",
+          "description": "了解后续步骤和更多资源，帮助你为自己的生意制定营销策略。 请注意，除非您已连接到互联网，否则此页面的链接将无法使用。请使用右键点击按钮，并选择“在新选项卡中打开”以打开链接。",
+          "source_id": "<div style=\"display: inline-bl",
+          "license": {
+            "license_id": "CC BY",
+            "copyright_holder": "HP LIFE",
+            "description": null
+          },
+          "language": "zh",
+          "files": [
+            {
+              "file_type": "html5",
+              "path": "/var/folders/wc/2r44j8gs4gn56t1xtw5f6wlm0000gn/T/tmpikel0lnv.zip",
+              "language": "zh"
+            }
+          ]
+        }
+      ],
+      "source_id": "2655hpl-zh04",
+      "description": "了解你如何使自己的生意与竞争对手截然不同。 学习如何： • 评估你的生意的优劣之处。 • 研究你的竞争对手的优劣之处。 • 开展有效的网上搜索，查找竞争对手的信息。"
+    },
+    {
+      "kind": "topic",
+      "title": "设定价格",
+      "language": "zh",
+      "thumbnail": "chefdata/thumbnails/new_channel_thumbnail.png",
+      "children": [
+        {
+          "kind": "html5",
+          "title": "故事",
+          "description": "Alejandro是否应该将他倍受欢迎的咖啡涨价？",
+          "source_id": "zh_15",
+          "license": {
+            "license_id": "CC BY",
+            "copyright_holder": "HP LIFE",
+            "description": null
+          },
+          "language": "zh",
+          "files": [
+            {
+              "file_type": "html5",
+              "path": "/var/folders/wc/2r44j8gs4gn56t1xtw5f6wlm0000gn/T/tmp41aieb_n.zip",
+              "language": "zh"
+            }
+          ],
+          "thumbnail": null
+        },
+        {
+          "kind": "html5",
+          "title": "经营理念",
+          "description": "学习你应该开展哪些研究，为你的产品或服务设定价格。",
+          "source_id": "TU15_Business_Concept_PRO_ch - Storyline output",
+          "license": {
+            "license_id": "CC BY",
+            "copyright_holder": "HP LIFE",
+            "description": null
+          },
+          "language": "zh",
+          "files": [
+            {
+              "file_type": "html5",
+              "path": "/var/folders/wc/2r44j8gs4gn56t1xtw5f6wlm0000gn/T/tmpvdcol0ww.zip",
+              "language": "zh"
+            }
+          ],
+          "thumbnail": "chefdata/Courses/zh/设定价格/content/TU15_Business_Concept_PRO_ch - Storyline output_webroot/story_content/thumbnail.jpg"
+        },
+        {
+          "kind": "html5",
+          "title": "技术技能",
+          "description": "学习如何使用文字处理软件创建和定制表格，以记录你的研究结果。",
+          "source_id": "TU15_Tech_Skill_Mobile_ch - Storyline output",
+          "license": {
+            "license_id": "CC BY",
+            "copyright_holder": "HP LIFE",
+            "description": null
+          },
+          "language": "zh",
+          "files": [
+            {
+              "file_type": "html5",
+              "path": "/var/folders/wc/2r44j8gs4gn56t1xtw5f6wlm0000gn/T/tmpeajxjamc.zip",
+              "language": "zh"
+            }
+          ],
+          "thumbnail": "chefdata/Courses/zh/设定价格/content/TU15_Tech_Skill_Mobile_ch - Storyline output_webroot/story_content/thumbnail.jpg"
+        },
+        {
+          "kind": "topic",
+          "title": "可下載的資源",
+          "source_id": "设定价格___resources",
+          "license": {
+            "license_id": "CC BY",
+            "copyright_holder": "HP LIFE",
+            "description": null
+          },
+          "language": "zh",
+          "thumbnail": "chefdata/thumbnails/resources_folder_thumbnail.png",
+          "children": [
+            {
+              "kind": "document",
+              "title": "价格比较工作表(Word)",
+              "description": "",
+              "source_id": "https://s3.amazonaws.com/hp-life-content/DownloadableChinese/Downloadable_Price-Comparison-Worksheet-zh.docx",
+              "license": {
+                "license_id": "CC BY",
+                "copyright_holder": "HP LIFE",
+                "description": null
+              },
+              "language": "zh",
+              "files": [
+                {
+                  "file_type": "document",
+                  "path": "chefdata/Courses/zh/设定价格/content/converted/Downloadable_Price-Comparison-Worksheet-zh.pdf",
+                  "language": "zh"
+                }
+              ]
+            },
+            {
+              "kind": "html5",
+              "title": "可下载的课程相关资源",
+              "description": "",
+              "source_id": "设定价格__resources__downloadable_resources",
+              "license": {
+                "license_id": "CC BY",
+                "copyright_holder": "HP LIFE",
+                "description": null
+              },
+              "language": "zh",
+              "thumbnail": "chefdata/thumbnails/downloadable_resources_thumbnail.png",
+              "files": [
+                {
+                  "file_type": "html5",
+                  "path": "chefdata/Courses/zh/设定价格/content/downloadable_resources_webroot.zip",
+                  "language": "zh"
+                }
+              ]
+            }
+          ]
+        },
+        {
+          "kind": "html5",
+          "title": "后续步骤",
+          "description": "了解后续步骤和更多资源，帮助你为你的生意设定价格。 请注意，除非您已连接到互联网，否则此页面的链接将无法使用。请使用右键点击按钮，并选择“在新选项卡中打开”以打开链接。",
+          "source_id": "<div class=\"field-item even\" s",
+          "license": {
+            "license_id": "CC BY",
+            "copyright_holder": "HP LIFE",
+            "description": null
+          },
+          "language": "zh",
+          "files": [
+            {
+              "file_type": "html5",
+              "path": "/var/folders/wc/2r44j8gs4gn56t1xtw5f6wlm0000gn/T/tmpgf7v5a9s.zip",
+              "language": "zh"
+            }
+          ]
+        }
+      ],
+      "source_id": "2667hpl-zh15",
+      "description": "了解可通过哪些研究来确定你的产品和服务的价格，以及如何在文字处理软件中定制表格，以记录你的研究结果。 学习如何： • 为产品和服务设定价格 • 使用文字处理软件定制表格"
+    },
+    {
+      "kind": "topic",
+      "title": "客户关系管理(CRM)",
+      "language": "zh",
+      "thumbnail": "chefdata/thumbnails/new_channel_thumbnail.png",
+      "children": [
+        {
+          "kind": "html5",
+          "title": "故事",
+          "description": "Dmitri在试图推销时遇到了意料不到的问题。",
+          "source_id": "12-CRM1-ST-CH - Storyline output",
+          "license": {
+            "license_id": "CC BY",
+            "copyright_holder": "HP LIFE",
+            "description": null
+          },
+          "language": "zh",
+          "files": [
+            {
+              "file_type": "html5",
+              "path": "/var/folders/wc/2r44j8gs4gn56t1xtw5f6wlm0000gn/T/tmp25cehv89.zip",
+              "language": "zh"
+            }
+          ],
+          "thumbnail": "chefdata/Courses/zh/客户关系管理(CRM)/content/12-CRM1-ST-CH - Storyline output_webroot/story_content/thumbnail.jpg"
+        },
+        {
+          "kind": "html5",
+          "title": "经营理念",
+          "description": "了解有效的客户管理流程与照料花园的相似性。",
+          "source_id": "12-CRM2-BC-CH - Storyline output",
+          "license": {
+            "license_id": "CC BY",
+            "copyright_holder": "HP LIFE",
+            "description": null
+          },
+          "language": "zh",
+          "files": [
+            {
+              "file_type": "html5",
+              "path": "/var/folders/wc/2r44j8gs4gn56t1xtw5f6wlm0000gn/T/tmpedosomq2.zip",
+              "language": "zh"
+            }
+          ],
+          "thumbnail": "chefdata/Courses/zh/客户关系管理(CRM)/content/12-CRM2-BC-CH - Storyline output_webroot/story_content/thumbnail.jpg"
+        },
+        {
+          "kind": "html5",
+          "title": "技术技能",
+          "description": "学习如何利用客户关系管理工具来管理销售周期和发展生意。",
+          "source_id": "12-CRM3-TS-CH - Storyline output",
+          "license": {
+            "license_id": "CC BY",
+            "copyright_holder": "HP LIFE",
+            "description": null
+          },
+          "language": "zh",
+          "files": [
+            {
+              "file_type": "html5",
+              "path": "/var/folders/wc/2r44j8gs4gn56t1xtw5f6wlm0000gn/T/tmp7jwvnk7v.zip",
+              "language": "zh"
+            }
+          ],
+          "thumbnail": "chefdata/Courses/zh/客户关系管理(CRM)/content/12-CRM3-TS-CH - Storyline output_webroot/story_content/thumbnail.jpg"
+        },
+        {
+          "kind": "topic",
+          "title": "可下載的資源",
+          "source_id": "客户关系管理(CRM)___resources",
+          "license": {
+            "license_id": "CC BY",
+            "copyright_holder": "HP LIFE",
+            "description": null
+          },
+          "language": "zh",
+          "thumbnail": "chefdata/thumbnails/resources_folder_thumbnail.png",
+          "children": [
+            {
+              "kind": "document",
+              "title": "沟通计划",
+              "description": "",
+              "source_id": "https://hp-life-content.s3.amazonaws.com/CRM+(New+Files+2019+-+Chinese)/Creating-a-Communication-Plan-CH+(2).docx",
+              "license": {
+                "license_id": "CC BY",
+                "copyright_holder": "HP LIFE",
+                "description": null
+              },
+              "language": "zh",
+              "files": [
+                {
+                  "file_type": "document",
+                  "path": "chefdata/Courses/zh/客户关系管理(CRM)/content/converted/Creating-a-Communication-Plan-CH (2).pdf",
+                  "language": "zh"
+                }
+              ]
+            },
+            {
+              "kind": "document",
+              "title": "建立客户忠诚度",
+              "description": "",
+              "source_id": "https://hp-life-content.s3.amazonaws.com/CRM+(New+Files+2019+-+Chinese)/Creating-Customer-Loyalty-CH+(2).docx",
+              "license": {
+                "license_id": "CC BY",
+                "copyright_holder": "HP LIFE",
+                "description": null
+              },
+              "language": "zh",
+              "files": [
+                {
+                  "file_type": "document",
+                  "path": "chefdata/Courses/zh/客户关系管理(CRM)/content/converted/Creating-Customer-Loyalty-CH (2).pdf",
+                  "language": "zh"
+                }
+              ]
+            },
+            {
+              "kind": "document",
+              "title": "客户关系管理跟踪电子表格",
+              "description": "",
+              "source_id": "https://hp-life-content.s3.amazonaws.com/CRM+(New+Files+2019+-+Chinese)/CRM-Tracking-spreadsheet-CH+(3).xlsx",
+              "license": {
+                "license_id": "CC BY",
+                "copyright_holder": "HP LIFE",
+                "description": null
+              },
+              "language": "zh",
+              "files": [
+                {
+                  "file_type": "document",
+                  "path": "chefdata/Courses/zh/客户关系管理(CRM)/content/converted/CRM-Tracking-spreadsheet-CH (3).pdf",
+                  "language": "zh"
+                }
+              ]
+            },
+            {
+              "kind": "document",
+              "title": "沟通策略模板",
+              "description": "",
+              "source_id": "https://hp-life-content.s3.amazonaws.com/CRM+(New+Files+2019+-+Chinese)/Developing-a-Communication-Strategy-CH+(2).docx",
+              "license": {
+                "license_id": "CC BY",
+                "copyright_holder": "HP LIFE",
+                "description": null
+              },
+              "language": "zh",
+              "files": [
+                {
+                  "file_type": "document",
+                  "path": "chefdata/Courses/zh/客户关系管理(CRM)/content/converted/Developing-a-Communication-Strategy-CH (2).pdf",
+                  "language": "zh"
+                }
+              ]
+            },
+            {
+              "kind": "document",
+              "title": "沟通计划",
+              "description": "",
+              "source_id": "chefdata/Courses/zh/客户关系管理(CRM)/content/12-CRM3-TS-CH - Storyline output/story_content/external_files/Creating-a-Communication-Plan-CH.docx",
+              "license": {
+                "license_id": "CC BY",
+                "copyright_holder": "HP LIFE",
+                "description": null
+              },
+              "language": "zh",
+              "files": [
+                {
+                  "file_type": "document",
+                  "path": "chefdata/Courses/zh/客户关系管理(CRM)/content/converted/Creating-a-Communication-Plan-CH.pdf",
+                  "language": "zh"
+                }
+              ]
+            },
+            {
+              "kind": "document",
+              "title": "建立客户忠诚度",
+              "description": "",
+              "source_id": "chefdata/Courses/zh/客户关系管理(CRM)/content/12-CRM3-TS-CH - Storyline output/story_content/external_files/Creating-Customer-Loyalty-CH.docx",
+              "license": {
+                "license_id": "CC BY",
+                "copyright_holder": "HP LIFE",
+                "description": null
+              },
+              "language": "zh",
+              "files": [
+                {
+                  "file_type": "document",
+                  "path": "chefdata/Courses/zh/客户关系管理(CRM)/content/converted/Creating-Customer-Loyalty-CH.pdf",
+                  "language": "zh"
+                }
+              ]
+            },
+            {
+              "kind": "document",
+              "title": "客户关系管理跟踪电子表格",
+              "description": "",
+              "source_id": "chefdata/Courses/zh/客户关系管理(CRM)/content/12-CRM3-TS-CH - Storyline output/story_content/external_files/CRM-Tracking-spreadsheet-CH.xlsx",
+              "license": {
+                "license_id": "CC BY",
+                "copyright_holder": "HP LIFE",
+                "description": null
+              },
+              "language": "zh",
+              "files": [
+                {
+                  "file_type": "document",
+                  "path": "chefdata/Courses/zh/客户关系管理(CRM)/content/converted/CRM-Tracking-spreadsheet-CH.pdf",
+                  "language": "zh"
+                }
+              ]
+            },
+            {
+              "kind": "document",
+              "title": "沟通策略模板",
+              "description": "",
+              "source_id": "chefdata/Courses/zh/客户关系管理(CRM)/content/12-CRM3-TS-CH - Storyline output/story_content/external_files/Developing-a-Communication-Strategy-CH.docx",
+              "license": {
+                "license_id": "CC BY",
+                "copyright_holder": "HP LIFE",
+                "description": null
+              },
+              "language": "zh",
+              "files": [
+                {
+                  "file_type": "document",
+                  "path": "chefdata/Courses/zh/客户关系管理(CRM)/content/converted/Developing-a-Communication-Strategy-CH.pdf",
+                  "language": "zh"
+                }
+              ]
+            },
+            {
+              "kind": "html5",
+              "title": "可下载的课程相关资源",
+              "description": "",
+              "source_id": "客户关系管理(CRM)__resources__downloadable_resources",
+              "license": {
+                "license_id": "CC BY",
+                "copyright_holder": "HP LIFE",
+                "description": null
+              },
+              "language": "zh",
+              "thumbnail": "chefdata/thumbnails/downloadable_resources_thumbnail.png",
+              "files": [
+                {
+                  "file_type": "html5",
+                  "path": "chefdata/Courses/zh/客户关系管理(CRM)/content/downloadable_resources_webroot.zip",
+                  "language": "zh"
+                }
+              ]
+            }
+          ]
+        },
+        {
+          "kind": "html5",
+          "title": "后续步骤",
+          "description": "了解后续步骤和更多资源，帮助你管理与客户的关系。 请注意，除非您已连接到互联网，否则此页面的链接将无法使用。请使用右键点击按钮，并选择“在新选项卡中打开”以打开链接。",
+          "source_id": "<div class=\"field-item even\" s",
+          "license": {
+            "license_id": "CC BY",
+            "copyright_holder": "HP LIFE",
+            "description": null
+          },
+          "language": "zh",
+          "files": [
+            {
+              "file_type": "html5",
+              "path": "/var/folders/wc/2r44j8gs4gn56t1xtw5f6wlm0000gn/T/tmpot9rse_t.zip",
+              "language": "zh"
+            }
+          ]
+        }
+      ],
+      "source_id": "2664hpl-zh12",
+      "description": "学习如何更好地记录客户和潜在客户的相关信息，从而发展生意。 学习如何： • 为你的生意设置CRM工具 • 使用CRM工具记录有助于你发展生意的信息"
+    },
+    {
+      "kind": "topic",
+      "title": "商务沟通",
+      "language": "zh",
+      "thumbnail": "chefdata/thumbnails/new_channel_thumbnail.png",
+      "children": [
+        {
+          "kind": "html5",
+          "title": "故事",
+          "description": "Julian 认识到，简单的请求也会由于糟糕的沟通而导致严重误解。",
+          "source_id": "26-BCOM1-ST-CH-NR-MOB",
+          "license": {
+            "license_id": "CC BY",
+            "copyright_holder": "HP LIFE",
+            "description": null
+          },
+          "language": "zh",
+          "files": [
+            {
+              "file_type": "html5",
+              "path": "/var/folders/wc/2r44j8gs4gn56t1xtw5f6wlm0000gn/T/tmpuaeo9dn0.zip",
+              "language": "zh"
+            }
+          ],
+          "thumbnail": "chefdata/Courses/zh/商务沟通/content/26-BCOM1-ST-CH-NR-MOB_webroot/story_content/thumbnail.jpg"
+        },
+        {
+          "kind": "html5",
+          "title": "经营理念",
+          "description": "了解如何在商务环境中进行有效地沟通。",
+          "source_id": "26-BCOM2-BC-CH-NR-MOB",
+          "license": {
+            "license_id": "CC BY",
+            "copyright_holder": "HP LIFE",
+            "description": null
+          },
+          "language": "zh",
+          "files": [
+            {
+              "file_type": "html5",
+              "path": "/var/folders/wc/2r44j8gs4gn56t1xtw5f6wlm0000gn/T/tmpkhkfs94h.zip",
+              "language": "zh"
+            }
+          ],
+          "thumbnail": "chefdata/Courses/zh/商务沟通/content/26-BCOM2-BC-CH-NR-MOB_webroot/story_content/thumbnail.jpg"
+        },
+        {
+          "kind": "html5",
+          "title": "技术技能",
+          "description": "学会使用技术来实现有效沟通。",
+          "source_id": "26-BCOM3-TS-CH-NR-MOB",
+          "license": {
+            "license_id": "CC BY",
+            "copyright_holder": "HP LIFE",
+            "description": null
+          },
+          "language": "zh",
+          "files": [
+            {
+              "file_type": "html5",
+              "path": "/var/folders/wc/2r44j8gs4gn56t1xtw5f6wlm0000gn/T/tmpk8l6ye1b.zip",
+              "language": "zh"
+            }
+          ],
+          "thumbnail": "chefdata/Courses/zh/商务沟通/content/26-BCOM3-TS-CH-NR-MOB_webroot/story_content/thumbnail.jpg"
+        },
+        {
+          "kind": "topic",
+          "title": "可下載的資源",
+          "source_id": "商务沟通___resources",
+          "license": {
+            "license_id": "CC BY",
+            "copyright_holder": "HP LIFE",
+            "description": null
+          },
+          "language": "zh",
+          "thumbnail": "chefdata/thumbnails/resources_folder_thumbnail.png",
+          "children": [
+            {
+              "kind": "document",
+              "title": "商务沟通行动计划",
+              "description": "",
+              "source_id": "https://cms-245-hplife.edcastcloud.com/asset-v1:hp-life-e-learning+4548hpl-zh26+open+type@asset+block@BC_JA_APLAN_zh.pdf",
+              "license": {
+                "license_id": "CC BY",
+                "copyright_holder": "HP LIFE",
+                "description": null
+              },
+              "language": "zh",
+              "files": [
+                {
+                  "file_type": "document",
+                  "path": "chefdata/Courses/zh/商务沟通/content/downloads/BC_JA_APLAN_zh.pdf",
+                  "language": "zh"
+                }
+              ]
+            },
+            {
+              "kind": "document",
+              "title": "商务沟通计划模板",
+              "description": "",
+              "source_id": "https://cms-245-hplife.edcastcloud.com/asset-v1:hp-life-e-learning+4548hpl-zh26+open+type@asset+block@BC_JA_COMMTEMP_zh.DOCX",
+              "license": {
+                "license_id": "CC BY",
+                "copyright_holder": "HP LIFE",
+                "description": null
+              },
+              "language": "zh",
+              "files": [
+                {
+                  "file_type": "document",
+                  "path": "chefdata/Courses/zh/商务沟通/content/converted/BC_JA_COMMTEMP_zh.pdf",
+                  "language": "zh"
+                }
+              ]
+            },
+            {
+              "kind": "document",
+              "title": "商务沟通技巧",
+              "description": "",
+              "source_id": "https://cms-245-hplife.edcastcloud.com/asset-v1:hp-life-e-learning+4548hpl-zh26+open+type@asset+block@BC_JA_TIPS_zh.pdf",
+              "license": {
+                "license_id": "CC BY",
+                "copyright_holder": "HP LIFE",
+                "description": null
+              },
+              "language": "zh",
+              "files": [
+                {
+                  "file_type": "document",
+                  "path": "chefdata/Courses/zh/商务沟通/content/downloads/BC_JA_TIPS_zh.pdf",
+                  "language": "zh"
+                }
+              ]
+            },
+            {
+              "kind": "html5",
+              "title": "可下载的课程相关资源",
+              "description": "",
+              "source_id": "商务沟通__resources__downloadable_resources",
+              "license": {
+                "license_id": "CC BY",
+                "copyright_holder": "HP LIFE",
+                "description": null
+              },
+              "language": "zh",
+              "thumbnail": "chefdata/thumbnails/downloadable_resources_thumbnail.png",
+              "files": [
+                {
+                  "file_type": "html5",
+                  "path": "chefdata/Courses/zh/商务沟通/content/downloadable_resources_webroot.zip",
+                  "language": "zh"
+                }
+              ]
+            }
+          ]
+        },
+        {
+          "kind": "html5",
+          "title": "后续步骤",
+          "description": "了解本课程的后续步骤和其他资源。 请注意，除非您已连接到互联网，否则此页面的链接将无法使用。请使用右键点击按钮，并选择“在新选项卡中打开”以打开链接。",
+          "source_id": "<p><strong>要获得您的证书，您需要成功完成业务概念",
+          "license": {
+            "license_id": "CC BY",
+            "copyright_holder": "HP LIFE",
+            "description": null
+          },
+          "language": "zh",
+          "files": [
+            {
+              "file_type": "html5",
+              "path": "/var/folders/wc/2r44j8gs4gn56t1xtw5f6wlm0000gn/T/tmptpwvm1rb.zip",
+              "language": "zh"
+            }
+          ]
+        }
+      ],
+      "source_id": "4548hpl-zh26",
+      "description": "了解如何有效地与目标受众进行沟通。 了解如何： • 确定有效商务沟通的特征 • 确定有效沟通的成功因素 • 确定并分析目标受众 • 利用通信媒介有效地传达消息"
+    },
+    {
+      "kind": "topic",
+      "title": "社会创业精神",
+      "language": "zh",
+      "thumbnail": "chefdata/thumbnails/new_channel_thumbnail.png",
+      "children": [
+        {
+          "kind": "html5",
+          "title": "故事",
+          "description": "Leanne探索如何解决她所在社区的一个重要问题。",
+          "source_id": "zh_21",
+          "license": {
+            "license_id": "CC BY",
+            "copyright_holder": "HP LIFE",
+            "description": null
+          },
+          "language": "zh",
+          "files": [
+            {
+              "file_type": "html5",
+              "path": "/var/folders/wc/2r44j8gs4gn56t1xtw5f6wlm0000gn/T/tmp6ss0jlhy.zip",
+              "language": "zh"
+            }
+          ],
+          "thumbnail": null
+        },
+        {
+          "kind": "html5",
+          "title": "经营理念",
+          "description": "学习如何评估具有社会影响力并且在经济上可行的商业创意。",
+          "source_id": "TU21_Business_Concept_PRO_ch - Storyline output",
+          "license": {
+            "license_id": "CC BY",
+            "copyright_holder": "HP LIFE",
+            "description": null
+          },
+          "language": "zh",
+          "files": [
+            {
+              "file_type": "html5",
+              "path": "/var/folders/wc/2r44j8gs4gn56t1xtw5f6wlm0000gn/T/tmpttf7dfzt.zip",
+              "language": "zh"
+            }
+          ],
+          "thumbnail": "chefdata/Courses/zh/社会创业精神/content/TU21_Business_Concept_PRO_ch - Storyline output_webroot/story_content/thumbnail.jpg"
+        },
+        {
+          "kind": "html5",
+          "title": "技术技能",
+          "description": "学习如何借助软件从社会挑战研究和发掘社会企业创意中获取信息。",
+          "source_id": "TU21_Tech_Skill_PRO_ch - Storyline output",
+          "license": {
+            "license_id": "CC BY",
+            "copyright_holder": "HP LIFE",
+            "description": null
+          },
+          "language": "zh",
+          "files": [
+            {
+              "file_type": "html5",
+              "path": "/var/folders/wc/2r44j8gs4gn56t1xtw5f6wlm0000gn/T/tmpbg9jjjna.zip",
+              "language": "zh"
+            }
+          ],
+          "thumbnail": "chefdata/Courses/zh/社会创业精神/content/TU21_Tech_Skill_PRO_ch - Storyline output_webroot/story_content/thumbnail.jpg"
+        },
+        {
+          "kind": "topic",
+          "title": "可下載的資源",
+          "source_id": "社会创业精神___resources",
+          "license": {
+            "license_id": "CC BY",
+            "copyright_holder": "HP LIFE",
+            "description": null
+          },
+          "language": "zh",
+          "thumbnail": "chefdata/thumbnails/resources_folder_thumbnail.png",
+          "children": [
+            {
+              "kind": "document",
+              "title": "社会创业者之旅(PDF)",
+              "description": "",
+              "source_id": "https://s3.amazonaws.com/hp-life-content/DownloadableChinese/Downloadable_-C21_Social_entrepreneur_journey-zh.pdf",
+              "license": {
+                "license_id": "CC BY",
+                "copyright_holder": "HP LIFE",
+                "description": null
+              },
+              "language": "zh",
+              "files": [
+                {
+                  "file_type": "document",
+                  "path": "chefdata/Courses/zh/社会创业精神/content/downloads/Downloadable_-C21_Social_entrepreneur_journey-zh.pdf",
+                  "language": "zh"
+                }
+              ]
+            },
+            {
+              "kind": "document",
+              "title": "发掘社会企业创意(PDF)",
+              "description": "",
+              "source_id": "https://s3.amazonaws.com/hp-life-content/DownloadableChinese/Downloadable_C21_Building_your_social_enterprise_idea-zh.pdf",
+              "license": {
+                "license_id": "CC BY",
+                "copyright_holder": "HP LIFE",
+                "description": null
+              },
+              "language": "zh",
+              "files": [
+                {
+                  "file_type": "document",
+                  "path": "chefdata/Courses/zh/社会创业精神/content/downloads/Downloadable_C21_Building_your_social_enterprise_idea-zh.pdf",
+                  "language": "zh"
+                }
+              ]
+            }
+          ]
+        },
+        {
+          "kind": "html5",
+          "title": "后续步骤",
+          "description": "了解后续步骤和更多资源，帮助你创办社会企业。 请注意，除非您已连接到互联网，否则此页面的链接将无法使用。请使用右键点击按钮，并选择“在新选项卡中打开”以打开链接。",
+          "source_id": "<div class=\"field-item even\" s",
+          "license": {
+            "license_id": "CC BY",
+            "copyright_holder": "HP LIFE",
+            "description": null
+          },
+          "language": "zh",
+          "files": [
+            {
+              "file_type": "html5",
+              "path": "/var/folders/wc/2r44j8gs4gn56t1xtw5f6wlm0000gn/T/tmpmkkav_jq.zip",
+              "language": "zh"
+            }
+          ]
+        }
+      ],
+      "source_id": "2673hpl-zh21",
+      "description": "学习如何发掘经济上可行的商业创意，并为社区解决一个问题。 学习如何： • 评估社会企业创意能否产生社会影响力，并且在经济上是否可行 • 在发掘社会企业创意时，使用桌面或移动软件记录信息 本课程与Volans合作开发。"
+    },
+    {
+      "kind": "topic",
+      "title": "战略规划",
+      "language": "zh",
+      "thumbnail": "chefdata/thumbnails/new_channel_thumbnail.png",
+      "children": [
+        {
+          "kind": "html5",
+          "title": "故事",
+          "description": "Aung和Cho考虑可增加药店生意的选择。",
+          "source_id": "zh_25",
+          "license": {
+            "license_id": "CC BY",
+            "copyright_holder": "HP LIFE",
+            "description": null
+          },
+          "language": "zh",
+          "files": [
+            {
+              "file_type": "html5",
+              "path": "/var/folders/wc/2r44j8gs4gn56t1xtw5f6wlm0000gn/T/tmpzkp1rv9y.zip",
+              "language": "zh"
+            }
+          ],
+          "thumbnail": null
+        },
+        {
+          "kind": "html5",
+          "title": "经营理念",
+          "description": "学习如何借助SWOT分析来选择最有效的策略，使你的生意取得成功。",
+          "source_id": "TU25_Business_Concept_PRO_zh - Storyline output",
+          "license": {
+            "license_id": "CC BY",
+            "copyright_holder": "HP LIFE",
+            "description": null
+          },
+          "language": "zh",
+          "files": [
+            {
+              "file_type": "html5",
+              "path": "/var/folders/wc/2r44j8gs4gn56t1xtw5f6wlm0000gn/T/tmpfo_0wkqe.zip",
+              "language": "zh"
+            }
+          ],
+          "thumbnail": "chefdata/Courses/zh/战略规划/content/TU25_Business_Concept_PRO_zh - Storyline output_webroot/story_content/thumbnail.jpg"
+        },
+        {
+          "kind": "html5",
+          "title": "技术技能",
+          "description": "学习如何集成文字处理和电子表格文档来支持战略规划。",
+          "source_id": "TU25_Tech_Skill_PRO_zh - Storyline output",
+          "license": {
+            "license_id": "CC BY",
+            "copyright_holder": "HP LIFE",
+            "description": null
+          },
+          "language": "zh",
+          "files": [
+            {
+              "file_type": "html5",
+              "path": "/var/folders/wc/2r44j8gs4gn56t1xtw5f6wlm0000gn/T/tmpjny9zr88.zip",
+              "language": "zh"
+            }
+          ],
+          "thumbnail": "chefdata/Courses/zh/战略规划/content/TU25_Tech_Skill_PRO_zh - Storyline output_webroot/story_content/thumbnail.jpg"
+        },
+        {
+          "kind": "topic",
+          "title": "可下載的資源",
+          "source_id": "战略规划___resources",
+          "license": {
+            "license_id": "CC BY",
+            "copyright_holder": "HP LIFE",
+            "description": null
+          },
+          "language": "zh",
+          "thumbnail": "chefdata/thumbnails/resources_folder_thumbnail.png",
+          "children": [
+            {
+              "kind": "document",
+              "title": "SWOT矩阵(Word)",
+              "description": "",
+              "source_id": "https://s3.amazonaws.com/hp-life-content/DownloadableChinese/Downloadable_C25_SWOT_matrix-zh.docx",
+              "license": {
+                "license_id": "CC BY",
+                "copyright_holder": "HP LIFE",
+                "description": null
+              },
+              "language": "zh",
+              "files": [
+                {
+                  "file_type": "document",
+                  "path": "chefdata/Courses/zh/战略规划/content/converted/Downloadable_C25_SWOT_matrix-zh.pdf",
+                  "language": "zh"
+                }
+              ]
+            },
+            {
+              "kind": "document",
+              "title": "SWOT因素优先排序(Word)",
+              "description": "",
+              "source_id": "https://s3.amazonaws.com/hp-life-content/DownloadableChinese/Downloadable_C25_SWOT_factor_prioritization-zh.docx",
+              "license": {
+                "license_id": "CC BY",
+                "copyright_holder": "HP LIFE",
+                "description": null
+              },
+              "language": "zh",
+              "files": [
+                {
+                  "file_type": "document",
+                  "path": "chefdata/Courses/zh/战略规划/content/converted/Downloadable_C25_SWOT_factor_prioritization-zh.pdf",
+                  "language": "zh"
+                }
+              ]
+            },
+            {
+              "kind": "html5",
+              "title": "可下载的课程相关资源",
+              "description": "",
+              "source_id": "战略规划__resources__downloadable_resources",
+              "license": {
+                "license_id": "CC BY",
+                "copyright_holder": "HP LIFE",
+                "description": null
+              },
+              "language": "zh",
+              "thumbnail": "chefdata/thumbnails/downloadable_resources_thumbnail.png",
+              "files": [
+                {
+                  "file_type": "html5",
+                  "path": "chefdata/Courses/zh/战略规划/content/downloadable_resources_webroot.zip",
+                  "language": "zh"
+                }
+              ]
+            }
+          ]
+        },
+        {
+          "kind": "html5",
+          "title": "后续步骤",
+          "description": "查看后续步骤和更多资源，深入了解如何进行SWOT分析，并寻找有助于进行战略规划的其他实用工具和示例。 请注意，除非您已连接到互联网，否则此页面的链接将无法使用。请使用右键点击按钮，并选择“在新选项卡中打开”以打开链接。",
+          "source_id": "<div style=\"display: inline-bl",
+          "license": {
+            "license_id": "CC BY",
+            "copyright_holder": "HP LIFE",
+            "description": null
+          },
+          "language": "zh",
+          "files": [
+            {
+              "file_type": "html5",
+              "path": "/var/folders/wc/2r44j8gs4gn56t1xtw5f6wlm0000gn/T/tmp2lp62cwo.zip",
+              "language": "zh"
+            }
+          ]
+        }
+      ],
+      "source_id": "2677hpl-zh25",
+      "description": "学习使用战略规划流程，使您的生意更上一层楼。 学习如何： • 通过SWOT分析，考虑生意的优势(Strengths)、劣势(Weaknesses)、机会(Opportunities)和威胁(Threats)，从而选择最有效的策略，使你的生意取得成功。 • 集成文字处理和电子表格文档，简化该流程 本课程与Kelley School of Business, Indiana University合作开发，是美国国际开发署(USAID)资助的缅甸“通过创业项目和培训实现进步与发展”(ADEPT)合作项目的一部分。"
+    },
+    {
+      "kind": "topic",
+      "title": "在线销售",
+      "language": "zh",
+      "thumbnail": "chefdata/thumbnails/new_channel_thumbnail.png",
+      "children": [
+        {
+          "kind": "html5",
+          "title": "故事",
+          "description": "Mariam意识到，她在当地无法再找到新的客源，需要寻找新的地方来销售她的包包。",
+          "source_id": "zh_7",
+          "license": {
+            "license_id": "CC BY",
+            "copyright_holder": "HP LIFE",
+            "description": null
+          },
+          "language": "zh",
+          "files": [
+            {
+              "file_type": "html5",
+              "path": "/var/folders/wc/2r44j8gs4gn56t1xtw5f6wlm0000gn/T/tmp365d37yi.zip",
+              "language": "zh"
+            }
+          ],
+          "thumbnail": null
+        },
+        {
+          "kind": "html5",
+          "title": "经营理念",
+          "description": "了解在线产品列表的各个元素，学习如何创建可吸引潜在客户的产品刊登。",
+          "source_id": "TU7_Business_Concept_PRO_zh - Storyline output",
+          "license": {
+            "license_id": "CC BY",
+            "copyright_holder": "HP LIFE",
+            "description": null
+          },
+          "language": "zh",
+          "files": [
+            {
+              "file_type": "html5",
+              "path": "/var/folders/wc/2r44j8gs4gn56t1xtw5f6wlm0000gn/T/tmpqeamptsv.zip",
+              "language": "zh"
+            }
+          ],
+          "thumbnail": "chefdata/Courses/zh/在线销售/content/TU7_Business_Concept_PRO_zh - Storyline output_webroot/story_content/thumbnail.jpg"
+        },
+        {
+          "kind": "html5",
+          "title": "技术技能",
+          "description": "学习使用照片编辑软件编辑照片的基本知识。",
+          "source_id": "TU7_Tech_Skill_PRO_zh - Storyline output",
+          "license": {
+            "license_id": "CC BY",
+            "copyright_holder": "HP LIFE",
+            "description": null
+          },
+          "language": "zh",
+          "files": [
+            {
+              "file_type": "html5",
+              "path": "/var/folders/wc/2r44j8gs4gn56t1xtw5f6wlm0000gn/T/tmpwq9qu4l6.zip",
+              "language": "zh"
+            }
+          ],
+          "thumbnail": "chefdata/Courses/zh/在线销售/content/TU7_Tech_Skill_PRO_zh - Storyline output_webroot/story_content/thumbnail.jpg"
+        },
+        {
+          "kind": "topic",
+          "title": "可下載的資源",
+          "source_id": "在线销售___resources",
+          "license": {
+            "license_id": "CC BY",
+            "copyright_holder": "HP LIFE",
+            "description": null
+          },
+          "language": "zh",
+          "thumbnail": "chefdata/thumbnails/resources_folder_thumbnail.png",
+          "children": [
+            {
+              "kind": "document",
+              "title": "深受欢迎的在线市场(PDF)",
+              "description": "",
+              "source_id": "https://s3.amazonaws.com/hp-life-content/DownloadableChinese/HP_LIFE-Where_Can_I_List-zh_0.pdf",
+              "license": {
+                "license_id": "CC BY",
+                "copyright_holder": "HP LIFE",
+                "description": null
+              },
+              "language": "zh",
+              "files": [
+                {
+                  "file_type": "document",
+                  "path": "chefdata/Courses/zh/在线销售/content/downloads/HP_LIFE-Where_Can_I_List-zh_0.pdf",
+                  "language": "zh"
+                }
+              ]
+            },
+            {
+              "kind": "document",
+              "title": "规划你的在线列表(PDF)",
+              "description": "",
+              "source_id": "https://s3.amazonaws.com/hp-life-content/DownloadableChinese/HP_LIFE-Planning_Your_Online_Listing-zh.pdf",
+              "license": {
+                "license_id": "CC BY",
+                "copyright_holder": "HP LIFE",
+                "description": null
+              },
+              "language": "zh",
+              "files": [
+                {
+                  "file_type": "document",
+                  "path": "chefdata/Courses/zh/在线销售/content/downloads/HP_LIFE-Planning_Your_Online_Listing-zh.pdf",
+                  "language": "zh"
+                }
+              ]
+            }
+          ]
+        },
+        {
+          "kind": "html5",
+          "title": "后续步骤",
+          "description": "了解后续步骤和更多资源，帮助你为自己的生意制定营销策略。 请注意，除非您已连接到互联网，否则此页面的链接将无法使用。请使用右键点击按钮，并选择“在新选项卡中打开”以打开链接。",
+          "source_id": "<div class=\"field-item even\" s",
+          "license": {
+            "license_id": "CC BY",
+            "copyright_holder": "HP LIFE",
+            "description": null
+          },
+          "language": "zh",
+          "files": [
+            {
+              "file_type": "html5",
+              "path": "/var/folders/wc/2r44j8gs4gn56t1xtw5f6wlm0000gn/T/tmpjua88ip1.zip",
+              "language": "zh"
+            }
+          ]
+        }
+      ],
+      "source_id": "2659hpl-zh07",
+      "description": "学习如何尽量提高你的在线产品列表的效果。 学习如何： • 为你的在线产品列表创建有效的标题、描述和照片 • 使用照片编辑软件美化你的产品照片"
+    },
+    {
+      "kind": "topic",
+      "title": "销售额预测",
+      "language": "zh",
+      "thumbnail": "chefdata/thumbnails/new_channel_thumbnail.png",
+      "children": [
+        {
+          "kind": "html5",
+          "title": "故事",
+          "description": "Walid如何预测自己每个月将会创造多少销售额？",
+          "source_id": "CH (EDCAST)/SF_Story_CH1",
+          "license": {
+            "license_id": "CC BY",
+            "copyright_holder": "HP LIFE",
+            "description": null
+          },
+          "language": "zh",
+          "files": [
+            {
+              "file_type": "html5",
+              "path": "/var/folders/wc/2r44j8gs4gn56t1xtw5f6wlm0000gn/T/tmpi3euuj_e.zip",
+              "language": "zh"
+            }
+          ],
+          "thumbnail": "chefdata/Courses/zh/销售额预测/content/CH (EDCAST)/SF_Story_CH1_webroot/story_content/thumbnail.jpg"
+        },
+        {
+          "kind": "html5",
+          "title": "经营理念",
+          "description": "学习如何收集重要信息，为你的生意预测销售额。",
+          "source_id": "CH (EDCAST)/SF_BC_CH1",
+          "license": {
+            "license_id": "CC BY",
+            "copyright_holder": "HP LIFE",
+            "description": null
+          },
+          "language": "zh",
+          "files": [
+            {
+              "file_type": "html5",
+              "path": "/var/folders/wc/2r44j8gs4gn56t1xtw5f6wlm0000gn/T/tmp99cyvyy_.zip",
+              "language": "zh"
+            }
+          ],
+          "thumbnail": "chefdata/Courses/zh/销售额预测/content/CH (EDCAST)/SF_BC_CH1_webroot/story_content/thumbnail.jpg"
+        },
+        {
+          "kind": "html5",
+          "title": "技术技能",
+          "description": "学习如何定制电子表格以帮助预测你的销售额。",
+          "source_id": "CH (EDCAST)/SF_TS_CH1",
+          "license": {
+            "license_id": "CC BY",
+            "copyright_holder": "HP LIFE",
+            "description": null
+          },
+          "language": "zh",
+          "files": [
+            {
+              "file_type": "html5",
+              "path": "/var/folders/wc/2r44j8gs4gn56t1xtw5f6wlm0000gn/T/tmpy7156v_z.zip",
+              "language": "zh"
+            }
+          ],
+          "thumbnail": "chefdata/Courses/zh/销售额预测/content/CH (EDCAST)/SF_TS_CH1_webroot/story_content/thumbnail.jpg"
+        },
+        {
+          "kind": "topic",
+          "title": "可下載的資源",
+          "source_id": "销售额预测___resources",
+          "license": {
+            "license_id": "CC BY",
+            "copyright_holder": "HP LIFE",
+            "description": null
+          },
+          "language": "zh",
+          "thumbnail": "chefdata/thumbnails/resources_folder_thumbnail.png",
+          "children": [
+            {
+              "kind": "document",
+              "title": "销售额预测建议(PDF)",
+              "description": "",
+              "source_id": "https://s3.amazonaws.com/hp-life-content/DownloadableChinese/Downloadable_-_Sales_Forecasting_Tips-zh2.pdf",
+              "license": {
+                "license_id": "CC BY",
+                "copyright_holder": "HP LIFE",
+                "description": null
+              },
+              "language": "zh",
+              "files": [
+                {
+                  "file_type": "document",
+                  "path": "chefdata/Courses/zh/销售额预测/content/downloads/Downloadable_-_Sales_Forecasting_Tips-zh2.pdf",
+                  "language": "zh"
+                }
+              ]
+            },
+            {
+              "kind": "document",
+              "title": "销售额预测工作表(Excel)",
+              "description": "",
+              "source_id": "https://s3.amazonaws.com/hp-life-content/DownloadableChinese/Sales_Forecast-zh.xlsx",
+              "license": {
+                "license_id": "CC BY",
+                "copyright_holder": "HP LIFE",
+                "description": null
+              },
+              "language": "zh",
+              "files": [
+                {
+                  "file_type": "document",
+                  "path": "chefdata/Courses/zh/销售额预测/content/converted/Sales_Forecast-zh.pdf",
+                  "language": "zh"
+                }
+              ]
+            },
+            {
+              "kind": "document",
+              "title": "销售额预测电子表格模板",
+              "description": "",
+              "source_id": "chefdata/Courses/zh/销售额预测/content/CH (EDCAST)/SF_TS_CH1/story_content/external_files/Sales_Forecast-ch.xlsx",
+              "license": {
+                "license_id": "CC BY",
+                "copyright_holder": "HP LIFE",
+                "description": null
+              },
+              "language": "zh",
+              "files": [
+                {
+                  "file_type": "document",
+                  "path": "chefdata/Courses/zh/销售额预测/content/converted/Sales_Forecast-ch.pdf",
+                  "language": "zh"
+                }
+              ]
+            },
+            {
+              "kind": "document",
+              "title": "销售额预测摘要",
+              "description": "",
+              "source_id": "chefdata/Courses/zh/销售额预测/content/CH (EDCAST)/SF_TS_CH1/story_content/external_files/SF_Summary_CH.pdf",
+              "license": {
+                "license_id": "CC BY",
+                "copyright_holder": "HP LIFE",
+                "description": null
+              },
+              "language": "zh",
+              "files": [
+                {
+                  "file_type": "document",
+                  "path": "chefdata/Courses/zh/销售额预测/content/extracted/SF_Summary_CH.pdf",
+                  "language": "zh"
+                }
+              ]
+            },
+            {
+              "kind": "document",
+              "title": "其他 Excel 技巧",
+              "description": "",
+              "source_id": "chefdata/Courses/zh/销售额预测/content/CH (EDCAST)/SF_TS_CH1/story_content/external_files/SF_Additional_Excel_Tips_CH.pdf",
+              "license": {
+                "license_id": "CC BY",
+                "copyright_holder": "HP LIFE",
+                "description": null
+              },
+              "language": "zh",
+              "files": [
+                {
+                  "file_type": "document",
+                  "path": "chefdata/Courses/zh/销售额预测/content/extracted/SF_Additional_Excel_Tips_CH.pdf",
+                  "language": "zh"
+                }
+              ]
+            },
+            {
+              "kind": "html5",
+              "title": "可下载的课程相关资源",
+              "description": "",
+              "source_id": "销售额预测__resources__downloadable_resources",
+              "license": {
+                "license_id": "CC BY",
+                "copyright_holder": "HP LIFE",
+                "description": null
+              },
+              "language": "zh",
+              "thumbnail": "chefdata/thumbnails/downloadable_resources_thumbnail.png",
+              "files": [
+                {
+                  "file_type": "html5",
+                  "path": "chefdata/Courses/zh/销售额预测/content/downloadable_resources_webroot.zip",
+                  "language": "zh"
+                }
+              ]
+            }
+          ]
+        },
+        {
+          "kind": "html5",
+          "title": "后续步骤",
+          "description": "了解后续步骤和更多资源，帮助你为你的生意预测销售额。 请注意，除非您已连接到互联网，否则此页面的链接将无法使用。请使用右键点击按钮，并选择“在新选项卡中打开”以打开链接。",
+          "source_id": "<div style=\"display: inline-bl",
+          "license": {
+            "license_id": "CC BY",
+            "copyright_holder": "HP LIFE",
+            "description": null
+          },
+          "language": "zh",
+          "files": [
+            {
+              "file_type": "html5",
+              "path": "/var/folders/wc/2r44j8gs4gn56t1xtw5f6wlm0000gn/T/tmpnrggu4od.zip",
+              "language": "zh"
+            }
+          ]
+        }
+      ],
+      "source_id": "2670hpl-zh18",
+      "description": "学习如何收集重要的信息来预测销售额，以及如何使用电子表格软件制作销售额预测文档。 学习如何： • 收集信息，为你的生意预测销售额 • 使用电子表格软件记录你的销售额预测"
+    },
+    {
+      "kind": "topic",
+      "title": "有效的企業網站",
+      "language": "zh",
+      "thumbnail": "chefdata/thumbnails/new_channel_thumbnail.png",
+      "children": [
+        {
+          "kind": "html5",
+          "title": "故事",
+          "description": "Mariam正在筹集资金启动自己的生意，因此面临着许多问题。",
+          "source_id": "zh_17",
+          "license": {
+            "license_id": "CC BY",
+            "copyright_holder": "HP LIFE",
+            "description": null
+          },
+          "language": "zh",
+          "files": [
+            {
+              "file_type": "html5",
+              "path": "/var/folders/wc/2r44j8gs4gn56t1xtw5f6wlm0000gn/T/tmpfgry55nz.zip",
+              "language": "zh"
+            }
+          ],
+          "thumbnail": null
+        },
+        {
+          "kind": "html5",
+          "title": "经营理念",
+          "description": "了解各类支出以及它们对你实现盈利的影响。",
+          "source_id": "TU17_Business_Concept_PRO_zh - Storyline output",
+          "license": {
+            "license_id": "CC BY",
+            "copyright_holder": "HP LIFE",
+            "description": null
+          },
+          "language": "zh",
+          "files": [
+            {
+              "file_type": "html5",
+              "path": "/var/folders/wc/2r44j8gs4gn56t1xtw5f6wlm0000gn/T/tmpokh7q7yf.zip",
+              "language": "zh"
+            }
+          ],
+          "thumbnail": "chefdata/Courses/zh/有效的企業網站/content/TU17_Business_Concept_PRO_zh - Storyline output_webroot/story_content/thumbnail.jpg"
+        },
+        {
+          "kind": "html5",
+          "title": "技术技能",
+          "description": "学习使用电子表格为自己做计算的基本知识。",
+          "source_id": "TU17_Tech_Skill_PRO_zh - Storyline output",
+          "license": {
+            "license_id": "CC BY",
+            "copyright_holder": "HP LIFE",
+            "description": null
+          },
+          "language": "zh",
+          "files": [
+            {
+              "file_type": "html5",
+              "path": "/var/folders/wc/2r44j8gs4gn56t1xtw5f6wlm0000gn/T/tmppuczgicc.zip",
+              "language": "zh"
+            }
+          ],
+          "thumbnail": "chefdata/Courses/zh/有效的企業網站/content/TU17_Tech_Skill_PRO_zh - Storyline output_webroot/story_content/thumbnail.jpg"
+        },
+        {
+          "kind": "topic",
+          "title": "可下載的資源",
+          "source_id": "有效的企業網站___resources",
+          "license": {
+            "license_id": "CC BY",
+            "copyright_holder": "HP LIFE",
+            "description": null
+          },
+          "language": "zh",
+          "thumbnail": "chefdata/thumbnails/resources_folder_thumbnail.png",
+          "children": [
+            {
+              "kind": "document",
+              "title": "企业网站策划工作表（ PDF ）",
+              "description": "",
+              "source_id": "https://s3.amazonaws.com/hp-life-content/DownloadableChinese/Downloadable_-_Business_Website_Planning_Worksheet-zh.pdf",
+              "license": {
+                "license_id": "CC BY",
+                "copyright_holder": "HP LIFE",
+                "description": null
+              },
+              "language": "zh",
+              "files": [
+                {
+                  "file_type": "document",
+                  "path": "chefdata/Courses/zh/有效的企業網站/content/downloads/Downloadable_-_Business_Website_Planning_Worksheet-zh.pdf",
+                  "language": "zh"
+                }
+              ]
+            },
+            {
+              "kind": "document",
+              "title": "网站用户使用体验的最佳实践（ PDF ）",
+              "description": "",
+              "source_id": "https://s3.amazonaws.com/hp-life-content/DownloadableChinese/Downloadable_-_Website_User_Experience-Best_Practices-zh.pdf",
+              "license": {
+                "license_id": "CC BY",
+                "copyright_holder": "HP LIFE",
+                "description": null
+              },
+              "language": "zh",
+              "files": [
+                {
+                  "file_type": "document",
+                  "path": "chefdata/Courses/zh/有效的企業網站/content/downloads/Downloadable_-_Website_User_Experience-Best_Practices-zh.pdf",
+                  "language": "zh"
+                }
+              ]
+            }
+          ]
+        },
+        {
+          "kind": "html5",
+          "title": "后续步骤",
+          "description": "了解本课程中的后续步骤和更多资源。 请注意，除非您已连接到互联网，否则此页面的链接将无法使用。请使用右键点击按钮，并选择“在新选项卡中打开”以打开链接。",
+          "source_id": "<div class=\"field-item even\" s",
+          "license": {
+            "license_id": "CC BY",
+            "copyright_holder": "HP LIFE",
+            "description": null
+          },
+          "language": "zh",
+          "files": [
+            {
+              "file_type": "html5",
+              "path": "/var/folders/wc/2r44j8gs4gn56t1xtw5f6wlm0000gn/T/tmp6agnqjkp.zip",
+              "language": "zh"
+            }
+          ]
+        }
+      ],
+      "source_id": "2669hpl-zh17",
+      "description": "学习基本的企业财务理念，可帮助计算你的支出情况并了解何时能够盈利。 学习如何： • 确定支出类型 • 计算你的收支平衡点 • 使用电子表格来简化计算"
+    },
+    {
+      "kind": "topic",
+      "title": "有效的展示",
+      "language": "zh",
+      "thumbnail": "chefdata/thumbnails/new_channel_thumbnail.png",
+      "children": [
+        {
+          "kind": "html5",
+          "title": "故事",
+          "description": "Alejandro准备进行重要的幻灯片展示，以获得新资金并提高销售额，从而扩大他的生意。",
+          "source_id": "zh_10",
+          "license": {
+            "license_id": "CC BY",
+            "copyright_holder": "HP LIFE",
+            "description": null
+          },
+          "language": "zh",
+          "files": [
+            {
+              "file_type": "html5",
+              "path": "/var/folders/wc/2r44j8gs4gn56t1xtw5f6wlm0000gn/T/tmpcifo94q6.zip",
+              "language": "zh"
+            }
+          ],
+          "thumbnail": null
+        },
+        {
+          "kind": "html5",
+          "title": "经营理念",
+          "description": "了解在幻灯片展示中应该做到和应该避免的实践，运用你的知识帮助Alejandro设计演示文件，以实现他的生意目标。",
+          "source_id": "TU10_Business_Concept_PRO_zh - Storyline output",
+          "license": {
+            "license_id": "CC BY",
+            "copyright_holder": "HP LIFE",
+            "description": null
+          },
+          "language": "zh",
+          "files": [
+            {
+              "file_type": "html5",
+              "path": "/var/folders/wc/2r44j8gs4gn56t1xtw5f6wlm0000gn/T/tmpioten5l6.zip",
+              "language": "zh"
+            }
+          ],
+          "thumbnail": "chefdata/Courses/zh/有效的展示/content/TU10_Business_Concept_PRO_zh - Storyline output_webroot/story_content/thumbnail.jpg"
+        },
+        {
+          "kind": "html5",
+          "title": "技术技能",
+          "description": "了解在PowerPoint演示文稿中添加主题、布局和图形的基本知识。",
+          "source_id": "TU10_Tech_Skill_PRO_zh - Storyline output",
+          "license": {
+            "license_id": "CC BY",
+            "copyright_holder": "HP LIFE",
+            "description": null
+          },
+          "language": "zh",
+          "files": [
+            {
+              "file_type": "html5",
+              "path": "/var/folders/wc/2r44j8gs4gn56t1xtw5f6wlm0000gn/T/tmpwqx2cnfh.zip",
+              "language": "zh"
+            }
+          ],
+          "thumbnail": "chefdata/Courses/zh/有效的展示/content/TU10_Tech_Skill_PRO_zh - Storyline output_webroot/story_content/thumbnail.jpg"
+        },
+        {
+          "kind": "topic",
+          "title": "可下載的資源",
+          "source_id": "有效的展示___resources",
+          "license": {
+            "license_id": "CC BY",
+            "copyright_holder": "HP LIFE",
+            "description": null
+          },
+          "language": "zh",
+          "thumbnail": "chefdata/thumbnails/resources_folder_thumbnail.png",
+          "children": [
+            {
+              "kind": "document",
+              "title": "规划你的展示(PDF)",
+              "description": "",
+              "source_id": "https://s3.amazonaws.com/hp-life-content/DownloadableChinese/Unit_10_-_Planning_Your_Presentation-zh.pdf",
+              "license": {
+                "license_id": "CC BY",
+                "copyright_holder": "HP LIFE",
+                "description": null
+              },
+              "language": "zh",
+              "files": [
+                {
+                  "file_type": "document",
+                  "path": "chefdata/Courses/zh/有效的展示/content/downloads/Unit_10_-_Planning_Your_Presentation-zh.pdf",
+                  "language": "zh"
+                }
+              ]
+            },
+            {
+              "kind": "document",
+              "title": "展示设计建议(PDF)",
+              "description": "",
+              "source_id": "https://s3.amazonaws.com/hp-life-content/DownloadableChinese/Unit_10_-_Tips_for_Designing_Your_Presentation-zh.pdf",
+              "license": {
+                "license_id": "CC BY",
+                "copyright_holder": "HP LIFE",
+                "description": null
+              },
+              "language": "zh",
+              "files": [
+                {
+                  "file_type": "document",
+                  "path": "chefdata/Courses/zh/有效的展示/content/downloads/Unit_10_-_Tips_for_Designing_Your_Presentation-zh.pdf",
+                  "language": "zh"
+                }
+              ]
+            }
+          ]
+        },
+        {
+          "kind": "html5",
+          "title": "后续步骤",
+          "description": "了解后续步骤和更多资源，以帮助你建立有效的幻灯片展示。 请注意，除非您已连接到互联网，否则此页面的链接将无法使用。请使用右键点击按钮，并选择“在新选项卡中打开”以打开链接。",
+          "source_id": "<div class=\"field-item even\" s",
+          "license": {
+            "license_id": "CC BY",
+            "copyright_holder": "HP LIFE",
+            "description": null
+          },
+          "language": "zh",
+          "files": [
+            {
+              "file_type": "html5",
+              "path": "/var/folders/wc/2r44j8gs4gn56t1xtw5f6wlm0000gn/T/tmp8rmmhafb.zip",
+              "language": "zh"
+            }
+          ]
+        }
+      ],
+      "source_id": "2662hpl-zh10",
+      "description": "学习如何创建精心设计且针对特定受众的幻灯片演示文件。 学习如何： • 确定哪些信息与特定受众相关 • 创建有效且精心设计的幻灯片演示文件"
+    },
+    {
+      "kind": "topic",
+      "title": "展示数据",
+      "language": "zh",
+      "thumbnail": "chefdata/thumbnails/new_channel_thumbnail.png",
+      "children": [
+        {
+          "kind": "html5",
+          "title": "故事",
+          "description": "Bethari有机会为在线广告获得贷款。",
+          "source_id": "zh_14",
+          "license": {
+            "license_id": "CC BY",
+            "copyright_holder": "HP LIFE",
+            "description": null
+          },
+          "language": "zh",
+          "files": [
+            {
+              "file_type": "html5",
+              "path": "/var/folders/wc/2r44j8gs4gn56t1xtw5f6wlm0000gn/T/tmp3p6oachi.zip",
+              "language": "zh"
+            }
+          ],
+          "thumbnail": null
+        },
+        {
+          "kind": "html5",
+          "title": "经营理念",
+          "description": "了解你可用于展示数据的图表类型。",
+          "source_id": "PD_BC_CH2",
+          "license": {
+            "license_id": "CC BY",
+            "copyright_holder": "HP LIFE",
+            "description": null
+          },
+          "language": "zh",
+          "files": [
+            {
+              "file_type": "html5",
+              "path": "/var/folders/wc/2r44j8gs4gn56t1xtw5f6wlm0000gn/T/tmpov310k5d.zip",
+              "language": "zh"
+            }
+          ],
+          "thumbnail": "chefdata/Courses/zh/展示数据/content/PD_BC_CH2_webroot/story_content/thumbnail.jpg"
+        },
+        {
+          "kind": "html5",
+          "title": "技术技能",
+          "description": "学习如何使用电子表格软件创建图表和图形。",
+          "source_id": "PD_TS_CH1",
+          "license": {
+            "license_id": "CC BY",
+            "copyright_holder": "HP LIFE",
+            "description": null
+          },
+          "language": "zh",
+          "files": [
+            {
+              "file_type": "html5",
+              "path": "/var/folders/wc/2r44j8gs4gn56t1xtw5f6wlm0000gn/T/tmpnmq95hcq.zip",
+              "language": "zh"
+            }
+          ],
+          "thumbnail": "chefdata/Courses/zh/展示数据/content/PD_TS_CH1_webroot/story_content/thumbnail.jpg"
+        },
+        {
+          "kind": "topic",
+          "title": "可下載的資源",
+          "source_id": "展示数据___resources",
+          "license": {
+            "license_id": "CC BY",
+            "copyright_holder": "HP LIFE",
+            "description": null
+          },
+          "language": "zh",
+          "thumbnail": "chefdata/thumbnails/resources_folder_thumbnail.png",
+          "children": [
+            {
+              "kind": "document",
+              "title": "创建图表和图形的建议",
+              "description": "",
+              "source_id": "https://s3.amazonaws.com/hp-life-content/DownloadableChinese/HP_LIFE_-_Creating_Charts_and_Graphs-zh.pdf",
+              "license": {
+                "license_id": "CC BY",
+                "copyright_holder": "HP LIFE",
+                "description": null
+              },
+              "language": "zh",
+              "files": [
+                {
+                  "file_type": "document",
+                  "path": "chefdata/Courses/zh/展示数据/content/downloads/HP_LIFE_-_Creating_Charts_and_Graphs-zh.pdf",
+                  "language": "zh"
+                }
+              ]
+            }
+          ]
+        },
+        {
+          "kind": "html5",
+          "title": "后续步骤",
+          "description": "了解后续步骤和更多资源，帮助你有效地展示数据。 请注意，除非您已连接到互联网，否则此页面的链接将无法使用。请使用右键点击按钮，并选择“在新选项卡中打开”以打开链接。",
+          "source_id": "<div style=\"display: inline-bl",
+          "license": {
+            "license_id": "CC BY",
+            "copyright_holder": "HP LIFE",
+            "description": null
+          },
+          "language": "zh",
+          "files": [
+            {
+              "file_type": "html5",
+              "path": "/var/folders/wc/2r44j8gs4gn56t1xtw5f6wlm0000gn/T/tmpnt6vp2pm.zip",
+              "language": "zh"
+            }
+          ]
+        }
+      ],
+      "source_id": "2666hpl-zh14",
+      "description": "学习如何为你希望传达的信息选择合适的图表，并且了解如何使用电子表格软件创建图表。 学习如何： • 决定使用哪种图表来有效地展示你的数据 • 使用电子表格软件创建图表和图形"
+    },
+    {
+      "kind": "topic",
+      "title": "库存管理",
+      "language": "zh",
+      "thumbnail": "chefdata/thumbnails/new_channel_thumbnail.png",
+      "children": [
+        {
+          "kind": "html5",
+          "title": "故事",
+          "description": "Ahmed和Moshen如何记录他们手头的库存？",
+          "source_id": "zh_20",
+          "license": {
+            "license_id": "CC BY",
+            "copyright_holder": "HP LIFE",
+            "description": null
+          },
+          "language": "zh",
+          "files": [
+            {
+              "file_type": "html5",
+              "path": "/var/folders/wc/2r44j8gs4gn56t1xtw5f6wlm0000gn/T/tmpd9gvdiru.zip",
+              "language": "zh"
+            }
+          ],
+          "thumbnail": null
+        },
+        {
+          "kind": "html5",
+          "title": "经营理念",
+          "description": "学习如何管理库存，使你的生意更加成功。",
+          "source_id": "TU20_Business_Concept_PRO_zh - Storyline output",
+          "license": {
+            "license_id": "CC BY",
+            "copyright_holder": "HP LIFE",
+            "description": null
+          },
+          "language": "zh",
+          "files": [
+            {
+              "file_type": "html5",
+              "path": "/var/folders/wc/2r44j8gs4gn56t1xtw5f6wlm0000gn/T/tmpy46swas0.zip",
+              "language": "zh"
+            }
+          ],
+          "thumbnail": "chefdata/Courses/zh/库存管理/content/TU20_Business_Concept_PRO_zh - Storyline output_webroot/story_content/thumbnail.jpg"
+        },
+        {
+          "kind": "html5",
+          "title": "技术技能",
+          "description": "学习如何使用不同的技术来管理库存。",
+          "source_id": "TU20_Tech_Skill_PRO_zh - Storyline output",
+          "license": {
+            "license_id": "CC BY",
+            "copyright_holder": "HP LIFE",
+            "description": null
+          },
+          "language": "zh",
+          "files": [
+            {
+              "file_type": "html5",
+              "path": "/var/folders/wc/2r44j8gs4gn56t1xtw5f6wlm0000gn/T/tmpmegyg4ib.zip",
+              "language": "zh"
+            }
+          ],
+          "thumbnail": "chefdata/Courses/zh/库存管理/content/TU20_Tech_Skill_PRO_zh - Storyline output_webroot/story_content/thumbnail.jpg"
+        },
+        {
+          "kind": "topic",
+          "title": "可下載的資源",
+          "source_id": "库存管理___resources",
+          "license": {
+            "license_id": "CC BY",
+            "copyright_holder": "HP LIFE",
+            "description": null
+          },
+          "language": "zh",
+          "thumbnail": "chefdata/thumbnails/resources_folder_thumbnail.png",
+          "children": [
+            {
+              "kind": "document",
+              "title": "库存管理建议(PDF)",
+              "description": "",
+              "source_id": "https://s3.amazonaws.com/hp-life-content/DownloadableChinese/Downloadable20_Inventory_Management_Tips-zh2.pdf",
+              "license": {
+                "license_id": "CC BY",
+                "copyright_holder": "HP LIFE",
+                "description": null
+              },
+              "language": "zh",
+              "files": [
+                {
+                  "file_type": "document",
+                  "path": "chefdata/Courses/zh/库存管理/content/downloads/Downloadable20_Inventory_Management_Tips-zh2.pdf",
+                  "language": "zh"
+                }
+              ]
+            },
+            {
+              "kind": "document",
+              "title": "库存管理电子表格(Excel)",
+              "description": "",
+              "source_id": "https://s3.amazonaws.com/hp-life-content/DownloadableChinese/Inventory_Management_Spreadsheet-zh.xlsx",
+              "license": {
+                "license_id": "CC BY",
+                "copyright_holder": "HP LIFE",
+                "description": null
+              },
+              "language": "zh",
+              "files": [
+                {
+                  "file_type": "document",
+                  "path": "chefdata/Courses/zh/库存管理/content/converted/Inventory_Management_Spreadsheet-zh.pdf",
+                  "language": "zh"
+                }
+              ]
+            },
+            {
+              "kind": "document",
+              "title": "库存管理技术资源链接(PDF)",
+              "description": "",
+              "source_id": "https://s3.amazonaws.com/hp-life-content/DownloadableChinese/Downloadable_-_Inventory_Management_Technology_Resource_Links-zh.pdf",
+              "license": {
+                "license_id": "CC BY",
+                "copyright_holder": "HP LIFE",
+                "description": null
+              },
+              "language": "zh",
+              "files": [
+                {
+                  "file_type": "document",
+                  "path": "chefdata/Courses/zh/库存管理/content/downloads/Downloadable_-_Inventory_Management_Technology_Resource_Links-zh.pdf",
+                  "language": "zh"
+                }
+              ]
+            },
+            {
+              "kind": "html5",
+              "title": "可下载的课程相关资源",
+              "description": "",
+              "source_id": "库存管理__resources__downloadable_resources",
+              "license": {
+                "license_id": "CC BY",
+                "copyright_holder": "HP LIFE",
+                "description": null
+              },
+              "language": "zh",
+              "thumbnail": "chefdata/thumbnails/downloadable_resources_thumbnail.png",
+              "files": [
+                {
+                  "file_type": "html5",
+                  "path": "chefdata/Courses/zh/库存管理/content/downloadable_resources_webroot.zip",
+                  "language": "zh"
+                }
+              ]
+            }
+          ]
+        },
+        {
+          "kind": "html5",
+          "title": "后续步骤",
+          "description": "了解后续步骤和更多资源，帮助你管理库存。 请注意，除非您已连接到互联网，否则此页面的链接将无法使用。请使用右键点击按钮，并选择“在新选项卡中打开”以打开链接。",
+          "source_id": "<div class=\"field-item even\" s",
+          "license": {
+            "license_id": "CC BY",
+            "copyright_holder": "HP LIFE",
+            "description": null
+          },
+          "language": "zh",
+          "files": [
+            {
+              "file_type": "html5",
+              "path": "/var/folders/wc/2r44j8gs4gn56t1xtw5f6wlm0000gn/T/tmp0f_plx3f.zip",
+              "language": "zh"
+            }
+          ]
+        }
+      ],
+      "source_id": "2672hpl-zh20",
+      "description": "学习库存管理为什么对于维持生意的成功经营和尽量扩大利润至关重要。 学习如何： • 选择最适合你生意的库存管理方法 • 使用不同的技术来管理库存"
+    },
+    {
+      "kind": "topic",
+      "title": "能源效率：以少做多",
+      "language": "zh",
+      "thumbnail": "chefdata/thumbnails/new_channel_thumbnail.png",
+      "children": [
+        {
+          "kind": "html5",
+          "title": "故事",
+          "description": "Ahmed如何减少自己的能耗？",
+          "source_id": "zh_22",
+          "license": {
+            "license_id": "CC BY",
+            "copyright_holder": "HP LIFE",
+            "description": null
+          },
+          "language": "zh",
+          "files": [
+            {
+              "file_type": "html5",
+              "path": "/var/folders/wc/2r44j8gs4gn56t1xtw5f6wlm0000gn/T/tmprt0o854k.zip",
+              "language": "zh"
+            }
+          ],
+          "thumbnail": null
+        },
+        {
+          "kind": "html5",
+          "title": "经营理念",
+          "description": "学习如何评估和降低你的能耗，从而节省资金、保护自然资源并且减少污染。",
+          "source_id": "TU22_Business_Concept_PRO_zh - Storyline output",
+          "license": {
+            "license_id": "CC BY",
+            "copyright_holder": "HP LIFE",
+            "description": null
+          },
+          "language": "zh",
+          "files": [
+            {
+              "file_type": "html5",
+              "path": "/var/folders/wc/2r44j8gs4gn56t1xtw5f6wlm0000gn/T/tmpmf207tpd.zip",
+              "language": "zh"
+            }
+          ],
+          "thumbnail": "chefdata/Courses/zh/能源效率：以少做多/content/TU22_Business_Concept_PRO_zh - Storyline output_webroot/story_content/thumbnail.jpg"
+        },
+        {
+          "kind": "html5",
+          "title": "技术技能",
+          "description": "学习如何使用电子表格记录你的能耗。",
+          "source_id": "TU22_Tech_Skill_PRO_zh - Storyline output",
+          "license": {
+            "license_id": "CC BY",
+            "copyright_holder": "HP LIFE",
+            "description": null
+          },
+          "language": "zh",
+          "files": [
+            {
+              "file_type": "html5",
+              "path": "/var/folders/wc/2r44j8gs4gn56t1xtw5f6wlm0000gn/T/tmpqwsjoofa.zip",
+              "language": "zh"
+            }
+          ],
+          "thumbnail": "chefdata/Courses/zh/能源效率：以少做多/content/TU22_Tech_Skill_PRO_zh - Storyline output_webroot/story_content/thumbnail.jpg"
+        },
+        {
+          "kind": "topic",
+          "title": "可下載的資源",
+          "source_id": "能源效率：以少做多___resources",
+          "license": {
+            "license_id": "CC BY",
+            "copyright_holder": "HP LIFE",
+            "description": null
+          },
+          "language": "zh",
+          "thumbnail": "chefdata/thumbnails/resources_folder_thumbnail.png",
+          "children": [
+            {
+              "kind": "document",
+              "title": "节能检查清单(PDF)",
+              "description": "",
+              "source_id": "https://s3.amazonaws.com/hp-life-content/DownloadableChinese/Downloadable22_Energy_Checklist-zh3.pdf",
+              "license": {
+                "license_id": "CC BY",
+                "copyright_holder": "HP LIFE",
+                "description": null
+              },
+              "language": "zh",
+              "files": [
+                {
+                  "file_type": "document",
+                  "path": "chefdata/Courses/zh/能源效率：以少做多/content/downloads/Downloadable22_Energy_Checklist-zh3.pdf",
+                  "language": "zh"
+                }
+              ]
+            },
+            {
+              "kind": "document",
+              "title": "能源审计模板(Excel)",
+              "description": "",
+              "source_id": "https://s3.amazonaws.com/hp-life-content/DownloadableChinese/Downloadable22_Energy_Audit_Template-zh.xlsx",
+              "license": {
+                "license_id": "CC BY",
+                "copyright_holder": "HP LIFE",
+                "description": null
+              },
+              "language": "zh",
+              "files": [
+                {
+                  "file_type": "document",
+                  "path": "chefdata/Courses/zh/能源效率：以少做多/content/converted/Downloadable22_Energy_Audit_Template-zh.pdf",
+                  "language": "zh"
+                }
+              ]
+            },
+            {
+              "kind": "html5",
+              "title": "可下载的课程相关资源",
+              "description": "",
+              "source_id": "能源效率：以少做多__resources__downloadable_resources",
+              "license": {
+                "license_id": "CC BY",
+                "copyright_holder": "HP LIFE",
+                "description": null
+              },
+              "language": "zh",
+              "thumbnail": "chefdata/thumbnails/downloadable_resources_thumbnail.png",
+              "files": [
+                {
+                  "file_type": "html5",
+                  "path": "chefdata/Courses/zh/能源效率：以少做多/content/downloadable_resources_webroot.zip",
+                  "language": "zh"
+                }
+              ]
+            }
+          ]
+        },
+        {
+          "kind": "html5",
+          "title": "后续步骤",
+          "description": "了解后续步骤和更多资源，帮助你降低能耗。 请注意，除非您已连接到互联网，否则此页面的链接将无法使用。请使用右键点击按钮，并选择“在新选项卡中打开”以打开链接。",
+          "source_id": "<div style=\"display: inline-bl",
+          "license": {
+            "license_id": "CC BY",
+            "copyright_holder": "HP LIFE",
+            "description": null
+          },
+          "language": "zh",
+          "files": [
+            {
+              "file_type": "html5",
+              "path": "/var/folders/wc/2r44j8gs4gn56t1xtw5f6wlm0000gn/T/tmpzexwgb_4.zip",
+              "language": "zh"
+            }
+          ]
+        }
+      ],
+      "source_id": "2674hpl-zh22",
+      "description": "了解如何评估和降低自己企业中的能耗，从而节省成本和保护环境。学习如何使用电子表格评估能耗。 学习如何： • 了解如何评估你的能耗，以及节能如何为你的企业节省资金、保护自然资源并且减少污染 • 使用电子表格评估自己企业的能耗 本课程与联合国工业发展组织(UNIDO)合作开发。"
+    },
+    {
+      "kind": "topic",
+      "title": "管理联系人信息",
+      "language": "zh",
+      "thumbnail": "chefdata/thumbnails/new_channel_thumbnail.png",
+      "children": [
+        {
+          "kind": "html5",
+          "title": "故事",
+          "description": "Ming试图找到所需的联系人信息，以完成一项重要的工作。",
+          "source_id": "zh_8",
+          "license": {
+            "license_id": "CC BY",
+            "copyright_holder": "HP LIFE",
+            "description": null
+          },
+          "language": "zh",
+          "files": [
+            {
+              "file_type": "html5",
+              "path": "/var/folders/wc/2r44j8gs4gn56t1xtw5f6wlm0000gn/T/tmpyd7fvy_o.zip",
+              "language": "zh"
+            }
+          ],
+          "thumbnail": null
+        },
+        {
+          "kind": "html5",
+          "title": "经营理念",
+          "description": "了解如何在地址簿软件中记录有关客户和其他联系人的正确类型的信息。",
+          "source_id": "TU8_Business_Concept_PRO-zh - Storyline output",
+          "license": {
+            "license_id": "CC BY",
+            "copyright_holder": "HP LIFE",
+            "description": null
+          },
+          "language": "zh",
+          "files": [
+            {
+              "file_type": "html5",
+              "path": "/var/folders/wc/2r44j8gs4gn56t1xtw5f6wlm0000gn/T/tmp_9nh3yrx.zip",
+              "language": "zh"
+            }
+          ],
+          "thumbnail": "chefdata/Courses/zh/管理联系人信息/content/TU8_Business_Concept_PRO-zh - Storyline output_webroot/story_content/thumbnail.jpg"
+        },
+        {
+          "kind": "html5",
+          "title": "技术技能",
+          "description": "学习如何通过不同方式使用搜索功能，查找你所需的联系人。",
+          "source_id": "TU8_Tech_Skill_PRO_zh - Storyline output",
+          "license": {
+            "license_id": "CC BY",
+            "copyright_holder": "HP LIFE",
+            "description": null
+          },
+          "language": "zh",
+          "files": [
+            {
+              "file_type": "html5",
+              "path": "/var/folders/wc/2r44j8gs4gn56t1xtw5f6wlm0000gn/T/tmpbe21fz8z.zip",
+              "language": "zh"
+            }
+          ],
+          "thumbnail": "chefdata/Courses/zh/管理联系人信息/content/TU8_Tech_Skill_PRO_zh - Storyline output_webroot/story_content/thumbnail.jpg"
+        },
+        {
+          "kind": "topic",
+          "title": "可下載的資源",
+          "source_id": "管理联系人信息___resources",
+          "license": {
+            "license_id": "CC BY",
+            "copyright_holder": "HP LIFE",
+            "description": null
+          },
+          "language": "zh",
+          "thumbnail": "chefdata/thumbnails/resources_folder_thumbnail.png",
+          "children": [
+            {
+              "kind": "document",
+              "title": "联系人信息工作表(PDF)",
+              "description": "",
+              "source_id": "https://s3.amazonaws.com/hp-life-content/DownloadableChinese/Downloadable_Managing_Contact_Information-zh_0.pdf",
+              "license": {
+                "license_id": "CC BY",
+                "copyright_holder": "HP LIFE",
+                "description": null
+              },
+              "language": "zh",
+              "files": [
+                {
+                  "file_type": "document",
+                  "path": "chefdata/Courses/zh/管理联系人信息/content/downloads/Downloadable_Managing_Contact_Information-zh_0.pdf",
+                  "language": "zh"
+                }
+              ]
+            }
+          ]
+        },
+        {
+          "kind": "html5",
+          "title": "后续步骤",
+          "description": "了解后续步骤和更多资源，管理你生意的联系人信息。 请注意，除非您已连接到互联网，否则此页面的链接将无法使用。请使用右键点击按钮，并选择“在新选项卡中打开”以打开链接。",
+          "source_id": "<div style=\"display: inline-bl",
+          "license": {
+            "license_id": "CC BY",
+            "copyright_holder": "HP LIFE",
+            "description": null
+          },
+          "language": "zh",
+          "files": [
+            {
+              "file_type": "html5",
+              "path": "/var/folders/wc/2r44j8gs4gn56t1xtw5f6wlm0000gn/T/tmpm996oaz6.zip",
+              "language": "zh"
+            }
+          ]
+        }
+      ],
+      "source_id": "2660hpl-zh08",
+      "description": "了解如何收集和获取客户、潜在客户、供应商和其他联系人的重要信息。 学习如何： • 记录你的业务联系人的重要信息 • 在联系人管理系统中创建新的联系人 • 在联系人管理系统中搜索联系人"
+    },
+    {
+      "kind": "topic",
+      "title": "创办小企业",
+      "language": "zh",
+      "thumbnail": "chefdata/thumbnails/new_channel_thumbnail.png",
+      "children": [
+        {
+          "kind": "html5",
+          "title": "故事",
+          "description": "Chet 从修理和收集小型设备的兴趣中发现了一个潜在商机。",
+          "source_id": "28-SSB1-ST-CH-NR-MOB",
+          "license": {
+            "license_id": "CC BY",
+            "copyright_holder": "HP LIFE",
+            "description": null
+          },
+          "language": "zh",
+          "files": [
+            {
+              "file_type": "html5",
+              "path": "/var/folders/wc/2r44j8gs4gn56t1xtw5f6wlm0000gn/T/tmpyg7oh5ho.zip",
+              "language": "zh"
+            }
+          ],
+          "thumbnail": "chefdata/Courses/zh/创办小企业/content/28-SSB1-ST-CH-NR-MOB_webroot/story_content/thumbnail.jpg"
+        },
+        {
+          "kind": "html5",
+          "title": "经营理念",
+          "description": "了解所需的创业能力和创办小型企业的步骤。",
+          "source_id": "28-SSB2-BC-CH-NR-MOB",
+          "license": {
+            "license_id": "CC BY",
+            "copyright_holder": "HP LIFE",
+            "description": null
+          },
+          "language": "zh",
+          "files": [
+            {
+              "file_type": "html5",
+              "path": "/var/folders/wc/2r44j8gs4gn56t1xtw5f6wlm0000gn/T/tmppb5uj8ln.zip",
+              "language": "zh"
+            }
+          ],
+          "thumbnail": "chefdata/Courses/zh/创办小企业/content/28-SSB2-BC-CH-NR-MOB_webroot/story_content/thumbnail.jpg"
+        },
+        {
+          "kind": "html5",
+          "title": "技术技能",
+          "description": "了解如何使用指标衡量小型企业的成就。",
+          "source_id": "28-SSB3-TS-CH-NR-MOB",
+          "license": {
+            "license_id": "CC BY",
+            "copyright_holder": "HP LIFE",
+            "description": null
+          },
+          "language": "zh",
+          "files": [
+            {
+              "file_type": "html5",
+              "path": "/var/folders/wc/2r44j8gs4gn56t1xtw5f6wlm0000gn/T/tmp787j0s9i.zip",
+              "language": "zh"
+            }
+          ],
+          "thumbnail": "chefdata/Courses/zh/创办小企业/content/28-SSB3-TS-CH-NR-MOB_webroot/story_content/thumbnail.jpg"
+        },
+        {
+          "kind": "topic",
+          "title": "可下載的資源",
+          "source_id": "创办小企业___resources",
+          "license": {
+            "license_id": "CC BY",
+            "copyright_holder": "HP LIFE",
+            "description": null
+          },
+          "language": "zh",
+          "thumbnail": "chefdata/thumbnails/resources_folder_thumbnail.png",
+          "children": [
+            {
+              "kind": "document",
+              "title": "竞争分析模板",
+              "description": "",
+              "source_id": "https://s3.amazonaws.com/hp-life-content/Antonio+TechClass+Academy/Starting+A+Small+Business/Chinese/Chinese+New+Files/DOWNLOADABLES/Competitive_analysis_template_CHS.docx",
+              "license": {
+                "license_id": "CC BY",
+                "copyright_holder": "HP LIFE",
+                "description": null
+              },
+              "language": "zh",
+              "files": [
+                {
+                  "file_type": "document",
+                  "path": "chefdata/Courses/zh/创办小企业/content/converted/Competitive_analysis_template_CHS.pdf",
+                  "language": "zh"
+                }
+              ]
+            },
+            {
+              "kind": "document",
+              "title": "我的创业清单",
+              "description": "",
+              "source_id": "https://s3.amazonaws.com/hp-life-content/Antonio+TechClass+Academy/Starting+A+Small+Business/Chinese/Chinese+New+Files/DOWNLOADABLES/My_entrepreneurship_inventory_CHS.docx",
+              "license": {
+                "license_id": "CC BY",
+                "copyright_holder": "HP LIFE",
+                "description": null
+              },
+              "language": "zh",
+              "files": [
+                {
+                  "file_type": "document",
+                  "path": "chefdata/Courses/zh/创办小企业/content/converted/My_entrepreneurship_inventory_CHS.pdf",
+                  "language": "zh"
+                }
+              ]
+            },
+            {
+              "kind": "document",
+              "title": "小型企业的创意",
+              "description": "",
+              "source_id": "https://s3.amazonaws.com/hp-life-content/Antonio+TechClass+Academy/Starting+A+Small+Business/Chinese/Chinese+New+Files/DOWNLOADABLES/Small_business_ideas_CHS.docx",
+              "license": {
+                "license_id": "CC BY",
+                "copyright_holder": "HP LIFE",
+                "description": null
+              },
+              "language": "zh",
+              "files": [
+                {
+                  "file_type": "document",
+                  "path": "chefdata/Courses/zh/创办小企业/content/converted/Small_business_ideas_CHS.pdf",
+                  "language": "zh"
+                }
+              ]
+            },
+            {
+              "kind": "document",
+              "title": "小企业衡量指标",
+              "description": "",
+              "source_id": "https://s3.amazonaws.com/hp-life-content/Antonio+TechClass+Academy/Starting+A+Small+Business/Chinese/Chinese+New+Files/DOWNLOADABLES/Small_business_metrics_CHS.pdf",
+              "license": {
+                "license_id": "CC BY",
+                "copyright_holder": "HP LIFE",
+                "description": null
+              },
+              "language": "zh",
+              "files": [
+                {
+                  "file_type": "document",
+                  "path": "chefdata/Courses/zh/创办小企业/content/downloads/Small_business_metrics_CHS.pdf",
+                  "language": "zh"
+                }
+              ]
+            },
+            {
+              "kind": "document",
+              "title": "小企业的资源",
+              "description": "",
+              "source_id": "https://s3.amazonaws.com/hp-life-content/Antonio+TechClass+Academy/Starting+A+Small+Business/Chinese/Chinese+New+Files/DOWNLOADABLES/Small_business_resources_CHS.pdf",
+              "license": {
+                "license_id": "CC BY",
+                "copyright_holder": "HP LIFE",
+                "description": null
+              },
+              "language": "zh",
+              "files": [
+                {
+                  "file_type": "document",
+                  "path": "chefdata/Courses/zh/创办小企业/content/downloads/Small_business_resources_CHS.pdf",
+                  "language": "zh"
+                }
+              ]
+            },
+            {
+              "kind": "document",
+              "title": "创办小型企业的步骤",
+              "description": "",
+              "source_id": "https://s3.amazonaws.com/hp-life-content/Antonio+TechClass+Academy/Starting+A+Small+Business/Chinese/Chinese+New+Files/DOWNLOADABLES/Steps_to_starting_a_small_business_CHS.pdf",
+              "license": {
+                "license_id": "CC BY",
+                "copyright_holder": "HP LIFE",
+                "description": null
+              },
+              "language": "zh",
+              "files": [
+                {
+                  "file_type": "document",
+                  "path": "chefdata/Courses/zh/创办小企业/content/downloads/Steps_to_starting_a_small_business_CHS.pdf",
+                  "language": "zh"
+                }
+              ]
+            },
+            {
+              "kind": "document",
+              "title": "目标市场模板",
+              "description": "",
+              "source_id": "https://s3.amazonaws.com/hp-life-content/Antonio+TechClass+Academy/Starting+A+Small+Business/Chinese/Chinese+New+Files/DOWNLOADABLES/Target_market_template_CHS.docx",
+              "license": {
+                "license_id": "CC BY",
+                "copyright_holder": "HP LIFE",
+                "description": null
+              },
+              "language": "zh",
+              "files": [
+                {
+                  "file_type": "document",
+                  "path": "chefdata/Courses/zh/创办小企业/content/converted/Target_market_template_CHS.pdf",
+                  "language": "zh"
+                }
+              ]
+            },
+            {
+              "kind": "html5",
+              "title": "可下载的课程相关资源",
+              "description": "",
+              "source_id": "创办小企业__resources__downloadable_resources",
+              "license": {
+                "license_id": "CC BY",
+                "copyright_holder": "HP LIFE",
+                "description": null
+              },
+              "language": "zh",
+              "thumbnail": "chefdata/thumbnails/downloadable_resources_thumbnail.png",
+              "files": [
+                {
+                  "file_type": "html5",
+                  "path": "chefdata/Courses/zh/创办小企业/content/downloadable_resources_webroot.zip",
+                  "language": "zh"
+                }
+              ]
+            }
+          ]
+        },
+        {
+          "kind": "html5",
+          "title": "后续步骤",
+          "description": "从本课程中了解后续步骤和其他资源。 请注意，除非您已连接到互联网，否则此页面的链接将无法使用。请使用右键点击按钮，并选择“在新选项卡中打开”以打开链接。",
+          "source_id": "<p class=\"MsoNormal\"><strong><",
+          "license": {
+            "license_id": "CC BY",
+            "copyright_holder": "HP LIFE",
+            "description": null
+          },
+          "language": "zh",
+          "files": [
+            {
+              "file_type": "html5",
+              "path": "/var/folders/wc/2r44j8gs4gn56t1xtw5f6wlm0000gn/T/tmptdubl1jm.zip",
+              "language": "zh"
+            }
+          ]
+        }
+      ],
+      "source_id": "6356hpl-zh28",
+      "description": "为什么今天开始？如果您正在考虑创办一家小企业，请先了解创业的基本步骤，包括开发商业创意，开展市场调研，制定商业计划以及使用指标衡量企业成功。 探索 • 创业能力 • 创办企业的步骤 • 我的商业计划 \\- 帮助您制定商业计划的工具 • 衡量业务成就的标准"
+    },
+    {
+      "kind": "topic",
+      "title": "生产能力最大化",
+      "language": "zh",
+      "thumbnail": "chefdata/thumbnails/new_channel_thumbnail.png",
+      "children": [
+        {
+          "kind": "html5",
+          "title": "故事",
+          "description": "Ming疲于应对生意兴旺后带来的源源不断的订单。",
+          "source_id": "zh_5",
+          "license": {
+            "license_id": "CC BY",
+            "copyright_holder": "HP LIFE",
+            "description": null
+          },
+          "language": "zh",
+          "files": [
+            {
+              "file_type": "html5",
+              "path": "/var/folders/wc/2r44j8gs4gn56t1xtw5f6wlm0000gn/T/tmp2hf61t3v.zip",
+              "language": "zh"
+            }
+          ],
+          "thumbnail": null
+        },
+        {
+          "kind": "html5",
+          "title": "经营理念",
+          "description": "了解可帮助你最大程度扩大生产能力，从而实现目标的多种选择。",
+          "source_id": "TU5_Business_Concept_PRO-zh - Storyline output",
+          "license": {
+            "license_id": "CC BY",
+            "copyright_holder": "HP LIFE",
+            "description": null
+          },
+          "language": "zh",
+          "files": [
+            {
+              "file_type": "html5",
+              "path": "/var/folders/wc/2r44j8gs4gn56t1xtw5f6wlm0000gn/T/tmplxeywi7c.zip",
+              "language": "zh"
+            }
+          ],
+          "thumbnail": "chefdata/Courses/zh/生产能力最大化/content/TU5_Business_Concept_PRO-zh - Storyline output_webroot/story_content/thumbnail.jpg"
+        },
+        {
+          "kind": "html5",
+          "title": "技术技能",
+          "description": "学习使用电子表格，了解员工工时可能会怎样限制你的生产能力。",
+          "source_id": "TU5_Tech_Skill_PRO_zh - Storyline output",
+          "license": {
+            "license_id": "CC BY",
+            "copyright_holder": "HP LIFE",
+            "description": null
+          },
+          "language": "zh",
+          "files": [
+            {
+              "file_type": "html5",
+              "path": "/var/folders/wc/2r44j8gs4gn56t1xtw5f6wlm0000gn/T/tmp7zl8qtgf.zip",
+              "language": "zh"
+            }
+          ],
+          "thumbnail": "chefdata/Courses/zh/生产能力最大化/content/TU5_Tech_Skill_PRO_zh - Storyline output_webroot/story_content/thumbnail.jpg"
+        },
+        {
+          "kind": "topic",
+          "title": "可下載的資源",
+          "source_id": "生产能力最大化___resources",
+          "license": {
+            "license_id": "CC BY",
+            "copyright_holder": "HP LIFE",
+            "description": null
+          },
+          "language": "zh",
+          "thumbnail": "chefdata/thumbnails/resources_folder_thumbnail.png",
+          "children": [
+            {
+              "kind": "document",
+              "title": "员工工作时间量计算器电子表格(Excel)",
+              "description": "",
+              "source_id": "https://s3.amazonaws.com/hp-life-content/DownloadableChinese/Staff+Time+Capacity+Calculator-zh_0.xls",
+              "license": {
+                "license_id": "CC BY",
+                "copyright_holder": "HP LIFE",
+                "description": null
+              },
+              "language": "zh",
+              "files": [
+                {
+                  "file_type": "document",
+                  "path": "chefdata/Courses/zh/生产能力最大化/content/converted/Staff Time Capacity Calculator-zh_0.pdf",
+                  "language": "zh"
+                }
+              ]
+            },
+            {
+              "kind": "document",
+              "title": "员工工作时间量计算器电子表格(LibreOffice)",
+              "description": "",
+              "source_id": "https://s3.amazonaws.com/hp-life-content/DownloadableChinese/Staff_Time_Capacity_Calculator-zh.ods",
+              "license": {
+                "license_id": "CC BY",
+                "copyright_holder": "HP LIFE",
+                "description": null
+              },
+              "language": "zh",
+              "files": [
+                {
+                  "file_type": "document",
+                  "path": "chefdata/Courses/zh/生产能力最大化/content/converted/Staff_Time_Capacity_Calculator-zh.pdf",
+                  "language": "zh"
+                }
+              ]
+            },
+            {
+              "kind": "document",
+              "title": "生产能力指南(PDF)",
+              "description": "",
+              "source_id": "https://s3.amazonaws.com/hp-life-content/DownloadableChinese/Production_Capacity_Guide-zh.pdf",
+              "license": {
+                "license_id": "CC BY",
+                "copyright_holder": "HP LIFE",
+                "description": null
+              },
+              "language": "zh",
+              "files": [
+                {
+                  "file_type": "document",
+                  "path": "chefdata/Courses/zh/生产能力最大化/content/downloads/Production_Capacity_Guide-zh.pdf",
+                  "language": "zh"
+                }
+              ]
+            },
+            {
+              "kind": "html5",
+              "title": "可下载的课程相关资源",
+              "description": "",
+              "source_id": "生产能力最大化__resources__downloadable_resources",
+              "license": {
+                "license_id": "CC BY",
+                "copyright_holder": "HP LIFE",
+                "description": null
+              },
+              "language": "zh",
+              "thumbnail": "chefdata/thumbnails/downloadable_resources_thumbnail.png",
+              "files": [
+                {
+                  "file_type": "html5",
+                  "path": "chefdata/Courses/zh/生产能力最大化/content/downloadable_resources_webroot.zip",
+                  "language": "zh"
+                }
+              ]
+            }
+          ]
+        },
+        {
+          "kind": "html5",
+          "title": "后续步骤",
+          "description": "了解后续步骤和更多资源，帮助管理你生意的生产能力。 请注意，除非您已连接到互联网，否则此页面的链接将无法使用。请使用右键点击按钮，并选择“在新选项卡中打开”以打开链接。",
+          "source_id": "<div class=\"field-item even\" s",
+          "license": {
+            "license_id": "CC BY",
+            "copyright_holder": "HP LIFE",
+            "description": null
+          },
+          "language": "zh",
+          "files": [
+            {
+              "file_type": "html5",
+              "path": "/var/folders/wc/2r44j8gs4gn56t1xtw5f6wlm0000gn/T/tmpmpfbr8s9.zip",
+              "language": "zh"
+            }
+          ]
+        }
+      ],
+      "source_id": "2657hpl-zh05",
+      "description": "了解如何最大程度扩大你生意的产品或服务生产能力，并了解电子表格如何帮助你更好地掌握生意中所使用的员工工作时间。"
+    },
+    {
+      "kind": "topic",
+      "title": "优势与特色宣传",
+      "language": "zh",
+      "thumbnail": "chefdata/thumbnails/new_channel_thumbnail.png",
+      "children": [
+        {
+          "kind": "html5",
+          "title": "故事",
+          "description": "Wassim如何更有效地推销自己的产品？",
+          "source_id": "zh_19",
+          "license": {
+            "license_id": "CC BY",
+            "copyright_holder": "HP LIFE",
+            "description": null
+          },
+          "language": "zh",
+          "files": [
+            {
+              "file_type": "html5",
+              "path": "/var/folders/wc/2r44j8gs4gn56t1xtw5f6wlm0000gn/T/tmpg3lh6lgn.zip",
+              "language": "zh"
+            }
+          ],
+          "thumbnail": null
+        },
+        {
+          "kind": "html5",
+          "title": "经营理念",
+          "description": "学习如何有效地向目标市场推介你的产品或服务的优势。",
+          "source_id": "TU19_Business_Concept_PRO-zh - Storyline output",
+          "license": {
+            "license_id": "CC BY",
+            "copyright_holder": "HP LIFE",
+            "description": null
+          },
+          "language": "zh",
+          "files": [
+            {
+              "file_type": "html5",
+              "path": "/var/folders/wc/2r44j8gs4gn56t1xtw5f6wlm0000gn/T/tmpdi9buexz.zip",
+              "language": "zh"
+            }
+          ],
+          "thumbnail": "chefdata/Courses/zh/优势与特色宣传/content/TU19_Business_Concept_PRO-zh - Storyline output_webroot/story_content/thumbnail.jpg"
+        },
+        {
+          "kind": "html5",
+          "title": "技术技能",
+          "description": "学习如何使用文字处理模板为你的生意创建传单。",
+          "source_id": "TU19_Tech_Skill_PRO-zh - Storyline output",
+          "license": {
+            "license_id": "CC BY",
+            "copyright_holder": "HP LIFE",
+            "description": null
+          },
+          "language": "zh",
+          "files": [
+            {
+              "file_type": "html5",
+              "path": "/var/folders/wc/2r44j8gs4gn56t1xtw5f6wlm0000gn/T/tmpjsxfo4z4.zip",
+              "language": "zh"
+            }
+          ],
+          "thumbnail": "chefdata/Courses/zh/优势与特色宣传/content/TU19_Tech_Skill_PRO-zh - Storyline output_webroot/story_content/thumbnail.jpg"
+        },
+        {
+          "kind": "topic",
+          "title": "可下載的資源",
+          "source_id": "优势与特色宣传___resources",
+          "license": {
+            "license_id": "CC BY",
+            "copyright_holder": "HP LIFE",
+            "description": null
+          },
+          "language": "zh",
+          "thumbnail": "chefdata/thumbnails/resources_folder_thumbnail.png",
+          "children": [
+            {
+              "kind": "document",
+              "title": "优势与特色宣传工作表(PDF)",
+              "description": "",
+              "source_id": "https://s3.amazonaws.com/hp-life-content/DownloadableChinese/Downloadable19_Benefits_v_Features_Worksheet_2.pdf",
+              "license": {
+                "license_id": "CC BY",
+                "copyright_holder": "HP LIFE",
+                "description": null
+              },
+              "language": "zh",
+              "files": [
+                {
+                  "file_type": "document",
+                  "path": "chefdata/Courses/zh/优势与特色宣传/content/downloads/Downloadable19_Benefits_v_Features_Worksheet_2.pdf",
+                  "language": "zh"
+                }
+              ]
+            }
+          ]
+        },
+        {
+          "kind": "html5",
+          "title": "后续步骤",
+          "description": "了解后续步骤和更多资源，帮助你推介产品或服务的优势。 请注意，除非您已连接到互联网，否则此页面的链接将无法使用。请使用右键点击按钮，并选择“在新选项卡中打开”以打开链接。",
+          "source_id": "<div class=\"field-item even\" s",
+          "license": {
+            "license_id": "CC BY",
+            "copyright_holder": "HP LIFE",
+            "description": null
+          },
+          "language": "zh",
+          "files": [
+            {
+              "file_type": "html5",
+              "path": "/var/folders/wc/2r44j8gs4gn56t1xtw5f6wlm0000gn/T/tmpnod107lr.zip",
+              "language": "zh"
+            }
+          ]
+        }
+      ],
+      "source_id": "2671hpl-zh19",
+      "description": "学习如何有效地推介你的产品或服务的优势，以帮助提高销售额。学习如何使用模板创建营销材料。 学习如何： • 理解你产品或服务的优势与特色之间的区别，有效地向目标市场进行宣传 • 使用在线模板为你的生意创建传单"
+    },
+    {
+      "kind": "topic",
+      "title": "现金流",
+      "language": "zh",
+      "thumbnail": "chefdata/thumbnails/new_channel_thumbnail.png",
+      "children": [
+        {
+          "kind": "html5",
+          "title": "故事",
+          "description": "Bethari发现她没有足够的钱来支付账单。",
+          "source_id": "zh_16",
+          "license": {
+            "license_id": "CC BY",
+            "copyright_holder": "HP LIFE",
+            "description": null
+          },
+          "language": "zh",
+          "files": [
+            {
+              "file_type": "html5",
+              "path": "/var/folders/wc/2r44j8gs4gn56t1xtw5f6wlm0000gn/T/tmpkps2_bhs.zip",
+              "language": "zh"
+            }
+          ],
+          "thumbnail": null
+        },
+        {
+          "kind": "html5",
+          "title": "经营理念",
+          "description": "了解现金流如何影响你的生意状况。",
+          "source_id": "CF_BC_CH1",
+          "license": {
+            "license_id": "CC BY",
+            "copyright_holder": "HP LIFE",
+            "description": null
+          },
+          "language": "zh",
+          "files": [
+            {
+              "file_type": "html5",
+              "path": "/var/folders/wc/2r44j8gs4gn56t1xtw5f6wlm0000gn/T/tmprk51nlkx.zip",
+              "language": "zh"
+            }
+          ],
+          "thumbnail": "chefdata/Courses/zh/现金流/content/CF_BC_CH1_webroot/story_content/thumbnail.jpg"
+        },
+        {
+          "kind": "html5",
+          "title": "技术技能",
+          "description": "学习如何为电子表格和工作表的标签设置格式。",
+          "source_id": "CF_TS_CH2",
+          "license": {
+            "license_id": "CC BY",
+            "copyright_holder": "HP LIFE",
+            "description": null
+          },
+          "language": "zh",
+          "files": [
+            {
+              "file_type": "html5",
+              "path": "/var/folders/wc/2r44j8gs4gn56t1xtw5f6wlm0000gn/T/tmpyox9rpy3.zip",
+              "language": "zh"
+            }
+          ],
+          "thumbnail": "chefdata/Courses/zh/现金流/content/CF_TS_CH2_webroot/story_content/thumbnail.jpg"
+        },
+        {
+          "kind": "topic",
+          "title": "可下載的資源",
+          "source_id": "现金流___resources",
+          "license": {
+            "license_id": "CC BY",
+            "copyright_holder": "HP LIFE",
+            "description": null
+          },
+          "language": "zh",
+          "thumbnail": "chefdata/thumbnails/resources_folder_thumbnail.png",
+          "children": [
+            {
+              "kind": "document",
+              "title": "现金流预测工作表(Excel)",
+              "description": "",
+              "source_id": "https://s3.amazonaws.com/hp-life-content/DownloadableChinese/Cashflow_Worksheet-zh.xlsx",
+              "license": {
+                "license_id": "CC BY",
+                "copyright_holder": "HP LIFE",
+                "description": null
+              },
+              "language": "zh",
+              "files": [
+                {
+                  "file_type": "document",
+                  "path": "chefdata/Courses/zh/现金流/content/converted/Cashflow_Worksheet-zh.pdf",
+                  "language": "zh"
+                }
+              ]
+            },
+            {
+              "kind": "html5",
+              "title": "可下载的课程相关资源",
+              "description": "",
+              "source_id": "现金流__resources__downloadable_resources",
+              "license": {
+                "license_id": "CC BY",
+                "copyright_holder": "HP LIFE",
+                "description": null
+              },
+              "language": "zh",
+              "thumbnail": "chefdata/thumbnails/downloadable_resources_thumbnail.png",
+              "files": [
+                {
+                  "file_type": "html5",
+                  "path": "chefdata/Courses/zh/现金流/content/downloadable_resources_webroot.zip",
+                  "language": "zh"
+                }
+              ]
+            }
+          ]
+        },
+        {
+          "kind": "html5",
+          "title": "后续步骤",
+          "description": "了解后续步骤和更多资源，帮助你管理生意的现金流。 请注意，除非您已连接到互联网，否则此页面的链接将无法使用。请使用右键点击按钮，并选择“在新选项卡中打开”以打开链接。",
+          "source_id": "<div style=\"display: inline-bl",
+          "license": {
+            "license_id": "CC BY",
+            "copyright_holder": "HP LIFE",
+            "description": null
+          },
+          "language": "zh",
+          "files": [
+            {
+              "file_type": "html5",
+              "path": "/var/folders/wc/2r44j8gs4gn56t1xtw5f6wlm0000gn/T/tmpz5z7i2oi.zip",
+              "language": "zh"
+            }
+          ]
+        }
+      ],
+      "source_id": "2668hpl-zh16",
+      "description": "学习现金流对于生意的重要意义，以及如何使用电子表格软件记录现金流。 学习如何： • 就如何管理现金做出决策 • 使用电子表格软件记录你的现金流"
+    },
+    {
+      "kind": "topic",
+      "title": "财务基础",
+      "language": "zh",
+      "thumbnail": "chefdata/thumbnails/new_channel_thumbnail.png",
+      "children": [
+        {
+          "kind": "html5",
+          "title": "故事",
+          "description": "Mariam正在筹集资金启动自己的生意，因此面临着许多问题。",
+          "source_id": "zh_1",
+          "license": {
+            "license_id": "CC BY",
+            "copyright_holder": "HP LIFE",
+            "description": null
+          },
+          "language": "zh",
+          "files": [
+            {
+              "file_type": "html5",
+              "path": "/var/folders/wc/2r44j8gs4gn56t1xtw5f6wlm0000gn/T/tmpdlkas70c.zip",
+              "language": "zh"
+            }
+          ],
+          "thumbnail": null
+        },
+        {
+          "kind": "html5",
+          "title": "经营理念",
+          "description": "了解各类支出以及它们对你实现盈利的影响。",
+          "source_id": "BoF_BC_CH2",
+          "license": {
+            "license_id": "CC BY",
+            "copyright_holder": "HP LIFE",
+            "description": null
+          },
+          "language": "zh",
+          "files": [
+            {
+              "file_type": "html5",
+              "path": "/var/folders/wc/2r44j8gs4gn56t1xtw5f6wlm0000gn/T/tmpm_dbr_tm.zip",
+              "language": "zh"
+            }
+          ],
+          "thumbnail": "chefdata/Courses/zh/财务基础/content/BoF_BC_CH2_webroot/story_content/thumbnail.jpg"
+        },
+        {
+          "kind": "html5",
+          "title": "技术技能",
+          "description": "学习使用电子表格为自己做计算的基本知识。",
+          "source_id": "BoF_TS_CH3",
+          "license": {
+            "license_id": "CC BY",
+            "copyright_holder": "HP LIFE",
+            "description": null
+          },
+          "language": "zh",
+          "files": [
+            {
+              "file_type": "html5",
+              "path": "/var/folders/wc/2r44j8gs4gn56t1xtw5f6wlm0000gn/T/tmp5ez5gr5s.zip",
+              "language": "zh"
+            }
+          ],
+          "thumbnail": "chefdata/Courses/zh/财务基础/content/BoF_TS_CH3_webroot/story_content/thumbnail.jpg"
+        },
+        {
+          "kind": "topic",
+          "title": "可下載的資源",
+          "source_id": "财务基础___resources",
+          "license": {
+            "license_id": "CC BY",
+            "copyright_holder": "HP LIFE",
+            "description": null
+          },
+          "language": "zh",
+          "thumbnail": "chefdata/thumbnails/resources_folder_thumbnail.png",
+          "children": [
+            {
+              "kind": "document",
+              "title": "收支平衡点电子表格说明(PDF)",
+              "description": "",
+              "source_id": "https://s3.amazonaws.com/hp-life-content/DownloadableChinese/Instructions_Break-Even_Spreadsheet-zh.pdf",
+              "license": {
+                "license_id": "CC BY",
+                "copyright_holder": "HP LIFE",
+                "description": null
+              },
+              "language": "zh",
+              "files": [
+                {
+                  "file_type": "document",
+                  "path": "chefdata/Courses/zh/财务基础/content/downloads/Instructions_Break-Even_Spreadsheet-zh.pdf",
+                  "language": "zh"
+                }
+              ]
+            },
+            {
+              "kind": "document",
+              "title": "收支平衡点电子表格(Excel)",
+              "description": "",
+              "source_id": "https://s3.amazonaws.com/hp-life-content/DownloadableChinese/Break-Even_Spreadsheet_0-zh.xlsx",
+              "license": {
+                "license_id": "CC BY",
+                "copyright_holder": "HP LIFE",
+                "description": null
+              },
+              "language": "zh",
+              "files": [
+                {
+                  "file_type": "document",
+                  "path": "chefdata/Courses/zh/财务基础/content/converted/Break-Even_Spreadsheet_0-zh.pdf",
+                  "language": "zh"
+                }
+              ]
+            },
+            {
+              "kind": "document",
+              "title": "收支平衡点电子表格(LibreOffice)",
+              "description": "",
+              "source_id": "https://s3.amazonaws.com/hp-life-content/DownloadableChinese/Break-Even_Spreadsheet_0-zh.ods",
+              "license": {
+                "license_id": "CC BY",
+                "copyright_holder": "HP LIFE",
+                "description": null
+              },
+              "language": "zh",
+              "files": [
+                {
+                  "file_type": "document",
+                  "path": "chefdata/Courses/zh/财务基础/content/converted/Break-Even_Spreadsheet_0-zh.pdf",
+                  "language": "zh"
+                }
+              ]
+            },
+            {
+              "kind": "html5",
+              "title": "可下载的课程相关资源",
+              "description": "",
+              "source_id": "财务基础__resources__downloadable_resources",
+              "license": {
+                "license_id": "CC BY",
+                "copyright_holder": "HP LIFE",
+                "description": null
+              },
+              "language": "zh",
+              "thumbnail": "chefdata/thumbnails/downloadable_resources_thumbnail.png",
+              "files": [
+                {
+                  "file_type": "html5",
+                  "path": "chefdata/Courses/zh/财务基础/content/downloadable_resources_webroot.zip",
+                  "language": "zh"
+                }
+              ]
+            }
+          ]
+        },
+        {
+          "kind": "html5",
+          "title": "后续步骤",
+          "description": "了解本课程中的后续步骤和更多资源。 请注意，除非您已连接到互联网，否则此页面的链接将无法使用。请使用右键点击按钮，并选择“在新选项卡中打开”以打开链接。",
+          "source_id": "<div class=\"field-item even\" s",
+          "license": {
+            "license_id": "CC BY",
+            "copyright_holder": "HP LIFE",
+            "description": null
+          },
+          "language": "zh",
+          "files": [
+            {
+              "file_type": "html5",
+              "path": "/var/folders/wc/2r44j8gs4gn56t1xtw5f6wlm0000gn/T/tmpd2vt1qzu.zip",
+              "language": "zh"
+            }
+          ]
+        }
+      ],
+      "source_id": "2545hpl-zh01",
+      "description": "学习基本的企业财务理念，可帮助计算你的支出情况并了解何时能够盈利。 学习如何： • 确定支出类型 • 计算你的收支平衡点 • 使用电子表格来简化计算"
+    },
+    {
+      "kind": "topic",
+      "title": "商务电子邮件",
+      "language": "zh",
+      "thumbnail": "chefdata/thumbnails/new_channel_thumbnail.png",
+      "children": [
+        {
+          "kind": "html5",
+          "title": "故事",
+          "description": "DJ Vijay Singh很疑惑潜在客户为什么都不回复他的电子邮件。",
+          "source_id": "zh_11",
+          "license": {
+            "license_id": "CC BY",
+            "copyright_holder": "HP LIFE",
+            "description": null
+          },
+          "language": "zh",
+          "files": [
+            {
+              "file_type": "html5",
+              "path": "/var/folders/wc/2r44j8gs4gn56t1xtw5f6wlm0000gn/T/tmprrwlwor8.zip",
+              "language": "zh"
+            }
+          ],
+          "thumbnail": null
+        },
+        {
+          "kind": "html5",
+          "title": "经营理念",
+          "description": "了解如何撰写有效的商务电子邮件。",
+          "source_id": "TU11_Business_Concept_PRO-zh - Storyline output",
+          "license": {
+            "license_id": "CC BY",
+            "copyright_holder": "HP LIFE",
+            "description": null
+          },
+          "language": "zh",
+          "files": [
+            {
+              "file_type": "html5",
+              "path": "/var/folders/wc/2r44j8gs4gn56t1xtw5f6wlm0000gn/T/tmpcvsonj1y.zip",
+              "language": "zh"
+            }
+          ],
+          "thumbnail": "chefdata/Courses/zh/商务电子邮件/content/TU11_Business_Concept_PRO-zh - Storyline output_webroot/story_content/thumbnail.jpg"
+        },
+        {
+          "kind": "html5",
+          "title": "技术技能",
+          "description": "了解电子邮件的各个组成部分、如何为电子邮件添加收件人地址、如何添加附件以及如何创建电子邮件签名。",
+          "source_id": "TU11_Tech_Skill_PRO_zh - Storyline output",
+          "license": {
+            "license_id": "CC BY",
+            "copyright_holder": "HP LIFE",
+            "description": null
+          },
+          "language": "zh",
+          "files": [
+            {
+              "file_type": "html5",
+              "path": "/var/folders/wc/2r44j8gs4gn56t1xtw5f6wlm0000gn/T/tmpm2252dc_.zip",
+              "language": "zh"
+            }
+          ],
+          "thumbnail": "chefdata/Courses/zh/商务电子邮件/content/TU11_Tech_Skill_PRO_zh - Storyline output_webroot/story_content/thumbnail.jpg"
+        },
+        {
+          "kind": "topic",
+          "title": "可下載的資源",
+          "source_id": "商务电子邮件___resources",
+          "license": {
+            "license_id": "CC BY",
+            "copyright_holder": "HP LIFE",
+            "description": null
+          },
+          "language": "zh",
+          "thumbnail": "chefdata/thumbnails/resources_folder_thumbnail.png",
+          "children": [
+            {
+              "kind": "document",
+              "title": "商务电子邮件建议",
+              "description": "",
+              "source_id": "https://s3.amazonaws.com/hp-life-content/DownloadableChinese/Business_Email_downloadable-zh.pdf",
+              "license": {
+                "license_id": "CC BY",
+                "copyright_holder": "HP LIFE",
+                "description": null
+              },
+              "language": "zh",
+              "files": [
+                {
+                  "file_type": "document",
+                  "path": "chefdata/Courses/zh/商务电子邮件/content/downloads/Business_Email_downloadable-zh.pdf",
+                  "language": "zh"
+                }
+              ]
+            }
+          ]
+        },
+        {
+          "kind": "html5",
+          "title": "后续步骤",
+          "description": "了解后续步骤和更多资源，有助于通过电子邮件有效地沟通。 请注意，除非您已连接到互联网，否则此页面的链接将无法使用。请使用右键点击按钮，并选择“在新选项卡中打开”以打开链接。",
+          "source_id": "<div style=\"display: inline-bl",
+          "license": {
+            "license_id": "CC BY",
+            "copyright_holder": "HP LIFE",
+            "description": null
+          },
+          "language": "zh",
+          "files": [
+            {
+              "file_type": "html5",
+              "path": "/var/folders/wc/2r44j8gs4gn56t1xtw5f6wlm0000gn/T/tmp9tu33fbn.zip",
+              "language": "zh"
+            }
+          ]
+        }
+      ],
+      "source_id": "2663hpl-zh11",
+      "description": "学习如何撰写专业且得体的商务电子邮件。 学习如何： • 辨别商务电子邮件中该做与不该做的 • 为电子邮件添加收件人地址 • 为电子邮件添加附件 • 创建电子邮件签名"
+    },
+    {
+      "kind": "topic",
+      "title": "寻找资金",
+      "language": "zh",
+      "thumbnail": "chefdata/thumbnails/new_channel_thumbnail.png",
+      "children": [
+        {
+          "kind": "html5",
+          "title": "故事",
+          "description": "Mariam 意识到她需要资金来增加一条新的产品线。",
+          "source_id": "zh_9",
+          "license": {
+            "license_id": "CC BY",
+            "copyright_holder": "HP LIFE",
+            "description": null
+          },
+          "language": "zh",
+          "files": [
+            {
+              "file_type": "html5",
+              "path": "/var/folders/wc/2r44j8gs4gn56t1xtw5f6wlm0000gn/T/tmp7xfni2op.zip",
+              "language": "zh"
+            }
+          ],
+          "thumbnail": null
+        },
+        {
+          "kind": "html5",
+          "title": "经营理念",
+          "description": "确定您所需要的资金金额。探索资金来源，学习如何选择最适合贵公司的来源。",
+          "source_id": "TU9_Business_Concept_PRO_zh - Storyline output",
+          "license": {
+            "license_id": "CC BY",
+            "copyright_holder": "HP LIFE",
+            "description": null
+          },
+          "language": "zh",
+          "files": [
+            {
+              "file_type": "html5",
+              "path": "/var/folders/wc/2r44j8gs4gn56t1xtw5f6wlm0000gn/T/tmpoya4__p2.zip",
+              "language": "zh"
+            }
+          ],
+          "thumbnail": "chefdata/Courses/zh/寻找资金/content/TU9_Business_Concept_PRO_zh - Storyline output_webroot/story_content/thumbnail.jpg"
+        },
+        {
+          "kind": "html5",
+          "title": "技术技能",
+          "description": "了解众筹和如何搜索潜在的资金来源。",
+          "source_id": "TU9_Tech_Skill_PRO_zh - Storyline output",
+          "license": {
+            "license_id": "CC BY",
+            "copyright_holder": "HP LIFE",
+            "description": null
+          },
+          "language": "zh",
+          "files": [
+            {
+              "file_type": "html5",
+              "path": "/var/folders/wc/2r44j8gs4gn56t1xtw5f6wlm0000gn/T/tmp4xnx339v.zip",
+              "language": "zh"
+            }
+          ],
+          "thumbnail": "chefdata/Courses/zh/寻找资金/content/TU9_Tech_Skill_PRO_zh - Storyline output_webroot/story_content/thumbnail.jpg"
+        },
+        {
+          "kind": "topic",
+          "title": "可下載的資源",
+          "source_id": "寻找资金___resources",
+          "license": {
+            "license_id": "CC BY",
+            "copyright_holder": "HP LIFE",
+            "description": null
+          },
+          "language": "zh",
+          "thumbnail": "chefdata/thumbnails/resources_folder_thumbnail.png",
+          "children": [
+            {
+              "kind": "document",
+              "title": "了解其他企业如何寻找融资。",
+              "description": "",
+              "source_id": "https://s3.amazonaws.com/hp-life-content/Tech+Class+Academy/Finding+Funding+/Finding+Funding+(CH)+Downloadable+Resource/%E4%BA%86%E8%A7%A3%E5%85%B6%E4%BB%96%E4%BC%81%E4%B8%9A%E5%A6%82%E4%BD%95%E5%AF%BB%E6%89%BE%E8%9E%8D%E8%B5%84%E3%80%82",
+              "license": {
+                "license_id": "CC BY",
+                "copyright_holder": "HP LIFE",
+                "description": null
+              },
+              "language": "zh",
+              "files": [
+                {
+                  "file_type": "document",
+                  "path": "chefdata/Courses/zh/寻找资金/content/downloads/了解其他企业如何寻找融资。.pdf",
+                  "language": "zh"
+                }
+              ]
+            },
+            {
+              "kind": "document",
+              "title": "制定一份出色商业计划书的 5 点技巧",
+              "description": "",
+              "source_id": "https://s3.amazonaws.com/hp-life-content/Tech+Class+Academy/Finding+Funding+/Finding+Funding+(CH)+Downloadable+Resource/%E5%88%B6%E5%AE%9A%E4%B8%80%E4%BB%BD%E5%87%BA%E8%89%B2%E5%95%86%E4%B8%9A%E8%AE%A1%E5%88%92%E4%B9%A6%E7%9A%84+5+%E7%82%B9%E6%8A%80%E5%B7%A7",
+              "license": {
+                "license_id": "CC BY",
+                "copyright_holder": "HP LIFE",
+                "description": null
+              },
+              "language": "zh",
+              "files": [
+                {
+                  "file_type": "document",
+                  "path": "chefdata/Courses/zh/寻找资金/content/downloads/制定一份出色商业计划书的 5 点技巧.pdf",
+                  "language": "zh"
+                }
+              ]
+            },
+            {
+              "kind": "document",
+              "title": "资金来源",
+              "description": "",
+              "source_id": "https://s3.amazonaws.com/hp-life-content/Tech+Class+Academy/Finding+Funding+/Finding+Funding+(CH)+Downloadable+Resource/%E8%B5%84%E9%87%91%E6%9D%A5%E6%BA%90",
+              "license": {
+                "license_id": "CC BY",
+                "copyright_holder": "HP LIFE",
+                "description": null
+              },
+              "language": "zh",
+              "files": [
+                {
+                  "file_type": "document",
+                  "path": "chefdata/Courses/zh/寻找资金/content/downloads/资金来源.pdf",
+                  "language": "zh"
+                }
+              ]
+            },
+            {
+              "kind": "document",
+              "title": "投资者见面会简报指南",
+              "description": "",
+              "source_id": "https://s3.amazonaws.com/hp-life-content/Tech+Class+Academy/Finding+Funding+/Finding+Funding+(CH)+Downloadable+Resource/%E6%8A%95%E8%B5%84%E8%80%85%E8%A7%81%E9%9D%A2%E4%BC%9A%E7%AE%80%E6%8A%A5%E6%8C%87%E5%8D%97",
+              "license": {
+                "license_id": "CC BY",
+                "copyright_holder": "HP LIFE",
+                "description": null
+              },
+              "language": "zh",
+              "files": [
+                {
+                  "file_type": "document",
+                  "path": "chefdata/Courses/zh/寻找资金/content/downloads/投资者见面会简报指南.pdf",
+                  "language": "zh"
+                }
+              ]
+            },
+            {
+              "kind": "document",
+              "title": "小企业贷款检查清单",
+              "description": "",
+              "source_id": "https://s3.amazonaws.com/hp-life-content/Tech+Class+Academy/Finding+Funding+/Finding+Funding+(CH)+Downloadable+Resource/%E5%B0%8F%E4%BC%81%E4%B8%9A%E8%B4%B7%E6%AC%BE%E6%A3%80%E6%9F%A5%E6%B8%85%E5%8D%95",
+              "license": {
+                "license_id": "CC BY",
+                "copyright_holder": "HP LIFE",
+                "description": null
+              },
+              "language": "zh",
+              "files": [
+                {
+                  "file_type": "document",
+                  "path": "chefdata/Courses/zh/寻找资金/content/downloads/小企业贷款检查清单.pdf",
+                  "language": "zh"
+                }
+              ]
+            },
+            {
+              "kind": "document",
+              "title": "跟踪您的資金可能性",
+              "description": "",
+              "source_id": "https://s3.amazonaws.com/hp-life-content/Tech+Class+Academy/Finding+Funding+/Finding+Funding+(CH)+Downloadable+Resource/%E8%B7%9F%E8%B8%AA%E6%82%A8%E7%9A%84%E8%B3%87%E9%87%91%E5%8F%AF%E8%83%BD%E6%80%A7",
+              "license": {
+                "license_id": "CC BY",
+                "copyright_holder": "HP LIFE",
+                "description": null
+              },
+              "language": "zh",
+              "files": [
+                {
+                  "file_type": "document",
+                  "path": "chefdata/Courses/zh/寻找资金/content/converted/跟踪您的資金可能性.pdf",
+                  "language": "zh"
+                }
+              ]
+            },
+            {
+              "kind": "html5",
+              "title": "可下载的课程相关资源",
+              "description": "",
+              "source_id": "寻找资金__resources__downloadable_resources",
+              "license": {
+                "license_id": "CC BY",
+                "copyright_holder": "HP LIFE",
+                "description": null
+              },
+              "language": "zh",
+              "thumbnail": "chefdata/thumbnails/downloadable_resources_thumbnail.png",
+              "files": [
+                {
+                  "file_type": "html5",
+                  "path": "chefdata/Courses/zh/寻找资金/content/downloadable_resources_webroot.zip",
+                  "language": "zh"
+                }
+              ]
+            }
+          ]
+        },
+        {
+          "kind": "html5",
+          "title": "后续步骤",
+          "description": "从本课程和其他资源中发掘后续步骤。 请注意，除非您已连接到互联网，否则此页面的链接将无法使用。请使用右键点击按钮，并选择“在新选项卡中打开”以打开链接。",
+          "source_id": "<div class=\"field-item even\" s",
+          "license": {
+            "license_id": "CC BY",
+            "copyright_holder": "HP LIFE",
+            "description": null
+          },
+          "language": "zh",
+          "files": [
+            {
+              "file_type": "html5",
+              "path": "/var/folders/wc/2r44j8gs4gn56t1xtw5f6wlm0000gn/T/tmpivbp_pyp.zip",
+              "language": "zh"
+            }
+          ]
+        }
+      ],
+      "source_id": "2661hpl-zh09",
+      "description": "探索您的企业资金来源。确定哪些来源最适合您的需求，并在申请之前了解要考虑的事项。探索如何在互联网上搜索，寻找潜在的投资者。 学习如何： 1. 确定您所需要的资金金额 2. 了解您需要借入这笔资金的期限 3. 确定最适合贵公司需求的资金来源 4. 增加融资成功率 5. 避免向掠夺性贷款人借贷"
+    },
+    {
+      "kind": "topic",
+      "title": "利润与亏损",
+      "language": "zh",
+      "thumbnail": "chefdata/thumbnails/new_channel_thumbnail.png",
+      "children": [
+        {
+          "kind": "html5",
+          "title": "故事",
+          "description": "Lorenzo发现有销量不一定就能实现盈利。",
+          "source_id": "zh_3",
+          "license": {
+            "license_id": "CC BY",
+            "copyright_holder": "HP LIFE",
+            "description": null
+          },
+          "language": "zh",
+          "files": [
+            {
+              "file_type": "html5",
+              "path": "/var/folders/wc/2r44j8gs4gn56t1xtw5f6wlm0000gn/T/tmpaiqh08fr.zip",
+              "language": "zh"
+            }
+          ],
+          "thumbnail": null
+        },
+        {
+          "kind": "html5",
+          "title": "经营理念",
+          "description": "查找容易被忽略但影响盈利的支出。",
+          "source_id": "TU3_Business_Concept_zh - Storyline output",
+          "license": {
+            "license_id": "CC BY",
+            "copyright_holder": "HP LIFE",
+            "description": null
+          },
+          "language": "zh",
+          "files": [
+            {
+              "file_type": "html5",
+              "path": "/var/folders/wc/2r44j8gs4gn56t1xtw5f6wlm0000gn/T/tmp3ywmcp5l.zip",
+              "language": "zh"
+            }
+          ],
+          "thumbnail": "chefdata/Courses/zh/利润与亏损/content/TU3_Business_Concept_zh - Storyline output_webroot/story_content/thumbnail.jpg"
+        },
+        {
+          "kind": "html5",
+          "title": "技术技能",
+          "description": "学习如何自定义电子表格以计算利润。",
+          "source_id": "TU3_Tech_Skill_PRO_zh - Storyline output",
+          "license": {
+            "license_id": "CC BY",
+            "copyright_holder": "HP LIFE",
+            "description": null
+          },
+          "language": "zh",
+          "files": [
+            {
+              "file_type": "html5",
+              "path": "/var/folders/wc/2r44j8gs4gn56t1xtw5f6wlm0000gn/T/tmpvzaxg1ln.zip",
+              "language": "zh"
+            }
+          ],
+          "thumbnail": "chefdata/Courses/zh/利润与亏损/content/TU3_Tech_Skill_PRO_zh - Storyline output_webroot/story_content/thumbnail.jpg"
+        },
+        {
+          "kind": "topic",
+          "title": "可下載的資源",
+          "source_id": "利润与亏损___resources",
+          "license": {
+            "license_id": "CC BY",
+            "copyright_holder": "HP LIFE",
+            "description": null
+          },
+          "language": "zh",
+          "thumbnail": "chefdata/thumbnails/resources_folder_thumbnail.png",
+          "children": [
+            {
+              "kind": "document",
+              "title": "损益表（单步式）(Excel)",
+              "description": "",
+              "source_id": "https://s3.amazonaws.com/hp-life-content/DownloadableChinese/Income_Statement_-_Single_Step-zh_4.xls",
+              "license": {
+                "license_id": "CC BY",
+                "copyright_holder": "HP LIFE",
+                "description": null
+              },
+              "language": "zh",
+              "files": [
+                {
+                  "file_type": "document",
+                  "path": "chefdata/Courses/zh/利润与亏损/content/converted/Income_Statement_-_Single_Step-zh_4.pdf",
+                  "language": "zh"
+                }
+              ]
+            },
+            {
+              "kind": "document",
+              "title": "损益表（单步式）(LibreOffice)",
+              "description": "",
+              "source_id": "https://s3.amazonaws.com/hp-life-content/DownloadableChinese/Income_Statement_-_Single_Step-zh_0.ods",
+              "license": {
+                "license_id": "CC BY",
+                "copyright_holder": "HP LIFE",
+                "description": null
+              },
+              "language": "zh",
+              "files": [
+                {
+                  "file_type": "document",
+                  "path": "chefdata/Courses/zh/利润与亏损/content/converted/Income_Statement_-_Single_Step-zh_0.pdf",
+                  "language": "zh"
+                }
+              ]
+            },
+            {
+              "kind": "html5",
+              "title": "可下载的课程相关资源",
+              "description": "",
+              "source_id": "利润与亏损__resources__downloadable_resources",
+              "license": {
+                "license_id": "CC BY",
+                "copyright_holder": "HP LIFE",
+                "description": null
+              },
+              "language": "zh",
+              "thumbnail": "chefdata/thumbnails/downloadable_resources_thumbnail.png",
+              "files": [
+                {
+                  "file_type": "html5",
+                  "path": "chefdata/Courses/zh/利润与亏损/content/downloadable_resources_webroot.zip",
+                  "language": "zh"
+                }
+              ]
+            }
+          ]
+        },
+        {
+          "kind": "html5",
+          "title": "后续步骤",
+          "description": "了解后续步骤和更多资源，帮助你提高生意利润。 请注意，除非您已连接到互联网，否则此页面的链接将无法使用。请使用右键点击按钮，并选择“在新选项卡中打开”以打开链接。",
+          "source_id": "<div class=\"field-item even\" s",
+          "license": {
+            "license_id": "CC BY",
+            "copyright_holder": "HP LIFE",
+            "description": null
+          },
+          "language": "zh",
+          "files": [
+            {
+              "file_type": "html5",
+              "path": "/var/folders/wc/2r44j8gs4gn56t1xtw5f6wlm0000gn/T/tmpz1t_tc9x.zip",
+              "language": "zh"
+            }
+          ]
+        }
+      ],
+      "source_id": "2654hpl-zh03",
+      "description": "学习在考虑所有成本的情况下计算利润与亏损。 学习如何： • 寻找你的隐形支出 • 计算利润与亏损"
+    },
+    {
+      "kind": "topic",
+      "title": "招聘员工",
+      "language": "zh",
+      "thumbnail": "chefdata/thumbnails/new_channel_thumbnail.png",
+      "children": [
+        {
+          "kind": "html5",
+          "title": "故事",
+          "description": "Ming的生意发展非常迅速，他需要招聘一名办公室经理。",
+          "source_id": "zh_13",
+          "license": {
+            "license_id": "CC BY",
+            "copyright_holder": "HP LIFE",
+            "description": null
+          },
+          "language": "zh",
+          "files": [
+            {
+              "file_type": "html5",
+              "path": "/var/folders/wc/2r44j8gs4gn56t1xtw5f6wlm0000gn/T/tmp9aiaijjw.zip",
+              "language": "zh"
+            }
+          ],
+          "thumbnail": null
+        },
+        {
+          "kind": "html5",
+          "title": "经营理念",
+          "description": "了解招聘合适员工的流程。",
+          "source_id": "TU13_Business_Concept_PRO_ch - Storyline output",
+          "license": {
+            "license_id": "CC BY",
+            "copyright_holder": "HP LIFE",
+            "description": null
+          },
+          "language": "zh",
+          "files": [
+            {
+              "file_type": "html5",
+              "path": "/var/folders/wc/2r44j8gs4gn56t1xtw5f6wlm0000gn/T/tmpbdxhjlng.zip",
+              "language": "zh"
+            }
+          ],
+          "thumbnail": "chefdata/Courses/zh/招聘员工/content/TU13_Business_Concept_PRO_ch - Storyline output_webroot/story_content/thumbnail.jpg"
+        },
+        {
+          "kind": "html5",
+          "title": "技术技能",
+          "description": "学习如何使用文字处理软件为求职申请表文档排版。",
+          "source_id": "TU13_Tech_Skill_PRO_ch - Storyline output",
+          "license": {
+            "license_id": "CC BY",
+            "copyright_holder": "HP LIFE",
+            "description": null
+          },
+          "language": "zh",
+          "files": [
+            {
+              "file_type": "html5",
+              "path": "/var/folders/wc/2r44j8gs4gn56t1xtw5f6wlm0000gn/T/tmpilihchmd.zip",
+              "language": "zh"
+            }
+          ],
+          "thumbnail": "chefdata/Courses/zh/招聘员工/content/TU13_Tech_Skill_PRO_ch - Storyline output_webroot/story_content/thumbnail.jpg"
+        },
+        {
+          "kind": "topic",
+          "title": "可下載的資源",
+          "source_id": "招聘员工___resources",
+          "license": {
+            "license_id": "CC BY",
+            "copyright_holder": "HP LIFE",
+            "description": null
+          },
+          "language": "zh",
+          "thumbnail": "chefdata/thumbnails/resources_folder_thumbnail.png",
+          "children": [
+            {
+              "kind": "document",
+              "title": "关于面试求职者的建议",
+              "description": "",
+              "source_id": "https://s3.amazonaws.com/hp-life-content/DownloadableChinese/Downloadable_-_Conducting_Interview_Tips-zh.pdf",
+              "license": {
+                "license_id": "CC BY",
+                "copyright_holder": "HP LIFE",
+                "description": null
+              },
+              "language": "zh",
+              "files": [
+                {
+                  "file_type": "document",
+                  "path": "chefdata/Courses/zh/招聘员工/content/downloads/Downloadable_-_Conducting_Interview_Tips-zh.pdf",
+                  "language": "zh"
+                }
+              ]
+            }
+          ]
+        },
+        {
+          "kind": "html5",
+          "title": "后续步骤",
+          "description": "了解后续步骤和更多资源，帮助你招聘员工。 请注意，除非您已连接到互联网，否则此页面的链接将无法使用。请使用右键点击按钮，并选择“在新选项卡中打开”以打开链接。",
+          "source_id": "<div style=\"display: inline-bl",
+          "license": {
+            "license_id": "CC BY",
+            "copyright_holder": "HP LIFE",
+            "description": null
+          },
+          "language": "zh",
+          "files": [
+            {
+              "file_type": "html5",
+              "path": "/var/folders/wc/2r44j8gs4gn56t1xtw5f6wlm0000gn/T/tmps7l53hcw.zip",
+              "language": "zh"
+            }
+          ]
+        }
+      ],
+      "source_id": "2665hpl-zh13",
+      "description": "学习如何为你的生意招聘员工，以及如何创建求职申请表。 学习如何： • 遵照结构化程序招聘员工。 • 使用文字处理软件创建求职申请表"
+    },
+    {
+      "kind": "topic",
+      "title": "成功心态",
+      "language": "zh",
+      "thumbnail": "chefdata/thumbnails/new_channel_thumbnail.png",
+      "children": [
+        {
+          "kind": "html5",
+          "title": "故事",
+          "description": "吉安娜(Gianna)实现了她的梦想: 拥有自己的工作室和陈列室来制造和销售木工艺品及家具。",
+          "source_id": "30-SM1-ST-CH-fix1",
+          "license": {
+            "license_id": "CC BY",
+            "copyright_holder": "HP LIFE",
+            "description": null
+          },
+          "language": "zh",
+          "files": [
+            {
+              "file_type": "html5",
+              "path": "/var/folders/wc/2r44j8gs4gn56t1xtw5f6wlm0000gn/T/tmpu6b6g99s.zip",
+              "language": "zh"
+            }
+          ],
+          "thumbnail": "chefdata/Courses/zh/成功心态/content/30-SM1-ST-CH-fix1_webroot/story_content/thumbnail.jpg"
+        },
+        {
+          "kind": "html5",
+          "title": "经营理念",
+          "description": "学习如何为你的未来、目标和成功计划创建一个美好的愿景。",
+          "source_id": "30-SM2-BC-CH-fix2",
+          "license": {
+            "license_id": "CC BY",
+            "copyright_holder": "HP LIFE",
+            "description": null
+          },
+          "language": "zh",
+          "files": [
+            {
+              "file_type": "html5",
+              "path": "/var/folders/wc/2r44j8gs4gn56t1xtw5f6wlm0000gn/T/tmptsat9eno.zip",
+              "language": "zh"
+            }
+          ],
+          "thumbnail": "chefdata/Courses/zh/成功心态/content/30-SM2-BC-CH-fix2_webroot/story_content/thumbnail.jpg"
+        },
+        {
+          "kind": "html5",
+          "title": "技术技能",
+          "description": "学习如何提升你的优势，培养良好的商业习惯，从而获得成功。",
+          "source_id": "30-SM3-TS-CH-fix1",
+          "license": {
+            "license_id": "CC BY",
+            "copyright_holder": "HP LIFE",
+            "description": null
+          },
+          "language": "zh",
+          "files": [
+            {
+              "file_type": "html5",
+              "path": "/var/folders/wc/2r44j8gs4gn56t1xtw5f6wlm0000gn/T/tmppc7ygaym.zip",
+              "language": "zh"
+            }
+          ],
+          "thumbnail": "chefdata/Courses/zh/成功心态/content/30-SM3-TS-CH-fix1_webroot/story_content/thumbnail.jpg"
+        },
+        {
+          "kind": "topic",
+          "title": "可下載的資源",
+          "source_id": "成功心态___resources",
+          "license": {
+            "license_id": "CC BY",
+            "copyright_holder": "HP LIFE",
+            "description": null
+          },
+          "language": "zh",
+          "thumbnail": "chefdata/thumbnails/resources_folder_thumbnail.png",
+          "children": [
+            {
+              "kind": "document",
+              "title": "成功心态学习表",
+              "description": "",
+              "source_id": "https://s3.amazonaws.com/hp-life-content/Antonio+TechClass+Academy/Success+Mindset/Chinese/Downloadable+Resources/Success%2BMindshet%2BWorksheet-CH.docx",
+              "license": {
+                "license_id": "CC BY",
+                "copyright_holder": "HP LIFE",
+                "description": null
+              },
+              "language": "zh",
+              "files": [
+                {
+                  "file_type": "document",
+                  "path": "chefdata/Courses/zh/成功心态/content/converted/Success_Mindshet_Worksheet-CH.pdf",
+                  "language": "zh"
+                }
+              ]
+            },
+            {
+              "kind": "document",
+              "title": "行动价值观问卷调查说明",
+              "description": "",
+              "source_id": "https://s3.amazonaws.com/hp-life-content/Antonio+TechClass+Academy/Success+Mindset/Chinese/Downloadable+Resources/Values%2Bin%2Baction%2Bsurvey%2Binstructions-CH.docx",
+              "license": {
+                "license_id": "CC BY",
+                "copyright_holder": "HP LIFE",
+                "description": null
+              },
+              "language": "zh",
+              "files": [
+                {
+                  "file_type": "document",
+                  "path": "chefdata/Courses/zh/成功心态/content/converted/Values_in_action_survey_instructions-CH.pdf",
+                  "language": "zh"
+                }
+              ]
+            },
+            {
+              "kind": "document",
+              "title": "优势评估",
+              "description": "",
+              "source_id": "https://s3.amazonaws.com/hp-life-content/Antonio+TechClass+Academy/Success+Mindset/Chinese/Downloadable+Resources/Strengths%2Bassessment%2BHP%2BLIFE-CH.pptx",
+              "license": {
+                "license_id": "CC BY",
+                "copyright_holder": "HP LIFE",
+                "description": null
+              },
+              "language": "zh",
+              "files": [
+                {
+                  "file_type": "document",
+                  "path": "chefdata/Courses/zh/成功心态/content/converted/Strengths_assessment_HP_LIFE-CH.pdf",
+                  "language": "zh"
+                }
+              ]
+            },
+            {
+              "kind": "document",
+              "title": "时间管理",
+              "description": "",
+              "source_id": "https://s3.amazonaws.com/hp-life-content/Antonio+TechClass+Academy/Success+Mindset/Chinese/Downloadable+Resources/Time%2BManagement%2BHP%2BLIFE-CH.pptx",
+              "license": {
+                "license_id": "CC BY",
+                "copyright_holder": "HP LIFE",
+                "description": null
+              },
+              "language": "zh",
+              "files": [
+                {
+                  "file_type": "document",
+                  "path": "chefdata/Courses/zh/成功心态/content/converted/Time_Management_HP_LIFE-CH.pdf",
+                  "language": "zh"
+                }
+              ]
+            },
+            {
+              "kind": "html5",
+              "title": "可下载的课程相关资源",
+              "description": "",
+              "source_id": "成功心态__resources__downloadable_resources",
+              "license": {
+                "license_id": "CC BY",
+                "copyright_holder": "HP LIFE",
+                "description": null
+              },
+              "language": "zh",
+              "thumbnail": "chefdata/thumbnails/downloadable_resources_thumbnail.png",
+              "files": [
+                {
+                  "file_type": "html5",
+                  "path": "chefdata/Courses/zh/成功心态/content/downloadable_resources_webroot.zip",
+                  "language": "zh"
+                }
+              ]
+            }
+          ]
+        },
+        {
+          "kind": "html5",
+          "title": "后续步骤",
+          "description": "发现和探索本课程的后续步骤及其它资源。 请注意，除非您已连接到互联网，否则此页面的链接将无法使用。请使用右键点击按钮，并选择“在新选项卡中打开”以打开链接。",
+          "source_id": "<p class=\"MsoNormal\"><span lan",
+          "license": {
+            "license_id": "CC BY",
+            "copyright_holder": "HP LIFE",
+            "description": null
+          },
+          "language": "zh",
+          "files": [
+            {
+              "file_type": "html5",
+              "path": "/var/folders/wc/2r44j8gs4gn56t1xtw5f6wlm0000gn/T/tmp_yfly1xj.zip",
+              "language": "zh"
+            }
+          ]
+        }
+      ],
+      "source_id": "6708hpl-zh30",
+      "description": "在本课程中，你将： •了解什么让你快乐——你的价值观、兴趣和优势 •为你的未来创建一个美好的愿景，设定个人/职业目标，制定一个成功计划 •学习如何通过培养良好的商业习惯和发挥自身优势来实现你的计划，从而获得成功"
+    },
+    {
+      "kind": "topic",
+      "title": "你的目标受众",
+      "language": "zh",
+      "thumbnail": "chefdata/thumbnails/new_channel_thumbnail.png",
+      "children": [
+        {
+          "kind": "html5",
+          "title": "故事",
+          "description": "Paul和Loretta试图弄清楚谁是他们的客户，以便使他们的营销活动更有针对性。",
+          "source_id": "zh_6",
+          "license": {
+            "license_id": "CC BY",
+            "copyright_holder": "HP LIFE",
+            "description": null
+          },
+          "language": "zh",
+          "files": [
+            {
+              "file_type": "html5",
+              "path": "/var/folders/wc/2r44j8gs4gn56t1xtw5f6wlm0000gn/T/tmpcy7a2yqm.zip",
+              "language": "zh"
+            }
+          ],
+          "thumbnail": null
+        },
+        {
+          "kind": "html5",
+          "title": "经营理念",
+          "description": "了解客户调查如何帮助确定你的目标受众以及改进你的营销。",
+          "source_id": "TU6_Business_Concept_PRO_zh - Storyline output",
+          "license": {
+            "license_id": "CC BY",
+            "copyright_holder": "HP LIFE",
+            "description": null
+          },
+          "language": "zh",
+          "files": [
+            {
+              "file_type": "html5",
+              "path": "/var/folders/wc/2r44j8gs4gn56t1xtw5f6wlm0000gn/T/tmpvwreojun.zip",
+              "language": "zh"
+            }
+          ],
+          "thumbnail": "chefdata/Courses/zh/你的目标受众/content/TU6_Business_Concept_PRO_zh - Storyline output_webroot/story_content/thumbnail.jpg"
+        },
+        {
+          "kind": "html5",
+          "title": "技术技能",
+          "description": "我如何创建在线调查，以了解客户/潜在客户的人口统计信息并且详细了解他们最看重的因素？",
+          "source_id": "TU6_Tech_Skill_ch - Storyline output",
+          "license": {
+            "license_id": "CC BY",
+            "copyright_holder": "HP LIFE",
+            "description": null
+          },
+          "language": "zh",
+          "files": [
+            {
+              "file_type": "html5",
+              "path": "/var/folders/wc/2r44j8gs4gn56t1xtw5f6wlm0000gn/T/tmp1ym0bw39.zip",
+              "language": "zh"
+            }
+          ],
+          "thumbnail": "chefdata/Courses/zh/你的目标受众/content/TU6_Tech_Skill_ch - Storyline output_webroot/story_content/thumbnail.jpg"
+        },
+        {
+          "kind": "topic",
+          "title": "可下載的資源",
+          "source_id": "你的目标受众___resources",
+          "license": {
+            "license_id": "CC BY",
+            "copyright_holder": "HP LIFE",
+            "description": null
+          },
+          "language": "zh",
+          "thumbnail": "chefdata/thumbnails/resources_folder_thumbnail.png",
+          "children": [
+            {
+              "kind": "document",
+              "title": "目标受众概况工作表(PDF)",
+              "description": "",
+              "source_id": "https://s3.amazonaws.com/hp-life-content/DownloadableChinese/TU6_Target_Audience_Downloadable-zh.pdf",
+              "license": {
+                "license_id": "CC BY",
+                "copyright_holder": "HP LIFE",
+                "description": null
+              },
+              "language": "zh",
+              "files": [
+                {
+                  "file_type": "document",
+                  "path": "chefdata/Courses/zh/你的目标受众/content/downloads/TU6_Target_Audience_Downloadable-zh.pdf",
+                  "language": "zh"
+                }
+              ]
+            }
+          ]
+        },
+        {
+          "kind": "html5",
+          "title": "后续步骤",
+          "description": "了解后续步骤和更多资源，帮助你为自己的生意制定营销策略。 请注意，除非您已连接到互联网，否则此页面的链接将无法使用。请使用右键点击按钮，并选择“在新选项卡中打开”以打开链接。",
+          "source_id": "<div style=\"display: inline-bl",
+          "license": {
+            "license_id": "CC BY",
+            "copyright_holder": "HP LIFE",
+            "description": null
+          },
+          "language": "zh",
+          "files": [
+            {
+              "file_type": "html5",
+              "path": "/var/folders/wc/2r44j8gs4gn56t1xtw5f6wlm0000gn/T/tmppbbn_r6o.zip",
+              "language": "zh"
+            }
+          ]
+        }
+      ],
+      "source_id": "2658hpl-zh06",
+      "description": "了解如何收集与客户和潜在客户有关的信息。 学习如何： • 设计问题，了解客户的更多信息 • 创建在线调查，收集客户的相关信息"
+    },
+    {
+      "kind": "topic",
+      "title": "生意成功所需的IT",
+      "language": "zh",
+      "thumbnail": "chefdata/thumbnails/new_channel_thumbnail.png",
+      "children": [
+        {
+          "kind": "html5",
+          "title": "故事",
+          "description": "在为他们的旅行社确定最佳技术项目方面，Tarek和Jamel面临诸多选择。",
+          "source_id": "zh_24",
+          "license": {
+            "license_id": "CC BY",
+            "copyright_holder": "HP LIFE",
+            "description": null
+          },
+          "language": "zh",
+          "files": [
+            {
+              "file_type": "html5",
+              "path": "/var/folders/wc/2r44j8gs4gn56t1xtw5f6wlm0000gn/T/tmpaozxxk9j.zip",
+              "language": "zh"
+            }
+          ],
+          "thumbnail": null
+        },
+        {
+          "kind": "html5",
+          "title": "经营理念",
+          "description": "了解如何选择可使你的生意受益最多的技术解决方案。",
+          "source_id": "TU24_Business_Concept_PRO_zh - Storyline output",
+          "license": {
+            "license_id": "CC BY",
+            "copyright_holder": "HP LIFE",
+            "description": null
+          },
+          "language": "zh",
+          "files": [
+            {
+              "file_type": "html5",
+              "path": "/var/folders/wc/2r44j8gs4gn56t1xtw5f6wlm0000gn/T/tmphexzk37n.zip",
+              "language": "zh"
+            }
+          ],
+          "thumbnail": "chefdata/Courses/zh/生意成功所需的IT/content/TU24_Business_Concept_PRO_zh - Storyline output_webroot/story_content/thumbnail.jpg"
+        },
+        {
+          "kind": "html5",
+          "title": "技术技能",
+          "description": "了解如何选择实施技术的最佳方法。",
+          "source_id": "TU24_Tech_Skill_Mobile_zh - Storyline output",
+          "license": {
+            "license_id": "CC BY",
+            "copyright_holder": "HP LIFE",
+            "description": null
+          },
+          "language": "zh",
+          "files": [
+            {
+              "file_type": "html5",
+              "path": "/var/folders/wc/2r44j8gs4gn56t1xtw5f6wlm0000gn/T/tmp9ntxwif0.zip",
+              "language": "zh"
+            }
+          ],
+          "thumbnail": "chefdata/Courses/zh/生意成功所需的IT/content/TU24_Tech_Skill_Mobile_zh - Storyline output_webroot/story_content/thumbnail.jpg"
+        },
+        {
+          "kind": "topic",
+          "title": "可下載的資源",
+          "source_id": "生意成功所需的IT___resources",
+          "license": {
+            "license_id": "CC BY",
+            "copyright_holder": "HP LIFE",
+            "description": null
+          },
+          "language": "zh",
+          "thumbnail": "chefdata/thumbnails/resources_folder_thumbnail.png",
+          "children": [
+            {
+              "kind": "document",
+              "title": "技术项目规划模板(Word)",
+              "description": "",
+              "source_id": "https://s3.amazonaws.com/hp-life-content/DownloadableChinese/Downloadable_C24_Technology_initiative_planning_template-zh.docx",
+              "license": {
+                "license_id": "CC BY",
+                "copyright_holder": "HP LIFE",
+                "description": null
+              },
+              "language": "zh",
+              "files": [
+                {
+                  "file_type": "document",
+                  "path": "chefdata/Courses/zh/生意成功所需的IT/content/converted/Downloadable_C24_Technology_initiative_planning_template-zh.pdf",
+                  "language": "zh"
+                }
+              ]
+            },
+            {
+              "kind": "html5",
+              "title": "可下载的课程相关资源",
+              "description": "",
+              "source_id": "生意成功所需的IT__resources__downloadable_resources",
+              "license": {
+                "license_id": "CC BY",
+                "copyright_holder": "HP LIFE",
+                "description": null
+              },
+              "language": "zh",
+              "thumbnail": "chefdata/thumbnails/downloadable_resources_thumbnail.png",
+              "files": [
+                {
+                  "file_type": "html5",
+                  "path": "chefdata/Courses/zh/生意成功所需的IT/content/downloadable_resources_webroot.zip",
+                  "language": "zh"
+                }
+              ]
+            }
+          ]
+        },
+        {
+          "kind": "html5",
+          "title": "后续步骤",
+          "description": "了解后续步骤和更多资源，帮助你为自己的生意选择和实施技术解决方案。 请注意，除非您已连接到互联网，否则此页面的链接将无法使用。请使用右键点击按钮，并选择“在新选项卡中打开”以打开链接。",
+          "source_id": "<div class=\"field-item even\" s",
+          "license": {
+            "license_id": "CC BY",
+            "copyright_holder": "HP LIFE",
+            "description": null
+          },
+          "language": "zh",
+          "files": [
+            {
+              "file_type": "html5",
+              "path": "/var/folders/wc/2r44j8gs4gn56t1xtw5f6wlm0000gn/T/tmpeurb4fse.zip",
+              "language": "zh"
+            }
+          ]
+        }
+      ],
+      "source_id": "2676hpl-zh24",
+      "description": "学习如何： • 确定最能帮助你实现生意目标的技术解决方案类型 • 根据具体的生意情况来决定实施技术解决方案的最好方法 本课程单元是与HP Institute合作开发的。"
+    },
+    {
+      "kind": "topic",
+      "title": "有效领导力",
+      "language": "zh",
+      "thumbnail": "chefdata/thumbnails/new_channel_thumbnail.png",
+      "children": [
+        {
+          "kind": "html5",
+          "title": "故事",
+          "description": "Bethari面临如何有效地领导自己的员工这一挑战。",
+          "source_id": "zh_23",
+          "license": {
+            "license_id": "CC BY",
+            "copyright_holder": "HP LIFE",
+            "description": null
+          },
+          "language": "zh",
+          "files": [
+            {
+              "file_type": "html5",
+              "path": "/var/folders/wc/2r44j8gs4gn56t1xtw5f6wlm0000gn/T/tmpngwv2pvg.zip",
+              "language": "zh"
+            }
+          ],
+          "thumbnail": null
+        },
+        {
+          "kind": "html5",
+          "title": "经营理念",
+          "description": "了解不同的领导方法以及如何成为更加有效的领导者。",
+          "source_id": "TU23_Business_Concept_PRO_zh - Storyline output",
+          "license": {
+            "license_id": "CC BY",
+            "copyright_holder": "HP LIFE",
+            "description": null
+          },
+          "language": "zh",
+          "files": [
+            {
+              "file_type": "html5",
+              "path": "/var/folders/wc/2r44j8gs4gn56t1xtw5f6wlm0000gn/T/tmpybhufzr2.zip",
+              "language": "zh"
+            }
+          ],
+          "thumbnail": "chefdata/Courses/zh/有效领导力/content/TU23_Business_Concept_PRO_zh - Storyline output_webroot/story_content/thumbnail.jpg"
+        },
+        {
+          "kind": "html5",
+          "title": "技术技能",
+          "description": "学习如何使用软件来更有成效地进行协作和沟通。",
+          "source_id": "TU23_Tech_Skill_PRO_zh - Storyline output",
+          "license": {
+            "license_id": "CC BY",
+            "copyright_holder": "HP LIFE",
+            "description": null
+          },
+          "language": "zh",
+          "files": [
+            {
+              "file_type": "html5",
+              "path": "/var/folders/wc/2r44j8gs4gn56t1xtw5f6wlm0000gn/T/tmp74rq9ysb.zip",
+              "language": "zh"
+            }
+          ],
+          "thumbnail": "chefdata/Courses/zh/有效领导力/content/TU23_Tech_Skill_PRO_zh - Storyline output_webroot/story_content/thumbnail.jpg"
+        },
+        {
+          "kind": "topic",
+          "title": "可下載的資源",
+          "source_id": "有效领导力___resources",
+          "license": {
+            "license_id": "CC BY",
+            "copyright_holder": "HP LIFE",
+            "description": null
+          },
+          "language": "zh",
+          "thumbnail": "chefdata/thumbnails/resources_folder_thumbnail.png",
+          "children": [
+            {
+              "kind": "document",
+              "title": "六种领导方法(PDF)",
+              "description": "",
+              "source_id": "https://s3.amazonaws.com/hp-life-content/DownloadableChinese/Downloadable_C23_The_six_leadership_approaches-zh-0.pdf",
+              "license": {
+                "license_id": "CC BY",
+                "copyright_holder": "HP LIFE",
+                "description": null
+              },
+              "language": "zh",
+              "files": [
+                {
+                  "file_type": "document",
+                  "path": "chefdata/Courses/zh/有效领导力/content/downloads/Downloadable_C23_The_six_leadership_approaches-zh-0.pdf",
+                  "language": "zh"
+                }
+              ]
+            },
+            {
+              "kind": "document",
+              "title": "实现有效领导的通讯技术(PDF)",
+              "description": "",
+              "source_id": "https://s3.amazonaws.com/hp-life-content/DownloadableChinese/Downloadable_C23_Communication_technologies_for_effective_leadership-zh_0.pdf",
+              "license": {
+                "license_id": "CC BY",
+                "copyright_holder": "HP LIFE",
+                "description": null
+              },
+              "language": "zh",
+              "files": [
+                {
+                  "file_type": "document",
+                  "path": "chefdata/Courses/zh/有效领导力/content/downloads/Downloadable_C23_Communication_technologies_for_effective_leadership-zh_0.pdf",
+                  "language": "zh"
+                }
+              ]
+            }
+          ]
+        },
+        {
+          "kind": "html5",
+          "title": "后续步骤",
+          "description": "了解后续步骤和更多资源，帮助你成为更有效的领导者。 请注意，除非您已连接到互联网，否则此页面的链接将无法使用。请使用右键点击按钮，并选择“在新选项卡中打开”以打开链接。",
+          "source_id": "<div class=\"field-item even\" s",
+          "license": {
+            "license_id": "CC BY",
+            "copyright_holder": "HP LIFE",
+            "description": null
+          },
+          "language": "zh",
+          "files": [
+            {
+              "file_type": "html5",
+              "path": "/var/folders/wc/2r44j8gs4gn56t1xtw5f6wlm0000gn/T/tmpk5cnx0ru.zip",
+              "language": "zh"
+            }
+          ]
+        }
+      ],
+      "source_id": "2675hpl-zh23",
+      "description": "学习如何成为有效的领导者。 学习如何： • 评估哪些领导方法适用于不同情形。 • 使用桌面或移动软件来更有成效地作为领导者进行协作和沟通。"
+    },
+    {
+      "kind": "topic",
+      "title": "设计思路",
+      "language": "zh",
+      "thumbnail": "chefdata/thumbnails/new_channel_thumbnail.png",
+      "children": [
+        {
+          "kind": "html5",
+          "title": "故事",
+          "description": "Dina 和 Carlos 是 Coffee Corner 的店主，他们有一个商业机会以帮助他们的城市改善应急响应措施。他们不知道如何找到问题或设计一种能够改善应急响应措施的解决方案。",
+          "source_id": "27-DT1-ST-CH-NR-MOB",
+          "license": {
+            "license_id": "CC BY",
+            "copyright_holder": "HP LIFE",
+            "description": null
+          },
+          "language": "zh",
+          "files": [
+            {
+              "file_type": "html5",
+              "path": "/var/folders/wc/2r44j8gs4gn56t1xtw5f6wlm0000gn/T/tmplj1gdius.zip",
+              "language": "zh"
+            }
+          ],
+          "thumbnail": "chefdata/Courses/zh/设计思路/content/27-DT1-ST-CH-NR-MOB_webroot/story_content/thumbnail.jpg"
+        },
+        {
+          "kind": "html5",
+          "title": "企业理念",
+          "description": "理解设计思路流程，以及如何使用流程了解问题、构建并检验可能的解决方案。",
+          "source_id": "27-DT2-BC-CH-NR-MOB",
+          "license": {
+            "license_id": "CC BY",
+            "copyright_holder": "HP LIFE",
+            "description": null
+          },
+          "language": "zh",
+          "files": [
+            {
+              "file_type": "html5",
+              "path": "/var/folders/wc/2r44j8gs4gn56t1xtw5f6wlm0000gn/T/tmpwsnb2_2f.zip",
+              "language": "zh"
+            }
+          ],
+          "thumbnail": "chefdata/Courses/zh/设计思路/content/27-DT2-BC-CH-NR-MOB_webroot/story_content/thumbnail.jpg"
+        },
+        {
+          "kind": "html5",
+          "title": "技术技能",
+          "description": "学习如何向投资者或潜在客户准备新产品或服务的游说（演示）。",
+          "source_id": "27-DT3-TS-CH-NR-MOB",
+          "license": {
+            "license_id": "CC BY",
+            "copyright_holder": "HP LIFE",
+            "description": null
+          },
+          "language": "zh",
+          "files": [
+            {
+              "file_type": "html5",
+              "path": "/var/folders/wc/2r44j8gs4gn56t1xtw5f6wlm0000gn/T/tmptmpx9cop.zip",
+              "language": "zh"
+            }
+          ],
+          "thumbnail": "chefdata/Courses/zh/设计思路/content/27-DT3-TS-CH-NR-MOB_webroot/story_content/thumbnail.jpg"
+        },
+        {
+          "kind": "topic",
+          "title": "可下載的資源",
+          "source_id": "设计思路___resources",
+          "license": {
+            "license_id": "CC BY",
+            "copyright_holder": "HP LIFE",
+            "description": null
+          },
+          "language": "zh",
+          "thumbnail": "chefdata/thumbnails/resources_folder_thumbnail.png",
+          "children": [
+            {
+              "kind": "document",
+              "title": "设计思维的面试指南",
+              "description": "",
+              "source_id": "https://s3.amazonaws.com/hp-life-content/Sweet_Rush/Design+Thinking/Chinese/Downloadables/%E8%AE%BE%E8%AE%A1%E6%80%9D%E7%BB%B4%E7%9A%84%E9%9D%A2%E8%AF%95%E6%8C%87%E5%8D%97.pdf",
+              "license": {
+                "license_id": "CC BY",
+                "copyright_holder": "HP LIFE",
+                "description": null
+              },
+              "language": "zh",
+              "files": [
+                {
+                  "file_type": "document",
+                  "path": "chefdata/Courses/zh/设计思路/content/downloads/设计思维的面试指南.pdf",
+                  "language": "zh"
+                }
+              ]
+            },
+            {
+              "kind": "document",
+              "title": "与麦和苏拉杰的采访",
+              "description": "",
+              "source_id": "https://s3.amazonaws.com/hp-life-content/Sweet_Rush/Design+Thinking/Chinese/Downloadables/%E4%B8%8E%E9%BA%A6%E5%92%8C%E8%8B%8F%E6%8B%89%E6%9D%B0%E7%9A%84%E9%87%87%E8%AE%BF.pdf",
+              "license": {
+                "license_id": "CC BY",
+                "copyright_holder": "HP LIFE",
+                "description": null
+              },
+              "language": "zh",
+              "files": [
+                {
+                  "file_type": "document",
+                  "path": "chefdata/Courses/zh/设计思路/content/downloads/与麦和苏拉杰的采访.pdf",
+                  "language": "zh"
+                }
+              ]
+            },
+            {
+              "kind": "document",
+              "title": "基于Mai的情景",
+              "description": "",
+              "source_id": "https://s3.amazonaws.com/hp-life-content/Sweet_Rush/Design+Thinking/Chinese/Downloadables/%E5%9F%BA%E4%BA%8EMai%E7%9A%84%E6%83%85%E6%99%AF.pdf",
+              "license": {
+                "license_id": "CC BY",
+                "copyright_holder": "HP LIFE",
+                "description": null
+              },
+              "language": "zh",
+              "files": [
+                {
+                  "file_type": "document",
+                  "path": "chefdata/Courses/zh/设计思路/content/downloads/基于Mai的情景.pdf",
+                  "language": "zh"
+                }
+              ]
+            },
+            {
+              "kind": "document",
+              "title": "了解设计思维过程",
+              "description": "",
+              "source_id": "https://s3.amazonaws.com/hp-life-content/Sweet_Rush/Design+Thinking/Chinese/Downloadables/%E4%BA%86%E8%A7%A3%E8%AE%BE%E8%AE%A1%E6%80%9D%E7%BB%B4%E8%BF%87%E7%A8%8B.pdf",
+              "license": {
+                "license_id": "CC BY",
+                "copyright_holder": "HP LIFE",
+                "description": null
+              },
+              "language": "zh",
+              "files": [
+                {
+                  "file_type": "document",
+                  "path": "chefdata/Courses/zh/设计思路/content/downloads/了解设计思维过程.pdf",
+                  "language": "zh"
+                }
+              ]
+            },
+            {
+              "kind": "document",
+              "title": "样本人物形态：5月",
+              "description": "",
+              "source_id": "https://s3.amazonaws.com/hp-life-content/Sweet_Rush/Design+Thinking/Chinese/Downloadables/%E6%A0%B7%E6%9C%AC%E4%BA%BA%E7%89%A9%E5%BD%A2%E6%80%81%EF%BC%9A5%E6%9C%88.pdf",
+              "license": {
+                "license_id": "CC BY",
+                "copyright_holder": "HP LIFE",
+                "description": null
+              },
+              "language": "zh",
+              "files": [
+                {
+                  "file_type": "document",
+                  "path": "chefdata/Courses/zh/设计思路/content/downloads/样本人物形态：5月.pdf",
+                  "language": "zh"
+                }
+              ]
+            },
+            {
+              "kind": "document",
+              "title": "设计思维构思和原型工作表",
+              "description": "",
+              "source_id": "https://s3.amazonaws.com/hp-life-content/Sweet_Rush/Design+Thinking/Chinese/Downloadables/%E8%AE%BE%E8%AE%A1%E6%80%9D%E7%BB%B4%E6%9E%84%E6%80%9D%E5%92%8C%E5%8E%9F%E5%9E%8B%E5%B7%A5%E4%BD%9C%E8%A1%A8.docx",
+              "license": {
+                "license_id": "CC BY",
+                "copyright_holder": "HP LIFE",
+                "description": null
+              },
+              "language": "zh",
+              "files": [
+                {
+                  "file_type": "document",
+                  "path": "chefdata/Courses/zh/设计思路/content/converted/设计思维构思和原型工作表.pdf",
+                  "language": "zh"
+                }
+              ]
+            },
+            {
+              "kind": "html5",
+              "title": "可下载的课程相关资源",
+              "description": "",
+              "source_id": "设计思路__resources__downloadable_resources",
+              "license": {
+                "license_id": "CC BY",
+                "copyright_holder": "HP LIFE",
+                "description": null
+              },
+              "language": "zh",
+              "thumbnail": "chefdata/thumbnails/downloadable_resources_thumbnail.png",
+              "files": [
+                {
+                  "file_type": "html5",
+                  "path": "chefdata/Courses/zh/设计思路/content/downloadable_resources_webroot.zip",
+                  "language": "zh"
+                }
+              ]
+            }
+          ]
+        },
+        {
+          "kind": "html5",
+          "title": "后续步骤",
+          "description": "发现本课程的后续步骤和其他资源。 请注意，除非您已连接到互联网，否则此页面的链接将无法使用。请使用右键点击按钮，并选择“在新选项卡中打开”以打开链接。",
+          "source_id": "<p class=\"MsoNormal\"><strong><",
+          "license": {
+            "license_id": "CC BY",
+            "copyright_holder": "HP LIFE",
+            "description": null
+          },
+          "language": "zh",
+          "files": [
+            {
+              "file_type": "html5",
+              "path": "/var/folders/wc/2r44j8gs4gn56t1xtw5f6wlm0000gn/T/tmpd3eelekc.zip",
+              "language": "zh"
+            }
+          ]
+        }
+      ],
+      "source_id": "4857hpl-zh27",
+      "description": "学习基础概念以确立、定义、探索、产生及验证构想从而解决难题。用户将掌握设计思路流程的应用知识。 学会如何： • 定义问题并建立问题陈述 • 进行采访以了解潜在客户和他们的问题或未满足的需要 • 探索问题以加深你的理解 • 产生并验证问题的解决方案 • 利用反馈反复改进解决方案"
+    },
+    {
+      "kind": "topic",
+      "title": "销售的艺术：销售的基本要素",
+      "language": "zh",
+      "thumbnail": "chefdata/thumbnails/new_channel_thumbnail.png",
+      "children": [
+        {
+          "kind": "html5",
+          "title": "故事",
+          "description": "多丽丝是一个极具才华的面包师，她想在她的附近开一个流动式面包店。她相信她可以通过在火车站向下班回家的上班族出售手工面包来增加其所在社区的价值。",
+          "source_id": "32-SALES-1-ST-CH",
+          "license": {
+            "license_id": "CC BY",
+            "copyright_holder": "HP LIFE",
+            "description": null
+          },
+          "language": "zh",
+          "files": [
+            {
+              "file_type": "html5",
+              "path": "/var/folders/wc/2r44j8gs4gn56t1xtw5f6wlm0000gn/T/tmpi9_temdy.zip",
+              "language": "zh"
+            }
+          ],
+          "thumbnail": "chefdata/Courses/zh/销售的艺术：销售的基本要素/content/32-SALES-1-ST-CH_webroot/story_content/thumbnail.jpg"
+        },
+        {
+          "kind": "html5",
+          "title": "经营理念",
+          "description": "学习销售的基本要素，包括SWOT分析（创造附加价值和更好地了解你的受众客户群体）和销售沟通（创建“电梯演讲”，谈生意，以及处理拒绝）。",
+          "source_id": "32-SALES-2-BC-CH",
+          "license": {
+            "license_id": "CC BY",
+            "copyright_holder": "HP LIFE",
+            "description": null
+          },
+          "language": "zh",
+          "files": [
+            {
+              "file_type": "html5",
+              "path": "/var/folders/wc/2r44j8gs4gn56t1xtw5f6wlm0000gn/T/tmpd2jgmn8t.zip",
+              "language": "zh"
+            }
+          ],
+          "thumbnail": "chefdata/Courses/zh/销售的艺术：销售的基本要素/content/32-SALES-2-BC-CH_webroot/story_content/thumbnail.jpg"
+        },
+        {
+          "kind": "html5",
+          "title": "技术技能",
+          "description": "学习如何使用销售工具，包括管理顾客数据，谷歌分析和社交媒体。",
+          "source_id": "32-SALES-3-TS-CH",
+          "license": {
+            "license_id": "CC BY",
+            "copyright_holder": "HP LIFE",
+            "description": null
+          },
+          "language": "zh",
+          "files": [
+            {
+              "file_type": "html5",
+              "path": "/var/folders/wc/2r44j8gs4gn56t1xtw5f6wlm0000gn/T/tmp4rlt25ux.zip",
+              "language": "zh"
+            }
+          ],
+          "thumbnail": "chefdata/Courses/zh/销售的艺术：销售的基本要素/content/32-SALES-3-TS-CH_webroot/story_content/thumbnail.jpg"
+        },
+        {
+          "kind": "html5",
+          "title": "后续步骤",
+          "description": "本课程没有参考资源，但请务必参加以下HP LIFE 在线课程：    管理联系人信息               在线销售 客户关系管理(CRM) 社會化媒體營銷 请注意，除非您已连接到互联网，否则此页面的链接将无法使用。请使用右键点击按钮，并选择“在新选项卡中打开”以打开链接。",
+          "source_id": "<p class=\"MsoNormal\"><font fac",
+          "license": {
+            "license_id": "CC BY",
+            "copyright_holder": "HP LIFE",
+            "description": null
+          },
+          "language": "zh",
+          "files": [
+            {
+              "file_type": "html5",
+              "path": "/var/folders/wc/2r44j8gs4gn56t1xtw5f6wlm0000gn/T/tmpxmsboe4s.zip",
+              "language": "zh"
+            }
+          ]
+        }
+      ],
+      "source_id": "6861hpl-zh32",
+      "description": "在本课程中，你将： • 了解什么是销售，以及如何成为一个更高效的销售人员 • 了解你的潜在顾客的购买习惯 • 为你的生意创建“电梯演讲” • 学习如何谈生意和处理拒绝 • 学习如何使用销售工具，如谷歌分析和社交媒体"
+    },
+    {
+      "kind": "topic",
+      "title": "社會化媒體營銷",
+      "language": "zh",
+      "thumbnail": "chefdata/thumbnails/new_channel_thumbnail.png",
+      "children": [
+        {
+          "kind": "html5",
+          "title": "故事",
+          "description": "Alejandro试图寻找新的途径，使自己的咖啡店扩大业务。",
+          "source_id": "zh_2",
+          "license": {
+            "license_id": "CC BY",
+            "copyright_holder": "HP LIFE",
+            "description": null
+          },
+          "language": "zh",
+          "files": [
+            {
+              "file_type": "html5",
+              "path": "/var/folders/wc/2r44j8gs4gn56t1xtw5f6wlm0000gn/T/tmpk_v80lbr.zip",
+              "language": "zh"
+            }
+          ],
+          "thumbnail": null
+        },
+        {
+          "kind": "html5",
+          "title": "经营理念",
+          "description": "了解示例中三项生意的Facebook、Twitter和博客营销策略。",
+          "source_id": "TU2_Business_Concept_PRO-zh/TU2_Business_Concept_PRO-zh output",
+          "license": {
+            "license_id": "CC BY",
+            "copyright_holder": "HP LIFE",
+            "description": null
+          },
+          "language": "zh",
+          "files": [
+            {
+              "file_type": "html5",
+              "path": "/var/folders/wc/2r44j8gs4gn56t1xtw5f6wlm0000gn/T/tmpv2oeiohe.zip",
+              "language": "zh"
+            }
+          ],
+          "thumbnail": "chefdata/Courses/zh/社會化媒體營銷/content/TU2_Business_Concept_PRO-zh/TU2_Business_Concept_PRO-zh output_webroot/story_content/thumbnail.jpg"
+        },
+        {
+          "kind": "html5",
+          "title": "技术技能",
+          "description": "了解如何针对你的目标人群制作Facebook广告。",
+          "source_id": "TU2_Tech_Skill/TU2_Tech_Skill_PRO-zh output",
+          "license": {
+            "license_id": "CC BY",
+            "copyright_holder": "HP LIFE",
+            "description": null
+          },
+          "language": "zh",
+          "files": [
+            {
+              "file_type": "html5",
+              "path": "/var/folders/wc/2r44j8gs4gn56t1xtw5f6wlm0000gn/T/tmpqiltpeiz.zip",
+              "language": "zh"
+            }
+          ],
+          "thumbnail": "chefdata/Courses/zh/社會化媒體營銷/content/TU2_Tech_Skill/TU2_Tech_Skill_PRO-zh output_webroot/story_content/thumbnail.jpg"
+        },
+        {
+          "kind": "topic",
+          "title": "可下載的資源",
+          "source_id": "社會化媒體營銷___resources",
+          "license": {
+            "license_id": "CC BY",
+            "copyright_holder": "HP LIFE",
+            "description": null
+          },
+          "language": "zh",
+          "thumbnail": "chefdata/thumbnails/resources_folder_thumbnail.png",
+          "children": [
+            {
+              "kind": "document",
+              "title": "创建Facebook广告说明(PDF)",
+              "description": "",
+              "source_id": "https://s3.amazonaws.com/hp-life-content/DownloadableChinese/Instructions_creating_Facebook_ad-zh_0.pdf",
+              "license": {
+                "license_id": "CC BY",
+                "copyright_holder": "HP LIFE",
+                "description": null
+              },
+              "language": "zh",
+              "files": [
+                {
+                  "file_type": "document",
+                  "path": "chefdata/Courses/zh/社會化媒體營銷/content/downloads/Instructions_creating_Facebook_ad-zh_0.pdf",
+                  "language": "zh"
+                }
+              ]
+            },
+            {
+              "kind": "document",
+              "title": "社交媒体营销规划器(PDF)",
+              "description": "",
+              "source_id": "https://s3.amazonaws.com/hp-life-content/DownloadableChinese/TU2Planner_zh_0.pdf",
+              "license": {
+                "license_id": "CC BY",
+                "copyright_holder": "HP LIFE",
+                "description": null
+              },
+              "language": "zh",
+              "files": [
+                {
+                  "file_type": "document",
+                  "path": "chefdata/Courses/zh/社會化媒體營銷/content/downloads/TU2Planner_zh_0.pdf",
+                  "language": "zh"
+                }
+              ]
+            }
+          ]
+        },
+        {
+          "kind": "html5",
+          "title": "后续步骤",
+          "description": "了解本课程中的后续步骤和更多资源，帮助你发展生意。 请注意，除非您已连接到互联网，否则此页面的链接将无法使用。请使用右键点击按钮，并选择“在新选项卡中打开”以打开链接。",
+          "source_id": "<div class=\"field-item even\" s",
+          "license": {
+            "license_id": "CC BY",
+            "copyright_holder": "HP LIFE",
+            "description": null
+          },
+          "language": "zh",
+          "files": [
+            {
+              "file_type": "html5",
+              "path": "/var/folders/wc/2r44j8gs4gn56t1xtw5f6wlm0000gn/T/tmp2jf2j4vl.zip",
+              "language": "zh"
+            }
+          ]
+        }
+      ],
+      "source_id": "2653hpl-zh02",
+      "description": "了解各种不同的社交媒体营销活动。学习如何创建可覆盖目标客户的社交媒体广告。 了解： • 各种社交媒体营销活动 • 如何针对你的客户创建Facebook广告"
+    }
+  ]
+}
